@@ -33,6 +33,14 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.listen(PORT, () => {
-    log(`Server is starting at PORT: ${PORT}`);
-});
+async function start() {
+    try {
+
+        app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
+    } catch (e) {
+        console.log('Server Error', e.message)
+        process.exit(1)
+    }
+}
+
+start()
