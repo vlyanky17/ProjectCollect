@@ -3,6 +3,7 @@ import Form from './components/Form';
 import DisplayUsers from './components/DisplayUsers';
 import axios from 'axios';
 import './App.css';
+import {authPage} from "./pages/authPage";
 
 
 
