@@ -18,9 +18,7 @@ class App extends Component {
   componentDidMount = () => {
     this.fetchUsers();
   };
-  const {token, login, logout, userId, ready} = useAuth()
-const isAuthenticated = !!token
-const routes = useRoutes(isAuthenticated)
+
   fetchUsers = () => {
     axios.get('/users')
       .then((response) => {
