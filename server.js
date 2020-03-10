@@ -33,6 +33,18 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.listen(PORT, () => {
-    log(`Server is starting at PORT: ${PORT}`);
-});
+sync function start() {
+ try{
+ await mongoose.connect( process.env.MONGODB_URI || config.get('mongoUri'),{
+  useNewUrlParser: true,
+  useUnifiedTopology:true,
+  useCreateIndex:true
+ }) 
+ app.listen(PORT,() => console.log('has started on port',PORT,))
+ } catch (e) {
+ 	console.log('error ',e.message)
+ 
+ }
+}
+
+start()
