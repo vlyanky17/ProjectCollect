@@ -15,9 +15,6 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 
 // Step 2
-mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/my_database', {
-    useNewUrlParser: true
-});
 
 // Configuration
 app.use(bodyParser.json());
@@ -35,6 +32,9 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
     try {
+        mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/my_database', {
+            useNewUrlParser: true
+        });
 
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
     } catch (e) {
