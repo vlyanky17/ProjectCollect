@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
     try {
-        await     mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/my_database', {
+        mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/my_database', {
             useNewUrlParser: true
         });
 
