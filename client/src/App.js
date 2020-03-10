@@ -3,6 +3,13 @@ import Form from './components/Form';
 import DisplayUsers from './components/DisplayUsers';
 import axios from 'axios';
 import './App.css';
+import 'materialize-css'
+import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom'
+import {useRoutes} from "./routes";
+import {authPage} from "./pages/authPage";
+import {useAuth} from './hooks/auth.hook'
+import {AuthContext} from './context/AuthContext'
 class App extends Component {
   state = {
     users: []
@@ -11,7 +18,9 @@ class App extends Component {
   componentDidMount = () => {
     this.fetchUsers();
   };
-
+  const {token, login, logout, userId, ready} = useAuth()
+const isAuthenticated = !!token
+const routes = useRoutes(isAuthenticated)
   fetchUsers = () => {
     axios.get('/users')
       .then((response) => {
