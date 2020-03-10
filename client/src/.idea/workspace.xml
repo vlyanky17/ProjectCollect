@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec64d76c-b428-4d0f-b6cc-0feb4dadfea9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pages/ForTabl.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ForTabl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,7 @@
       <workItem from="1583409217010" duration="32000" />
       <workItem from="1583409278441" duration="7000" />
       <workItem from="1583411287667" duration="140000" />
-      <workItem from="1583878115386" duration="901000" />
+      <workItem from="1583878115386" duration="1052000" />
     </task>
     <servers />
   </component>
