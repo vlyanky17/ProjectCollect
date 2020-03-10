@@ -4,6 +4,8 @@ import DisplayUsers from './components/DisplayUsers';
 import axios from 'axios';
 import './App.css';
 import {authPage} from "./pages/authPage";
+import {useAuth} from './hooks/auth.hook'
+import {AuthContext} from './context/AuthContext'
 
 
 
