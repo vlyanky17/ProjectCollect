@@ -33,9 +33,11 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
     try {
-        mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/my_database', {
-            useNewUrlParser: true
-        });
+        mongoose.connect(config.get('mongoUri'), {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
+        })
 
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
     } catch (e) {
