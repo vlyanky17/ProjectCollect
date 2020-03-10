@@ -6,7 +6,10 @@
     "@material-ui/core": "^3.9.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-router-dom": "^5.1.2",
+     "@testing-library/user-event": "^7.2.1",
+    "path-to-regexp": "^6.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
