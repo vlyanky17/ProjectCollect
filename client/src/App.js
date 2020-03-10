@@ -7,11 +7,12 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import {authPage} from "./pages/authPage";
 import {useAuth} from './hooks/auth.hook'
 import {AuthContext} from './context/AuthContext'
+import {useRoutes} from "./routes"
 
 
 
 class App extends Component {
- 
+
 }
 
 export default App;
