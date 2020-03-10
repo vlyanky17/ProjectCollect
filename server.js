@@ -15,9 +15,7 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 
 // Step 2
-mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/my_database', {
-    useNewUrlParser: true
-});
+
 
 // Configuration
 app.use(bodyParser.json());
