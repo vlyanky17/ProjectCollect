@@ -79,31 +79,7 @@ console.log(data.userId)
     }
 
 
-    return(<div>
-
-            <nav>
-            <div className="nav-wrapper" style={{ padding: '0 2rem' }}>
-
-    <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a onClick={delet}>Удалить</a></li>
-
-        <li><a onClick={antibanMachine}>Разблокировать</a></li>
-
-        <li><a onClick={banMachine}>Заблокировать</a></li>
-
-        <li><a onClick={registerAll}>Обновить/загрузить таблицу</a></li>
-
-    <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
-    </ul>
-    </div>
-    </nav>
-       <form>
-    < UserTabl users={users}  changeHandler={changeHandler} />
-        </form>
-
-
-    </div>
-        );
+    return(
     }
 
 export default ForTabl;
