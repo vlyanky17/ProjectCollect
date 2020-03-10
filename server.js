@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const config = require('config')
+
 // importing files
 const routes = require('./routes');
 
