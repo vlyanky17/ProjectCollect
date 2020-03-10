@@ -15,11 +15,10 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 
 // Step 2
-await mongoose.connect(config.get('mongoUri'),{
+mongoose.connect( process.env.MONGODB_URI ||config.get('mongoUri'),{
     useNewUrlParser: true,
     useUnifiedTopology:true,
-    useCreateIndex:true
-})
+    useCreateIndex:true});
 
 // Configuration
 app.use(bodyParser.json());
