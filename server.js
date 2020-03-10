@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-
+const config = require('config')
 // importing files
 const routes = require('./routes');
 
@@ -33,18 +33,20 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-sync function start() {
- try{
- await mongoose.connect( process.env.MONGODB_URI || config.get('mongoUri'),{
-  useNewUrlParser: true,
-  useUnifiedTopology:true,
-  useCreateIndex:true
- }) 
- app.listen(PORT,() => console.log('has started on port',PORT,))
- } catch (e) {
- 	console.log('error ',e.message)
- 
- }
+
+async function start() {
+    try{
+        await mongoose.connect(config.get('mongoUri'),{
+            useNewUrlParser: true,
+            useUnifiedTopology:true,
+            useCreateIndex:true
+        })
+        app.listen(PORT,() => console.log('has started on port',PORT,))
+    } catch (e) {
+        console.log('error ',e.message)
+
+    }
 }
 
 start()
+
