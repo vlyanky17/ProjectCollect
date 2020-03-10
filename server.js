@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-
+const config = require('config')
 // importing files
 const routes = require('./routes');
 
@@ -32,11 +32,9 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
     try {
-        mongoose.connect(config.get('mongoUri'), {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        })
+        await     mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/my_database', {
+            useNewUrlParser: true
+        });
 
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
     } catch (e) {
