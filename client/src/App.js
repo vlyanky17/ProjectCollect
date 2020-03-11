@@ -41,16 +41,7 @@ class App extends Component {
         const routes = useRoutes(isAuthenticated)
 
         return (
-        <AuthContext.Provider value={{
-            token, login, logout, userId, isAuthenticated
-        }}>
-    <Router>
-        <div className="conteiner">
-            {routes}
-            </div>
-
-        </Router>
-    </AuthContext.Provider>
+     <div> tehterthrthrthrtyhrthrt </div>
     );
     }
 }
