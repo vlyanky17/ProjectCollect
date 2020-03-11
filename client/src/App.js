@@ -42,7 +42,13 @@ class App extends Component {
             <div className="App">
             <Form addUser={this.addUser}/>
         < DisplayUsers users={this.state.users} />
+        <Router>
+        <div className="conteiner">
+            {routes}
 
+
+            </div>
+            </Router>
         </div>
     );
     }
