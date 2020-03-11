@@ -11,7 +11,7 @@ import {useRoutes} from './routes'
 import 'materialize-css'
 
 function App() {
-        const { login, logout, token, userId, ready } = useAuth(true)
+    const {token, login, logout, userId, ready} = useAuth()
         const routes = useRoutes(false)
 
         return (
