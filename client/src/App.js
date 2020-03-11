@@ -27,7 +27,9 @@ class App extends Component {
             })
             .catch(() => alert('Error fetching new users'));
     };
-
+    const {token, login, logout, userId, ready} = useAuth()
+const isAuthenticated = !!token
+const routes = useRoutes(isAuthenticated)
 
     addUser = ({ name, position, company }) => {
         this.setState({
