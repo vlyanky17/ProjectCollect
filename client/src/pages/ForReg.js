@@ -9,8 +9,5 @@ export const ForReg = () =>{
     const [form, setForm] = useState( {login:'', password:''})
 
 
-    const arr =2 ;
-    return arr
-
 }
 export default ForReg;
