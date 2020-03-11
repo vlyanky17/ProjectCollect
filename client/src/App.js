@@ -13,8 +13,7 @@ import {useRoutes} from './routes'
 
 class App extends Component {
     const {token, login, logout, userId, ready} = useAuth()
-const isAuthenticated = !!token
-const routes = useRoutes(isAuthenticated)
+
 }
 
 export default App;
