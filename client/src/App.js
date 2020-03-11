@@ -12,24 +12,14 @@ import 'materialize-css'
 
 class App extends Component {
 
+
     render() {
         const {token, login, logout, userId, ready} = useAuth()
         const isAuthenticated = !!token
         const routes = useRoutes(isAuthenticated)
-
         return (
-            <div>
-            <AuthContext.Provider value={{
-            token, login, logout, userId, isAuthenticated
-        }}>
-    <Router>
-        <div className="conteiner">
-            {routes}
-
-
-            </div>
-            </Router>
-            </AuthContext.Provider>
+            <div >
+           rthrthrthrthrthrthrtty
         </div>
     );
     }
