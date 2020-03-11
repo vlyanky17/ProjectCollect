@@ -1,6 +1,6 @@
 import React, { useState,useCallback } from 'react';
 
-
+const storageName = 'userData'
 
 
 export const useAuth = isAuth => {
