@@ -12,17 +12,21 @@ import 'materialize-css'
 
 function App() {
     const {token, login, logout, userId, ready} = useAuth()
-        const routes = useRoutes(false)
+    const isAuthenticated = !!token
+    const routes = useRoutes(isAuthenticated)
+    return(
+        <AuthContext.Provider value={{
+        token, login, logout, userId, isAuthenticated
+    }}>
+<Router>
+    <div className="conteiner">
+        {routes}
 
-        return (
 
-        <Router>
-        <div className="conteiner">
-            {routes}
-            </div>
-            </Router>
+        </div>
+        </Router>
+        </AuthContext.Provider>
 )
 }
-
 
 export default App;
