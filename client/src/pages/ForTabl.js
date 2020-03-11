@@ -8,7 +8,7 @@ import {useHttp} from "../hooks/http.hook";
 
 
 export const ForTabl = () =>{
-
+    return()
 
 }
 
