@@ -10,9 +10,7 @@ import {AuthContext} from './context/AuthContext'
 import {useRoutes} from './routes'
 import 'materialize-css'
 
-class App extends Component {
-
-    render() {
+function App() {
         const { login, logout, token, userId, ready } = useAuth(true)
         const routes = useRoutes(false)
 
@@ -23,9 +21,8 @@ class App extends Component {
             {routes}
             </div>
             </Router>
-
-    );
-    }
+)
 }
+
 
 export default App;
