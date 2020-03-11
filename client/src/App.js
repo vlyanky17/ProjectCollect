@@ -36,7 +36,7 @@ class App extends Component {
     };
 
     render() {
-
+        const arr = useAuth()
         const routes = useRoutes(false)
 
         return (
