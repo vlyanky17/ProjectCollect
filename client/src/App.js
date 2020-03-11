@@ -17,9 +17,7 @@ class App extends Component {
         const isAuthenticated = !!token
         const routes = useRoutes(isAuthenticated)
 
-        return (
-          
-    );
+      
     }
 }
 
