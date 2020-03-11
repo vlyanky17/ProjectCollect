@@ -13,9 +13,10 @@ export const ForReg = () =>{
 
     const registerHandler = async () => {
         try {
+            console.log('reg')
             const data = await request('/api/auth/register', 'POST', {...form})
-
-        } catch (e) {}
+            console.log('reg1')
+        } catch (e) {   console.log('regEr')}
     }
     return(
         <div>
