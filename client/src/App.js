@@ -12,7 +12,22 @@ import {useRoutes} from './routes'
 
 
 class App extends Component {
+    const {token, login, logout, userId, ready} = useAuth()
+const isAuthenticated = !!token
+const routes = useRoutes(isAuthenticated)
+return(
+    <AuthContext.Provider value={{
+    token, login, logout, userId, isAuthenticated
+}}>
+<Router>
+<div className="conteiner">
+    {routes}
 
+
+    </div>
+    </Router>
+    </AuthContext.Provider>
+)
 }
 
 export default App;
