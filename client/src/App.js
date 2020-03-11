@@ -39,17 +39,13 @@ class App extends Component {
         const routes = useRoutes(false)
 
         return (
-            <div className="App">
-            <Form addUser={this.addUser}/>
-        < DisplayUsers users={this.state.users} />
+
         <Router>
         <div className="conteiner">
             {routes}
-
-
             </div>
             </Router>
-        </div>
+
     );
     }
 }
