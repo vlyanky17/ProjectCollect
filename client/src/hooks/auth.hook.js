@@ -9,5 +9,5 @@ export const useAuth = () => {
 
 
 
-  return {token,   userId, ready }
+  return {token }
 }

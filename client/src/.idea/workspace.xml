@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec64d76c-b428-4d0f-b6cc-0feb4dadfea9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hooks/auth.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/auth.hook.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
       <workItem from="1583878115386" duration="3242000" />
       <workItem from="1583881388365" duration="7657000" />
       <workItem from="1583922769294" duration="7864000" />
-      <workItem from="1583941580153" duration="2076000" />
+      <workItem from="1583941580153" duration="2710000" />
     </task>
     <servers />
   </component>
