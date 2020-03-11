@@ -13,7 +13,7 @@ import 'materialize-css'
 class App extends Component {
 
     render() {
-        const arr = useAuth(true)
+        const { login, logout } = useAuth(true)
         const routes = useRoutes(false)
 
         return (
