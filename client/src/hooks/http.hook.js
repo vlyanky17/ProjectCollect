@@ -16,7 +16,7 @@ export const useHttp = () => {
 
             const response = await fetch(url, {method, body, headers})
             console.log('hook3')
-            const data = await response.json()
+            const data =  response.json()
             console.log('hook4')
             if (!response.ok) {
                 throw new Error(data.message || 'Что-то пошло не так')

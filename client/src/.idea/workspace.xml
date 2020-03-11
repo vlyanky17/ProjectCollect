@@ -4,7 +4,6 @@
     <list default="true" id="ec64d76c-b428-4d0f-b6cc-0feb4dadfea9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hooks/http.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/http.hook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ForReg.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ForReg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
       <workItem from="1583922769294" duration="7864000" />
       <workItem from="1583941580153" duration="10769000" />
       <workItem from="1583953953821" duration="598000" />
-      <workItem from="1583954566652" duration="2956000" />
+      <workItem from="1583954566652" duration="3222000" />
     </task>
     <servers />
   </component>
