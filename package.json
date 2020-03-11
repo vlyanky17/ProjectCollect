@@ -19,6 +19,7 @@
     "fetch": "^1.1.0",
     "hookrouter": "^1.2.3",
     "lodash": "^4.17.11",
+    "materialize-css": "^1.0.0",
     "mongoose": "^5.4.13",
     "pretty-checkbox": "^3.0.3",
     "prop-types": "^15.7.2",
