@@ -11,15 +11,36 @@ import {useRoutes} from './routes'
 import 'materialize-css'
 
 class App extends Component {
+    state = {
+        users: []
+    }
 
+    componentDidMount = () => {
+        this.fetchUsers();
+    };
+
+    fetchUsers = () => {
+        axios.get('/users')
+            .then((response) => {
+                const { users } = response.data;
+                this.setState({ users: [...this.state.users, ...users] })
+            })
+            .catch(() => alert('Error fetching new users'));
+    };
+
+
+    addUser = ({ name, position, company }) => {
+        this.setState({
+            users: [...this.state.users, { name, position, company }]
+        });
+    };
 
     render() {
-        const {token, login, logout, userId, ready} = useAuth()
-        const isAuthenticated = !!token
-        const routes = useRoutes(isAuthenticated)
         return (
-            <div >
-           rthrthrthrthrthrthrtty
+            <div className="App">
+            <Form addUser={this.addUser}/>
+        < DisplayUsers users={this.state.users} />
+
         </div>
     );
     }
