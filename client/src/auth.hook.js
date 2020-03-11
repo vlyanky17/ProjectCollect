@@ -1,16 +1,14 @@
-import { useCallback} from 'react'
-import useState from 'usestate';
+import React, { useState,useCallback } from 'react';
+
 
 
 
 export const useAuth = isAuth => {
 
-  const [token, setToken] = useState(null)
-  const [ready, setReady] = useState(false)
-  const [userId, setUserId] = useState(null)
+  const [count, setCount] = useState(0);
 
   const arr =2 ;
-  if (isAuth) {  return arr}
+  if (isAuth) {  return count}
 
 
 }
