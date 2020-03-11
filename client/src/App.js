@@ -6,13 +6,14 @@ import './App.css';
 import {BrowserRouter as Router} from 'react-router-dom'
 import {authPage} from "./pages/authPage";
 import {useAuth} from './hooks/auth.hook'
-import {AuthContext} from './context/AuthContext'
+import {AuthContext} from './co ntext/AuthContext'
 import {useRoutes} from './routes'
 import 'materialize-css'
 
 
 
 class App extends Component {
+  
     const {token, login, logout, userId, ready} = useAuth()
 
 }
