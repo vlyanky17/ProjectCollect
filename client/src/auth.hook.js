@@ -27,7 +27,7 @@ export const useAuth = isAuth => {
     if (data && data.token) {
       login(data.token, data.userId)
     }
-    setReady(true)
+
   }, [login])
 
 
