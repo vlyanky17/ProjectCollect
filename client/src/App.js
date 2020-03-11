@@ -44,7 +44,11 @@ class App extends Component {
             <div className="App">
             <Form addUser={this.addUser}/>
         < DisplayUsers users={this.state.users} />
+        <AuthContext.Provider value={{
+            token, login, logout, userId, isAuthenticated
+        }}>
 
+    </AuthContext.Provider>
         </div>
     );
     }
