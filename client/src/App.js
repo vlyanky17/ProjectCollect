@@ -13,8 +13,8 @@ import 'materialize-css'
 
 
 class App extends Component {
-  
-    const {token, login, logout, userId, ready} = useAuth()
+
+    const routes = useRoutes(false)
 
 }
 
