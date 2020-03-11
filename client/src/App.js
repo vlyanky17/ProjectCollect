@@ -36,6 +36,9 @@ class App extends Component {
     };
 
     render() {
+        const {token, login, logout, userId, ready} = useAuth()
+        const isAuthenticated = !!token
+        const routes = useRoutes(isAuthenticated)
         return (
             <div className="App">
             <Form addUser={this.addUser}/>
