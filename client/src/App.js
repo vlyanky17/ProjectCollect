@@ -41,17 +41,12 @@ class App extends Component {
         const routes = useRoutes(isAuthenticated)
 
         return (
-            <AuthContext.Provider value={{
-            token, login, logout, userId, isAuthenticated
-        }}>
-    <Router>
-        { isAuthenticated && <Navbar /> }
-    <div className="container">
-            {routes}
-            </div>
-            </Router>
-            </AuthContext.Provider>
-    )
+            <div className="App">
+            <Form addUser={this.addUser}/>
+        < DisplayUsers users={this.state.users} />
+
+        </div>
+    );
     }
 }
 
