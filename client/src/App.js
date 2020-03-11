@@ -14,7 +14,7 @@ import 'materialize-css'
 
 class App extends Component {
 
-    const routes = useRoutes(false)
+    const routes = 1;
 
 }
 
