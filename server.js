@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 5000; // Step 1
 // Configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use( '/api/auth', require('./routes/auth.routes'))
+app.use('/', routes);
 
 // Step 3
 if (process.env.NODE_ENV === 'production') {
