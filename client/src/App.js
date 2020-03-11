@@ -47,7 +47,8 @@ class App extends Component {
         <AuthContext.Provider value={{
             token, login, logout, userId, isAuthenticated
         }}>
-
+    <Router>
+        </Router>
     </AuthContext.Provider>
         </div>
     );
