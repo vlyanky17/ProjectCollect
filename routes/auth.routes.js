@@ -16,7 +16,7 @@ router.post('/register',
     ], async(req,res) =>{
  try{
 
-
+     System.err.println("Hello, logs!");
      console.log(req.body)
 const errors = validationResult(req)
 if (!errors.isEmpty()) { return res.status(400).json({
