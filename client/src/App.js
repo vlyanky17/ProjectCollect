@@ -10,31 +10,27 @@ import {AuthContext} from './context/AuthContext'
 import {useRoutes} from './routes'
 import 'materialize-css'
 
-
-
-class App extends Component {
-
+function App() {
     const {token, login, logout, userId, ready} = useAuth()
-const isAuthenticated = !!token
-const routes = useRoutes(isAuthenticated)
+    const isAuthenticated = !!token
+    const routes = useRoutes(isAuthenticated)
 
-if (!ready) {
-    return <Loader />
-}
+    if (!ready) {
+        return <Loader />
+    }
 
-return (
-    <AuthContext.Provider value={{
-    token, login, logout, userId, isAuthenticated
-}}>
+    return (
+        <AuthContext.Provider value={{
+        token, login, logout, userId, isAuthenticated
+    }}>
 <Router>
-{ isAuthenticated && <Navbar /> }
+    { isAuthenticated && <Navbar /> }
 <div className="container">
-    {routes}
-    </div>
-    </Router>
-    </AuthContext.Provider>
+        {routes}
+        </div>
+        </Router>
+        </AuthContext.Provider>
 )
-
 }
 
-export default App;
+export default App
