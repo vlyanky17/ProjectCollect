@@ -32,7 +32,6 @@ export const useAuth = isAuth => {
     }
     setReady(true)
   }, [login])
-
-  if (isAuth) { return { login, logout, token, userId, ready }}
+ return { login, logout, token, userId, ready }
 
 }
