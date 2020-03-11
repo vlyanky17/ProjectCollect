@@ -36,8 +36,8 @@ class App extends Component {
     };
 
     render() {
-        const {token, login, logout, userId, ready} = useAuth()
-  
+        const routes = useRoutes(false)
+
         return (
             <div className="App">
             <Form addUser={this.addUser}/>
