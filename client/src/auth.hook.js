@@ -30,7 +30,7 @@ export const useAuth = isAuth => {
 
   }, [login])
 
-
-  return { login, logout }
+const arr =2;
+  return arr
 
 }
