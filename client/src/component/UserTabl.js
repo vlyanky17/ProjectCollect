@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import ForReg from "../pages/ForReg";
-import { Checkbox } from 'react-input-checkbox';
+
 
 
 export const UserTabl = ({ users,changeHandler} ) => {
