@@ -8,6 +8,7 @@ import {authPage} from "./pages/authPage";
 import {useAuth} from './hooks/auth.hook'
 import {AuthContext} from './context/AuthContext'
 import {useRoutes} from './routes'
+import 'materialize-css'
 
 
 
