@@ -21,6 +21,7 @@
     "lodash": "^4.17.11",
     "materialize-css": "^1.0.0",
     "mongoose": "^5.4.13",
+    "jsonwebtoken": "^8.5.1",
     "pretty-checkbox": "^3.0.3",
     "prop-types": "^15.7.2",
     "react-input-checkbox": "^0.1.6",
