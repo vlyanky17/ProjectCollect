@@ -36,7 +36,7 @@ class App extends Component {
     };
 
     render() {
-        const lg = useAuth()
+        const {token,   userId, ready } = useAuth()
         const routes = useRoutes(false)
 
         return (
