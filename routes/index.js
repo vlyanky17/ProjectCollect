@@ -1,6 +1,7 @@
 const express = require('express');
 const { isEmpty } = require('lodash');
 const User = require('../models/user');
+const {check, validationResult} = require('express-validator')
 const router = express.Router();
 
 router.post('/add', async (req, res) => {
