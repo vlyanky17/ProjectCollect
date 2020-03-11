@@ -6,7 +6,7 @@ import './App.css';
 import {BrowserRouter as Router} from 'react-router-dom'
 import {authPage} from "./pages/authPage";
 import {useAuth} from './hooks/auth.hook'
-import {AuthContext} from './co ntext/AuthContext'
+import {AuthContext} from './context/AuthContext'
 import {useRoutes} from './routes'
 import 'materialize-css'
 
