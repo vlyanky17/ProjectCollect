@@ -48,6 +48,10 @@ class App extends Component {
             token, login, logout, userId, isAuthenticated
         }}>
     <Router>
+        <div className="conteiner">
+            {routes}
+            </div>
+
         </Router>
     </AuthContext.Provider>
         </div>
