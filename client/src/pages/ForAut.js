@@ -20,9 +20,12 @@ export const ForAut = () =>{
     }
     const loginHandler = async () => {
         try {
+            console.log('aut')
             const data = await request('/api/auth/login', 'POST', {...form})
+            console.log('aut1')
             auth.login(data.token, data.userId)
-        } catch (e) {}
+            console.log('aut2')
+        } catch (e) {         console.log('autEr')}
     }
 
     return(
