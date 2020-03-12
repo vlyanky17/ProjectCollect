@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000; // Step 1
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
-mongoose.connect( process.env.MONGODB_URI ||'mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect( process.env.MONGODB_URI ||'mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/app?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
