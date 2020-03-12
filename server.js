@@ -34,7 +34,7 @@ const db = process.env.MONGODB_URL;
  function start() {
     try {
         console.log('th')
-        await mongoose.connect(db, {
+         mongoose.connect(db, {
             useUnifiedTopology: true,
             useNewUrlParser: true
         });
