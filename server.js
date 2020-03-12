@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 const db = process.env.MONGODB_URL;
-async function start() {
+ function start() {
     try {
         console.log('th')
         await mongoose.connect(db, {
