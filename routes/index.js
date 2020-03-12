@@ -12,30 +12,30 @@ router.post('/register',
     async(req,res) =>{
         try{
 
-            System.err.println("1||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("1||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             console.log(req.body)
-            System.err.println("2||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("2||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const errors = validationResult(req)
-            System.err.println("3||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("3||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             if (!errors.isEmpty()) { return res.status(400).json({
                 errors:errors.array(),message:'некорректные данные регистрации'
             })}
-            System.err.println("4||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("4||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const {login,password,email} = req.body
-            System.err.println("5||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("5||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const candidate =  await User.findOne({login})
-            System.err.println("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.logn("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const d = new Date();
             if (candidate) {
                 return	res.status(400).json({message:' Логин занят'})
             }
-            System.err.println("7||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("7||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
-            System.err.println("8||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("8||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             await user.save()
-            System.err.println("9||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("9||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             res.status(201).json({message:' user added'})
-            System.err.println("10||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("10||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
 
         } catch(e){
             console.log('rout err')
