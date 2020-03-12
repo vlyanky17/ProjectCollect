@@ -55,7 +55,9 @@ export const ForTabl = () =>{
 
     }
 
-
+    useEffect(() => {
+        registerAll()
+    }, [registerAll])
 
     const banMachine = async () => {
         try {
