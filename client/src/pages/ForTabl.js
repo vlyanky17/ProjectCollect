@@ -75,7 +75,7 @@ export const ForTabl = () =>{
     const delet = async () => {
         try {
 
-            const data = await request('/api/auth/delet', 'POST', {...aray})
+            const data = await request('/delet', 'POST', {...aray})
 
         } catch (e) {}
     }

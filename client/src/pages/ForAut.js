@@ -21,7 +21,7 @@ export const ForAut = () =>{
     const loginHandler = async () => {
         try {
             console.log('aut')
-            const data = await request('/api/auth/login', 'POST', {...form})
+            const data = await request('/login', 'POST', {...form})
             console.log('aut1')
             auth.login(data.token, data.userId)
             console.log('aut2')
