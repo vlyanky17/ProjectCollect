@@ -4,8 +4,204 @@ const User = require('../models/user');
 const {check, validationResult} = require('express-validator')
 const jwt = require('jsonwebtoken')
 const config = require('config')
+const {Router} = require ('express')
 const router = express.Router();
 
+
+router.post('/register',
+    async(req,res) =>{
+        try{
+
+            System.err.println("1||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log(req.body)
+            System.err.println("2||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            const errors = validationResult(req)
+            System.err.println("3||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            if (!errors.isEmpty()) { return res.status(400).json({
+                errors:errors.array(),message:'некорректные данные регистрации'
+            })}
+            System.err.println("4||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            const {login,password,email} = req.body
+            System.err.println("5||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            const candidate =  await User.findOne({login})
+            System.err.println("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            const d = new Date();
+            if (candidate) {
+                return	res.status(400).json({message:' Логин занят'})
+            }
+            System.err.println("7||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
+            System.err.println("8||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            await user.save()
+            System.err.println("9||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            res.status(201).json({message:' user added'})
+            System.err.println("10||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+
+        } catch(e){
+            console.log('rout err')
+
+            res.status(500).json({message: 'error register'})
+
+        }
+    })
+
+
+
+
+router.post('/login',[check('login','введите логин').exists(),check('password','введите пароль').exists() ], async(req,res) =>{
+
+    try{
+        console.log(req.body)
+        const errors = validationResult(req.body)
+        if (!errors.isEmpty()) { return res.status(400).json({
+            errors:errors.array(),message:'некорректные данные авторизации'
+        })}
+        console.log('try1')
+        const {login, password} = req.body
+        console.log('try2')
+        const user = await User.findOne({login})
+        console.log('try3')
+        if (!user) { return res.status(400).json({message:' user not found'})}
+        console.log('try4')
+        if (user.password!=password) { return res.status(400).json({ message:'неверный пароль'})}
+        if (user.stat=="banned") { return res.status(400).json({ message:'пользователь заблокирован'})}
+        const d = new Date();
+        await user.update({datLog:d.toDateString()})
+        console.log('try5')
+        const token = jwt.sign(
+            { userId: user.id },
+            config.get('jwtSek'),
+            { expiresIn: '1h' }
+        )
+        console.log('try6')
+        res.json({token,userId:user.id})
+        console.log('try7')
+
+
+
+
+        console.log('try8')
+
+    } catch(e){
+        res.status(500).json({message: 'error login'})
+    }
+})
+
+
+router.post('/allLog', async(req,res) =>{
+
+    try{
+        const user = await User.find()
+        console.log(user)
+        const d = new Date();
+
+
+        res.json(user)
+        const [users, setUsers] = useState([])
+        setUsers(req.body)
+        console.log(users)
+
+
+
+
+
+        console.log('try8')
+
+    } catch(e){
+        res.status(500).json({message: 'error all'})
+    }
+})
+
+
+router.post('/ban', async(req,res) =>{
+
+    try{
+
+        let i=0;
+
+        while (true){
+            try {
+                const {login, val} = req.body[i]
+                console.log(i)
+                if (val==true) {
+                    const user = await User.findOne({login})
+                    console.log(user)
+                    await user.update({stat:'banned'})
+                    console.log('ban')}
+                i++
+            }catch (e) {
+
+                break
+            }
+        }
+
+
+        res.status(201).json({message:' users banned'})
+
+
+    } catch(e){
+        res.status(500).json({message: 'error ban'})
+    }
+})
+
+
+router.post('/antiban', async(req,res) =>{
+
+    try{
+
+        let i=0;
+
+        while (true){
+            try {
+                const {login, val} = req.body[i]
+                console.log(i)
+                if (val==true) {
+                    const user = await User.findOne({login})
+                    console.log(user)
+                    await user.update({stat:'not banned'})
+                    console.log('ban')}
+                i++
+            }catch (e) {
+
+                break
+            }
+        }
+        res.status(201).json({message:' users not banned'})
+
+
+    } catch(e){
+        res.status(500).json({message: 'error all'})
+    }
+})
+
+
+router.post('/delet', async(req,res) =>{
+
+    try{
+
+        let i=0;
+
+        while (true){
+            try {
+                const {login, val} = req.body[i]
+                console.log(i)
+                if (val==true) {
+                    const user = await User.findOne({login})
+                    console.log(user)
+                    await user.remove()
+                    console.log('ban')}
+                i++
+            }catch (e) {
+                break
+            }
+        }
+        res.status(201).json({message:' users delete'})
+
+
+    } catch(e){
+        res.status(500).json({message: 'error all'})
+    }
+})
 router.post('/add', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
