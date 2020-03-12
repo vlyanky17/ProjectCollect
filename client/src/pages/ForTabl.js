@@ -60,7 +60,7 @@ export const ForTabl = () =>{
     const banMachine = async () => {
         try {
 
-            const data = await request('/api/auth/ban', 'POST', {...aray})
+            const data = await request('/ban', 'POST', {...aray})
 
         } catch (e) {}
     }
@@ -68,7 +68,7 @@ export const ForTabl = () =>{
     const antibanMachine = async () => {
         try {
 
-            const data = await request('/api/auth/antiban', 'POST', {...aray})
+            const data = await request('/antiban', 'POST', {...aray})
 
         } catch (e) {}
     }
