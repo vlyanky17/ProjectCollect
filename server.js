@@ -12,7 +12,7 @@ const routes = require('./routes');
 // Define Global Variables
 const app = express();
 const log = console.log;
-const PORT = process.env.PORT || 38416; // Step 1
+const PORT = process.env.PORT || 5000; // Step 1
 
 
 // Step 2
@@ -21,7 +21,11 @@ const PORT = process.env.PORT || 38416; // Step 1
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
-
+mongoose.connect( process.env.MONGODB_URI ||'mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/test?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
 // Step 3
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static( 'client/build' ));
@@ -33,11 +37,7 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
     try {
-           mongoose.connect( process.env.MONGODB_URI ||'mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/test?retryWrites=true&w=majority', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        })
+
 
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
     } catch (e) {
