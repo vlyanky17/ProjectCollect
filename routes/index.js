@@ -7,33 +7,37 @@ const config = require('config')
 const {Router} = require ('express')
 const router = express.Router();
 
-
 router.post('/register',
-    async(req,res) =>{
+    [
+        check('email', 'Некорректный email').isEmail(),
+        check('password', 'Минимальная длина 3')
+            .isLength({ min: 3 }),        check('login', 'Минимальная длина 3')
+        .isLength({ min: 3 })
+    ], async(req,res) =>{
         try{
 
-            console.log("1||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+
             console.log(req.body)
-            console.log("2||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const errors = validationResult(req)
-            console.log("3||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             if (!errors.isEmpty()) { return res.status(400).json({
                 errors:errors.array(),message:'некорректные данные регистрации'
             })}
-            console.log("4||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-            const {login,password,email} = req.body
-            console.log("5||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-            const candidate =  await User.findOne({login})
-            console.log("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-            const d = new Date();
 
-            console.log("7||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            const {login,password,email} = req.body
+
+            const candidate =  await User.findOne({login})
+
+            const d = new Date();
+            if (candidate) {
+                return	res.status(400).json({message:' Логин занят'})
+            }
+
             const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
-            console.log("8||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-            await  user.save()
-            console.log("9||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+
+            await user.save()
+
             res.status(201).json({message:' user added'})
-            console.log("10||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+
 
         } catch(e){
             console.log('rout err')
@@ -42,7 +46,6 @@ router.post('/register',
 
         }
     })
-
 
 
 
