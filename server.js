@@ -21,11 +21,7 @@ const PORT = process.env.PORT || 5000; // Step 1
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
-mongoose.connect( process.env.MONGODB_URI ||'mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/app?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-})
+
 // Step 3
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static( 'client/build' ));
@@ -34,10 +30,13 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
     });
 }
-
+const db = process.env.MONGODB_URL;
 async function start() {
     try {
-
+        await mongoose.connect(db, {
+            useUnifiedTopology: true,
+            useNewUrlParser: true
+        });
 
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
     } catch (e) {
