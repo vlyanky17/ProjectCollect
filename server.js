@@ -31,9 +31,10 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 const db = process.env.MONGODB_URL;
-async function start() {
+const start = async () => {
     try {
-        await mongoose.connect(db, {
+        console.log('th')
+         mongoose.connect(db, {
             useUnifiedTopology: true,
             useNewUrlParser: true
         });
