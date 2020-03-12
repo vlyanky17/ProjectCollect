@@ -23,12 +23,10 @@ router.post('/register',
             console.log("4||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const {login,password,email} = req.body
             console.log("5||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-            const candidate =   User.findOne({login})
+
             console.logn("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const d = new Date();
-            if (candidate) {
-                return	res.status(400).json({message:' Логин занят'})
-            }
+          
             console.log("7||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
             console.log("8||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
