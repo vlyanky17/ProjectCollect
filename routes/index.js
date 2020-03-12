@@ -29,7 +29,7 @@ router.post('/register',
             console.log("7||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
             console.log("8||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-            await user.save()
+             user.save()
             console.log("9||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             res.status(201).json({message:' user added'})
             console.log("10||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
