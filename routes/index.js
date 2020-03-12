@@ -11,28 +11,30 @@ router.post('/register',
     async(req,res) =>{
         try{
 
-            console.log('???????????????????????????????????????????????')
+            console.log('1////////////////////////////////////////////////////////')
             console.log(req.body)
             const errors = validationResult(req)
+            console.log('2////////////////////////////////////////////////////////')
             if (!errors.isEmpty()) { return res.status(400).json({
                 errors:errors.array(),message:'некорректные данные регистрации'
             })}
-
+            console.log('3////////////////////////////////////////////////////////')
             const {login,password,email} = req.body
-
+            console.log('4////////////////////////////////////////////////////////')
             const candidate =  await User.findOne({login})
-
+            console.log('5////////////////////////////////////////////////////////')
             const d = new Date();
+            console.log('6////////////////////////////////////////////////////////')
             if (candidate) {
                 return	res.status(400).json({message:' Логин занят'})
             }
-
+            console.log('7////////////////////////////////////////////////////////')
             const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
-
+            console.log('8////////////////////////////////////////////////////////')
             await user.save()
-
+            console.log('9////////////////////////////////////////////////////////')
             res.status(201).json({message:' user added'})
-
+            console.log('10////////////////////////////////////////////////////////')
 
         } catch(e){
             console.log('rout err')
