@@ -23,7 +23,7 @@ router.post('/register',
             console.log("4||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const {login,password,email} = req.body
             console.log("5||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-            const candidate =  await User.findOne({login})
+            const candidate =   User.findOne({login})
             console.logn("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const d = new Date();
             if (candidate) {
