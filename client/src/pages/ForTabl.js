@@ -19,7 +19,7 @@ export const ForTabl = () =>{
 
     const registerAll = async () => {
         try {
-            const data = await request('/api/auth/allLog', 'POST')
+            const data = await request('/allLog', 'POST')
             console.log(data.userId)
             setUsers(data)
             console.log(users)
