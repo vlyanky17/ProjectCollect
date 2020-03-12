@@ -23,10 +23,9 @@ router.post('/register',
             console.log("4||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const {login,password,email} = req.body
             console.log("5||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-
-            console.logn("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            console.log("6||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const d = new Date();
-          
+
             console.log("7||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
             const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
             console.log("8||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
