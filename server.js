@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000; // Step 1
 
 
 // Step 2
-
+//mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/test?retryWrites=true&w=majority
 // Configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
