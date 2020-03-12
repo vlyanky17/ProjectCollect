@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === 'production') {
 
 async function start() {
     try {
-        awai   mongoose.connect('mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/app?retryWrites=true&w=majority', {
+           mongoose.connect('mongodb+srv://vld:123465@cluster0-ha1lp.azure.mongodb.net/app?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
