@@ -31,7 +31,7 @@ router.post('/register',
                 return	res.status(400).json({message:' Логин занят'})
             }
 
-            const user = new User({login,password,Admin:'not banned'})
+            const user = new User({login,password,Admin:'not admin'})
 
             await user.save()
 
@@ -64,7 +64,7 @@ router.post('/login',[check('login','введите логин').exists(),check(
         if (!user) { return res.status(400).json({message:' user not found'})}
         console.log('try4')
         if (user.password!=password) { return res.status(400).json({ message:'неверный пароль'})}
-        if (user.stat=="banned") { return res.status(400).json({ message:'пользователь заблокирован'})}
+
         const d = new Date();
         await user.update({datLog:d.toDateString()})
         console.log('try5')
