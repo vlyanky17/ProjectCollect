@@ -13,10 +13,10 @@ export const ForReg = () =>{
 
     const registerHandler = async () => {
         try {
-            console.log('reg')
-            const data = await request('/register', 'POST', {...form})
-            console.log('reg1')
-        } catch (e) {   console.log('regEr')}
+
+            const data = await request('/api/auth/register', 'POST', {...form})
+
+        } catch (e) {}
     }
     return(
         <div>
@@ -37,10 +37,12 @@ export const ForReg = () =>{
 
         <input type="submit" name="submit" value="регистрация" onClick={registerHandler} disabled={loading} href="/"/>
 
-        </p>
-        <a href="/" >Авторизация</a>
-        </form>
-        </div>
+    </p>
+        <a href="/Aut" >Авторизация</a>
+
+    </form>
+        <a href="/" >Главная</a>
+    </div>
 )
 
 }

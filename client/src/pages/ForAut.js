@@ -20,12 +20,9 @@ export const ForAut = () =>{
     }
     const loginHandler = async () => {
         try {
-            console.log('aut')
-            const data = await request('/login', 'POST', {...form})
-            console.log('aut1')
+            const data = await request('/api/auth/login', 'POST', {...form})
             auth.login(data.token, data.userId)
-            console.log('aut2')
-        } catch (e) {         console.log('autEr')}
+        } catch (e) {}
     }
 
     return(
@@ -50,6 +47,7 @@ export const ForAut = () =>{
         <a href="/Reg" >Регистрация</a>
 
     </p>
+        <a href="/" >Главная</a>
     </form>
     </div>
 )
