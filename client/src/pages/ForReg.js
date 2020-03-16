@@ -37,6 +37,7 @@ export const ForReg = () =>{
 
     </p>
         <a href="/Aut" >Авторизация</a>
+        </p>
         <a href="/" >Главная</a>
     </form>
 
