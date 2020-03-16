@@ -35,8 +35,12 @@ export const ForReg = () =>{
 
         <input type="submit" name="submit" value="регистрация" onClick={registerHandler} disabled={loading} href="/"/>
 
-    </p>
+        </p>
+        <p className="clearfix">
+
         <a href="/Aut" >Авторизация</a>
+
+        </p>
         <a href="/" >Главная</a>
     </form>
 
