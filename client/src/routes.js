@@ -5,33 +5,70 @@ import Redirect from "react-router-dom/es/Redirect";
 import ForAut from "./pages/ForAut";
 import ForReg from "./pages/ForReg";
 import ForTabl from "./pages/ForTabl";
+import ToolNotAut from "./pages/ToolNotAut";
+import ToolAut from "./pages/ToolAut";
+import ToolAdmin from "./pages/ToolAdmin";
 
 export const useRoutes = isAuthenticated => {
-    if (isAuthenticated) {
+    if (isAuthenticated=="NotAut") {
         return (
             <Switch>
-            <Route path="/tabl" exact>
-        <ForTabl/>
+            <Route path="/Aut" exact>
+        <ForAut/>
 
         </Route>
-        <Redirect to="/tabl" />
+        <Route path="/Reg" exact>
+        <ForReg/>
+
+        </Route>
+        <Route path="/" exact>
+        <ToolNotAut/>
+
+        </Route>
+        <Redirect to="/" />
+            </Switch>
+    )
+    }
+
+    if (isAuthenticated=="Adm") {
+        return (
+            <Switch>
+            <Route path="/Aut" exact>
+        <ForAut/>
+
+        </Route>
+        <Route path="/Reg" exact>
+        <ForReg/>
+
+        </Route>
+        <Route path="/" exact>
+        <ToolAdmin/>
+
+        </Route>
+        <Redirect to="/" />
+            </Switch>
+    )
+    }
+
+    if (isAuthenticated=="Aut") {
+        return (
+            <Switch>
+            <Route path="/Aut" exact>
+        <ForAut/>
+
+        </Route>
+        <Route path="/Reg" exact>
+        <ForReg/>
+
+        </Route>
+        <Route path="/" exact>
+        <ToolAut/>
+
+        </Route>
+        <Redirect to="/" />
             </Switch>
     )
     }
 
 
-
-    return (
-        <Switch>
-        <Route path="/" exact>
-    <ForAut/>
-
-    </Route>
-    <Route path="/Reg" exact>
-    <ForReg/>
-
-    </Route>
-    <Redirect to="/" />
-        </Switch>
-)
 }
