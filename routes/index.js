@@ -9,7 +9,6 @@ const router = express.Router();
 
 router.post('/register',
     [
-        check('email', 'Некорректный email').isEmail(),
         check('password', 'Минимальная длина 3')
             .isLength({ min: 3 }),        check('login', 'Минимальная длина 3')
         .isLength({ min: 3 })
@@ -32,7 +31,7 @@ router.post('/register',
                 return	res.status(400).json({message:' Логин занят'})
             }
 
-            const user = new User({login,password,email,datReg:d.toDateString(),datLog:d.toDateString(),stat:'not banned'})
+            const user = new User({login,password,Admin:'not banned'})
 
             await user.save()
 
