@@ -12,7 +12,8 @@ import 'materialize-css'
 
 function App() {
     const {token, login, logout, userId, ready} = useAuth()
-    const isAuthenticated = "NotAut"
+    const isAuthenticated = "Adm"
+    console.log(isAuthenticated)
     const routes = useRoutes(isAuthenticated)
     return(
         <AuthContext.Provider value={{
