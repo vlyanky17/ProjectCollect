@@ -20,6 +20,8 @@ const schema = new Schema({
     bol1: {type: Boolean, required: false},
     bol2: {type: Boolean, required: false},
     bol3: {type: Boolean, required: false},
+    coment: [{ type: Types.ObjectId, ref: 'coment' }],
+    like: [{ type: Types.ObjectId, ref: 'like' }],
     owner: {type: Types.ObjectId, ref: 'User'}
 })
 
