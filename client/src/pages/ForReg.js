@@ -29,8 +29,6 @@ export const ForReg = () =>{
     <label for="password"><i class="icon-lock"></i>Пароль</label>
     <input type="password" id="password" name="password" placeholder="Пароль" class="showpassword"  onChange={changeHandler} />
 
-    <label for="email"><i class="icon-user"></i>email</label>
-    <input type="text" id="email" name="email" placeholder="email " onChange={changeHandler} />
 
 
     <p className="clearfix">
@@ -39,9 +37,9 @@ export const ForReg = () =>{
 
     </p>
         <a href="/Aut" >Авторизация</a>
-
-    </form>
         <a href="/" >Главная</a>
+    </form>
+
     </div>
 )
 
