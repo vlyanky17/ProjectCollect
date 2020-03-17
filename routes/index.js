@@ -31,7 +31,7 @@ router.post('/register',
                 return	res.status(400).json({message:' Логин занят'})
             }
 
-            const user = new User({login,password,Admin:'not admin'})
+            const user = new User({login,password,Admin:'Aut'})
 
             await user.save()
 

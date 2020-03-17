@@ -14,7 +14,7 @@ export const ForReg = () =>{
     const registerHandler = async () => {
         try {
 
-            const data = await request('/api/auth/register', 'POST', {...form})
+            const data = await request('/register', 'POST', {...form})
 
         } catch (e) {}
     }

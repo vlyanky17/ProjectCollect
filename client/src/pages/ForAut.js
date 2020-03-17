@@ -14,13 +14,13 @@ export const ForAut = () =>{
 
     const registerHandler = async () => {
         try {
-            const data = await request('/api/auth/register', 'POST', {...form})
+            const data = await request('/register', 'POST', {...form})
 
         } catch (e) {}
     }
     const loginHandler = async () => {
         try {
-            const data = await request('/api/auth/login', 'POST', {...form})
+            const data = await request('/login', 'POST', {...form})
             auth.login(data.token, data.userId)
         } catch (e) {}
     }
