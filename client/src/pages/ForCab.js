@@ -8,6 +8,9 @@ import 'materialize-css'
 
 export const ForCab = () =>{
 
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+    const us = data.userId
     return( <nav>
         <div className="nav-wrapper" style={{ padding: '0 2rem' }}>
 
