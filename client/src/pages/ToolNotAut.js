@@ -11,7 +11,11 @@ export const ToolNotAut = () =>{
     const history = useHistory()
     const auth = useContext(AuthContext)
     const [users, setUsers] = useState([])
-
+    const logoutHandler = event => {
+        event.preventDefault()
+        auth.logout()
+        history.push('/')
+    }
 
     return(<div>
 
