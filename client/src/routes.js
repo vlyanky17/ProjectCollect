@@ -63,6 +63,9 @@ export const useRoutes = isAuthenticated => {
     <ForAut/>
 
     </Route>
+    <Route path="/Cab" exact>
+    <ForCab/>
+    </Route>
     <Route path="/Reg" exact>
     <ForReg/>
 
