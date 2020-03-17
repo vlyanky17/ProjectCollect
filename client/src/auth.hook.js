@@ -13,7 +13,7 @@ export const useAuth = isAuth => {
     setToken(jwtToken)
     setUserId(id)
     setUserAdm(Adm)
-    setUserAdm(logn)
+    setUserLog(logn)
     localStorage.setItem(storageName, JSON.stringify({
       userId: id, token: jwtToken,Adm:Adm,logn:logn
     }))
@@ -24,6 +24,7 @@ export const useAuth = isAuth => {
     setToken(null)
     setUserId(null)
     setUserAdm(null)
+    setUserLog(null)
     localStorage.removeItem(storageName)
   }, [])
 
@@ -40,6 +41,6 @@ export const useAuth = isAuth => {
 console.log(token)
   console.log(userId)
   console.log(userAdm)
-  return { login, logout, token, userId, ready, userAdm}
+  return { login, logout, token, userId, ready, userAdm,userLog}
 
 }
