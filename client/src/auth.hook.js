@@ -8,14 +8,14 @@ export const useAuth = isAuth => {
   const [ready, setReady] = useState(false)
   const [userId, setUserId] = useState(null)
   const [userAdm, setUserAdm] = useState(null)
-  const login = useCallback((jwtToken, id,Adm,log) => {
+  const [userLog, setUserLog] = useState(null)
+  const login = useCallback((jwtToken, id,Adm,logn) => {
     setToken(jwtToken)
     setUserId(id)
     setUserAdm(Adm)
-    console.log("||||||||||||||||")
-    console.log(log)
+    setUserAdm(logn)
     localStorage.setItem(storageName, JSON.stringify({
-      userId: id, token: jwtToken,Adm:Adm
+      userId: id, token: jwtToken,Adm:Adm,logn:logn
     }))
   }, [])
 
@@ -32,7 +32,7 @@ export const useAuth = isAuth => {
 
     if (data && data.token) {
 
-      login(data.token, data.userId, data.Adm)
+      login(data.token, data.userId, data.Adm, data.logn)
     }
     setReady(true)
   }, [login])
