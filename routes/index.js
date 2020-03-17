@@ -74,7 +74,7 @@ router.post('/login',[check('login','введите логин').exists(),check(
             { expiresIn: '1h' }
         )
         console.log('try6')
-        res.json({token,userId:user.id,userAdm:user.Admin})
+        res.json({userAdm:user.Admin})
         console.log('try7')
 
 
