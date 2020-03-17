@@ -8,7 +8,7 @@ import ForTabl from "./pages/ForTabl";
 import ToolNotAut from "./pages/ToolNotAut";
 import ToolAut from "./pages/ToolAut";
 import ToolAdmin from "./pages/ToolAdmin";
-import Cab from "./pages/Cab";
+import ForCab from "./pages/ForCab";
 
 export const useRoutes = isAuthenticated => {
 
@@ -20,7 +20,7 @@ export const useRoutes = isAuthenticated => {
         <ForAut/>
         </Route>
         <Route path="/Cab" exact>
-        <Cab/>
+        <ForCab/>
         </Route>
         <Route path="/Reg" exact>
         <ForReg/>
@@ -47,7 +47,7 @@ export const useRoutes = isAuthenticated => {
 
         </Route>
         <Route path="/Cab" exact>
-        <Cab/>
+        <ForCab/>
         </Route>
         <Route path="/" exact>
         <ToolAut/>

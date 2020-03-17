@@ -6,7 +6,7 @@ import {useHttp} from "../hooks/http.hook";
 import 'materialize-css'
 
 
-export const Cab = () =>{
+export const ForCab = () =>{
 
     return(<div>
 
@@ -16,4 +16,4 @@ export const Cab = () =>{
 );
 }
 
-export default Cab;
+export default ForCab;
