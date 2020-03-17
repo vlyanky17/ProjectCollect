@@ -14,7 +14,10 @@ function App() {
 
     const {token, login, logout, userId, ready,userAdm} = useAuth()
     const isAuthenticated = userAdm
+    console.log("userAdm")
     console.log(userAdm)
+    console.log("token")
+    console.log(token)
     const routes = useRoutes(isAuthenticated)
     return(
         <AuthContext.Provider value={{
