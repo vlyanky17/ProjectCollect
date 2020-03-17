@@ -28,7 +28,7 @@ console.log(Admin)
     const data = JSON.parse(localStorage.getItem(storageName))
 
     if (data && data.token) {
-      login(data.token, data.userId)
+      login(data.token, data.userId,data.userAdm)
     }
     setReady(true)
   }, [login])
