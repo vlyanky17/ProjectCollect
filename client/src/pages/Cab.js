@@ -8,7 +8,7 @@ import 'materialize-css'
 
 export const Cab = () =>{
 
-    return(кабинет
+    return(
 );
 }
 

@@ -27,7 +27,7 @@ export const ToolNotAut = () =>{
 
     <li><a href="/Aut">Авторизироваться</a></li>
 
-    <li><a href="/Cab">Личный кабинет</a></li>
+    <li><a >Личный кабинет</a></li>
     <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
     </ul>
     </div>
