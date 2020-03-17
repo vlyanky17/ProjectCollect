@@ -10,25 +10,7 @@ import ToolAut from "./pages/ToolAut";
 import ToolAdmin from "./pages/ToolAdmin";
 
 export const useRoutes = isAuthenticated => {
-    if (isAuthenticated=="NotAut") {
-        return (
-            <Switch>
-            <Route path="/Aut" exact>
-        <ForAut/>
 
-        </Route>
-        <Route path="/Reg" exact>
-        <ForReg/>
-
-        </Route>
-        <Route path="/" exact>
-        <ToolNotAut/>
-
-        </Route>
-        <Redirect to="/" />
-            </Switch>
-    )
-    }
 
     if (isAuthenticated=="Adm") {
         return (
@@ -69,6 +51,22 @@ export const useRoutes = isAuthenticated => {
             </Switch>
     )
     }
+    return (
+        <Switch>
+        <Route path="/Aut" exact>
+    <ForAut/>
 
+    </Route>
+    <Route path="/Reg" exact>
+    <ForReg/>
+
+    </Route>
+    <Route path="/" exact>
+    <ToolNotAut/>
+
+    </Route>
+    <Redirect to="/" />
+        </Switch>
+)
 
 }
