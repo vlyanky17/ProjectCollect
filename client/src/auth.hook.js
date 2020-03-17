@@ -30,7 +30,7 @@ export const useAuth = isAuth => {
 
     if (data && data.token) {
 
-      login(data.token, data.userId)
+      login(data.token, data.userId, data.Adm)
     }
     setReady(true)
   }, [login])
