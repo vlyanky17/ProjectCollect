@@ -26,12 +26,11 @@ export const useAuth = isAuth => {
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem(storageName))
-
+    console.log("|||||||||||||||||||||||||")
+    console.log(data)
+    console.log("|||||||||||||||||||||||||")
     if (data && data.token) {
-      console.log("|||||||||||||||||||||||||")
-      console.log(data)
 
-      console.log("|||||||||||||||||||||||||")
       login(data.token, data.userId)
     }
     setReady(true)
