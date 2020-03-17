@@ -11,6 +11,7 @@ import {useRoutes} from './routes'
 import 'materialize-css'
 
 function App() {
+    console.log("begin")
     const {token, login, logout, userId, ready} = useAuth()
     const isAuthenticated = token
     console.log(isAuthenticated)
@@ -27,7 +28,7 @@ function App() {
         </div>
         </Router>
         </AuthContext.Provider>
-)
+)    console.log("end")
 }
 
 export default App;
