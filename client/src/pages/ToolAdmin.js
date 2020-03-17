@@ -6,7 +6,15 @@ import Tabl from "../pages/Tabl";
 import 'materialize-css'
 
 export const ToolAdmin = () =>{
-
+    const {loading, error,request} = useHttp()
+    const history = useHistory()
+    const auth = useContext(AuthContext)
+    const [users, setUsers] = useState([])
+    const logoutHandler = event => {
+        event.preventDefault()
+        auth.logout()
+        history.push('/')
+    }
 
     return(<div>
 
@@ -21,6 +29,7 @@ export const ToolAdmin = () =>{
     <li><a >Личный кабинет</a></li>
 
     <li><a >Администрирование </a></li>
+    <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
     </ul>
     </div>
     </nav>

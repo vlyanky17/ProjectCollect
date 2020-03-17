@@ -7,15 +7,7 @@ import 'materialize-css'
 
 
 export const ToolNotAut = () =>{
-    const {loading, error,request} = useHttp()
-    const history = useHistory()
-    const auth = useContext(AuthContext)
-    const [users, setUsers] = useState([])
-    const logoutHandler = event => {
-        event.preventDefault()
-        auth.logout()
-        history.push('/')
-    }
+
 
     return(<div>
 
@@ -26,7 +18,7 @@ export const ToolNotAut = () =>{
         <li><a href="/Reg">Зарегистрироваться</a></li>
 
     <li><a href="/Aut">Авторизироваться</a></li>
-    <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
+
 
     </ul>
     </div>
