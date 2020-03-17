@@ -28,9 +28,11 @@ export const useAuth = isAuth => {
     const data = JSON.parse(localStorage.getItem(storageName))
 
     if (data && data.token) {
+      console.log("|||||||||||||||||||||||||")
       console.log(data)
       console.log(data.userAdm)
-      login(data.token, data.userId,)
+      console.log("|||||||||||||||||||||||||")
+      login(data.token, data.userId)
     }
     setReady(true)
   }, [login])
