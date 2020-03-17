@@ -22,7 +22,7 @@ export const ForAut = () =>{
         try {
             const data = await request('/login', 'POST', {...form})
             auth.login(data.token, data.userId,data.userAdm,data.userlogin)
-if (data) {console.log("true")}
+if (data) {href="/"}
         } catch (e) {}
     }
 
