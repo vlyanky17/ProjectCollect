@@ -28,7 +28,7 @@ function App() {
         </div>
         </Router>
         </AuthContext.Provider>
-)    console.log("end")
+)
 }
 
 export default App;
