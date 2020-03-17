@@ -69,7 +69,7 @@ router.post('/login',[check('login','введите логин').exists(),check(
         await user.update({datLog:d.toDateString()})
         console.log('try5')
         const token = jwt.sign(
-            { userId: user.id },
+            { userId: user.id,userAdm:user.Admin },
             config.get('jwtSek'),
             { expiresIn: '1h' }
         )

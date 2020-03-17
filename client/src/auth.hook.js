@@ -30,7 +30,7 @@ export const useAuth = isAuth => {
     if (data && data.token) {
       console.log("|||||||||||||||||||||||||")
       console.log(data)
-      console.log(data.userAdm)
+
       console.log("|||||||||||||||||||||||||")
       login(data.token, data.userId)
     }
