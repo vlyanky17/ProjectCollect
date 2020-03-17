@@ -7,11 +7,11 @@ import 'materialize-css'
 
 
 export const ToolNotAut = () =>{
-    const logoutHandler = event => {
-        event.preventDefault()
-        auth.logout()
-        history.push('/')
-    }
+    const {loading, error,request} = useHttp()
+    const history = useHistory()
+    const auth = useContext(AuthContext)
+    const [users, setUsers] = useState([])
+
 
     return(<div>
 
