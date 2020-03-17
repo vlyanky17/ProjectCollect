@@ -8,11 +8,15 @@ import 'materialize-css'
 
 export const ForCab = () =>{
 
-    return(<div>
+    return( <nav>
+        <div className="nav-wrapper" style={{ padding: '0 2rem' }}>
 
-      кабинет
+<ul id="nav-mobile" className="right hide-on-med-and-down">
 
+    <li><a >Добро пожаловать</a></li>
+    </ul>
     </div>
+    </nav>
 );
 }
 
