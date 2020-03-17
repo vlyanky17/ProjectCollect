@@ -35,7 +35,9 @@ export const useAuth = isAuth => {
     setReady(true)
   }, [login])
 
-
+console.log(token)
+  console.log(userId)
+  console.log(userAdm)
   return { login, logout, token, userId, ready, userAdm}
 
 }
