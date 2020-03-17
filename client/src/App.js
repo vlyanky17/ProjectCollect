@@ -11,10 +11,10 @@ import {useRoutes} from './routes'
 import 'materialize-css'
 
 function App() {
-    console.log("begin")
+
     const {token, login, logout, userId, ready,userAdm} = useAuth()
     const isAuthenticated = userAdm
-    console.log(isAuthenticated)
+    console.log(userAdm)
     const routes = useRoutes(isAuthenticated)
     return(
         <AuthContext.Provider value={{
