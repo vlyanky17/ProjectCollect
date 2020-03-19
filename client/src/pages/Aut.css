@@ -187,3 +187,7 @@
 .form-2 .reg:active{
     top: 1px;
 }
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
