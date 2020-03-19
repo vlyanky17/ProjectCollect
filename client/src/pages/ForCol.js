@@ -36,7 +36,7 @@ class ForCol extends React.Component {
         const changeHandler = event => {
             this.setState({...form,[event.target.name]: event.target.value})
             console.log("111111")
-            console.log(form)}
+            console.log( event.target.value)}
         return (
             <div className="App">
             <nav>
