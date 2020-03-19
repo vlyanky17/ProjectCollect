@@ -69,14 +69,14 @@ class ForCol extends React.Component {
         <option value="Marks" id="Marks">Marks </option>
 
             </select>
-
+            <label for="tem"><i class="icon-user"></i>Необязательные поля</label>
             <hr class="hr-shelf"/>
             <Dropzone  onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}} onChange={changeHandler}
     >
         {({ getRootProps, getInputProps }) => (
             <div {...getRootProps()} className="">
             <input {...getInputProps()} />
-        <div style={{ height: 100,weight: 100, backgroundColor: "DarkKhaki" }}>
+        <div style={{ height: 100,weight: 100, backgroundColor: "PeachPuff" }}>
           картинка
             {dropzone1.map(file => (
                 <img
