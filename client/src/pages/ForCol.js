@@ -45,6 +45,11 @@ class ForCol extends React.Component {
         </ul>
         </div>
         </nav>
+        <form class="form-2">
+            <label for="name"><i class="icon-user"></i>название</label>
+        <input type="text" id="email" name="name" placeholder="название " onChange={changeHandler} />
+        <label for="ops"><i class="icon-user"></i>название</label>
+        <input type="text" id="ops" name="ops" placeholder="описание " onChange={changeHandler} />
 
             <Dropzone onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}}
     >
@@ -57,7 +62,7 @@ class ForCol extends React.Component {
                 <img
                 src={file.preview}
                 alt={file.path}
-                style={{ width: 400, height: 400 }}
+                style={{ width: 100, height: 100 }}
                 />
             ))}
         </div>
@@ -65,7 +70,7 @@ class ForCol extends React.Component {
         )}
     </Dropzone>
 
-
+        </form>
         </div>
     );
     }
