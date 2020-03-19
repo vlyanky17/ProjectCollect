@@ -70,7 +70,8 @@ class ForCol extends React.Component {
 
             </select>
 
-
+            <hr class="hr-shelf">
+            
             <Dropzone  onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}} onChange={changeHandler}
     >
         {({ getRootProps, getInputProps }) => (
