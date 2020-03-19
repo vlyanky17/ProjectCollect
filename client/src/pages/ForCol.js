@@ -61,6 +61,7 @@ class ForCol extends React.Component {
 
         <label for="ops"><i class="icon-user"></i>описание</label>
         <input type="text" id="ops" name="ops" placeholder="описание " onChange={changeHandler} />
+        <label for="tem"><i class="icon-user"></i>Тема</label>
         <select class="select-css" name="tem" id="tem" onChange={changeHandler}>
             <option value=""></option>
             <option value="Alcohol" id="Alcohol">Alcohol </option>
