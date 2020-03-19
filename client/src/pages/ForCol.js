@@ -12,7 +12,7 @@ import {useCallback, useContext, useEffect, useState} from 'react'
 class ForCol extends React.Component {
     constructor(props) {
         super(props);
-        const [form, setForm] = useState( {login:'', password:''})
+
         this.state = {
             dropzone1: [],
             dropzone2: []
