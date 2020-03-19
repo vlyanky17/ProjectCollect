@@ -3,7 +3,7 @@ import {NavLink, useHistory} from 'react-router-dom'
 import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import ReactDOM from "react-dom";
-
+import Dropzone from "react-dropzone";
 
 import 'materialize-css'
 
