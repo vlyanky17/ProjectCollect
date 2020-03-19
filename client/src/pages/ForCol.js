@@ -40,13 +40,13 @@ class ForCol extends React.Component {
         {({ getRootProps, getInputProps }) => (
             <div {...getRootProps()} className="">
             <input {...getInputProps()} />
-        <div style={{ height: 100,weight: 100, backgroundColor: "white" }}>
+        <div style={{ height: 100,weight: 100, backgroundColor: "blue" }}>
           картинка
             {dropzone1.map(file => (
                 <img
                 src={file.preview}
                 alt={file.path}
-                style={{ width: 40, height: 40 }}
+                style={{ width: 400, height: 400 }}
                 />
             ))}
         </div>
