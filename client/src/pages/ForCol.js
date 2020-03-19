@@ -15,7 +15,8 @@ class ForCol extends React.Component {
 
         this.state = {
             dropzone1: [],
-            dropzone2: []
+            dropzone2: [],
+            form: {login:'', password:''}
         };
     }
 
