@@ -29,6 +29,7 @@
     "mongoose": "^5.9.4",
     "pretty-checkbox": "^3.0.3",
     "prop-types": "^15.7.2",
+    "react-dropzone": "^10.2.1",
     "react-input-checkbox": "^0.1.6",
     "react-router-dom": "^5.1.2",
     "usestate": "^1.1.3"
