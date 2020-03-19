@@ -17,7 +17,7 @@ export const ForCab = () =>{
 <ul id="nav-mobile" className="right hide-on-med-and-down">
 
     <li><a >Добро пожаловать {us}</a></li>
-    <li><a >Создать коллекцию</a></li>
+    <li><a  href="/Col">Создать коллекцию</a></li>
     <li><a href="/">Главная </a></li>
     </ul>
     </div>
