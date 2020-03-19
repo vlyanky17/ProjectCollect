@@ -3,6 +3,7 @@ import {NavLink, useHistory} from 'react-router-dom'
 import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
+import './select-css.css';
 import 'materialize-css'
 import ReactDOM from "react-dom";
 import Dropzone from "react-dropzone";
@@ -36,7 +37,7 @@ class ForCol extends React.Component {
     }
 
     render() {
-        const { dropzone1, nam ,ops} = this.state;
+        const { dropzone1, nam ,ops,tem} = this.state;
         const changeHandler = event => {
             this.setState({[event.target.name]: event.target.value})
             console.log("111111")
@@ -60,7 +61,7 @@ class ForCol extends React.Component {
 
         <label for="ops"><i class="icon-user"></i>описание</label>
         <input type="text" id="ops" name="ops" placeholder="описание " onChange={changeHandler} />
-        <select name="tem" id="tem">
+        <select class="select-css" name="tem" id="tem" onChange={changeHandler}>
             <option value=""></option>
             <option value="Alcohol" id="Alcohol">Alcohol </option>
         <option value="Books" id="Books">Books </option>
