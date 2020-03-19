@@ -5,7 +5,7 @@ import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
 import ReactDOM from "react-dom";
-import fr from "react-dropzone";
+import Dropzone from "react-dropzone";
 
 
 
