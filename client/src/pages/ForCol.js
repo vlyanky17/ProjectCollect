@@ -31,10 +31,7 @@ class ForCol extends React.Component {
     }
 
     render() {
-
         const { dropzone1, dropzone2 } = this.state;
-        const [form, setForm] = useState( {login:'', password:''})
-
         
         return (
             <div className="App">
