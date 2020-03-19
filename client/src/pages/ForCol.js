@@ -35,7 +35,7 @@ class ForCol extends React.Component {
         return (
             <div className="App">
             <nav>
-            <div className="nav-wrapper" style={{ padding: '0 2rem' }}>
+            <div className="nav-wrapper" style={{ padding: '0 ' }}>
 
     <ul id="nav-mobile" className="right hide-on-med-and-down">
 
