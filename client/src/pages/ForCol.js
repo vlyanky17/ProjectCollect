@@ -34,14 +34,14 @@ class ForCol extends React.Component {
         const { dropzone1, dropzone2 } = this.state;
         return (
             <div className="App">
-      
+
             <Dropzone onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}}
     >
         {({ getRootProps, getInputProps }) => (
             <div {...getRootProps()} className="">
             <input {...getInputProps()} />
-        <div style={{ height: 100, backgroundColor: "yellow" }}>
-            Drop some files here
+        <div style={{ height: 100,weight: 100, backgroundColor: "white" }}>
+          картинка
             {dropzone1.map(file => (
                 <img
                 src={file.preview}
