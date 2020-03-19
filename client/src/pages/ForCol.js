@@ -15,7 +15,6 @@ class ForCol extends React.Component {
 
         this.state = {
             dropzone1: [],
-            dropzone2: [],
             form: {name:'', ops:'',dropzone1:[]}
         };
     }
@@ -36,9 +35,9 @@ class ForCol extends React.Component {
     render() {
         const { dropzone1, dropzone2 ,form} = this.state;
         const changeHandler = event => {
-            this.setState({...form,[event.target.name]: event.target.value})
+            this.setState({[event.target.name]: event.target.value})
             console.log("111111")
-            console.log( event.target.value)}
+            console.log(this.state)}
         return (
             <div className="App">
             <nav>
