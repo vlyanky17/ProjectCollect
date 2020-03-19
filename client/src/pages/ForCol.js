@@ -49,7 +49,11 @@ class ForCol extends React.Component {
         </div>
         </nav>
         <form class="form-2">
+            <label for="name"><i class="icon-user"></i>name</label>
+        <input type="text" id="name" name="name" placeholder="name " onChange={changeHandler} />
 
+        <label for="email"><i class="icon-user"></i>email</label>
+        <input type="text" id="email" name="email" placeholder="email " onChange={changeHandler} />
 
 
             <Dropzone onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}}
