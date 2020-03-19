@@ -29,6 +29,8 @@ class ForCol extends React.Component {
 
         const new_files = [...this.state[dropzone], ...files_with_preview];
         this.setState({ [dropzone]: new_files });
+        console.log(new_files)
+        console.log(files)
     }
 
     render() {
