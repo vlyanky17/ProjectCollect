@@ -4,24 +4,35 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
+import ReactDOM from "react-dom";
+class ForCol extends React.Component {
+    constructor(props) {
+        super(props);
 
-export const ForCol = () =>{
+        this.state = {
+            dropzone1: [],
+            dropzone2: []
+        };
+    }
 
+    addFilesToDropzone(files, dropzone) {
+        let files_with_preview = [];
+        files.map(file => {
+            file["preview"] = URL.createObjectURL(file);
+            files_with_preview.push(file);
+        });
 
-    return(  <div>
-        <nav>
-        <div className="nav-wrapper" style={{ padding: '0 2rem' }}>
+        const new_files = [...this.state[dropzone], ...files_with_preview];
+        this.setState({ [dropzone]: new_files });
+    }
 
-<ul id="nav-mobile" className="right hide-on-med-and-down">
-
-
-        <li><a  href="/Cab" >назад</a></li>
-    <li><a href="/">Главная </a></li>
-    </ul>
-    </div>
-    </nav>
-
+    render() {
+        const { dropzone1, dropzone2 } = this.state;
+        return (
+            <div className="App">
+          11111111
         </div>
-);
+    );
+    }
 }
 export default ForCol;
