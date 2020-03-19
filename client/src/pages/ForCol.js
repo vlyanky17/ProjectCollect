@@ -70,6 +70,7 @@ class ForCol extends React.Component {
             </select>
             <p className="clearfix">
             <label for=""><i class="icon-user"></i>Необязательные поля</label>
+        Необязательные поля
             <hr class="hr-shelf"/>
             </p>
             <Dropzone  onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}} onChange={changeHandler}
