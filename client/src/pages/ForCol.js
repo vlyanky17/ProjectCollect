@@ -34,9 +34,7 @@ class ForCol extends React.Component {
         const { dropzone1, dropzone2 } = this.state;
         return (
             <div className="App">
-            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-
-            </input>
+      
             <Dropzone onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}}
     >
         {({ getRootProps, getInputProps }) => (
