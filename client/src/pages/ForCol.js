@@ -6,9 +6,7 @@ import './Aut.css';
 import 'materialize-css'
 import ReactDOM from "react-dom";
 import Dropzone from "react-dropzone";
-import React, {useState} from 'react';
-import './Aut.css';
-import {useHttp} from "../hooks/http.hook";
+
 
 
 class ForCol extends React.Component {
@@ -33,7 +31,6 @@ class ForCol extends React.Component {
     }
 
     render() {
-
         const { dropzone1, dropzone2 } = this.state;
         return (
             <div className="App">
