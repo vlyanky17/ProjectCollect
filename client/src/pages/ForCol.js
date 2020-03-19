@@ -4,6 +4,8 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
+import ReactDOM from "react-dom";
+import fr from "react-dropzone";
 
 export const ForCol = () =>{
 
