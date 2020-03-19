@@ -32,7 +32,7 @@ class ForCol extends React.Component {
 
     render() {
         const { dropzone1, dropzone2 } = this.state;
-        const [token, setToken] = useState(null)
+        const [ready, setReady] = useState(false);
         return (
             <div className="App">
             <nav>
