@@ -35,8 +35,7 @@ class ForCol extends React.Component {
         const { dropzone1, dropzone2 } = this.state;
         const [form, setForm] = useState( {login:'', password:''})
 
-        const changeHandler = event => {
-            setForm({...form,[event.target.name]: event.target.value})}
+        
         return (
             <div className="App">
             <nav>
@@ -51,7 +50,8 @@ class ForCol extends React.Component {
         </div>
         </nav>
         <form class="form-2">
-         
+
+
 
             <Dropzone onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}}
     >
