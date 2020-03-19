@@ -4,7 +4,7 @@ const schema = new Schema({
     name: {type: String, required: true},
     disk: {type: String, required: true},
     tem: {type: String, required: true},
-    pict: {type: String, required: false},
+    pict: {type: Object, required: false},
     intgr1: {type: String, required: false},
     intgr2: {type: String, required: false},
     intgr3: {type: String, required: false},
