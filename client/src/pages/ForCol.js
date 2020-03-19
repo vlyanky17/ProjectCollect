@@ -30,7 +30,54 @@ class ForCol extends React.Component {
         const { dropzone1, dropzone2 } = this.state;
         return (
             <div className="App">
-          11111111
+            <Dropzone
+        onDrop={files => {
+            this.addFilesToDropzone(files, "dropzone1");
+        }}
+    >
+        {({ getRootProps, getInputProps }) => (
+            <div {...getRootProps()} className="">
+            <input {...getInputProps()} />
+        <div style={{ height: 100, backgroundColor: "yellow" }}>
+            Drop some files here
+            {dropzone1.map(file => (
+                <img
+                src={file.preview}
+                alt={file.path}
+                style={{ width: 40, height: 40 }}
+                />
+            ))}
+        </div>
+        </div>
+        )}
+    </Dropzone>
+
+        <div style={{ display: "flex", flexDirection: "row", marginTop: 25 }}>
+    <div style={{ width: "100%" }}>
+        DROPZONE 2
+        <Dropzone
+        onDrop={files => {
+            this.addFilesToDropzone(files, "dropzone2");
+        }}
+    >
+        {({ getRootProps, getInputProps }) => (
+            <div {...getRootProps()} className="">
+            <input {...getInputProps()} />
+        <div style={{ height: 100, backgroundColor: "yellow" }}>
+            Drop some files here
+            {dropzone2.map(file => (
+                <img
+                src={file.preview}
+                alt="dsds"
+                style={{ width: 40, height: 40 }}
+                />
+            ))}
+        </div>
+        </div>
+        )}
+    </Dropzone>
+        </div>
+        </div>
         </div>
     );
     }
