@@ -67,10 +67,11 @@ class ForCol extends React.Component {
             <option value="Alcohol" id="Alcohol">Alcohol </option>
         <option value="Books" id="Books">Books </option>
         <option value="Marks" id="Marks">Marks </option>
-
             </select>
-            <label for="hr-shelf"><i class="icon-user"></i>Необязательные поля</label>
+            <p className="clearfix">
+            <label for=""><i class="icon-user"></i>Необязательные поля</label>
             <hr class="hr-shelf"/>
+            </p>
             <Dropzone  onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}} onChange={changeHandler}
     >
         {({ getRootProps, getInputProps }) => (
