@@ -15,7 +15,9 @@ class ForCol extends React.Component {
 
         this.state = {
             dropzone1: [],
-            form: {name:'', ops:'',dropzone1:[]}
+            nam:'',
+            ops:'',
+
         };
     }
 
@@ -33,7 +35,7 @@ class ForCol extends React.Component {
     }
 
     render() {
-        const { dropzone1, dropzone2 ,form} = this.state;
+        const { dropzone1, nam ,ops} = this.state;
         const changeHandler = event => {
             this.setState({[event.target.name]: event.target.value})
             console.log("111111")
@@ -52,8 +54,8 @@ class ForCol extends React.Component {
         </div>
         </nav>
         <form class="form-2">
-            <label for="name"><i class="icon-user"></i>название</label>
-        <input type="text" id="name" name="name" placeholder="название " onChange={changeHandler} />
+            <label for="nam"><i class="icon-user"></i>название</label>
+        <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler} />
 
         <label for="ops"><i class="icon-user"></i>описание</label>
         <input type="text" id="ops" name="ops" placeholder="описание " onChange={changeHandler} />
