@@ -19,7 +19,21 @@ class ForCol extends React.Component {
             nam:'',
             ops:'',
             tem:'',
-
+            intgr1:'',
+            intgr2:'',
+            intgr3:'',
+            Cstr1:'',
+            Cstr2:'',
+            Cstr3:'',
+            Cdate1:'',
+            Cdate2:'',
+            Cdate3:'',
+            Ctxt1:'',
+            Ctxt2:'',
+            Ctxt3:'',
+            Cbol1:'',
+            Cbol2:'',
+            Cbol3:'',
         };
     }
 
@@ -37,7 +51,7 @@ class ForCol extends React.Component {
     }
 
     render() {
-        const { dropzone1, nam ,ops,tem} = this.state;
+        const { dropzone1, nam ,ops,tem,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = this.state;
         const changeHandler = event => {
             this.setState({[event.target.name]: event.target.value})
             console.log("111111")
@@ -70,7 +84,7 @@ class ForCol extends React.Component {
             </select>
             <p className="clearfix">
             <label for=""><i class="icon-user"></i>Необязательные поля</label>
-        Необязательные поля
+
             <hr class="hr-shelf"/>
             </p>
             <Dropzone  onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}} onChange={changeHandler}
@@ -91,6 +105,45 @@ class ForCol extends React.Component {
         </div>
         )}
     </Dropzone>
+        <label for="intgr1"><i class="icon-user"></i>описание</label>
+        <input type="text" id="intgr1" name="intgr1" placeholder="описание " onChange={changeHandler} />
+        <label for="intgr2"><i class="icon-user"></i>описание</label>
+        <input type="text" id="intgr2" name="intgr2" placeholder="описание " onChange={changeHandler} />
+        <label for="intgr3"><i class="icon-user"></i>описание</label>
+        <input type="text" id="intgr3" name="intgr3" placeholder="описание " onChange={changeHandler} />
+
+
+        <label for="Cstr1"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cstr1" name="Cstr1" placeholder="описание " onChange={changeHandler} />
+        <label for="Cstr2"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cstr2" name="Cstr2" placeholder="описание " onChange={changeHandler} />
+        <label for="Cstr3"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cstr3" name="Cstr3" placeholder="описание " onChange={changeHandler} />
+
+
+        <label for="Cdate1"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cdate1" name="Cdate1" placeholder="описание " onChange={changeHandler} />
+        <label for="Cdate2"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cdate2" name="Cdate2" placeholder="описание " onChange={changeHandler} />
+        <label for="Cdate3"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cdate3" name="Cdate3" placeholder="описание " onChange={changeHandler} />
+
+
+        <label for="Ctxt1"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Ctxt1" name="Ctxt1" placeholder="описание " onChange={changeHandler} />
+        <label for="Ctxt2"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Ctxt2" name="Ctxt2" placeholder="описание " onChange={changeHandler} />
+        <label for="Ctxt3"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Ctxt3" name="Ctxt3" placeholder="описание " onChange={changeHandler} />
+
+
+
+        <label for="Cbol1"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cbol1" name="Cbol1" placeholder="описание " onChange={changeHandler} />
+        <label for="Cbol2"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cbol2" name="Cbol2" placeholder="описание " onChange={changeHandler} />
+        <label for="Cbol3"><i class="icon-user"></i>описание</label>
+        <input type="text" id="Cbol3" name="Cbol3" placeholder="описание " onChange={changeHandler} />
 
         </form>
         </div>
