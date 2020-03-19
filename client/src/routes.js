@@ -9,6 +9,7 @@ import ToolNotAut from "./pages/ToolNotAut";
 import ToolAut from "./pages/ToolAut";
 import ToolAdmin from "./pages/ToolAdmin";
 import ForCab from "./pages/ForCab";
+import ForCol from "./pages/ForCol";
 
 export const useRoutes = isAuthenticated => {
 
@@ -16,16 +17,15 @@ export const useRoutes = isAuthenticated => {
     if (isAuthenticated=="Adm") {
         return (
             <Switch>
-            <Route path="/Aut" exact>
-        <ForAut/>
+
+            <Route path="/Col" exact>
+        <ForCol/>
         </Route>
+
         <Route path="/Cab" exact>
         <ForCab/>
         </Route>
-        <Route path="/Reg" exact>
-        <ForReg/>
 
-        </Route>
         <Route path="/" exact>
         <ToolAdmin/>
 
@@ -38,14 +38,10 @@ export const useRoutes = isAuthenticated => {
     if (isAuthenticated=="Aut") {
         return (
             <Switch>
-            <Route path="/Aut" exact>
-        <ForAut/>
-
+            <Route path="/Col" exact>
+        <ForCol/>
         </Route>
-        <Route path="/Reg" exact>
-        <ForReg/>
 
-        </Route>
         <Route path="/Cab" exact>
         <ForCab/>
         </Route>
@@ -65,6 +61,9 @@ export const useRoutes = isAuthenticated => {
     </Route>
     <Route path="/Cab" exact>
     <ForCab/>
+    </Route>
+    <Route path="/Col" exact>
+    <ForCol/>
     </Route>
     <Route path="/Reg" exact>
     <ForReg/>

@@ -22,9 +22,6 @@ export const ToolAdmin = () =>{
         <div className="nav-wrapper" style={{ padding: '0 2rem' }}>
 
 <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a href="/Reg">Зарегистрироваться</a></li>
-
-    <li><a href="/Aut">Авторизироваться</a></li>
 
     <li><a href="/Cab">Личный кабинет</a></li>
 
