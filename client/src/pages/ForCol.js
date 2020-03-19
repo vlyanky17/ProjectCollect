@@ -66,7 +66,7 @@ class ForCol extends React.Component {
         {({ getRootProps, getInputProps }) => (
             <div {...getRootProps()} className="">
             <input {...getInputProps()} />
-        <div style={{ height: 100,weight: 100, backgroundColor: "Azure" }}>
+        <div style={{ height: 100,weight: 100, backgroundColor: "DarkKhaki" }}>
           картинка
             {dropzone1.map(file => (
                 <img
