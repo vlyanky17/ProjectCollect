@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react'
+import React from 'react'
 import {NavLink, useHistory} from 'react-router-dom'
 import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
@@ -6,7 +6,7 @@ import './Aut.css';
 import 'materialize-css'
 import ReactDOM from "react-dom";
 import Dropzone from "react-dropzone";
-
+import {useCallback, useContext, useEffect, useState} from 'react'
 
 
 class ForCol extends React.Component {
