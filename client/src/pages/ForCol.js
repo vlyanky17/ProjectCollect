@@ -57,6 +57,14 @@ class ForCol extends React.Component {
             console.log("111111")
             console.log(this.state)}
         const {loading, error,request} = useHttp()
+
+        const addCol = async () => {
+            try {
+
+                const data = await request('/adcol', 'POST', {nam})
+
+            } catch (e) {}
+        }
         return (
             <div className="App">
             <nav>
