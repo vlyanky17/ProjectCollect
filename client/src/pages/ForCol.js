@@ -51,12 +51,13 @@ class ForCol extends React.Component {
     }
 
     render() {
+        const {loading, error,request} = useHttp()
         const { dropzone1, nam ,ops,tem,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = this.state;
         const changeHandler = event => {
             this.setState({[event.target.name]: event.target.value})
             console.log("111111")
             console.log(this.state)}
-     
+
         return (
             <div className="App">
             <nav>
