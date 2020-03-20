@@ -61,7 +61,7 @@ class ForCol extends React.Component {
         const addCol = async () => {
             try {
 
-                const data = await request('/adcol', 'POST', {nam})
+                const data = await request('/adcol', 'POST', this.state)
 
             } catch (e) {}
         }
