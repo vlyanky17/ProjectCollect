@@ -57,10 +57,18 @@ class ForCol extends React.Component {
             this.setState({[event.target.name]: event.target.value})
             console.log("111111")
             console.log(this.state)}
-        const registerHandler = async () => {
+        const addCol = async () => {
             try {
 
               console.log("tryToReq")
+
+const  headers = {}
+                const body   = JSON.stringify(this.state)
+                    headers['Content-Type'] = 'application/json'
+const url = '/adcol'
+const method= 'POST'
+
+                const response = await fetch(url, {method, body, headers})
 
             } catch (e) {}
         }
