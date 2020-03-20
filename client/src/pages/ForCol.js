@@ -171,7 +171,8 @@ const method= 'POST'
 
         <p className="clearfix">
 
-            <input type="submit" name="submit" value="добавить" onClick={addCol}/>
+            <button onClick={addCol}>добавить</button>
+
 
             </p>
         </form>
