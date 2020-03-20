@@ -160,7 +160,8 @@ class ForCol extends React.Component {
 
         <p className="clearfix">
 
-            <button onClick={addCol}>добавить</button>
+        <input type="text" id="Cbol3" name="Cbol3" placeholder="тест  " onChange={addCol} />
+
 
 
             </p>
