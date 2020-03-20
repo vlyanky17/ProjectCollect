@@ -105,45 +105,45 @@ class ForCol extends React.Component {
         </div>
         )}
     </Dropzone>
-        <label for="intgr1"><i class="icon-user"></i>описание</label>
-        <input type="text" id="intgr1" name="intgr1" placeholder="описание " onChange={changeHandler} />
-        <label for="intgr2"><i class="icon-user"></i>описание</label>
-        <input type="text" id="intgr2" name="intgr2" placeholder="описание " onChange={changeHandler} />
-        <label for="intgr3"><i class="icon-user"></i>описание</label>
-        <input type="text" id="intgr3" name="intgr3" placeholder="описание " onChange={changeHandler} />
+        <label for="intgr1"><i class="icon-user"></i>первое числовое поле</label>
+        <input type="text" id="intgr1" name="intgr1" placeholder="название числового поля " onChange={changeHandler} />
+        <label for="intgr2"><i class="icon-user"></i>второе числовое поле</label>
+        <input type="text" id="intgr2" name="intgr2" placeholder="название числового поля " onChange={changeHandler} />
+        <label for="intgr3"><i class="icon-user"></i>третье числовое поле</label>
+        <input type="text" id="intgr3" name="intgr3" placeholder="название числового поля " onChange={changeHandler} />
 
 
-        <label for="Cstr1"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cstr1" name="Cstr1" placeholder="описание " onChange={changeHandler} />
-        <label for="Cstr2"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cstr2" name="Cstr2" placeholder="описание " onChange={changeHandler} />
-        <label for="Cstr3"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cstr3" name="Cstr3" placeholder="описание " onChange={changeHandler} />
+        <label for="Cstr1"><i class="icon-user"></i>первое строковое поле</label>
+        <input type="text" id="Cstr1" name="Cstr1" placeholder="название строкового поля " onChange={changeHandler} />
+        <label for="Cstr2"><i class="icon-user"></i>второе строковое поле</label>
+        <input type="text" id="Cstr2" name="Cstr2" placeholder="название строкового поля " onChange={changeHandler} />
+        <label for="Cstr3"><i class="icon-user"></i>третье строковое поле</label>
+        <input type="text" id="Cstr3" name="Cstr3" placeholder="название строкового поля " onChange={changeHandler} />
 
 
-        <label for="Cdate1"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cdate1" name="Cdate1" placeholder="описание " onChange={changeHandler} />
-        <label for="Cdate2"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cdate2" name="Cdate2" placeholder="описание " onChange={changeHandler} />
-        <label for="Cdate3"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cdate3" name="Cdate3" placeholder="описание " onChange={changeHandler} />
+        <label for="Cdate1"><i class="icon-user"></i>первое  поле даты</label>
+        <input type="text" id="Cdate1" name="Cdate1" placeholder="название поля даты " onChange={changeHandler} />
+        <label for="Cdate2"><i class="icon-user"></i>второе  поле даты</label>
+        <input type="text" id="Cdate2" name="Cdate2" placeholder="название поля даты  " onChange={changeHandler} />
+        <label for="Cdate3"><i class="icon-user"></i>третье  поле даты</label>
+        <input type="text" id="Cdate3" name="Cdate3" placeholder="название поля даты  " onChange={changeHandler} />
 
 
-        <label for="Ctxt1"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Ctxt1" name="Ctxt1" placeholder="описание " onChange={changeHandler} />
-        <label for="Ctxt2"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Ctxt2" name="Ctxt2" placeholder="описание " onChange={changeHandler} />
-        <label for="Ctxt3"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Ctxt3" name="Ctxt3" placeholder="описание " onChange={changeHandler} />
+        <label for="Ctxt1"><i class="icon-user"></i>первое текстовое поле</label>
+        <input type="text" id="Ctxt1" name="Ctxt1" placeholder="название текстового поля " onChange={changeHandler} />
+        <label for="Ctxt2"><i class="icon-user"></i>второе текстовое поле</label>
+        <input type="text" id="Ctxt2" name="Ctxt2" placeholder="название текстового поля " onChange={changeHandler} />
+        <label for="Ctxt3"><i class="icon-user"></i>третье текстовое поле</label>
+        <input type="text" id="Ctxt3" name="Ctxt3" placeholder="название текстового поля " onChange={changeHandler} />
 
 
 
-        <label for="Cbol1"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cbol1" name="Cbol1" placeholder="описание " onChange={changeHandler} />
-        <label for="Cbol2"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cbol2" name="Cbol2" placeholder="описание " onChange={changeHandler} />
-        <label for="Cbol3"><i class="icon-user"></i>описание</label>
-        <input type="text" id="Cbol3" name="Cbol3" placeholder="описание " onChange={changeHandler} />
+        <label for="Cbol1"><i class="icon-user"></i>первое логическое поле</label>
+        <input type="text" id="Cbol1" name="Cbol1" placeholder="название логического поля " onChange={changeHandler} />
+        <label for="Cbol2"><i class="icon-user"></i>второе логическое поле</label>
+        <input type="text" id="Cbol2" name="Cbol2" placeholder="название логического поля  " onChange={changeHandler} />
+        <label for="Cbol3"><i class="icon-user"></i>третье логическое поле</label>
+        <input type="text" id="Cbol3" name="Cbol3" placeholder="название логического поля  " onChange={changeHandler} />
 
         </form>
         </div>
