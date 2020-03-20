@@ -57,13 +57,6 @@ class ForCol extends React.Component {
             console.log("111111")
             console.log(this.state)}
         const {loading, error,request} = useHttp()
-        const addCol = async () => {
-            try {
-
-                const data = await request('/adcol', 'POST', {this.state})
-
-            } catch (e) {}
-        }
         return (
             <div className="App">
             <nav>
@@ -155,7 +148,7 @@ class ForCol extends React.Component {
 
         <p className="clearfix">
 
-            <input type="submit" name="submit" value="добавить" onClick={addCol} disabled={loading} />
+            <input type="submit" name="submit" value="добавить"  disabled={loading} />
 
             </p>
         </form>
