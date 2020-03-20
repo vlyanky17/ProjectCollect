@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink, useHistory} from 'react-router-dom'
 import {AuthContext} from '../context/AuthContext'
-import {useHttp} from "../hooks/http.hook";
+import {loading, error,request}  from "../hooks/http.hook";
 import './Aut.css';
 import './select-css.css';
 import 'materialize-css'
@@ -51,7 +51,8 @@ class ForCol extends React.Component {
     }
 
     render() {
-        const {loading, error,request} = useHttp()
+
+        
         const { dropzone1, nam ,ops,tem,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = this.state;
         const changeHandler = event => {
             this.setState({[event.target.name]: event.target.value})
