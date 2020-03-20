@@ -46,8 +46,7 @@ class ForCol extends React.Component {
 
         const new_files = [...this.state[dropzone], ...files_with_preview];
         this.setState({ [dropzone]: new_files });
-        console.log(new_files)
-        console.log(files)
+
     }
 
     render() {
@@ -61,7 +60,7 @@ class ForCol extends React.Component {
             console.log("tryToReq")
 
             const  headers = {}
-            const body   = JSON.stringify(this.state)
+            const body  =this.state
             headers['Content-Type'] = 'application/json'
             const url = '/adcol'
             const method= 'POST'
