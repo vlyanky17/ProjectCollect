@@ -13,7 +13,7 @@ import {useCallback, useContext, useEffect, useState} from 'react'
 class ForCol extends React.Component {
     constructor(props) {
         super(props);
-        const {loading, error,request} = useHttp()
+
         this.state = {
             dropzone1: [],
             nam:'',
@@ -57,6 +57,13 @@ class ForCol extends React.Component {
             this.setState({[event.target.name]: event.target.value})
             console.log("111111")
             console.log(this.state)}
+        const registerHandler = async () => {
+            try {
+
+              console.log("tryToReq")
+
+            } catch (e) {}
+        }
 
         return (
             <div className="App">
