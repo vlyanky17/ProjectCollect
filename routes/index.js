@@ -252,4 +252,19 @@ router.get('/users', async (req, res) => {
        
 });
 
+
+router.get('/adcol', async (req, res) => {
+
+    try {
+        console.log(req.body)
+        res.status(201).json({message:' listen'})
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+
+});
+
+
 module.exports = router;

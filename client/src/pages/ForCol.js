@@ -56,6 +56,14 @@ class ForCol extends React.Component {
             this.setState({[event.target.name]: event.target.value})
             console.log("111111")
             console.log(this.state)}
+        const {loading, error,request} = useHttp()
+        const addCol = async () => {
+            try {
+
+                const data = await request('/adcol', 'POST', {this.state})
+
+            } catch (e) {}
+        }
         return (
             <div className="App">
             <nav>
@@ -145,6 +153,11 @@ class ForCol extends React.Component {
         <label for="Cbol3"><i class="icon-user"></i>третье логическое поле</label>
         <input type="text" id="Cbol3" name="Cbol3" placeholder="название логического поля  " onChange={changeHandler} />
 
+        <p className="clearfix">
+
+            <input type="submit" name="submit" value="добавить" onClick={addCol} disabled={loading} />
+
+            </p>
         </form>
         </div>
     );
