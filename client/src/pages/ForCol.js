@@ -58,18 +58,14 @@ class ForCol extends React.Component {
             console.log("111111")
             console.log(this.state)}
         const addCol = async () => {
-            try {
+            console.log("tryToReq")
 
-              console.log("tryToReq")
-
-const  headers = {}
-                const body   = JSON.stringify(this.state)
-                    headers['Content-Type'] = 'application/json'
-const url = '/adcol'
-const method= 'POST'
-console.log(body)
-
-            } catch (e) {}
+            const  headers = {}
+            const body   = JSON.stringify(this.state)
+            headers['Content-Type'] = 'application/json'
+            const url = '/adcol'
+            const method= 'POST'
+            console.log(body)
         }
 
         return (
