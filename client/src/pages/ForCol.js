@@ -2,7 +2,7 @@ import React, { useCallback,useMemo,useContext, useEffect, useState } from "reac
 import ReactDOM from "react-dom";
 import { useDropzone } from "react-dropzone";
 import './Aut.css';
-
+import './select-css.css';
 
 
 const image2base64 = require('image-to-base64');
@@ -181,7 +181,12 @@ function ForCol(props) {
             </nav>
             <form className="form-2">
 
-                
+                <label htmlFor="nam"><i className="icon-user"></i>название</label>
+                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler}/>
+
+                <label htmlFor="disk"><i className="icon-user"></i>описание</label>
+                <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler}/>
+
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
