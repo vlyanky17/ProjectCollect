@@ -222,6 +222,24 @@ function ForCol(props) {
                     </button>
                 </div>
 
+                <div className={classes.root}>
+                    <ExpansionPanel>
+                        <ExpansionPanelSummary
+                           
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                        >
+                            <Typography className={classes.heading}>Expansion Panel 1</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                sit amet blandit leo lobortis eget.
+                            </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+
+                </div>
 
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
