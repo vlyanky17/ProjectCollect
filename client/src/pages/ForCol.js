@@ -168,7 +168,6 @@ function ForCol(props) {
 
     return (
         <div>
-
             <nav>
                 <div className="nav-wrapper" style={{ padding: '0 ' }}>
 
@@ -212,28 +211,6 @@ function ForCol(props) {
 
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
-
-
-                <div className="accordion">
-                    <div className="tab">
-                        <input type="checkbox" id="tab1" name="tab-group"/>
-                            <label htmlFor="tab1" className="tab-title">Что такое HTML5?</label>
-                            <section className="tab-content">
-                                <p>Под HTML5 обычно подразумевают два разных понятия:</p>
-                                <ul>
-                                    <li>Это язык разметки документа, пришедший на смену HTML4 и XHTML.</li>
-                                    <li>Это набор веб-технологий, позволяющий делать на сайте
-                                        всякие интересные штуки.
-                                    </li>
-                                </ul>
-                            </section>
-                    </div>
-
-
-
-
-                    </div>
-                </div>
             </form>
         </div>
 
