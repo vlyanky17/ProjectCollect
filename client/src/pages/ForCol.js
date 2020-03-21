@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { useDropzone } from "react-dropzone";
 import './Aut.css';
 import './select-css.css';
-
+import { makeStyles } from '@material-ui/core/styles';
 
 const image2base64 = require('image-to-base64');
 
