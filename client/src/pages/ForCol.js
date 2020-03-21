@@ -5,7 +5,7 @@ import './Aut.css';
 import './select-css.css';
 import { makeStyles } from '@material-ui/core/styles';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
 const image2base64 = require('image-to-base64');
 
