@@ -168,41 +168,7 @@ function ForCol(props) {
 
     return (
         <div>
-            <style>
-                .tab input, .tab-content { display: none; }
-                .tab {
-                font: 0.8rem/1.2 Arial, sans-serif; /* Параметры шрифта */
-                border: 1px solid #e9eaec; /* Параметры рамки */
-                border-radius: 3px; /* Скругляем уголки */
-                color: #848994; /* Цвет текста */
-                margin-bottom: 10px; /* Расстояние между пунктами */
-            }
-                .tab-title {
-                padding: 10px; /* Поля вокруг текста */
-                display: block; /* Блочный элемент */
-                text-transform: uppercase; /* Все буквы заглавные */
-                font-weight: bold; /* Жирное начертание */
-                cursor: pointer; /* Вид курсора */
-            }
-                .tab-title::after {
-                content: '+'; /* Выводим плюс */
-                float: right; /* Размещаем по правому краю */
-            }
-                .tab-content {
-                padding: 10px 20px; /* Поля вокруг текста */
-            }
-                .tab :checked + .tab-title {
-                background-color: #50a2de; /* Цвет фона */
-                border-radius: 3px 3px 0 0; /* Скругляем уголки */
-                color: #fff; /* Цвет текста */
-            }
-                .tab :checked + .tab-title::after {
-                content: '−'; /* Выводим минус */
-            }
-                .tab :checked ~ .tab-content {
-                display: block; /* Показываем содержимое */
-            }
-            </style>
+
             <nav>
                 <div className="nav-wrapper" style={{ padding: '0 ' }}>
 
@@ -263,22 +229,9 @@ function ForCol(props) {
                             </section>
                     </div>
 
-                    <div className="tab">
-                        <input type="checkbox" id="tab2" name="tab-group"/>
-                            <label htmlFor="tab2" className="tab-title">Можно ли программировать на HTML5?</label>
-                            <section className="tab-content">
-                                Нет, на HTML5 по прежнему нельзя программировать, основным языком является JavaScript.
-                                Так что в разговоре лучше не упоминать, что умеешь программировать на HTML5, засмеют.
-                            </section>
-                    </div>
-                    <div className="tab">
-                        <input type="checkbox" id="tab3" name="tab-group"/>
-                            <label htmlFor="tab3" className="tab-title">Чем HTML5 отличается от HTML4?</label>
-                            <section className="tab-content">
-                                В HTML5 добавлены новые элементы, вроде &lt;header&gt;, &lt;footer&gt;,
-                                &lt;aside&gt;, &lt;article&gt;, появилась долгожданная поддержка аудио,
-                                видео и многое другое.
-                            </section>
+
+
+
                     </div>
                 </div>
             </form>
