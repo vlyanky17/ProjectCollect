@@ -163,6 +163,17 @@ function ForCol(props) {
 
     return (
         <div>
+            <nav>
+                <div className="nav-wrapper" style={{ padding: '0 ' }}>
+
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+
+
+                        <li><a  href="/Cab">Создать коллекцию</a></li>
+                        <li><a href="/">Главная </a></li>
+                    </ul>
+                </div>
+            </nav>
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
