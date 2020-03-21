@@ -1,8 +1,11 @@
 import React, { useCallback,useMemo,useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useDropzone } from "react-dropzone";
+
+
+
+
 const image2base64 = require('image-to-base64');
-import './Aut.css';
 
 const baseStyle = {
     flex: 1,
