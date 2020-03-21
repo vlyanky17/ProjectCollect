@@ -7,6 +7,8 @@ import { useDropzone } from "react-dropzone";
 
 const image2base64 = require('image-to-base64');
 
+
+
 const baseStyle = {
     flex: 1,
     display: "flex",
