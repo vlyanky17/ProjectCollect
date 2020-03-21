@@ -1,7 +1,7 @@
 import React, { useCallback,useMemo,useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useDropzone } from "react-dropzone";
-
+import './Aut.css';
 
 
 
