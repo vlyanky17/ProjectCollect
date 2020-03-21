@@ -212,7 +212,9 @@ function ForCol(props) {
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
                 <div className="accordion">
-                   
+                    <div className="tab">
+                      
+                    </div>
                 </div>
             </form>
         </div>
