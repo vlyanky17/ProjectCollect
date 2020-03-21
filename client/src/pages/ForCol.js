@@ -179,6 +179,9 @@ function ForCol(props) {
                     </ul>
                 </div>
             </nav>
+            <form className="form-2">
+
+                
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
@@ -191,6 +194,7 @@ function ForCol(props) {
 
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
+            </form>
         </div>
 
     );
