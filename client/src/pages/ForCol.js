@@ -1,173 +1,182 @@
-import React from 'react'
-import {NavLink, useHistory} from 'react-router-dom'
-import {AuthContext} from '../context/AuthContext'
-import {useHttp} from "../hooks/http.hook";
-import './Aut.css';
-import './select-css.css';
-import 'materialize-css'
+import React, { useMemo, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import Dropzone from "react-dropzone";
-import {useCallback, useContext, useEffect, useState} from 'react'
+import { useDropzone } from "react-dropzone";
+const image2base64 = require('image-to-base64');
 
 
-class ForCol extends React.Component {
-    constructor(props) {
-        super(props);
+const baseStyle = {
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "20px",
+    borderWidth: 2,
+    borderRadius: 2,
+    borderColor: "#eeeeee",
+    borderStyle: "dashed",
+    backgroundColor: "#fafafa",
+    color: "#bdbdbd",
+    outline: "none",
+    transition: "border .24s ease-in-out"
+};
 
-        this.state = {
-            dropzone1: [],
-            nam:'',
-            ops:'',
-            tem:'',
-            intgr1:'',
-            intgr2:'',
-            intgr3:'',
-            Cstr1:'',
-            Cstr2:'',
-            Cstr3:'',
-            Cdate1:'',
-            Cdate2:'',
-            Cdate3:'',
-            Ctxt1:'',
-            Ctxt2:'',
-            Ctxt3:'',
-            Cbol1:'',
-            Cbol2:'',
-            Cbol3:'',
-        };
-    }
+const activeStyle = {
+    borderColor: "#2196f3"
+};
 
-    addFilesToDropzone(files, dropzone) {
-        let files_with_preview = [];
-        files.map(file => {
-            file["preview"] = URL.createObjectURL(file);
-            files_with_preview.push(file);
-        });
+const acceptStyle = {
+    borderColor: "#00e676"
+};
 
-        const new_files = [...this.state[dropzone], ...files_with_preview];
-        this.setState({ [dropzone]: new_files });
+const rejectStyle = {
+    borderColor: "#ff1744"
+};
 
-    }
+const thumbsContainer = {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginTop: 16
+};
 
-    render() {
+const thumb = {
+    display: "inline-flex",
+    borderRadius: 2,
+    border: "1px solid #eaeaea",
+    marginBottom: 8,
+    marginRight: 8,
+    width: "auto",
+    height: 200,
+    padding: 4,
+    boxSizing: "border-box"
+};
 
-        const { dropzone1, nam ,ops,tem,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = this.state;
-        const changeHandler = event => {
-            this.setState({[event.target.name]: event.target.value})
-            console.log("111111")
-            console.log(this.state)}
-        const addCol = async () => {
-            console.log("tryToReq")
+const thumbInner = {
+    display: "flex",
+    minWidth: 0,
+    overflow: "hidden"
+};
 
-            const  headers = {}
-            const body  =this.state
-            headers['Content-Type'] = 'application/json'
-            const url = '/adcol'
-            const method= 'POST'
-            console.log(body)
+const img = {
+    display: "block",
+    width: "auto",
+    height: "100%"
+};
+
+
+
+function ForCol(props) {
+    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
+    const [yo, setyo] = useState( '')
+    const [base6, setbase6] = useState( '')
+    const [files, setFiles] = useState([]);
+    const {
+        getRootProps,
+        getInputProps,
+        isDragActive,
+        isDragAccept,
+        isDragReject,
+        acceptedFiles,
+        open
+    } = useDropzone({
+        accept: "image/*",
+        noClick: true,
+        noKeyboard: true,
+        onDrop: acceptedFiles => {
+            setFiles(
+                acceptedFiles.map(file =>
+                    Object.assign(file, {
+                        preview: URL.createObjectURL(file)
+                    })
+                )
+            );
         }
+    });
 
-        return (
-            <div className="App">
-            <nav>
-            <div className="nav-wrapper" style={{ padding: '0 ' }}>
-
-    <ul id="nav-mobile" className="right hide-on-med-and-down">
-
-
-            <li><a  href="/Cab" >назад</a></li>
-        <li><a href="/">Главная </a></li>
-        </ul>
-        </div>
-        </nav>
-        <form class="form-2">
-            <label for="nam"><i class="icon-user"></i>название</label>
-        <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler} />
-
-        <label for="ops"><i class="icon-user"></i>описание</label>
-        <input type="text" id="ops" name="ops" placeholder="описание " onChange={changeHandler} />
-        <label for="tem"><i class="icon-user"></i>Тема</label>
-        <select class="select-css" name="tem" id="tem" onChange={changeHandler}>
-            <option value=""></option>
-            <option value="Alcohol" id="Alcohol">Alcohol </option>
-        <option value="Books" id="Books">Books </option>
-        <option value="Marks" id="Marks">Marks </option>
-            </select>
-            <p className="clearfix">
-            <label for=""><i class="icon-user"></i>Необязательные поля</label>
-
-            <hr class="hr-shelf"/>
-            </p>
-            <Dropzone  onDrop={files => {this.addFilesToDropzone(files, "dropzone1");}} onChange={changeHandler}
-    >
-        {({ getRootProps, getInputProps }) => (
-            <div {...getRootProps()} className="">
-            <input {...getInputProps()} />
-        <div style={{ height: 100,weight: 100, backgroundColor: "PeachPuff" }}>
-          картинка
-            {dropzone1.map(file => (
-                <img
-                src={file.preview}
-                alt={file.path}
-                style={{ width: 80, height: 80 }}
-                />
-            ))}
-        </div>
-        </div>
-        )}
-    </Dropzone>
-        <label for="intgr1"><i class="icon-user"></i>первое числовое поле</label>
-        <input type="text" id="intgr1" name="intgr1" placeholder="название числового поля " onChange={changeHandler} />
-        <label for="intgr2"><i class="icon-user"></i>второе числовое поле</label>
-        <input type="text" id="intgr2" name="intgr2" placeholder="название числового поля " onChange={changeHandler} />
-        <label for="intgr3"><i class="icon-user"></i>третье числовое поле</label>
-        <input type="text" id="intgr3" name="intgr3" placeholder="название числового поля " onChange={changeHandler} />
-
-
-        <label for="Cstr1"><i class="icon-user"></i>первое строковое поле</label>
-        <input type="text" id="Cstr1" name="Cstr1" placeholder="название строкового поля " onChange={changeHandler} />
-        <label for="Cstr2"><i class="icon-user"></i>второе строковое поле</label>
-        <input type="text" id="Cstr2" name="Cstr2" placeholder="название строкового поля " onChange={changeHandler} />
-        <label for="Cstr3"><i class="icon-user"></i>третье строковое поле</label>
-        <input type="text" id="Cstr3" name="Cstr3" placeholder="название строкового поля " onChange={changeHandler} />
-
-
-        <label for="Cdate1"><i class="icon-user"></i>первое  поле даты</label>
-        <input type="text" id="Cdate1" name="Cdate1" placeholder="название поля даты " onChange={changeHandler} />
-        <label for="Cdate2"><i class="icon-user"></i>второе  поле даты</label>
-        <input type="text" id="Cdate2" name="Cdate2" placeholder="название поля даты  " onChange={changeHandler} />
-        <label for="Cdate3"><i class="icon-user"></i>третье  поле даты</label>
-        <input type="text" id="Cdate3" name="Cdate3" placeholder="название поля даты  " onChange={changeHandler} />
-
-
-        <label for="Ctxt1"><i class="icon-user"></i>первое текстовое поле</label>
-        <input type="text" id="Ctxt1" name="Ctxt1" placeholder="название текстового поля " onChange={changeHandler} />
-        <label for="Ctxt2"><i class="icon-user"></i>второе текстовое поле</label>
-        <input type="text" id="Ctxt2" name="Ctxt2" placeholder="название текстового поля " onChange={changeHandler} />
-        <label for="Ctxt3"><i class="icon-user"></i>третье текстовое поле</label>
-        <input type="text" id="Ctxt3" name="Ctxt3" placeholder="название текстового поля " onChange={changeHandler} />
-
-
-
-        <label for="Cbol1"><i class="icon-user"></i>первое логическое поле</label>
-        <input type="text" id="Cbol1" name="Cbol1" placeholder="название логического поля " onChange={changeHandler} />
-        <label for="Cbol2"><i class="icon-user"></i>второе логическое поле</label>
-        <input type="text" id="Cbol2" name="Cbol2" placeholder="название логического поля  " onChange={changeHandler} />
-        <label for="Cbol3"><i class="icon-user"></i>третье логическое поле</label>
-        <input type="text" id="Cbol3" name="Cbol3" placeholder="название логического поля  " onChange={changeHandler} />
-
-
-        <p className="clearfix">
-
-        <input type="text" id="Cbol3" name="Cbol3" placeholder="тест  " onChange={addCol} />
-
-
-
-            </p>
-        </form>
-        </div>
+    const style = useMemo(
+        () => ({
+            ...baseStyle,
+            ...(isDragActive ? activeStyle : {}),
+            ...(isDragAccept ? acceptStyle : {}),
+            ...(isDragReject ? rejectStyle : {})
+        }),
+        [isDragActive, isDragReject]
     );
-    }
-}
 
+    const changeHandler = event => {
+        setForm({...form,[event.target.name]: event.target.value})}
+
+
+    const thumbs = files.map(file => (
+        <div style={thumb} key={file.name}>
+            <div style={thumbInner}>
+                <img src={file.preview} style={img} />
+            </div>
+        </div>
+    ));
+    const th = files.map(file => (
+
+        file.preview
+
+    ));
+    console.log(thumbs)
+
+    const changeH= event => {
+        console.log("111111111111111")
+
+    }
+    image2base64(th) // you can also to use url
+        .then(
+            (response) => {
+                //cGF0aC90by9maWxlLmpwZw==
+                setyo(response)
+                console.log(yo)
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error); //Exepection error....
+            }
+        )
+
+    var reader = new FileReader();
+    reader.readAsDataURL(new Blob([new Uint8Array(th)]));
+    reader.onloadend = function() {
+        var base64data = reader.result;
+
+        setbase6(base64data)
+    }
+
+    useEffect(
+        () => () => {
+            // Make sure to revoke the data uris to avoid memory leaks
+            files.forEach(file => URL.revokeObjectURL(file.preview));
+        },
+        [files]
+    );
+
+    const filepath = acceptedFiles.map(file => (
+        <li key={file.path}>
+            {file.path} - {file.size} bytes
+        </li>
+    ));
+
+    return (
+        <div>
+            <div className='container' onChange={changeH}>
+                <div {...getRootProps({ style })}>
+                    <input {...getInputProps()} />
+                    <p>Drag 'n' drop some files here</p>
+                    <button type='button' onClick={open}>
+                        Open File Dialog
+                    </button>
+                </div>
+
+
+            </div>
+            <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
+        </div>
+
+    );
+}
 export default ForCol;
