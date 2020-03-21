@@ -71,7 +71,7 @@ const img = {
 
 
 function ForCol(props) {
-    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
+    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
     const [yo, setyo] = useState( '')
     const [base6, setbase6] = useState( '')
     const [files, setFiles] = useState([]);
@@ -186,6 +186,14 @@ function ForCol(props) {
 
                 <label htmlFor="disk"><i className="icon-user"></i>описание</label>
                 <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler}/>
+
+                <label htmlFor="tem"><i className="icon-user"></i>Тема</label>
+                <select className="select-css" name="tem" id="tem" onChange={changeHandler}>
+                    <option value=""></option>
+                    <option value="Alcohol" id="Alcohol">Alcohol</option>
+                    <option value="Books" id="Books">Books</option>
+                    <option value="Marks" id="Marks">Marks</option>
+                </select>
 
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
