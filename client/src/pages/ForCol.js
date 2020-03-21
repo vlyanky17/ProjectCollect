@@ -194,7 +194,11 @@ function ForCol(props) {
                     <option value="Books" id="Books">Books</option>
                     <option value="Marks" id="Marks">Marks</option>
                 </select>
+                <p className="clearfix">
+                    <label htmlFor=""><i className="icon-user"></i>Необязательные поля</label>
 
+                    <hr className="hr-shelf"/>
+                </p>
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
