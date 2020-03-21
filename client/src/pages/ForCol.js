@@ -212,36 +212,7 @@ function ForCol(props) {
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
                 <div className="accordion">
-                    <div className="tab">
-                        <input type="checkbox" id="tab1" name="tab-group">
-                            <label htmlFor="tab1" className="tab-title">Что такое HTML5?</label>
-                            <section className="tab-content">
-                                <p>Под HTML5 обычно подразумевают два разных понятия:</p>
-                                <ul>
-                                    <li>Это язык разметки документа, пришедший на смену HTML4 и XHTML.</li>
-                                    <li>Это набор веб-технологий, позволяющий делать на сайте
-                                        всякие интересные штуки.
-                                    </li>
-                                </ul>
-                            </section>
-                    </div>
-                    <div className="tab">
-                        <input type="checkbox" id="tab2" name="tab-group">
-                            <label htmlFor="tab2" className="tab-title">Можно ли программировать на HTML5?</label>
-                            <section className="tab-content">
-                                Нет, на HTML5 по прежнему нельзя программировать, основным языком является JavaScript.
-                                Так что в разговоре лучше не упоминать, что умеешь программировать на HTML5, засмеют.
-                            </section>
-                    </div>
-                    <div className="tab">
-                        <input type="checkbox" id="tab3" name="tab-group">
-                            <label htmlFor="tab3" className="tab-title">Чем HTML5 отличается от HTML4?</label>
-                            <section className="tab-content">
-                                В HTML5 добавлены новые элементы, вроде &lt;header&gt;, &lt;footer&gt;,
-                                &lt;aside&gt;, &lt;article&gt;, появилась долгожданная поддержка аудио,
-                                видео и многое другое.
-                            </section>
-                    </div>
+                   
                 </div>
             </form>
         </div>
