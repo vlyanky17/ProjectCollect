@@ -21,7 +21,7 @@ const schema = new Schema({
     Cbol2: {type: String, required: false},
     Cbol3: {type: String, required: false},
     Item: [{ type: Types.ObjectId, ref: 'Item' }],
-    owner: {type: Types.ObjectId, ref: 'User'}
+    owner: {type:  String, required: false}
 })
 
 module.exports = model('Colec', schema)
