@@ -4,9 +4,9 @@ import ForReg from "../pages/ForReg";
 
 
 
-export const ColMap = ({ users} ) => {
+export const UserTabl = ({ users,changeHandler} ) => {
 
-
+    const [form, setForm] = useState( {Id:''})
 
 
 
@@ -37,7 +37,7 @@ export const ColMap = ({ users} ) => {
                 <tr key={user._id}>
               <td>
                 <label class="container">
-                <input type="checkbox" name={user.login}   />
+                <input type="checkbox" name={user.login}  onChange={changeHandler}  />
                 <span class="checkmark"> </span>
                 </label>
                 </td>
@@ -57,4 +57,4 @@ export const ColMap = ({ users} ) => {
 
 )
 }
-export default ColMap;
+export default UserTabl;
