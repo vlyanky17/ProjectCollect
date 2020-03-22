@@ -25,7 +25,7 @@ export const ForCab = () =>{
     </ul>
     </div>
     </nav>
-        <ColTabl/>
+        
     </div>
 );
 }
