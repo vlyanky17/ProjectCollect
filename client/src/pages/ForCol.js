@@ -5,7 +5,7 @@ import './Aut.css';
 import './select-css.css';
 import 'materialize-css'
 import {useCallback, useContext, } from 'react'
-
+import {useHttp} from "../hooks/http.hook";
 
 const image2base64 = require('image-to-base64');
 
@@ -180,6 +180,7 @@ function Tabl(props) {
                     </ul>
                 </div>
             </nav>
+            <form className="form-2">
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
@@ -192,6 +193,7 @@ function Tabl(props) {
 
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
+                </form>
         </div>
 
     );
