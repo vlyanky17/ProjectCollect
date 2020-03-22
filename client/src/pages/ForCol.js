@@ -274,7 +274,11 @@ function Tabl(props) {
                 <label htmlFor="Cbol3"><i className="icon-user"></i>третье логическое поле</label>
                 <input type="text" id="Cbol3" name="Cbol3" placeholder="название логического поля  "
                        onChange={changeHandler}/>
+                <p className="clearfix">
 
+                    <input type="submit" name="submit" value="добавить" onClick={addCol} />
+
+                </p>
             </form>
         </div>
 
