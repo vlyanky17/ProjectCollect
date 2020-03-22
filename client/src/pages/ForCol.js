@@ -131,6 +131,11 @@ function Tabl(props) {
         console.log("111111111111111")
 
     }
+
+    const changeHandler = event => {
+        setForm({...form,[event.target.name]: event.target.value})}
+
+
     image2base64(th) // you can also to use url
         .then(
             (response) => {
