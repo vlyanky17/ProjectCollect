@@ -272,4 +272,15 @@ console.log(colec)
 })
 
 
+router.post('/ToCabCol',auth, async(req,res) =>{
+
+    try{
+
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
+
 module.exports = router;

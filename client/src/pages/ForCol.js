@@ -156,7 +156,7 @@ if ( response.charAt(0)!= form.pict.charAt(0)) {
         console.log(response)
     }
 }
-             
+
 
             }
         )
