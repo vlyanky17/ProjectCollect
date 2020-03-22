@@ -9,10 +9,13 @@ export const ColTabl = () =>{
     const history = useHistory()
     const auth = useContext(AuthContext)
     const [users, setUsers] = useState([])
-
+    const storageName = 'userData'
+    const da = JSON.parse(localStorage.getItem(storageName))
+    const us = da.id
 
     const registerAll = async () => {
         try {
+
             const data = await request('/ToCabCol', 'POST')
             console.log(data.userId)
             setUsers(data)
@@ -23,6 +26,7 @@ export const ColTabl = () =>{
     return(
         <div>
         1111111111111111111111
+    {us}
         </div>
 )
 
