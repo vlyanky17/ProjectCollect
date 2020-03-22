@@ -124,23 +124,18 @@ export const ForCol = () =>{
 
 
     const addCol = async () => {
-        try {
-
-            setForm({...form,["pict"]:yo})
-                .then(
-                    console.log(form)
-            const data = await request('/adcol', 'POST', {...form})
-
-                    }
-                )
-                .catch(
-                    (error) => {
-                        console.log(error); //Exepection error....
-                    }
-                )
+        setForm({...form,["pict"]: yo})
+    .then(
+            console.log(form)
+        const data = await request('/adcol', 'POST', {...form})
+        )
+            .catch(
+                (error) => {
+                    console.log(error); //Exepection error....
+                }
+            )
 
 
-        } catch (e) {}
     }
 
 
