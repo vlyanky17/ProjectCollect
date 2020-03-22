@@ -126,7 +126,7 @@ export const ForCol = () =>{
     const addCol = async () => {
       const ty = await setForm({...form,["pict"]: yo})
 
-            console.log(form)
+            console.log(ty)
         const data = await request('/adcol', 'POST', {...form})
 
 
