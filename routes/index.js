@@ -254,7 +254,7 @@ router.get('/users', async (req, res) => {
 });
 
 
-router.post('/adcol',auth, async(req,res) =>{
+router.post('/adcol', async(req,res) =>{
 
     try{
         console.log(req.body)
