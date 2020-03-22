@@ -7,71 +7,72 @@ import 'materialize-css'
 import {useCallback, useContext, } from 'react'
 import {useHttp} from "../hooks/http.hook";
 
-const image2base64 = require('image-to-base64');
-
-
-const baseStyle = {
-    flex: 1,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: "20px",
-    borderWidth: 2,
-    borderRadius: 2,
-    borderColor: "#eeeeee",
-    borderStyle: "dashed",
-    backgroundColor: "#fafafa",
-    color: "#bdbdbd",
-    outline: "none",
-    transition: "border .24s ease-in-out"
-};
-
-const activeStyle = {
-    borderColor: "#2196f3"
-};
-
-const acceptStyle = {
-    borderColor: "#00e676"
-};
-
-const rejectStyle = {
-    borderColor: "#ff1744"
-};
-
-const thumbsContainer = {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    marginTop: 16
-};
-
-const thumb = {
-    display: "inline-flex",
-    borderRadius: 2,
-    border: "1px solid #eaeaea",
-    marginBottom: 8,
-    marginRight: 8,
-    width: "auto",
-    height: 200,
-    padding: 4,
-    boxSizing: "border-box"
-};
-
-const thumbInner = {
-    display: "flex",
-    minWidth: 0,
-    overflow: "hidden"
-};
-
-const img = {
-    display: "block",
-    width: "auto",
-    height: "100%"
-};
-
 
 
 export const ForCol = () =>{
+
+    const image2base64 = require('image-to-base64');
+
+
+    const baseStyle = {
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "20px",
+        borderWidth: 2,
+        borderRadius: 2,
+        borderColor: "#eeeeee",
+        borderStyle: "dashed",
+        backgroundColor: "#fafafa",
+        color: "#bdbdbd",
+        outline: "none",
+        transition: "border .24s ease-in-out"
+    };
+
+    const activeStyle = {
+        borderColor: "#2196f3"
+    };
+
+    const acceptStyle = {
+        borderColor: "#00e676"
+    };
+
+    const rejectStyle = {
+        borderColor: "#ff1744"
+    };
+
+    const thumbsContainer = {
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        marginTop: 16
+    };
+
+    const thumb = {
+        display: "inline-flex",
+        borderRadius: 2,
+        border: "1px solid #eaeaea",
+        marginBottom: 8,
+        marginRight: 8,
+        width: "auto",
+        height: 200,
+        padding: 4,
+        boxSizing: "border-box"
+    };
+
+    const thumbInner = {
+        display: "flex",
+        minWidth: 0,
+        overflow: "hidden"
+    };
+
+    const img = {
+        display: "block",
+        width: "auto",
+        height: "100%"
+    };
+
     const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
     const [yo, setyo] = useState( '')
     const [base6, setbase6] = useState( '')
