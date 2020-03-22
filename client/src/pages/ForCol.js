@@ -111,9 +111,9 @@ export const ForCol = () =>{
         [isDragActive, isDragReject]
     );
 
-  
-    const changeHandler = async () => {
+    const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})
+
     }
 
     const picHandler = async () => {
