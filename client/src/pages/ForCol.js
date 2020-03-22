@@ -130,7 +130,7 @@ export const ForCol = () =>{
 console.log(form.pict)
                 }
         console.log(form.pict)
-            )console.log(form.pict)
+            )
             .catch(
                 (error) => {
                     console.log(error); //Exepection error....
