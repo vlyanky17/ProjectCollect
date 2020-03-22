@@ -120,27 +120,7 @@ export const ForCol = () =>{
         console.log(form)
 
     }
-    const addCol = async () => {
-        try {
-            image2base64(th) // you can also to use url
-                .then(
-                    (response) => {
-                        //cGF0aC90by9maWxlLmpwZw==
-                        setForm({...form,["pict"]:response})
 
-                        console.log(form)
-                        const data = await request('/adcol', 'POST', {...form})
-                    }
-                )
-                .catch(
-                    (error) => {
-                        console.log(error); //Exepection error....
-                    }
-                )
-
-
-        } catch (e) {}
-    }
 
 
     const thumbs = files.map(file => (
@@ -183,7 +163,27 @@ export const ForCol = () =>{
             {file.path} - {file.size} bytes
         </li>
     ));
+    const addCol = async () => {
+        try {
+            image2base64(th) // you can also to use url
+                .then(
+                    (response) => {
+                        //cGF0aC90by9maWxlLmpwZw==
+                        setForm({...form,["pict"]:response})
 
+                        console.log(form)
+                        const data = await request('/adcol', 'POST', {...form})
+                    }
+                )
+                .catch(
+                    (error) => {
+                        console.log(error); //Exepection error....
+                    }
+                )
+
+
+        } catch (e) {}
+    }
     return (
         <div>
             <nav>
