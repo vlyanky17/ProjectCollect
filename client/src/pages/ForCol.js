@@ -127,9 +127,10 @@ export const ForCol = () =>{
                 (response) => {
                     //cGF0aC90by9maWxlLmpwZw==
                     setForm({...form,["pict"]:response})
-
+console.log(form.pict)
                 }
-            )
+        console.log(form.pict)
+            )console.log(form.pict)
             .catch(
                 (error) => {
                     console.log(error); //Exepection error....
