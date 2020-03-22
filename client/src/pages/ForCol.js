@@ -226,9 +226,6 @@ function ForCol(props) {
 
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
-
-
-            
             </form>
         </div>
 
