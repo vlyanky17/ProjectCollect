@@ -262,7 +262,7 @@ router.post('/adcol',auth, async(req,res) =>{
         const {nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = req.body
         console.log(nam)
         const colec = new Colec({
-            nam:'nam',  disk:'disk', tem:'tem', owner: req.user.userId
+            nam:'nam',  disk:'disk', tem:'tem'
         })
         console.log('111111')
         console.log(colec)
