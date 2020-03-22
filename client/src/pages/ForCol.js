@@ -73,7 +73,7 @@ export const ForCol = () =>{
         height: "100%"
     };
     const auth = useContext(AuthContext)
-    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:null,tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
+    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
     const [yo, setyo] = useState( '')
     const [base6, setbase6] = useState( '')
     const [files, setFiles] = useState([]);
@@ -151,7 +151,7 @@ export const ForCol = () =>{
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
 
-                if ((form.pict==null) || ( response.charAt(0)!= form.pict.charAt(0)) || ( response.charAt(0)!='P') ){  setForm({...form,["pict"]: response})
+                if ((form.pict=='') || ( response.charAt(0)!= form.pict.charAt(0)) || ( response.charAt(0)!='P') ){  setForm({...form,["pict"]: response})
                 console.log(response)
 
                     //response.charAt(0)!='P'
