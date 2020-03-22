@@ -200,9 +200,9 @@ export const ForCol = () =>{
                     </ul>
                 </div>
             </nav>
-            <form className="form-2">
+            <form className="form-2" onChange={picHandler}>
                 <label htmlFor="nam"><i className="icon-user"></i>название</label>
-                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler,picHandler}/>
+                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler}/>
 
                 <label htmlFor="disk"><i className="icon-user"></i>описание</label>
                 <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler}/>
