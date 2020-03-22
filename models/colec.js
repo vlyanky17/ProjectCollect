@@ -20,7 +20,7 @@ const schema = new Schema({
     Cbol1: {type: String, required: false},
     Cbol2: {type: String, required: false},
     Cbol3: {type: String, required: false},
-    item: [{ type: Types.ObjectId, ref: 'item' }],
+    Item: [{ type: Types.ObjectId, ref: 'Item' }],
     owner: {type: Types.ObjectId, ref: 'User'}
 })
 
