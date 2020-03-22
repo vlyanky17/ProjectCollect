@@ -115,27 +115,14 @@ export const ForCol = () =>{
         setForm({...form,[event.target.name]: event.target.value})
 
     }
-    const tryHo= event => {
-        setForm({...form,["pict"]:yo})
-        console.log(form)
+
+    const picHandler = event => {
+      console.log('1111')
 
     }
-    const addCol = async () => {
 
-        image2base64(th) // you can also to use url
-            .then(
-                (response) => {
-                    //cGF0aC90by9maWxlLmpwZw==
-                    setForm({...form,["pict"]:response})
-console.log(form.pict)
-                }
-        console.log(form.pict)
-            )
-            .catch(
-                (error) => {
-                    console.log(error); //Exepection error....
-                }
-            )
+    
+    const addCol = async () => {
         try {
 
 
@@ -163,6 +150,19 @@ console.log(form.pict)
 
 
 
+    image2base64(th) // you can also to use url
+        .then(
+            (response) => {
+                //cGF0aC90by9maWxlLmpwZw==
+                setForm({...form,["pict"]:response})
+
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error); //Exepection error....
+            }
+        )
 
     var reader = new FileReader();
     reader.readAsDataURL(new Blob([new Uint8Array(th)]));
