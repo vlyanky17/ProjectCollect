@@ -200,14 +200,14 @@ export const ForCol = () =>{
                     </ul>
                 </div>
             </nav>
-            <form className="form-2" onChange={picHandler}>
+            <form className="form-2">
                 <label htmlFor="nam"><i className="icon-user"></i>название</label>
-                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler}/>
+                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler,picHandler}/>
 
                 <label htmlFor="disk"><i className="icon-user"></i>описание</label>
-                <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler}/>
+                <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler,picHandler}/>
                 <label htmlFor="tem"><i className="icon-user"></i>Тема</label>
-                <select className="select-css" name="tem" id="tem" onChange={changeHandler}>
+                <select className="select-css" name="tem" id="tem" onChange={changeHandler,picHandler}>
                     <option value=""></option>
                     <option value="Alcohol" id="Alcohol">Alcohol</option>
                     <option value="Books" id="Books">Books</option>
@@ -233,57 +233,57 @@ export const ForCol = () =>{
 
                 <label htmlFor="intgr1"><i className="icon-user"></i>первое числовое поле</label>
                 <input type="text" id="intgr1" name="intgr1" placeholder="название числового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="intgr2"><i className="icon-user"></i>второе числовое поле</label>
                 <input type="text" id="intgr2" name="intgr2" placeholder="название числового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="intgr3"><i className="icon-user"></i>третье числовое поле</label>
                 <input type="text" id="intgr3" name="intgr3" placeholder="название числового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
 
 
                 <label htmlFor="Cstr1"><i className="icon-user"></i>первое строковое поле</label>
                 <input type="text" id="Cstr1" name="Cstr1" placeholder="название строкового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Cstr2"><i className="icon-user"></i>второе строковое поле</label>
                 <input type="text" id="Cstr2" name="Cstr2" placeholder="название строкового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Cstr3"><i className="icon-user"></i>третье строковое поле</label>
                 <input type="text" id="Cstr3" name="Cstr3" placeholder="название строкового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
 
 
                 <label htmlFor="Cdate1"><i className="icon-user"></i>первое поле даты</label>
                 <input type="text" id="Cdate1" name="Cdate1" placeholder="название поля даты "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Cdate2"><i className="icon-user"></i>второе поле даты</label>
                 <input type="text" id="Cdate2" name="Cdate2" placeholder="название поля даты  "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Cdate3"><i className="icon-user"></i>третье поле даты</label>
                 <input type="text" id="Cdate3" name="Cdate3" placeholder="название поля даты  "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
 
 
                 <label htmlFor="Ctxt1"><i className="icon-user"></i>первое текстовое поле</label>
                 <input type="text" id="Ctxt1" name="Ctxt1" placeholder="название текстового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Ctxt2"><i className="icon-user"></i>второе текстовое поле</label>
                 <input type="text" id="Ctxt2" name="Ctxt2" placeholder="название текстового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Ctxt3"><i className="icon-user"></i>третье текстовое поле</label>
                 <input type="text" id="Ctxt3" name="Ctxt3" placeholder="название текстового поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
 
 
                 <label htmlFor="Cbol1"><i className="icon-user"></i>первое логическое поле</label>
                 <input type="text" id="Cbol1" name="Cbol1" placeholder="название логического поля "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Cbol2"><i className="icon-user"></i>второе логическое поле</label>
                 <input type="text" id="Cbol2" name="Cbol2" placeholder="название логического поля  "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <label htmlFor="Cbol3"><i className="icon-user"></i>третье логическое поле</label>
                 <input type="text" id="Cbol3" name="Cbol3" placeholder="название логического поля  "
-                       onChange={changeHandler}/>
+                       onChange={changeHandler,picHandler}/>
                 <p className="clearfix">
 
                     <input type="submit" name="submit" value="добавить" onClick={addCol} />
