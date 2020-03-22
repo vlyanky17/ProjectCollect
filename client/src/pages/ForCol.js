@@ -112,7 +112,7 @@ export const ForCol = () =>{
     );
 
     const changeHandler = event => {
-        setForm({...form,([event.target.name]: event.target.value)})
+        setForm({...form,[event.target.name]: event.target.value})
 
     }
     const tryHo= event => {
@@ -153,7 +153,7 @@ export const ForCol = () =>{
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
                 setyo(response)
-                setForm({...form,["pict"]:response})
+
             }
         )
         .catch(
