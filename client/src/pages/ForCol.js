@@ -112,7 +112,7 @@ export const ForCol = () =>{
     );
 
     const changeHandler = event => {
-        setForm({...form,[event.target.name]: event.target.value})
+        setForm({...form,([event.target.name]: event.target.value)})
 
     }
     const tryHo= event => {
