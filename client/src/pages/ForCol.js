@@ -127,13 +127,13 @@ export const ForCol = () =>{
                 (response) => {
                     //cGF0aC90by9maWxlLmpwZw==
                     setForm({...form,["pict"]:response})
-                    try {
+
 
 
                         console.log(form)
                         const data = await request('/adcol', 'POST', {...form})
 
-                    } catch (e) {}
+               
                 }
             )
             .catch(
