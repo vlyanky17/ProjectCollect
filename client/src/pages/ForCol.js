@@ -1,6 +1,12 @@
 import React, { useMemo, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useDropzone } from "react-dropzone";
+import './Aut.css';
+import './select-css.css';
+import 'materialize-css'
+import {useCallback, useContext, } from 'react'
+
+
 const image2base64 = require('image-to-base64');
 
 
@@ -163,6 +169,17 @@ function Tabl(props) {
 
     return (
         <div>
+            <nav>
+                <div className="nav-wrapper" style={{ padding: '0 ' }}>
+
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+
+
+                        <li><a  href="/Cab" >назад</a></li>
+                        <li><a href="/">Главная </a></li>
+                    </ul>
+                </div>
+            </nav>
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
