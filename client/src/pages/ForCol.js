@@ -113,7 +113,7 @@ export const ForCol = () =>{
 
     const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})
-
+        console.log(yo)
 
     }
     const tryHo= event => {
