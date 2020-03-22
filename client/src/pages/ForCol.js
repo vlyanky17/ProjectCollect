@@ -148,20 +148,26 @@ export const ForCol = () =>{
 
 
 
-    image2base64(th) // you can also to use url
-        .then(
-            (response) => {
-                //cGF0aC90by9maWxlLmpwZw==
-                console.log('111111')
-                setForm({...form,["pict"]:response})
 
-            }
-        )
-        .catch(
-            (error) => {
-                console.log(error); //Exepection error....
-            }
-        )
+
+    const picHandler = event => {
+
+        image2base64(th) // you can also to use url
+            .then(
+                (response) => {
+                    //cGF0aC90by9maWxlLmpwZw==
+                    console.log('111111')
+                    setForm({...form,["pict"]:response})
+                    console.log(response)
+                }
+            )
+            .catch(
+                (error) => {
+                    console.log(error); //Exepection error....
+                }
+            )
+
+    }
 
     var reader = new FileReader();
     reader.readAsDataURL(new Blob([new Uint8Array(th)]));
@@ -216,7 +222,7 @@ export const ForCol = () =>{
 
                     <hr className="hr-shelf"/>
                 </p>
-            <div className='container'>
+            <div className='container' onChange={picHandler}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
                     <p>Drag 'n' drop some files here</p>
