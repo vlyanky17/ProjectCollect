@@ -6,7 +6,7 @@ import ForReg from "../pages/ForReg";
 
 export const ColMap = ({ users} ) => {
 
-  
+
 
 
 
