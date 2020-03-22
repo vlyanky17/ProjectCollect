@@ -129,7 +129,7 @@ export const ForCol = () =>{
 
         } catch (e) {}
     }
-    useEffect(  setForm({...form,["pict"]:yo})
+
 
     const thumbs = files.map(file => (
         <div style={thumb} key={file.name}>
@@ -145,10 +145,7 @@ export const ForCol = () =>{
     ));
     console.log(thumbs)
 
-    const changeH= event => {
-        setForm({...form,["pict"]:yo})
 
-    }
 
 
     image2base64(th) // you can also to use url
@@ -218,7 +215,7 @@ export const ForCol = () =>{
 
                     <hr className="hr-shelf"/>
                 </p>
-            <div className='container' onChange={changeH}>
+            <div className='container'>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
                     <p>Drag 'n' drop some files here</p>
