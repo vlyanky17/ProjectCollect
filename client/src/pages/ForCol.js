@@ -111,12 +111,15 @@ function Tabl(props) {
     );
 
     const changeHandler = event => {
-        setForm({...form,[event.target.name]: event.target.value})}
+        setForm({...form,[event.target.name]: event.target.value})
+    console.log(event.target.name)
+        console.log(event.target.value)
+    }
 
     const addCol = async () => {
         try {
 
-console.log(form)
+
          //   const data = await request('/adcol', 'POST', {...form})
 
         } catch (e) {}
@@ -147,7 +150,7 @@ console.log(form)
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
                 setyo(response)
-                setForm({...form,['pict']:yo})}
+
             }
         )
         .catch(
