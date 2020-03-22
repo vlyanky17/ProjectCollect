@@ -258,16 +258,17 @@ router.get('/users', async (req, res) => {
 router.post('/adcol',auth, async(req,res) =>{
 
     try{
-        console.log(req.body)
-        console.log(req.user.userId)
+
         const {nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = req.body
+        console.log(nam)
         const colec = new colec({
             nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: req.user.userId
         })
+        console.log(colec)
         await colec.save()
         res.status(201).json({message:' добавлена'})
     } catch(e){
-        res.status(500).json({message: 'error login'})
+        res.status(500).json({message: 'error add'})
     }
 })
 
