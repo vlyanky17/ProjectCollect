@@ -127,13 +127,18 @@ export const ForCol = () =>{
         try {
 
             setForm({...form,["pict"]:yo})
-                .then{  console.log(form)
-                const data = await request('/adcol', 'POST', {...form})}
-        .catch(
-                (error) => {
-                    console.log(error); //Exepection error....
-                }
-            )
+                .then(
+                    console.log(form)
+            const data = await request('/adcol', 'POST', {...form})
+
+                    }
+                )
+                .catch(
+                    (error) => {
+                        console.log(error); //Exepection error....
+                    }
+                )
+
 
         } catch (e) {}
     }
@@ -156,7 +161,7 @@ export const ForCol = () =>{
 
 
 
-    image2base64(th)  // you can also to use url
+    image2base64(th) // you can also to use url
         .then(
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
