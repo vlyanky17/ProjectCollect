@@ -115,7 +115,11 @@ function Tabl(props) {
 
 
     }
+    const tryHo= event => {
+        setForm({...form,["pict"]:yo})
+        console.log(form)
 
+    }
     const addCol = async () => {
         try {
 
@@ -281,7 +285,7 @@ function Tabl(props) {
                 <p className="clearfix">
 
                     <input type="submit" name="submit" value="добавить" onClick={addCol} />
-
+                    <button onClick={tryHo}> this </button>
                 </p>
             </form>
         </div>
