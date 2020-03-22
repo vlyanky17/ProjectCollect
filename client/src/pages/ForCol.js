@@ -115,8 +115,8 @@ function Tabl(props) {
 
     const addCol = async () => {
         try {
-            console.log(yo)
-         setForm({...form,['pict']: '11111'})}
+
+console.log(form)
          //   const data = await request('/adcol', 'POST', {...form})
 
         } catch (e) {}
@@ -147,7 +147,7 @@ function Tabl(props) {
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
                 setyo(response)
-
+                setForm({...form,['pict']:yo})}
             }
         )
         .catch(
