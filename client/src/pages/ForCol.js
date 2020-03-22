@@ -124,11 +124,11 @@ export const ForCol = () =>{
 
 
     const addCol = async () => {
-        setForm({...form,["pict"]: yo})
+      const ty = setForm({...form,["pict"]: yo})
 
             console.log(form)
         const data = await request('/adcol', 'POST', {...form})
-      
+
 
     }
 
