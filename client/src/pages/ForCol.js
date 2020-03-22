@@ -125,16 +125,10 @@ export const ForCol = () =>{
 
     const addCol = async () => {
         setForm({...form,["pict"]: yo})
-    .then(
+
             console.log(form)
         const data = await request('/adcol', 'POST', {...form})
-        )
-            .catch(
-                (error) => {
-                    console.log(error); //Exepection error....
-                }
-            )
-
+      
 
     }
 
