@@ -152,7 +152,7 @@ export const ForCol = () =>{
         .then(
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
-                setForm({...form,["pict"]:yo})
+                setForm({...form,["pict"]:response})
 
             }
         )
