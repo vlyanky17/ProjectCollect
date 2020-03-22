@@ -143,7 +143,7 @@ export const ForCol = () =>{
         file.preview
 
     ));
-    console.log(thumbs)
+
 
 
 
@@ -152,6 +152,7 @@ export const ForCol = () =>{
         .then(
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
+                console.log('111111')
                 setForm({...form,["pict"]:response})
 
             }
