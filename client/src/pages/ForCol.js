@@ -148,26 +148,19 @@ export const ForCol = () =>{
 
 
 
+    image2base64(th) // you can also to use url
+        .then(
+            (response) => {
+                //cGF0aC90by9maWxlLmpwZw==
+                setForm({...form,["pict"]:yo})
 
-
-    const picHandler = event => {
-
-        image2base64(th) // you can also to use url
-            .then(
-                (response) => {
-                    //cGF0aC90by9maWxlLmpwZw==
-                    console.log('111111')
-                    setForm({...form,["pict"]:response})
-                    console.log(form.pict)
-                }
-            )
-            .catch(
-                (error) => {
-                    console.log(error); //Exepection error....
-                }
-            )
-
-    }
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error); //Exepection error....
+            }
+        )
 
     var reader = new FileReader();
     reader.readAsDataURL(new Blob([new Uint8Array(th)]));
@@ -222,7 +215,7 @@ export const ForCol = () =>{
 
                     <hr className="hr-shelf"/>
                 </p>
-            <div className='container' onChange={picHandler}>
+            <div className='container'>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
                     <p>Drag 'n' drop some files here</p>
@@ -233,7 +226,7 @@ export const ForCol = () =>{
 
 
             </div>
-            <img src={'data:image/jpeg;base64,'+form.pict} style={{ width: 200, height: 200 }} />
+            <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
 
                 <label htmlFor="intgr1"><i className="icon-user"></i>первое числовое поле</label>
                 <input type="text" id="intgr1" name="intgr1" placeholder="название числового поля "
