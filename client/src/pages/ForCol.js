@@ -129,6 +129,7 @@ export const ForCol = () =>{
 
         } catch (e) {}
     }
+    useEffect(  setForm({...form,["pict"]:yo})
 
     const thumbs = files.map(file => (
         <div style={thumb} key={file.name}>
