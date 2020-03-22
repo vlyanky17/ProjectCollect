@@ -114,6 +114,7 @@ function Tabl(props) {
         setForm({...form,[event.target.name]: event.target.value})
     console.log(event.target.name)
         console.log(event.target.value)
+        setForm({...form,["pict"]: event.target.value})
     }
 
     const addCol = async () => {
