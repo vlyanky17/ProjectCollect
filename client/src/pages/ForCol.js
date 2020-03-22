@@ -117,7 +117,7 @@ export const ForCol = () =>{
     }
 
 
-    setForm({...form,["pict"]: yo})
+
 
     const addCol = async () => {
         console.log('121212121212121')
@@ -155,7 +155,7 @@ export const ForCol = () =>{
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
                 setyo(response)
-
+                setForm({...form,["pict"]: yo})
             }
         )
         .catch(
