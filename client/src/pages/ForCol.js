@@ -121,7 +121,7 @@ export const ForCol = () =>{
 
     }
 
-    
+
     const addCol = async () => {
         try {
 
@@ -201,7 +201,7 @@ export const ForCol = () =>{
             </nav>
             <form className="form-2">
                 <label htmlFor="nam"><i className="icon-user"></i>название</label>
-                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler}/>
+                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler,picHandler}/>
 
                 <label htmlFor="disk"><i className="icon-user"></i>описание</label>
                 <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler}/>
