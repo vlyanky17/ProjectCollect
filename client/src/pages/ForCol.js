@@ -6,7 +6,7 @@ import './select-css.css';
 import 'materialize-css'
 import {useCallback, useContext, } from 'react'
 import {useHttp} from "../hooks/http.hook";
-
+import {AuthContext} from '../context/AuthContext'
 
 
 export const ForCol = () =>{
@@ -72,7 +72,7 @@ export const ForCol = () =>{
         width: "auto",
         height: "100%"
     };
-
+    const auth = useContext(AuthContext)
     const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:null,tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
     const [yo, setyo] = useState( '')
     const [base6, setbase6] = useState( '')
