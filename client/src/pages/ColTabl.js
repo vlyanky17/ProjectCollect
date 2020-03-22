@@ -11,7 +11,7 @@ export const ColTabl = () =>{
     const [users, setUsers] = useState([])
     const storageName = 'userData'
     const da = JSON.parse(localStorage.getItem(storageName))
-    const us = da.id
+    const us = da.login
 
     const registerAll = async () => {
         try {
