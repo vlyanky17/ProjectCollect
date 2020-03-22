@@ -135,6 +135,13 @@ export const ForCol = () =>{
                     console.log(error); //Exepection error....
                 }
             )
+        try {
+
+
+            console.log(form)
+            const data = await request('/adcol', 'POST', {...form})
+
+        } catch (e) {}
     }
 
 
