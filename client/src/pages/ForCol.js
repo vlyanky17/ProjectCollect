@@ -120,15 +120,11 @@ export const ForCol = () =>{
 
 
     const addCol = async () => {
-        console.log('121212121212121')
-        console.log(form)
-        console.log(yo)
-      const ty = await setForm({...form,["pict"]: yo})
-        console.log('13131313131313131313')
-        console.log(form)
-            console.log(ty)
-        const data = await request('/adcol', 'POST', {...form})
-
+        try {
+        const data = await request('/adcol', 'POST', {...form}, {
+            Authorization: `Bearer ${auth.token}`
+        })
+        } catch (e) {}
 
     }
 

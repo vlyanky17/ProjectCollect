@@ -259,7 +259,7 @@ router.post('/adcol',auth, async(req,res) =>{
 
     try{
         console.log(req.body)
-    
+
         res.status(201).json({message:' users delete'})
     } catch(e){
         res.status(500).json({message: 'error login'})
