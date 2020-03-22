@@ -8,8 +8,18 @@ export const ColTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
     const auth = useContext(AuthContext)
-    const [users, setUsers] = useState([])
+    const [colecs, setcolecs] = useState([])
 
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+    const us = data.id
+    const registerAll = async () => {
+        try {
+            const data = await request('/ToCabCol', 'POST',{us})
+            setcolecs(data)
+            console.log(colecs)
+        } catch (e) {}
+    }
 
     return(
         <div>
