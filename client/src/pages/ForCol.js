@@ -151,7 +151,7 @@ export const ForCol = () =>{
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
 
-                if ((form.pict=='') || ( response.charAt(0)!= form.pict.charAt(0)) || ( response.charAt(0)!='P') ){  setForm({...form,["pict"]: response})
+                if ( ( response.charAt(0)!= form.pict.charAt(0)) || ( response.charAt(0)!='P') ){  setForm({...form,["pict"]: response})
                 console.log(response)
 
                     //response.charAt(0)!='P'
