@@ -128,12 +128,6 @@ export const ForCol = () =>{
                     //cGF0aC90by9maWxlLmpwZw==
                     setForm({...form,["pict"]:response})
 
-
-
-                        console.log(form)
-                        const data = await request('/adcol', 'POST', {...form})
-
-               
                 }
             )
             .catch(
@@ -141,8 +135,6 @@ export const ForCol = () =>{
                     console.log(error); //Exepection error....
                 }
             )
-
-
     }
 
 
