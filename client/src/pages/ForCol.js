@@ -181,6 +181,23 @@ function Tabl(props) {
                 </div>
             </nav>
             <form className="form-2">
+                <label htmlFor="nam"><i className="icon-user"></i>название</label>
+                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler}/>
+
+                <label htmlFor="ops"><i className="icon-user"></i>описание</label>
+                <input type="text" id="ops" name="ops" placeholder="описание " onChange={changeHandler}/>
+                <label htmlFor="tem"><i className="icon-user"></i>Тема</label>
+                <select className="select-css" name="tem" id="tem" onChange={changeHandler}>
+                    <option value=""></option>
+                    <option value="Alcohol" id="Alcohol">Alcohol</option>
+                    <option value="Books" id="Books">Books</option>
+                    <option value="Marks" id="Marks">Marks</option>
+                </select>
+                <p className="clearfix">
+                    <label htmlFor=""><i className="icon-user"></i>Необязательные поля</label>
+
+                    <hr className="hr-shelf"/>
+                </p>
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
