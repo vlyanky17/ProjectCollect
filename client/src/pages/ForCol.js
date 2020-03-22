@@ -179,7 +179,7 @@ export const ForCol = () =>{
         },
         [files]
     );
-    setForm({...form,["pict"]:yo})
+
     const filepath = acceptedFiles.map(file => (
         <li key={file.path}>
             {file.path} - {file.size} bytes
