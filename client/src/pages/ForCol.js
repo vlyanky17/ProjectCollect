@@ -288,7 +288,7 @@ export const ForCol = () =>{
                     <input type="submit" name="submit" value="добавить" onClick={addCol} />
 
                     <input type="text" id="tst" name="tst" placeholder="tst "
-                           onChange={tryHo}/>
+                           onChange={addCol}/>
                 </p>
             </form>
         </div>
