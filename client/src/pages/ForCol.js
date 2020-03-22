@@ -116,21 +116,20 @@ export const ForCol = () =>{
 
     }
 
-    const picHandler = async () => {
-        setForm({...form,["pict"]:yo})
-        console.log('1111')
+    const picHandler = event => {
+
+      console.log('1111')
+
     }
-
-
-
 
 
     const addCol = async () => {
         try {
 
+            setForm({...form,["pict"]:yo})
+                .then{  console.log(form)
+                const data = await request('/adcol', 'POST', {...form})}
 
-            console.log(form)
-            const data = await request('/adcol', 'POST', {...form})
 
         } catch (e) {}
     }
