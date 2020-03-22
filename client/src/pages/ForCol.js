@@ -113,9 +113,7 @@ export const ForCol = () =>{
 
     const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})
-        console.log(yo)
-        setForm({...form,["pict"]:yo})
-        console.log(form)
+
     }
     const tryHo= event => {
         setForm({...form,["pict"]:yo})
@@ -181,7 +179,7 @@ export const ForCol = () =>{
         },
         [files]
     );
-
+    setForm({...form,["pict"]:yo})
     const filepath = acceptedFiles.map(file => (
         <li key={file.path}>
             {file.path} - {file.size} bytes
