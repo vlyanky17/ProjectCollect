@@ -154,8 +154,9 @@ export const ForCol = () =>{
         .then(
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
-                setyo(response)
-                setForm({...form,["pict"]: yo})
+
+                if (form.pict==null){  setForm({...form,["pict"]: response})}
+
             }
         )
         .catch(
@@ -228,7 +229,7 @@ export const ForCol = () =>{
 
 
             </div>
-            <img src={'data:image/jpeg;base64,' + yo} />
+            <img src={'data:image/jpeg;base64,' + form.pict} />
 
                 <label htmlFor="intgr1"><i className="icon-user"></i>первое числовое поле</label>
                 <input type="text" id="intgr1" name="intgr1" placeholder="название числового поля "
