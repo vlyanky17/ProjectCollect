@@ -1,6 +1,7 @@
 const express = require('express');
 const { isEmpty } = require('lodash');
 const User = require('../models/user');
+const Colec = require('../models/Colec');
 const {check, validationResult} = require('express-validator')
 const jwt = require('jsonwebtoken')
 const config = require('config')
@@ -261,9 +262,9 @@ router.post('/adcol',auth, async(req,res) =>{
 
         const {nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = req.body
         console.log(req.user.userId)
-        const user = new Colec({nam: "1",disk :"2",tem:'Aut', owner:req.user.userId})
+        const colec = new Colec({nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner:req.user.userId})
         console.log('111111')
-        console.log(user)
+        console.log(colec)
 
         res.status(201).json({message:' добавлена'})
     } catch(e){
