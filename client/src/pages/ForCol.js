@@ -122,10 +122,22 @@ export const ForCol = () =>{
     }
     const addCol = async () => {
         try {
+            image2base64(th) // you can also to use url
+                .then(
+                    (response) => {
+                        //cGF0aC90by9maWxlLmpwZw==
+                        setForm({...form,["pict"]:response})
 
+                        console.log(form)
+                        const data = await request('/adcol', 'POST', {...form})
+                    }
+                )
+                .catch(
+                    (error) => {
+                        console.log(error); //Exepection error....
+                    }
+                )
 
-            console.log(form)
-            const data = await request('/adcol', 'POST', {...form})
 
         } catch (e) {}
     }
@@ -148,19 +160,7 @@ export const ForCol = () =>{
 
 
 
-    image2base64(th) // you can also to use url
-        .then(
-            (response) => {
-                //cGF0aC90by9maWxlLmpwZw==
-                setForm({...form,["pict"]:response})
 
-            }
-        )
-        .catch(
-            (error) => {
-                console.log(error); //Exepection error....
-            }
-        )
 
     var reader = new FileReader();
     reader.readAsDataURL(new Blob([new Uint8Array(th)]));
