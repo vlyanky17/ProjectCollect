@@ -253,19 +253,16 @@ router.get('/users', async (req, res) => {
 });
 
 
-router.get('/adcol', async (req, res) => {
+router.post('/adcol', async(req,res) =>{
 
-    try {
-        console.log("1111111111111111111")
+    try{
         console.log(req.body)
-        res.status(201).json({message:' listen'})
-    } catch (error) {
-        return res.status(500).json({
-            message: 'Internal Server error'
-        });
-    }
 
-});
+        res.status(201).json({message:' users delete'})
+    } catch(e){
+        res.status(500).json({message: 'error login'})
+    }
+})
 
 
 module.exports = router;
