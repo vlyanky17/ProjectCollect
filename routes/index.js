@@ -254,11 +254,11 @@ router.get('/users', async (req, res) => {
 });
 
 
-router.post('/adcol', async(req,res) =>{
+router.post('/adcol', auth,async(req,res) =>{
 
     try{
         console.log(req.body)
-
+        console.log(auth)
         res.status(201).json({message:' users delete'})
     } catch(e){
         res.status(500).json({message: 'error login'})
