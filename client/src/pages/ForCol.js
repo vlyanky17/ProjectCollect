@@ -76,6 +76,7 @@ function Tabl(props) {
     const [yo, setyo] = useState( '')
     const [base6, setbase6] = useState( '')
     const [files, setFiles] = useState([]);
+    const {loading, error,request} = useHttp()
     const {
         getRootProps,
         getInputProps,
@@ -112,6 +113,13 @@ function Tabl(props) {
     const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})}
 
+    const addCol = async () => {
+        try {
+
+         console.log(form)
+
+        } catch (e) {}
+    }
 
     const thumbs = files.map(file => (
         <div style={thumb} key={file.name}>
@@ -131,9 +139,6 @@ function Tabl(props) {
         console.log("111111111111111")
 
     }
-
-    const changeHandler = event => {
-        setForm({...form,[event.target.name]: event.target.value})}
 
 
     image2base64(th) // you can also to use url
