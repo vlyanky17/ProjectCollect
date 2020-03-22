@@ -1,26 +1,7 @@
-import React, { useCallback,useMemo,useContext, useEffect, useState } from "react";
+import React, { useMemo, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useDropzone } from "react-dropzone";
-import './Aut.css';
-import './select-css.css';
-import { makeStyles } from '@material-ui/core/styles';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Typography from '@material-ui/core/Typography';
-
-
 const image2base64 = require('image-to-base64');
-
-const useStyles = makeStyles(theme => ({
-    root: {
-        width: '100%',
-    },
-    heading: {
-        fontSize: theme.typography.pxToRem(15),
-        fontWeight: theme.typography.fontWeightRegular,
-    },
-}));
 
 
 const baseStyle = {
@@ -84,8 +65,8 @@ const img = {
 
 
 
-function ForCol(props) {
-    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
+function Tabl(props) {
+    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
     const [yo, setyo] = useState( '')
     const [base6, setbase6] = useState( '')
     const [files, setFiles] = useState([]);
@@ -182,37 +163,6 @@ function ForCol(props) {
 
     return (
         <div>
-            <nav>
-                <div className="nav-wrapper" style={{ padding: '0 ' }}>
-
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
-
-
-                        <li><a  href="/Cab">Создать коллекцию</a></li>
-                        <li><a href="/">Главная </a></li>
-                    </ul>
-                </div>
-            </nav>
-            <form className="form-2">
-
-                <label htmlFor="nam"><i className="icon-user"></i>название</label>
-                <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler}/>
-
-                <label htmlFor="disk"><i className="icon-user"></i>описание</label>
-                <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler}/>
-
-                <label htmlFor="tem"><i className="icon-user"></i>Тема</label>
-                <select className="select-css" name="tem" id="tem" onChange={changeHandler}>
-                    <option value=""></option>
-                    <option value="Alcohol" id="Alcohol">Alcohol</option>
-                    <option value="Books" id="Books">Books</option>
-                    <option value="Marks" id="Marks">Marks</option>
-                </select>
-                <p className="clearfix">
-                    <label htmlFor=""><i className="icon-user"></i>Необязательные поля</label>
-
-                    <hr className="hr-shelf"/>
-                </p>
             <div className='container' onChange={changeH}>
                 <div {...getRootProps({ style })}>
                     <input {...getInputProps()} />
@@ -223,12 +173,10 @@ function ForCol(props) {
                 </div>
 
 
-
             </div>
             <img src={'data:image/jpeg;base64,' + yo} style={{ width: 200, height: 200 }} />
-            </form>
         </div>
 
     );
 }
-export default ForCol;
+export default Tabl;
