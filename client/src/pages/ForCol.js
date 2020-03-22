@@ -73,7 +73,7 @@ export const ForCol = () =>{
         height: "100%"
     };
 
-    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:'',tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
+    const [form, setForm] = useState( {nam:'', disk:'',tem:'',pict:null,tem:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
     const [yo, setyo] = useState( '')
     const [base6, setbase6] = useState( '')
     const [files, setFiles] = useState([]);
@@ -114,7 +114,8 @@ export const ForCol = () =>{
     const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})
         console.log(yo)
-
+        setForm({...form,["pict"]:yo})
+        console.log(form)
     }
     const tryHo= event => {
         setForm({...form,["pict"]:yo})
@@ -204,8 +205,8 @@ export const ForCol = () =>{
                 <label htmlFor="nam"><i className="icon-user"></i>название</label>
                 <input type="text" id="nam" name="nam" placeholder="название " onChange={changeHandler}/>
 
-                <label htmlFor="ops"><i className="icon-user"></i>описание</label>
-                <input type="text" id="ops" name="ops" placeholder="описание " onChange={changeHandler}/>
+                <label htmlFor="disk"><i className="icon-user"></i>описание</label>
+                <input type="text" id="disk" name="disk" placeholder="описание " onChange={changeHandler}/>
                 <label htmlFor="tem"><i className="icon-user"></i>Тема</label>
                 <select className="select-css" name="tem" id="tem" onChange={changeHandler}>
                     <option value=""></option>
