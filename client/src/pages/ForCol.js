@@ -117,6 +117,7 @@ export const ForCol = () =>{
     }
 
     const picHandler = event => {
+        setForm({...form,["pict"]:yo})
       console.log('1111')
 
     }
@@ -154,7 +155,7 @@ export const ForCol = () =>{
         .then(
             (response) => {
                 //cGF0aC90by9maWxlLmpwZw==
-                setForm({...form,["pict"]:response})
+                setyo(response)
 
             }
         )
