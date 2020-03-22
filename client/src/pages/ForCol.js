@@ -111,16 +111,18 @@ export const ForCol = () =>{
         [isDragActive, isDragReject]
     );
 
-    const changeHandler = event => {
+  
+    const changeHandler = async () => {
         setForm({...form,[event.target.name]: event.target.value})
-
     }
 
-    const picHandler = event => {
+    const picHandler = async () => {
         setForm({...form,["pict"]:yo})
-      console.log('1111')
-
+        console.log('1111')
     }
+
+
+
 
 
     const addCol = async () => {
