@@ -24,7 +24,7 @@ export const ColTabl = () =>{
 
             const data = await request('/ToCabCol', 'POST',{us})
             setCols(data)
-            console.log(cols)
+
 
         } catch (e) {}
     }

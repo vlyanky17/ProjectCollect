@@ -21,7 +21,7 @@ export const ForCab = () =>{
 
     <li><a >Добро пожаловать {us}</a></li>
     <li><a  href="/Col">Создать коллекцию</a></li>
-    <li><a  href="/PageForCol">Создать коллекцию</a></li>
+    <li><a  href="/PageForCol">колекция</a></li>
     <li><a href="/">Главная </a></li>
     </ul>
     </div>
