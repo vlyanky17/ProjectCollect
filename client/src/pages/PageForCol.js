@@ -55,7 +55,7 @@ console.log(data[0])
         <th>имя</th>
         <th>описание</th>
         <th>тема</th>
-
+        <th>картинка</th>
 
         </tr>
         </thead>
@@ -63,15 +63,12 @@ console.log(data[0])
         <td>{form.nam}</td>
         <td>{form.disk}</td>
         <td>{form.tem}</td>
-
+        <td><img src={'data:image/jpeg;base64,' + form.pict} /></td>
         </tbody>
     </table>
 
         <div  >
-        <div style="display: table-cell; vertical-align: middle;  height: 100px; border: 1px solid red">
-        <button>Кнопка<br>с любой высотой<br>и шириной</button>
-    </div>
-        <img src={'data:image/jpeg;base64,' + form.pict} />
+
         </div>
     </div>
 );
