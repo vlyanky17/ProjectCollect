@@ -33,10 +33,7 @@ console.log(data[0])
 
         }
     )
-    const  ra = null
-    if (form.pict !=""){ ra =   "<img src={'data:image/jpeg;base64,' + form.pict} />"}
 
-    
 
     return( <div>
         <nav>
@@ -58,7 +55,7 @@ console.log(data[0])
         <th>имя</th>
         <th>описание</th>
         <th>тема</th>
-        <th> картинка</th>
+
 
         </tr>
         </thead>
@@ -71,7 +68,7 @@ console.log(data[0])
     </table>
 
         <div  >
-1111111
+        <img src={'data:image/jpeg;base64,' + form.pict} />
         </div>
     </div>
 );
