@@ -287,4 +287,18 @@ console.log(coleks)
 })
 
 
+
+router.post('/ColecOut', async(req,res) =>{
+
+    try{
+        console.log(req.body)
+
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
+
+
 module.exports = router;
