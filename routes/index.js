@@ -277,7 +277,7 @@ router.post('/ToCabCol', async(req,res) =>{
     try{
 console.log(req.body)
 
-        const coleks = await Colec.find(  { owner: req.body.us } , { nam:1 , dick:1})
+        const coleks = await Colec.find(  { owner: req.body.us } , { nam:1 , disk:1 ,tem:1})
 
 console.log(coleks)
 
