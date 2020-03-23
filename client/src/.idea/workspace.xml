@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec64d76c-b428-4d0f-b6cc-0feb4dadfea9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/PageForCol.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PageForCol.js" afterDir="false" />
-    </list>
+    <list default="true" id="ec64d76c-b428-4d0f-b6cc-0feb4dadfea9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +47,7 @@
       <workItem from="1584639611984" duration="5961000" />
       <workItem from="1584677713941" duration="12495000" />
       <workItem from="1584887108022" duration="5251000" />
-      <workItem from="1584919113888" duration="28777000" />
+      <workItem from="1584919113888" duration="28838000" />
     </task>
     <servers />
   </component>
