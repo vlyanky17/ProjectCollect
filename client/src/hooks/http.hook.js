@@ -29,11 +29,11 @@ console.log('http')
 
             return data
         } catch (e) {
-
             console.log('hookEr')
             setLoading(false)
             setError(e.message)
-            alert(e.message)
+            if (url !='/ToCabCol'){
+            alert(e.message)}
             throw e
         }
     }, [])
