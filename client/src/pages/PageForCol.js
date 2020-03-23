@@ -46,6 +46,10 @@ console.log(data)
     </div>
     </nav>
 
+    <table class="resp-tab">
+       
+    </table>
+
 
     </div>
 );
