@@ -7,9 +7,36 @@ export const ColMap = ({ cols }) => {
     }
 
     return (
-       <div>
-        111111111
-        </div>
+        <table>
+        <thead>
+        <tr>
+
+        <th>имя</th>
+        <th>описание</th>
+        <th>тема</th>
+
+
+    </tr>
+    </thead>
+
+    <tbody>
+    { cols.map((col, index) => {
+            return (
+
+                <tr key={col._id}>
+
+
+                <td>{col.nam}</td>
+                <td>{col.disk}</td>
+                <td>{col.tem}</td>
+                </tr>
+        )
+        }) }
+
+    </tbody>
+
+    </table>
+
 )
 }
 
