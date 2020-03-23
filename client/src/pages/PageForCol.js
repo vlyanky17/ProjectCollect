@@ -68,6 +68,30 @@ console.log(data[0])
     </table>
 
         <div  >
+        <style>
+.outer:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+.inner {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* добавим горизонтальное центрирование */
+.outer {
+        text-align: center;
+    }
+</style>
+
+    <div class="outer" style="height:100px; width: 100%; border:1px solid black">
+        <span class="inner" style="border:1px solid red">
+        Центрированный<br>Элемент
+        </span>
+        </div>
         <img src={'data:image/jpeg;base64,' + form.pict} />
         </div>
     </div>
