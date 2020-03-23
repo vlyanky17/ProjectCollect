@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import "../pages/Aut.css";
-
+import PageForCol from "../pages/PageForCol";
 
 
 export const ColMap = ({ cols }) => {
