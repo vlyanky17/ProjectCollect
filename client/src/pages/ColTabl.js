@@ -8,11 +8,11 @@ export const ColTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
     const auth = useContext(AuthContext)
-    const [users, setUsers] = useState([])
+    const [cols, setCols] = useState([])
     const storageName = 'userData'
     const da = JSON.parse(localStorage.getItem(storageName))
     const us = da.userId
-    useEffect(() => { console.log("UseEf")
+    useEffect(() => {
             registerAll()
         }
     )
@@ -22,7 +22,8 @@ export const ColTabl = () =>{
         try {
 
             const data = await request('/ToCabCol', 'POST',{us})
-            console.log(data)
+            setCols(data)
+            console.log(cols)
 
         } catch (e) {}
     }
