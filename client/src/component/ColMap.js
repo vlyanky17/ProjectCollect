@@ -8,6 +8,10 @@ export const ColMap = ({ cols }) => {
     if (!cols.length) {
         return <p className="center">нет коллекций</p>
     }
+    const changeHandler = event => {
+     console.log(event.target.name)
+
+    }
 
 
 
@@ -34,7 +38,7 @@ export const ColMap = ({ cols }) => {
                 <td>{col.nam}</td>
                 <td>{col.disk}</td>
                 <td>{col.tem}</td>
-                <td><button name={col.tem}> открыть</button></td>
+                <td><button name={col.tem} onClick={changeHandler}> открыть</button></td>
                 </tr>
         )
         }) }
