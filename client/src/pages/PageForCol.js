@@ -21,7 +21,7 @@ const us = data.ColId
 
             const data = await request('/ColUp', 'POST',{us})
 console.log(data[0])
-            setForm(data)
+            setForm(data[0])
 
         } catch (e) {}
     }
