@@ -20,9 +20,8 @@ const us = data.ColId
         try {
 
             const data = await request('/ColUp', 'POST',{us})
-            data.map((dat, index) => {
-console.log(dat)
-            setForm(dat)}
+console.log(data[0])
+            setForm(data)
 
         } catch (e) {}
     }
