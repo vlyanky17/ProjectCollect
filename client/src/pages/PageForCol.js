@@ -15,6 +15,17 @@ export const PageForCol = () =>{
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
 const us = data.ColId
+
+    const registerAll = async () => {
+        try {
+
+            const data = await request('/ColUp', 'POST',{us})
+     
+
+
+        } catch (e) {}
+    }
+
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
