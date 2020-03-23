@@ -12,3 +12,5 @@ export const ColMap = ({ cols }) => {
         </div>
 )
 }
+
+export default ColMap;

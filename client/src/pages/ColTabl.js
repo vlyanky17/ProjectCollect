@@ -33,7 +33,7 @@ export const ColTabl = () =>{
     return(
         <div>
 
-    {us}
+  <ColMap />
         </div>
 )
 
