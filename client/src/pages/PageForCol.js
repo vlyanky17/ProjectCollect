@@ -12,9 +12,6 @@ export const PageForCol = () =>{
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
 const us = data.ColId
-
-
-
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
