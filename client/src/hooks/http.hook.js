@@ -33,11 +33,7 @@ console.log('http')
             console.log('hookEr')
             setLoading(false)
             setError(e.message)
-            const storageName = 'userData'
-            const da = JSON.parse(localStorage.getItem(storageName))
-            const us = da.userId
             alert(e.message)
-
             throw e
         }
     }, [])
