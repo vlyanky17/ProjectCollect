@@ -20,7 +20,7 @@ const us = data.ColId
         try {
 
             const data = await request('/ColUp', 'POST',{us})
-console.log(data)
+console.log(data.nam)
             setForm(data)
 
         } catch (e) {}
@@ -30,7 +30,7 @@ console.log(data)
         if (form.nam =='') {registerAll()
             console.log("usEf")
         }
-        console.log(form.nam)
+      
         }
     )
     return( <div>
