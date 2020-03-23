@@ -277,9 +277,7 @@ router.post('/ToCabCol', async(req,res) =>{
     try{
 console.log(req.body)
         const Firstcolecs = await Colec.find({ owner: req.body.us })
-        console.log(Firstcolecs)
-   const SecColec = {Firstcolecs.nam,Firstcolecs.disk,Firstcolecs.tem }
-   console.log(SecColec)
+   console.log(Firstcolecs)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
