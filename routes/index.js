@@ -58,18 +58,20 @@ router.post('/login',[check('login','введите логин').exists(),check(
         if (!errors.isEmpty()) { return res.status(400).json({
             errors:errors.array(),message:'некорректные данные авторизации'
         })}
-        console.log('try1')
+
         const {login, password} = req.body
-        console.log('try2')
+
         const user = await User.findOne({login})
-        console.log('try3')
+
         if (!user) { return res.status(400).json({message:' user not found'})}
-        console.log('try4')
+
         if (user.password!=password) { return res.status(400).json({ message:'неверный пароль'})}
 
         const d = new Date();
         await user.update({datLog:d.toDateString()})
-        console.log('try5')
+        console.log(user)
+        console.log("||||||||||||||||||||||||||||")
+        console.log(user.login)
 
         const token = jwt.sign(
             { userId: user.id },
@@ -78,7 +80,7 @@ router.post('/login',[check('login','введите логин').exists(),check(
         )
         console.log(token)
         res.json({token,userId:user.id,userAdm:user.Admin,userlogin:user.login})
-        console.log('try7')
+
 
 
 
