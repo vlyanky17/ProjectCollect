@@ -42,7 +42,7 @@ export const ColMap = ({ cols }) => {
                 <td>{col.nam}</td>
                 <td>{col.disk}</td>
                 <td>{col.tem}</td>
-                <td><a href="/PageForCol"> <button name={col._id} onClick={changeHandler} href="/PageForCol"> открыть</button></a> </td>
+                <td><a href="/PageForCol"> <button name={col._id} onClick={changeHandler} > открыть</button></a> </td>
                 </tr>
         )
         }) }

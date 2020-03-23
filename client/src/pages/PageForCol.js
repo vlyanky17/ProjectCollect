@@ -9,10 +9,12 @@ import 'materialize-css'
 
 
 export const PageForCol = () =>{
-
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+    const us = data.ColId
 
     return( <div>
-        1111111111111
+        {us}
     </div>
 );
 }
