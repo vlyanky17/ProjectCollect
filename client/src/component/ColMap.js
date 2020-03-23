@@ -9,6 +9,8 @@ export const ColMap = ({ cols }) => {
         return <p className="center">нет коллекций</p>
     }
 
+
+
     return (
         <table class="resp-tab">
         <thead>
@@ -17,7 +19,7 @@ export const ColMap = ({ cols }) => {
         <th>имя</th>
         <th>описание</th>
         <th>тема</th>
-
+        <th> </th>
 
     </tr>
     </thead>
@@ -32,7 +34,7 @@ export const ColMap = ({ cols }) => {
                 <td>{col.nam}</td>
                 <td>{col.disk}</td>
                 <td>{col.tem}</td>
-                <td><button> открыть</button></td>
+                <td><button name={col.tem}> открыть</button></td>
                 </tr>
         )
         }) }
