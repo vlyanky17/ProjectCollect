@@ -16,7 +16,7 @@ export const PageForCol = () =>{
     return( <div>
         {ut}
         1111111112222221111
-    {us} 
+    {us}
     </div>
 );
 }
