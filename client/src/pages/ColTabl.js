@@ -12,7 +12,12 @@ export const ColTabl = () =>{
     const storageName = 'userData'
     const da = JSON.parse(localStorage.getItem(storageName))
     const us = da.userId
-console.log(us)
+    useEffect(() => { console.log("UseEf")
+            registerAll()
+        }
+    )
+
+
     const registerAll = async () => {
         try {
 
@@ -22,10 +27,6 @@ console.log(us)
         } catch (e) {}
     }
 
-    useEffect(() => { console.log(us)
-        registerAll()
-    }
-    )
 
     return(
         <div>
