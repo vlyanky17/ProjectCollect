@@ -46,27 +46,6 @@ console.log(data)
     </div>
     </nav>
 
-    <table class="resp-tab">
-        <thead>
-        <tr>
-        <th>Название</th>
-    <th>Описание 2</th>
-    <th>Тема </th>
-
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>{form.nam}</td>
-    <td>{form.disk}</td>
-    <td>{form.tem}</td>
-
-    </tr>
-    <!-- Строки таблицы -->
-
-    </tbody>
-    </table>
-
 
     </div>
 );
