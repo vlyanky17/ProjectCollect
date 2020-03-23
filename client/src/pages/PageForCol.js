@@ -33,6 +33,8 @@ console.log(data[0])
 
         }
     )
+    const  ra
+    if (form.pict !=""){ ra =   "<img src={'data:image/jpeg;base64,' + form.pict} />"}
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
@@ -53,7 +55,7 @@ console.log(data[0])
         <th>имя</th>
         <th>описание</th>
         <th>тема</th>
-        <th> </th>
+        <th> картинка</th>
 
         </tr>
         </thead>
@@ -61,6 +63,7 @@ console.log(data[0])
         <td>{form.nam}</td>
         <td>{form.disk}</td>
         <td>{form.tem}</td>
+        <td>{ra}</td>
         </tbody>
     </table>
 
