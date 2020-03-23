@@ -9,6 +9,9 @@ import 'materialize-css'
 
 
 export const PageForCol = () =>{
+    const {loading, error,request} = useHttp()
+    const history = useHistory()
+
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
 const us = data.ColId

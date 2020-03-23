@@ -292,7 +292,7 @@ router.post('/ColUp', async(req,res) =>{
     try{
         console.log(req.body)
 
-      
+
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
