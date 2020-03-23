@@ -58,7 +58,9 @@ console.log(data)
         </tr>
         </thead>
         <tbody>
-
+        <td>{form.nam}</td>
+        <td>{form.disk}</td>
+        <td>{form.tem}</td>
         </tbody>
     </table>
 
