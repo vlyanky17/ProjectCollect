@@ -11,7 +11,7 @@ import 'materialize-css'
 export const PageForCol = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
-
+    const [form, setForm] = useState( {})
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
 const us = data.ColId
@@ -21,11 +21,16 @@ const us = data.ColId
 
             const data = await request('/ColUp', 'POST',{us})
 console.log(data)
-
+            setForm(data)
 
         } catch (e) {}
     }
 
+    useEffect(() => {
+        if (form =={}) {registerAll()}
+
+        }
+    )
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
@@ -38,7 +43,7 @@ console.log(data)
     </ul>
     </div>
     </nav>
-    > <button onClick={registerAll} > открыть</button>
+
         {us}
 
 
