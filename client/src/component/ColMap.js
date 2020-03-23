@@ -10,7 +10,7 @@ export const ColMap = ({ cols }) => {
     }
 
     return (
-        <table>
+        <table class="resp-tab">
         <thead>
         <tr>
 
