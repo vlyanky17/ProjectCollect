@@ -12,8 +12,11 @@ export const PageForCol = () =>{
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const ut = data.logn
+    const us = data.ColId
     return( <div>
-        {ut}  1111111112222221111
+        {ut}
+        1111111112222221111
+    {us} 
     </div>
 );
 }
