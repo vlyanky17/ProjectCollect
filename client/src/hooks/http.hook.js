@@ -32,7 +32,7 @@ console.log('http')
             console.log('hookEr')
             setLoading(false)
             setError(e.message)
-            alert(e.message)
+      
             throw e
         }
     }, [])
