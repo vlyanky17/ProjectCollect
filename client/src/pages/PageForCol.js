@@ -14,7 +14,7 @@ export const PageForCol = () =>{
     const ut = data.logn
     const ur = data.ColId
     return( <div>
-        {data}
+  
         1111111112222221111
 
     </div>
