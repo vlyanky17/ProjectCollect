@@ -10,6 +10,7 @@ import ToolAut from "./pages/ToolAut";
 import ToolAdmin from "./pages/ToolAdmin";
 import ForCab from "./pages/ForCab";
 import ForCol from "./pages/ForCol";
+import PageForCol from "./pages/PageForCol";
 
 export const useRoutes = isAuthenticated => {
 
@@ -24,6 +25,10 @@ export const useRoutes = isAuthenticated => {
 
         <Route path="/Cab" exact>
         <ForCab/>
+        </Route>
+
+        <Route path="/PageForCol" exact>
+        <PageForCol/>
         </Route>
 
         <Route path="/" exact>
@@ -42,6 +47,9 @@ export const useRoutes = isAuthenticated => {
         <ForCol/>
         </Route>
 
+        <Route path="/PageForCol" exact>
+        <PageForCol/>
+        </Route>
         <Route path="/Cab" exact>
         <ForCab/>
         </Route>
@@ -58,6 +66,10 @@ export const useRoutes = isAuthenticated => {
         <Route path="/Aut" exact>
     <ForAut/>
 
+    </Route>
+
+    <Route path="/PageForCol" exact>
+    <PageForCol/>
     </Route>
     <Route path="/Cab" exact>
     <ForCab/>
