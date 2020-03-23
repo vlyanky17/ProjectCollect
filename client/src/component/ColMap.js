@@ -16,8 +16,7 @@ export const ColMap = ({ cols }) => {
             userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: event.target.name
 
         }))
-        console.log(data)
-        console.log(event.target.name)
+
     }
 
 

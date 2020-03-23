@@ -292,7 +292,8 @@ router.post('/ColUp', async(req,res) =>{
     try{
         console.log(req.body)
         const coleks = await Colec.find({ _id: req.body.us })
-        res.json(coleks)
+        res.json({nam:coleks.nam,disk:coleks.disk,tem:coleks.tem,pict:coleks.pict})
+  
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
