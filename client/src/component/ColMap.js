@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import './Aut.css';
+
 
 export const ColMap = ({ cols }) => {
     if (!cols.length) {
