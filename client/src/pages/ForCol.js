@@ -289,8 +289,7 @@ if ( response.charAt(0)!= form.pict.charAt(0)) {
 
                     <input type="submit" name="submit" value="добавить" onClick={addCol} />
 
-                    <input type="text" id="tst" name="tst" placeholder="tst "
-                           onChange={addCol}/>
+
                 </p>
             </form>
         </div>

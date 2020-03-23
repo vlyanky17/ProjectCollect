@@ -12,11 +12,11 @@ export const ColTabl = () =>{
     const storageName = 'userData'
     const da = JSON.parse(localStorage.getItem(storageName))
     const us = da.userId
-
+console.log(us)
     const registerAll = async () => {
         try {
 
-            const data = await request('/ToCabCol', 'POST')
+            const data = await request('/ToCabCol', 'POST',{us})
             console.log(data.userId)
             setUsers(data)
             console.log(users)
