@@ -29,10 +29,15 @@ console.log('http')
 
             return data
         } catch (e) {
+
             console.log('hookEr')
             setLoading(false)
             setError(e.message)
-      
+            const storageName = 'userData'
+            const da = JSON.parse(localStorage.getItem(storageName))
+            const us = da.userId
+          if (us !=body){     alert(e.message)}
+
             throw e
         }
     }, [])
