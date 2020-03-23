@@ -64,7 +64,7 @@ console.log(data[0])
         </tbody>
     </table>
 
-        <div  style="text-align: center">
+        <div  >
 1111111
         </div>
     </div>
