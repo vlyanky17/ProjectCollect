@@ -36,7 +36,7 @@ console.log('http')
             const storageName = 'userData'
             const da = JSON.parse(localStorage.getItem(storageName))
             const us = da.userId
-          if (us !=body){     alert(e.message)}
+            alert(e.message)
 
             throw e
         }
