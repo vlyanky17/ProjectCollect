@@ -11,7 +11,7 @@ import 'materialize-css'
 export const PageForCol = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
-    const [form, setForm] = useState( {})
+    const [form, setForm] = useState( null)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
 const us = data.ColId
@@ -27,7 +27,7 @@ console.log(data)
     }
 
     useEffect(() => {
-        if (form =={}) {registerAll()
+        if (form ==null) {registerAll()
             console.log("usEf")
         }
         console.log(form)
