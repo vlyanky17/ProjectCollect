@@ -27,7 +27,9 @@ console.log(data)
     }
 
     useEffect(() => {
-        if (form =={}) {registerAll()}
+        if (form =={}) {registerAll()
+            console.log("usEf")
+        }
 
         }
     )
