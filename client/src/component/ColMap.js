@@ -10,7 +10,11 @@ export const ColMap = ({ cols }) => {
     }
     const changeHandler = event => {
      console.log(event.target.name)
-
+        const storageName = 'userData'
+        const data = JSON.parse(localStorage.getItem(storageName))
+        localStorage.setItem(storageName, JSON.stringify({
+            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: event.target.name
+        }))
     }
 
 
