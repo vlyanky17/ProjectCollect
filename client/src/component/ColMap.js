@@ -32,6 +32,7 @@ export const ColMap = ({ cols }) => {
                 <td>{col.nam}</td>
                 <td>{col.disk}</td>
                 <td>{col.tem}</td>
+                <td><button> открыть</button></td>
                 </tr>
         )
         }) }
