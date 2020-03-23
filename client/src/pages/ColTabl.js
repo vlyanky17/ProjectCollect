@@ -17,11 +17,14 @@ console.log(us)
         try {
 
             const data = await request('/ToCabCol', 'POST',{us})
-            console.log(data.userId)
-            setUsers(data)
-            console.log(users)
+            console.log(data)
+
         } catch (e) {}
     }
+
+    useEffect(() => {
+        registerAll()
+    } )
 
     return(
         <div>
