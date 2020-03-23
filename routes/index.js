@@ -292,6 +292,9 @@ router.post('/ColUp', async(req,res) =>{
     try{
         console.log(req.body)
         const coleks = await Colec.find({ _id: req.body.us })
+        console.log(coleks)
+        console.log("||||||||||||||||||||||||||||")
+        console.log(coleks.nam)
         res.json({nam:coleks.nam,disk:coleks.disk,tem:coleks.tem,pict:coleks.pict})
 
     } catch(e){
