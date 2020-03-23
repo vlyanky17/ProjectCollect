@@ -47,7 +47,17 @@ console.log(data)
     </nav>
 
     <table class="resp-tab">
-       
+        <thead>
+        <tr>
+
+        <th>имя</th>
+        <th>описание</th>
+        <th>тема</th>
+        <th> </th>
+
+        </tr>
+        </thead>
+        
     </table>
 
 
