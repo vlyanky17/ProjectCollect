@@ -30,7 +30,7 @@ console.log(data)
         if (form =={}) {registerAll()
             console.log("usEf")
         }
-
+        console.log(form)
         }
     )
     return( <div>
