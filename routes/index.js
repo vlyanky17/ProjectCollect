@@ -280,7 +280,7 @@ console.log(req.body)
         const coleks = await Colec.find(  { owner: req.body.us } , { nam:1 , disk:1 ,tem:1})
 
 console.log(coleks)
-
+        res.json(coleks)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
