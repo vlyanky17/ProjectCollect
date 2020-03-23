@@ -22,9 +22,10 @@ console.log(us)
         } catch (e) {}
     }
 
-    useEffect(() => {
+    useEffect(() => { console.log(us)
         registerAll()
-    } )
+    }
+    )
 
     return(
         <div>
