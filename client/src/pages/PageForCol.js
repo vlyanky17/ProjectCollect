@@ -20,7 +20,7 @@ const us = data.ColId
         try {
 
             const data = await request('/ColUp', 'POST',{us})
-console.log(data.nam)
+console.log(data)
             setForm(data)
 
         } catch (e) {}
