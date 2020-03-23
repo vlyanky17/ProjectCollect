@@ -68,7 +68,9 @@ console.log(data[0])
     </table>
 
         <div  >
-
+        <div style="display: table-cell; vertical-align: middle;  height: 100px; border: 1px solid red">
+        <button>Кнопка<br>с любой высотой<br>и шириной</button>
+    </div>
         <img src={'data:image/jpeg;base64,' + form.pict} />
         </div>
     </div>
