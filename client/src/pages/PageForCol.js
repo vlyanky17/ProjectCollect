@@ -20,7 +20,7 @@ const us = data.ColId
         try {
 
             const data = await request('/ColUp', 'POST',{us})
-     
+
 
 
         } catch (e) {}
@@ -38,7 +38,7 @@ const us = data.ColId
     </ul>
     </div>
     </nav>
-
+    > <button onClick={registerAll} > открыть</button>
         {us}
 
 
