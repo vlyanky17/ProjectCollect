@@ -321,6 +321,7 @@ router.post('/ToItm', async(req,res) =>{
             if (i>0){
 const tag = new Tag({  nam: itm})
                 console.log(i)
+                console.log(item)
             }
 
 
