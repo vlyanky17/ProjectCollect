@@ -317,7 +317,7 @@ router.post('/ToItm', async(req,res) =>{
         console.log(item)
 
 
-        await item.save()
+    
 const i=0;
         console.log("whi0")
         while (true){
