@@ -17,8 +17,7 @@ export const CreatItem = () =>{
 
     const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})
-        console.log(form)
-        console.log(col)
+
     }
 
     const registerAll = async () => {
@@ -86,6 +85,14 @@ export const CreatItem = () =>{
                                                             if (col.Cbol3!='') {  var PCbol3 = col.Cbol3
                                                                 var Cbol3=  <input  type="date"  id="Cbol3" name="Cbol3" placeholder={PCbol3}  onChange={changeHandler} />}
 
+
+                                                                const addItm = async () => {
+                                                                    try {
+
+                                                                        const data = await request('/ToItm', 'POST', {...form})
+
+                                                                    } catch (e) {}
+                                                                }
     return (
         <div>
         <nav>
@@ -132,6 +139,8 @@ export const CreatItem = () =>{
                                                                 {Cbol2}
                                                                 {PCbol3}
                                                                 {Cbol3}
+
+                                                            <input type="submit" name="submit" value="добавить" onClick={addItm} />
         </form>
     </div>
 

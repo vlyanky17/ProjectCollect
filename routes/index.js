@@ -301,4 +301,15 @@ router.post('/ColUp', async(req,res) =>{
     }
 })
 
+router.post('/ToItm', async(req,res) =>{
+
+    try{
+        console.log(req.body)
+
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
 module.exports = router;
