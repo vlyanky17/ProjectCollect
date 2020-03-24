@@ -51,10 +51,10 @@ export const CreatItem = () =>{
                     var Cstr1=  <input type="text" id="Cstr1" name="Cstr1" placeholder={PCstr1}  onChange={changeHandler} />}
 
                     if (col.Cstr2!='') {  var PCstr2 = col.Cstr2
-                        var Cstr2=  <input type="number" id="Cstr2" name="Cstr2" placeholder={PCstr2}  onChange={changeHandler} />}
+                        var Cstr2=  <input type="text" id="Cstr2" name="Cstr2" placeholder={PCstr2}  onChange={changeHandler} />}
 
                         if (col.Cstr3!='') {  var PCstr3 = col.Cstr3
-                            var Cstr3=  <input type="number" id="Cstr3" name="Cstr3" placeholder={PCstr3}  onChange={changeHandler} />}
+                            var Cstr3=  <input type="text" id="Cstr3" name="Cstr3" placeholder={PCstr3}  onChange={changeHandler} />}
     return (
         <div>
         <nav>
