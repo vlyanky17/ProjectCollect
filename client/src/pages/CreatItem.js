@@ -111,12 +111,18 @@ export const CreatItem = () =>{
                                         {Ctxt1}
                                         {Ctxt2}
                                         {Ctxt3}
+                                                            <p className="clearfix">
                                                                 {PCdate1}
                                                                 {Cdate1}
+                                                            </p>
+                                                                <p className="clearfix">
                                                                 {PCdate2}
                                                                 {Cdate2}
+                                                            </p>
+                                                                <p className="clearfix">
                                                                 {PCdate3}
                                                                 {Cdate3}
+                                                            </p>
                                                                 {PCbol1}
                                                                 {Cbol1}
                                                                 {PCbol2}
