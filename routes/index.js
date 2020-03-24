@@ -305,7 +305,9 @@ router.post('/ToItm', async(req,res) =>{
 
     try{
         console.log(req.body)
-
+        req.body.tags.forEach(function(item, i, arr) {
+            console.log(arr)
+        });
 
     } catch(e){
         res.status(500).json({message: 'error Col'})

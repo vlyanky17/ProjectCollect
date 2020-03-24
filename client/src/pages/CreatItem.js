@@ -118,8 +118,8 @@ export const CreatItem = () =>{
         <label htmlFor="nazv"><i className="icon-user"></i>название</label>
     <input type="text" id="nazv" name="nazv" placeholder="название " onChange={changeHandler} />
 
-    <label htmlFor="tegs"><i className="icon-user"></i>теги</label>
-    <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={IgetTegs} />
+    <label htmlFor="tags"><i className="icon-user"></i>теги</label>
+    <input type="text" id="tags" name="tags" placeholder="пример(#FirstTag#secondTeg)" onChange={IgetTegs} />
     {intgr1}
     {intgr2}
     {intgr3}

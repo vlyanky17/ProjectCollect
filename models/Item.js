@@ -2,9 +2,6 @@ const {Schema, model, Types} = require('mongoose')
 
 const schema = new Schema({
     nam: {type: String, required: true},
-    tags: {type: String, required: true},
-    tem: {type: String, required: true},
-    pict: {type: String, required: false},
     intgr1: {type: String, required: false},
     intgr2: {type: String, required: false},
     intgr3: {type: String, required: false},
@@ -20,8 +17,10 @@ const schema = new Schema({
     Cbol1: {type: String, required: false},
     Cbol2: {type: String, required: false},
     Cbol3: {type: String, required: false},
-    item: [{ type: Types.ObjectId, ref: 'Item' }],
-    owner: {type: Types.ObjectId, ref: 'User'}
+    like: [{ type: Types.ObjectId, ref: 'Like' }],
+    coment: [{ type: Types.ObjectId, ref: 'Coment' }],
+    tag: [{ type: Types.ObjectId, ref: 'Tag' }],
+    owner: {type: Types.ObjectId, ref: 'Colec'}
 })
 
-module.exports = model('Colec', schema)
+module.exports = model('Item', schema)
