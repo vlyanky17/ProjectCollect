@@ -36,7 +36,9 @@ export const ColMap = ({ cols }) => {
     </thead>
 
     <tbody>
-    { cols.map((col, index) => {
+    {
+
+        sortBy(cols, c => c.nam).map((col, index) => {
             return (
 
                 <tr key={col.nam}>
