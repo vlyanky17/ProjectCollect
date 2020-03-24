@@ -18,8 +18,6 @@ const schema = new Schema({
     Cbol2: {type: String, required: false},
     Cbol3: {type: String, required: false},
     like: [{ type: Types.ObjectId, ref: 'Like' }],
-    coment: [{ type: Types.ObjectId, ref: 'Coment' }],
-    tag: [{ type: Types.ObjectId, ref: 'Tag' }],
     owner: {type: Types.ObjectId, ref: 'Colec'}
 })
 
