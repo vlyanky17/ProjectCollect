@@ -19,10 +19,10 @@ export const CreatItem = () =>{
         setForm({...form,[event.target.name]: event.target.value})
 
     }
-    const IgetTegs = event => {try {
+    const IgetTegs = event => {
         var arrayOfStrings = event.target.value.split("#");
         setForm({...form,[event.target.name]: arrayOfStrings})
-    }
+   
 
 
     }
