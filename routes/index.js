@@ -317,7 +317,7 @@ router.post('/ToItm', async(req,res) =>{
         console.log(item)
 
 
-
+console.log(req.body.tags.length)
 
 
     } catch(e){
