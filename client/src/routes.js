@@ -11,6 +11,8 @@ import ToolAdmin from "./pages/ToolAdmin";
 import ForCab from "./pages/ForCab";
 import ForCol from "./pages/ForCol";
 import PageForCol from "./pages/PageForCol";
+import CreatItem from "./pages/CreatItem";
+
 
 export const useRoutes = isAuthenticated => {
 
@@ -21,6 +23,10 @@ export const useRoutes = isAuthenticated => {
 
             <Route path="/Col" exact>
         <ForCol/>
+        </Route>
+
+        <Route path="/CreatItem" exact>
+        <CreatItem/>
         </Route>
 
         <Route path="/Cab" exact>
@@ -45,6 +51,10 @@ export const useRoutes = isAuthenticated => {
             <Switch>
             <Route path="/Col" exact>
         <ForCol/>
+        </Route>
+
+        <Route path="/CreatItem" exact>
+        <CreatItem/>
         </Route>
 
         <Route path="/PageForCol" exact>
@@ -79,11 +89,14 @@ export const useRoutes = isAuthenticated => {
     </Route>
     <Route path="/Reg" exact>
     <ForReg/>
-
     </Route>
+
+    <Route path="/CreatItem" exact>
+    <CreatItem/>
+    </Route>
+
     <Route path="/" exact>
     <ToolNotAut/>
-
     </Route>
     <Redirect to="/" />
         </Switch>
