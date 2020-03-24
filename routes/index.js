@@ -319,7 +319,7 @@ let y =0;
 
 
 let i=0;
-        console.log( req.body.tags.length)
+        console.log("whi0")
 
             try {
                 console.log("whi1")
