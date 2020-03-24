@@ -65,6 +65,15 @@ export const CreatItem = () =>{
                                     if (col.Ctxt3!='') {  var PCtxt3 = col.Ctxt3
                                         var Ctxt3=  <textarea  id="Ctxt3" name="Ctxt3" placeholder={PCtxt3}  onChange={changeHandler} />}
 
+                                        if (col.Cdate1!='') {  var PCdate1 = col.Cdate1
+                                            var Cdate1=  <input   type="date" id="Cdate1" name="Cdate1" placeholder={PCdate1}  onChange={changeHandler} />}
+
+                                            if (col.Cdate2!='') {  var PCdate2 = col.Cdate2
+                                                var Cdate2=  <input   type="date" id="Cdate2" name="Cdate2" placeholder={PCdate2}  onChange={changeHandler} />}
+
+                                                if (col.Cdate3!='') {  var PCdate3 = col.Cdate3
+                                                    var Cdate3=  <input  type="date"  id="Cdate3" name="Cdate3" placeholder={PCdate3}  onChange={changeHandler} />}
+
     return (
         <div>
         <nav>
@@ -93,6 +102,9 @@ export const CreatItem = () =>{
                                         {Ctxt1}
                                         {Ctxt2}
                                         {Ctxt3}
+                                                    {Cdate1}
+                                                    {Cdate2}
+                                                    {Cdate3}
         </form>
     </div>
 
