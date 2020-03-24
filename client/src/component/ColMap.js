@@ -5,6 +5,7 @@ import "../pages/Aut.css";
 
 
 export const ColMap = ({ cols }) => {
+    const sortBy = require('lodash/sortBy');
     if (!cols.length) {
         return <p className="center">нет коллекций</p>
     }
