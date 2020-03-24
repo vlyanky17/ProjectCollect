@@ -21,7 +21,8 @@ const schema = new Schema({
     Cbol2: {type: String, required: false},
     Cbol3: {type: String, required: false},
     tag: [{ type: Types.ObjectId, ref: 'Tag' }],
-    owner: {type: Types.ObjectId, ref: 'User'}
+    coment: [{ type: Types.ObjectId, ref: 'Coment' }],
+    owner: {type: Types.ObjectId, ref: 'Colec'}
 })
 
 module.exports = model('Item', schema)
