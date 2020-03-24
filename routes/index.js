@@ -1,7 +1,7 @@
 const express = require('express');
 const { isEmpty } = require('lodash');
 const User = require('../models/user');
-const Colec = require('../models/colec');
+const Item = require('../models/item');
 const {check, validationResult} = require('express-validator')
 const jwt = require('jsonwebtoken')
 const config = require('config')
