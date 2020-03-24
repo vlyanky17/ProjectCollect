@@ -38,7 +38,7 @@ export const CreatItem = () =>{
         }
     )
 
-    if (col.intgr1!='') {var intgr1=  <input type="text" id="intgr1" name="intgr1" placeholder="название " onChange={changeHandler} />}
+    if (col.intgr1!='') { var tr = col.intgr1 var intgr1=  <input type="text" id="intgr1" name="intgr1" placeholder="название " onChange={changeHandler} />}
     return (
         <div>
         <nav>
