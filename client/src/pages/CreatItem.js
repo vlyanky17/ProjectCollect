@@ -111,11 +111,17 @@ export const CreatItem = () =>{
                                         {Ctxt1}
                                         {Ctxt2}
                                         {Ctxt3}
-                                                    {Cdate1}
-                                                    {Cdate2}
-                                                    {Cdate3}
+                                                                {PCdate1}
+                                                                {Cdate1}
+                                                                {PCdate2}
+                                                                {Cdate2}
+                                                                {PCdate3}
+                                                                {Cdate3}
+                                                                {PCbol1}
                                                                 {Cbol1}
+                                                                {PCbol2}
                                                                 {Cbol2}
+                                                                {PCbol3}
                                                                 {Cbol3}
         </form>
     </div>
