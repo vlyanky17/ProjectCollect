@@ -139,8 +139,9 @@ export const CreatItem = () =>{
                                                                 {Cbol2}
                                                                 {PCbol3}
                                                                 {Cbol3}
-
+                                                            <p className="clearfix">
                                                             <input type="submit" name="submit" value="добавить" onClick={addItm} />
+                                                                </p>
         </form>
     </div>
 
