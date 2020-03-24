@@ -317,8 +317,11 @@ router.post('/ToItm', async(req,res) =>{
         console.log(item)
 
 
-console.log(req.body.tags.length)
 
+        for (var i = 1; i < req.body.tags.length; i++) {
+            console.log(i);
+
+        }
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
