@@ -320,7 +320,7 @@ router.post('/ToItm', async(req,res) =>{
         req.body.tags.forEach(function(itm, i, arr) {
             if (i>0){
 const tag = new Tag({  nam: itm, owner: item._id})
-                console.log(i)
+                console.log(tag)
                 console.log(item)
             }
 
