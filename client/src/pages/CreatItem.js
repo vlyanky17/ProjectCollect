@@ -37,6 +37,8 @@ export const CreatItem = () =>{
 
         }
     )
+
+    if (col.intgr1=='') {var intgr1="11111"}
     return (
         <div>
         <nav>
@@ -53,6 +55,9 @@ export const CreatItem = () =>{
     <form className="form-2">
         <label htmlFor="nazv"><i className="icon-user"></i>название</label>
     <input type="text" id="nazv" name="nazv" placeholder="название " onChange={changeHandler} />
+
+    <label htmlFor="tegs"><i className="icon-user"></i>теги</label>
+    <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={changeHandler} />
 
         </form>
     </div>
