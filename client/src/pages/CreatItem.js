@@ -39,13 +39,22 @@ export const CreatItem = () =>{
     )
 
     if (col.intgr1!='') {  var Pintgr1 = col.intgr1
-        var intgr1=  <input type="text" id="intgr1" name="intgr1" placeholder={Pintgr1}  onChange={changeHandler} />}
-        
+        var intgr1=  <input type="number" id="intgr1" name="intgr1" placeholder={Pintgr1}  onChange={changeHandler} />}
+
         if (col.intgr2!='') {  var Pintgr2 = col.intgr2
-            var intgr2=  <input type="text" id="intgr2" name="intgr2" placeholder={Pintgr2}  onChange={changeHandler} />}
+            var intgr2=  <input type="number" id="intgr2" name="intgr2" placeholder={Pintgr2}  onChange={changeHandler} />}
 
             if (col.intgr3!='') {  var Pintgr3 = col.intgr3
-                var intgr3=  <input type="text" id="intgr3" name="intgr3" placeholder={Pintgr3}  onChange={changeHandler} />}
+                var intgr3=  <input type="number" id="intgr3" name="intgr3" placeholder={Pintgr3}  onChange={changeHandler} />}
+
+                if (col.Cstr1!='') {  var PCstr1 = col.Cstr1
+                    var Cstr1=  <input type="text" id="Cstr1" name="Cstr1" placeholder={PCstr1}  onChange={changeHandler} />}
+
+                    if (col.Cstr2!='') {  var PCstr2 = col.Cstr2
+                        var Cstr2=  <input type="number" id="Cstr2" name="Cstr2" placeholder={PCstr2}  onChange={changeHandler} />}
+
+                        if (col.Cstr3!='') {  var PCstr3 = col.Cstr3
+                            var Cstr3=  <input type="number" id="Cstr3" name="Cstr3" placeholder={PCstr3}  onChange={changeHandler} />}
     return (
         <div>
         <nav>
@@ -66,6 +75,11 @@ export const CreatItem = () =>{
     <label htmlFor="tegs"><i className="icon-user"></i>теги</label>
     <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={changeHandler} />
     {intgr1}
+    {intgr2}
+    {intgr3}
+                            {Cstr1}
+                            {Cstr2}
+                            {Cstr3}
         </form>
     </div>
 
