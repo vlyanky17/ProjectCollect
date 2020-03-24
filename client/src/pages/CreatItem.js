@@ -13,9 +13,12 @@ export const CreatItem = () =>{
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
+    const [form, setForm] = useState( {})
 
+    const changeHandler = event => {
+        setForm({...form,[event.target.name]: event.target.value})
 
-
+    }
 
     const registerAll = async () => {
         try {
