@@ -19,6 +19,14 @@ export const CreatItem = () =>{
         setForm({...form,[event.target.name]: event.target.value})
 
     }
+    const IgetTegs = event => {try {
+        var arrayOfStrings = event.target.value.split("#");
+        setForm({...form,[event.target.name]: arrayOfStrings})
+    }
+
+
+    }
+
 
     const registerAll = async () => {
         try {
@@ -111,7 +119,7 @@ export const CreatItem = () =>{
     <input type="text" id="nazv" name="nazv" placeholder="название " onChange={changeHandler} />
 
     <label htmlFor="tegs"><i className="icon-user"></i>теги</label>
-    <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={changeHandler} />
+    <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={} />
     {intgr1}
     {intgr2}
     {intgr3}
