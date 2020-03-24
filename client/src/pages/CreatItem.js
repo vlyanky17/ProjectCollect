@@ -51,8 +51,7 @@ export const CreatItem = () =>{
     </div>
     </nav>
     <form className="form-2">
-        <label htmlFor="nazv"><i className="icon-user"></i>название</label>
-    <input type="text" id="nazv" name="nazv" placeholder="название " onChange={changeHandler}/>
+       
 
         </form>
     </div>
