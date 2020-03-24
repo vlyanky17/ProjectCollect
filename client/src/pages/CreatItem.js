@@ -14,7 +14,7 @@ export const CreatItem = () =>{
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
 
-  
+
 
 
     const registerAll = async () => {
@@ -28,7 +28,7 @@ export const CreatItem = () =>{
     }
 
     useEffect(() => {
-            if (form.nam =='') {registerAll()
+            if (col.nam =='') {registerAll()
                 console.log("usEf")
             }
 
