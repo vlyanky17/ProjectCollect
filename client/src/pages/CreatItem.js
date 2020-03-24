@@ -74,6 +74,15 @@ export const CreatItem = () =>{
                                                 if (col.Cdate3!='') {  var PCdate3 = col.Cdate3
                                                     var Cdate3=  <input  type="date"  id="Cdate3" name="Cdate3" placeholder={PCdate3}  onChange={changeHandler} />}
 
+                                                    if (col.Cbol1!='') {  var PCbol1 = col.Cbol1
+                                                        var Cbol1=  <input   type="checkbox" id="Cbol1" name="Cbol1" placeholder={PCbol1}  onChange={changeHandler} />}
+
+                                                        if (col.Cbol2!='') {  var PCbol2 = col.Cbol2
+                                                            var Cbol2=  <input   type="date" id="Cbol2" name="Cbol2" placeholder={PCbol2}  onChange={changeHandler} />}
+
+                                                            if (col.Cbol3!='') {  var PCbol3 = col.Cbol3
+                                                                var Cbol3=  <input  type="date"  id="Cbol3" name="Cbol3" placeholder={PCbol3}  onChange={changeHandler} />}
+
     return (
         <div>
         <nav>
@@ -105,6 +114,9 @@ export const CreatItem = () =>{
                                                     {Cdate1}
                                                     {Cdate2}
                                                     {Cdate3}
+                                                                {Cbol1}
+                                                                {Cbol2}
+                                                                {Cbol3}
         </form>
     </div>
 
