@@ -19,7 +19,7 @@ export const CreatItem = () =>{
             const data = await request('/ColUp', 'POST',{us})
             console.log(data[0])
             setForm(data[0])
-
+console.log('222222222')
         } catch (e) {}
     }
 
