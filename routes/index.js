@@ -318,7 +318,7 @@ router.post('/ToItm', async(req,res) =>{
 
 
 
-const i=0;
+let i=0;
         console.log("whi0")
         while (true){
             try {
