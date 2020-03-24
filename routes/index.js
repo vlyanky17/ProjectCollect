@@ -308,10 +308,7 @@ router.post('/ToItm', async(req,res) =>{
     try{
 
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
-        req.body.tags.forEach(function(item, i, arr) {
 
-
-        });
 
         const item = new Item({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: id})
         console.log(item)
@@ -320,7 +317,8 @@ router.post('/ToItm', async(req,res) =>{
 
         for (var i = 1; i < req.body.tags.length; i++) {
             console.log(i);
-
+const tag = new Tag({nam:req.body.tags[i]  ,owner: item._id})
+            console.log(tag)
         }
 
     } catch(e){
