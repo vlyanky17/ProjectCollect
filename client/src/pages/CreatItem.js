@@ -9,15 +9,12 @@ export const CreatItem = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
     const [col, setcol] = useState( {nam:'',disk:'',tem:''})
-    const [form, setForm] = useState(null)
+
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
 
-    const changeHandler = event => {
-        setForm({...form,[event.target.name]: event.target.value})
-
-    }
+  
 
 
     const registerAll = async () => {
@@ -51,7 +48,8 @@ export const CreatItem = () =>{
     </div>
     </nav>
     <form className="form-2">
-       
+        <label htmlFor="nazv"><i className="icon-user"></i>название</label>
+    <input type="text" id="nazv" name="nazv" placeholder="название " />
 
         </form>
     </div>
