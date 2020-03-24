@@ -306,11 +306,11 @@ router.post('/ColUp', async(req,res) =>{
 router.post('/ToItm', async(req,res) =>{
 
     try{
-
+let y =0;
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
         req.body.tags.forEach(function(item, i, arr) {
 
-
+y++
         });
 
         const item = new Item({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: id})
@@ -320,7 +320,7 @@ router.post('/ToItm', async(req,res) =>{
 
 let i=0;
         console.log("whi0")
-        while (true){
+
             try {
                 console.log("whi1")
                 i++
@@ -335,7 +335,7 @@ let i=0;
 
                 break
             }
-        }
+
         console.log("whiOv")
     } catch(e){
         res.status(500).json({message: 'error Col'})
