@@ -38,7 +38,7 @@ export const CreatItem = () =>{
         }
     )
 
-    if (col.intgr1=='') {var intgr1={<label htmlFor='intgr1'><i className='icon-user'></i>название</label> <input type='text' id='intgr1' name='intgr1' placeholder='название' onChange={changeHandler} />}}
+    if (col.intgr1=='') {var intgr1=(<label htmlFor='intgr1'><i className='icon-user'></i>название</label> <input type='text' id='intgr1' name='intgr1' placeholder='название' onChange={changeHandler} />)}
     return (
         <div>
         <nav>
