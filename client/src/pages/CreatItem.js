@@ -22,7 +22,7 @@ export const CreatItem = () =>{
     const IgetTegs = event => {
         var arrayOfStrings = event.target.value.split("#");
         setForm({...form,[event.target.name]: arrayOfStrings})
-   
+
 
 
     }
@@ -119,7 +119,7 @@ export const CreatItem = () =>{
     <input type="text" id="nazv" name="nazv" placeholder="название " onChange={changeHandler} />
 
     <label htmlFor="tegs"><i className="icon-user"></i>теги</label>
-    <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={} />
+    <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={IgetTegs} />
     {intgr1}
     {intgr2}
     {intgr3}
