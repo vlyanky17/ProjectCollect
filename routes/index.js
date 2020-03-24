@@ -319,7 +319,7 @@ router.post('/ToItm', async(req,res) =>{
 
         req.body.tags.forEach(function(itm, i, arr) {
             if (i>0){
-
+const tag = new tag({})
                 console.log(i)
             }
 
