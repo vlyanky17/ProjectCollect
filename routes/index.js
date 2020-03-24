@@ -306,11 +306,10 @@ router.post('/ColUp', async(req,res) =>{
 router.post('/ToItm', async(req,res) =>{
 
     try{
-        console.log(req.body)
+  
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
         req.body.tags.forEach(function(item, i, arr) {
-            console.log(item)
-            console.log(i)
+
 
         });
 
@@ -321,7 +320,7 @@ router.post('/ToItm', async(req,res) =>{
             if (i>0){
 const tag = new Tag({  nam: itm, owner: item._id})
                 console.log(tag)
-                console.log(item)
+
             }
 
 
