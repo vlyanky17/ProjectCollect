@@ -321,9 +321,13 @@ router.post('/ToItm', async(req,res) =>{
 const i=0;
         while (true){
             try {
+                console.log("whi1")
                 i++
+                console.log("whi2")
                 const  itm =  req.body.tags[i]
+                console.log("whi3")
                 const tag = new Tag({  nam: itm, owner: item._id})
+                console.log("whi4")
                 console.log(tag)
             }catch (e) {
 
