@@ -17,6 +17,7 @@ export const CreatItem = () =>{
 
     const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})
+        console.log(form)
 
     }
 
