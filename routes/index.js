@@ -317,7 +317,8 @@ router.post('/ToItm', async(req,res) =>{
 
         for (var i = 1; i < req.body.tags.length; i++) {
             console.log(i);
-const tag = new Tag({nam:req.body.tags[i]  ,owner: item._id})
+            const na = '#'+req.body.tags[i]
+const tag = new Tag({nam:na  ,owner: item._id})
             console.log(tag)
         }
 
