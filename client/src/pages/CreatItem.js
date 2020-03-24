@@ -38,8 +38,14 @@ export const CreatItem = () =>{
         }
     )
 
-    if (col.intgr1!='') {  var ty = col.intgr1
-        var intgr1=  <input type="text" id="intgr1" name="intgr1" placeholder={ty}  onChange={changeHandler} />}
+    if (col.intgr1!='') {  var Pintgr1 = col.intgr1
+        var intgr1=  <input type="text" id="intgr1" name="intgr1" placeholder={Pintgr1}  onChange={changeHandler} />}
+        
+        if (col.intgr2!='') {  var Pintgr2 = col.intgr2
+            var intgr2=  <input type="text" id="intgr2" name="intgr2" placeholder={Pintgr2}  onChange={changeHandler} />}
+
+            if (col.intgr3!='') {  var Pintgr3 = col.intgr3
+                var intgr3=  <input type="text" id="intgr3" name="intgr3" placeholder={Pintgr3}  onChange={changeHandler} />}
     return (
         <div>
         <nav>
