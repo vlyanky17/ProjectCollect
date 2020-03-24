@@ -108,6 +108,7 @@
 }
 .form-2 input[type=text],
 .form-2 input[type=number],
+.form-2 input[type=date],
 .form-2 input[type=password] {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 13px;
@@ -122,6 +123,7 @@
 }
 .form-2 input[type=text]:hover,
 .form-2 input[type=number]:hover,
+.form-2 input[type=date]:hover,
 .form-2 input[type=password]:hover {
     border-color: #CCC;
 }
@@ -132,6 +134,7 @@
  
 .form-2 input[type=text]:focus,
 .form-2 input[type=number]:focus,
+.form-2 input[type=date]:focus,
 .form-2 input[type=password]:focus {
     border-color: #BBB;
     outline: none;
