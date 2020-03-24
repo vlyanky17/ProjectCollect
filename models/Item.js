@@ -1,7 +1,7 @@
 const {Schema, model, Types} = require('mongoose')
 
 const schema = new Schema({
-    nam: {type: String, required: true},
+    nazv: {type: String, required: true},
     disk: {type: String, required: true},
     tem: {type: String, required: true},
     pict: {type: String, required: false},
@@ -22,6 +22,7 @@ const schema = new Schema({
     Cbol3: {type: String, required: false},
     tag: [{ type: Types.ObjectId, ref: 'Tag' }],
     coment: [{ type: Types.ObjectId, ref: 'Coment' }],
+    like: [{ type: Types.ObjectId, ref: 'Like' }],
     owner: {type: Types.ObjectId, ref: 'Colec'}
 })
 
