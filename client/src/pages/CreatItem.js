@@ -34,6 +34,8 @@ export const CreatItem = () =>{
     useEffect(() => {
             if (col.nam =='') {registerAll()
                 console.log("usEf")
+                console.log(col._id)
+                setForm({...form,["id"]:col._id})
             }
 
         }
