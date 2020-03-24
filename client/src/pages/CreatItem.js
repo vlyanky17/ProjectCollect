@@ -18,7 +18,7 @@ export const CreatItem = () =>{
     const changeHandler = event => {
         setForm({...form,[event.target.name]: event.target.value})
         console.log(form)
-
+        console.log(col)
     }
 
     const registerAll = async () => {
@@ -27,15 +27,15 @@ export const CreatItem = () =>{
             const data = await request('/ColUp', 'POST',{us})
 
             setcol(data[0])
-
+            setForm({...form,["id"]:data[0]._id})
         } catch (e) {}
     }
 
     useEffect(() => {
             if (col.nam =='') {registerAll()
                 console.log("usEf")
-                console.log(col)
-                setForm({...form,["id"]:col._id})
+
+
             }
 
         }
