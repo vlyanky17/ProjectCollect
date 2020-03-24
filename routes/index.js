@@ -319,6 +319,7 @@ router.post('/ToItm', async(req,res) =>{
 
         await item.save()
 const i=0;
+        console.log("whi0")
         while (true){
             try {
                 console.log("whi1")
@@ -334,6 +335,7 @@ const i=0;
                 break
             }
         }
+        console.log("whiOv")
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
