@@ -306,7 +306,7 @@ router.post('/ToItm', async(req,res) =>{
     try{
         console.log(req.body)
         req.body.tags.forEach(function(item, i, arr) {
-            console.log(arr)
+            console.log(item)
         });
 
     } catch(e){

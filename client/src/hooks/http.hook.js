@@ -31,6 +31,7 @@ export const useHttp = () => {
             setLoading(false)
             setError(e.message)
             if (url !='/ToCabCol'){
+                console.log(e.message)
             alert(e.message)}
             throw e
         }
