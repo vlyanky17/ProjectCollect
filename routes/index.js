@@ -323,7 +323,8 @@ let i=0;
         while (true){
             try {
                 console.log("whi1")
-                i=i+1
+                i++
+                console.log(i)
                 console.log("whi2")
                 const  itm =  req.body.tags[i]
                 console.log("whi3")
