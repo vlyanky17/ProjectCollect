@@ -20,6 +20,7 @@ export const CreatItem = () =>{
             console.log(data[0])
             setForm(data[0])
 console.log('222222222')
+            console.log(data[0].nam)
         } catch (e) {}
     }
 
