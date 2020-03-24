@@ -38,7 +38,7 @@ export const ColMap = ({ cols }) => {
     { cols.map((col, index) => {
             return (
 
-                <tr key={col.nam}>
+                <tr key={col.disk}>
 
 
                 <td>{col.nam}</td>
