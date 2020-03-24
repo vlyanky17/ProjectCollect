@@ -317,13 +317,13 @@ router.post('/ToItm', async(req,res) =>{
         console.log(item)
 
 
-    
+
 const i=0;
         console.log("whi0")
         while (true){
             try {
                 console.log("whi1")
-                i++
+                i=i+1
                 console.log("whi2")
                 const  itm =  req.body.tags[i]
                 console.log("whi3")
