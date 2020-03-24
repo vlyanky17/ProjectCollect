@@ -320,7 +320,7 @@ router.post('/ToItm', async(req,res) =>{
             if (i>0){
 const tag = new Tag({  nam: itm, owner: item._id})
                 console.log(tag)
-
+                await tag.save()
             }
 
 
