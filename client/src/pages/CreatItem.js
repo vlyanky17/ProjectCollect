@@ -58,7 +58,7 @@ export const CreatItem = () =>{
 
     <label htmlFor="tegs"><i className="icon-user"></i>теги</label>
     <input type="text" id="tegs" name="tegs" placeholder="теги " onChange={changeHandler} />
-
+    {intgr1}
         </form>
     </div>
 
