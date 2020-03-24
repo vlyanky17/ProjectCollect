@@ -8,19 +8,25 @@ import './Aut.css';
 export const CreatItem = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
-    const [form, setForm] = useState( {nam:'',disk:'',tem:''})
+    const [col, setcol] = useState( {nam:'',disk:'',tem:''})
+    const [form, setForm] = useState(null)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
+
+    const changeHandler = event => {
+        setForm({...form,[event.target.name]: event.target.value})
+
+    }
+
 
     const registerAll = async () => {
         try {
 
             const data = await request('/ColUp', 'POST',{us})
-            console.log(data[0])
-            setForm(data[0])
-console.log('222222222')
-            console.log(data[0].nam)
+
+            setcol(data[0])
+
         } catch (e) {}
     }
 
@@ -44,7 +50,11 @@ console.log('222222222')
     </ul>
     </div>
     </nav>
+    <form className="form-2">
+        <label htmlFor="nazv"><i className="icon-user"></i>название</label>
+    <input type="text" id="nazv" name="nazv" placeholder="название " onChange={changeHandler}/>
 
+        </form>
     </div>
 
 );
