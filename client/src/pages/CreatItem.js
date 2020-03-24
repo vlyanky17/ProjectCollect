@@ -55,6 +55,16 @@ export const CreatItem = () =>{
 
                         if (col.Cstr3!='') {  var PCstr3 = col.Cstr3
                             var Cstr3=  <input type="text" id="Cstr3" name="Cstr3" placeholder={PCstr3}  onChange={changeHandler} />}
+
+                            if (col.Ctxt1!='') {  var PCtxt1 = col.Ctxt1
+                                var Ctxt1=  <textarea  id="Ctxt1" name="Ctxt1" placeholder={PCtxt1}  onChange={changeHandler} />}
+
+                                if (col.Cstr2!='') {  var PCstr2 = col.Cstr2
+                                    var Cstr2=  <input type="text" id="Cstr2" name="Cstr2" placeholder={PCstr2}  onChange={changeHandler} />}
+
+                                    if (col.Cstr3!='') {  var PCstr3 = col.Cstr3
+                                        var Cstr3=  <input type="text" id="Cstr3" name="Cstr3" placeholder={PCstr3}  onChange={changeHandler} />}
+
     return (
         <div>
         <nav>
