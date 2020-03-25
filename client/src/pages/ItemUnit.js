@@ -91,13 +91,13 @@ export const ItemUnit = () => {
 
         tgs=tgs+UnitTag.nam
     }
-console.log(tgs)
+
     return( <div>
         <table class="resp-tab">
         <thead>
         <tr>
 
-        <th>{itm.nam}</th>
+        <th>{itm.nazv}</th>
         <th>{tgs}</th>
     {intgr1}
     {intgr2}
