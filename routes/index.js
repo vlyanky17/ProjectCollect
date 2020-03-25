@@ -279,7 +279,7 @@ console.log(colec)
 router.post('/ToCabCol', async(req,res) =>{
 
     try{
-console.log(req.body)
+
 
         const coleks = await Colec.find(  { owner: req.body.us } , { nam:1 , disk:1 ,tem:1})
 
@@ -294,7 +294,7 @@ console.log(req.body)
 router.post('/ColUp', async(req,res) =>{
 
     try{
-        console.log(req.body)
+
         const coleks = await Colec.find({ _id: req.body.us })
         res.json(coleks)
 
@@ -330,9 +330,9 @@ const tag = new Tag({nam:na  ,owner: item._id})
 router.post('/ItemUp', async(req,res) =>{
 
     try{
-        console.log(req.body)
+        console.log(req.body.us)
         const items = await Item.find({ owner: req.body.us })
-        console.log(coleks)
+        console.log(items)
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
