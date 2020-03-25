@@ -19,13 +19,13 @@ export const ItemUnit = () => {
 
     const registerAl = async () => {
         try {
-            console.log(us)
+
             const dat = await request('/GetItm', 'POST',{us})
 
             setitm(dat[0])
             delete dat[0];
             settag(dat)
-            console.log(dat)
+
 
         } catch (e) {}
     }
@@ -34,7 +34,8 @@ export const ItemUnit = () => {
         if (itm.nam==''){console.log('lod')
             registerAl()}
         console.log(itm)
-        console.log("1111111") }
+        console.log(tag)
+       }
     )
 
     return( <div>
