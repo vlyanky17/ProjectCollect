@@ -14,8 +14,8 @@ export const LikesComent = () => {
     const us = data.logn
 
     const changeHandler = event => {
-        setcom({...com,[event.target.name]: event.target.value})
-        setcom({...com,'nam':us})
+        setcom({...com,[event.target.name]: event.target.value,'nam':us})
+       
     console.log(com)
     }
 
