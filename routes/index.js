@@ -315,13 +315,7 @@ router.post('/ToItm', async(req,res) =>{
         await item.save()
 
         console.log(item)
-        for (var i = 1; i < req.body.tags.length; i++) {
-            console.log(i);
-            const na = '#'+req.body.tags[i]
-const tag = new Tag({nam:na  ,owner: item._id})
-            console.log(tag)
-            await tag.save()
-        }
+    
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
