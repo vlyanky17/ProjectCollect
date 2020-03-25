@@ -38,7 +38,7 @@ export const ItemMap = ({ itms }) => {
         <tr>
 
         <th>название</th>
-        <th>теги</th>
+        <th тэги></th>
 
 
         </tr>
