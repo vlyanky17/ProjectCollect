@@ -6,22 +6,27 @@ import {useHttp} from "../hooks/http.hook";
 
 export const ItemMap = ({ itms }) => {
     const {loading, error,request} = useHttp()
-    const [lod, setLod] = useState(null)
+    const [lod, setLod] = useState({nam:''})
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
 
-    const registerAll = async () => {
+    const registerAl = async () => {
         try {
 
             const dat = await request('/ToCabCol', 'POST',{us})
 
             setLod(dat)
-
+            console.log(dat)
 
         } catch (e) {}
     }
-
+    useEffect(() => {
+        if (lod.nam==''){console.log('lod')
+            registerAl()}
+        console.log(lod)
+        console.log("1111111") }
+    )
     if (!itms.length) {
         return <p className="center">нет айтемов</p>
     }
