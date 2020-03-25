@@ -15,12 +15,13 @@ export const LikesComent = () => {
 
     const changeHandler = event => {
         setcom({...com,[event.target.name]: event.target.value})
+        setcom({...com,'nam':us})
     console.log(com)
     }
 
     const ToComent = async () => {
         try {
-            setcom({com,'nam':us})
+
 console.log(com)
             const data = await request('/InCom', 'POST', {com})
 
