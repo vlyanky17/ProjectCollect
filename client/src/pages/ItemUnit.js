@@ -91,7 +91,7 @@ export const ItemUnit = () => {
         <tr>
 
         <th>название</th>
-        <th>{tag.nam}</th>
+        <th>{tag}</th>
     {intgr1}
     {intgr2}
     {intgr3}
