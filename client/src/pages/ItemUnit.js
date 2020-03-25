@@ -27,7 +27,7 @@ export const ItemUnit = () => {
             settag(dat)
 
             const tgs =""
-            for (var i = 1; i < tag.length; i++) {console.log(tag)
+            for (var i = 1; i < tag.length; i++) {tgs=tgs+itm[i].nam
                 console.log(tgs)}
         } catch (e) {}
     }
