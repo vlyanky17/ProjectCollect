@@ -3,7 +3,7 @@ import {NavLink, useHistory} from 'react-router-dom'
 import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
-
+import LikesComent from "./LikesComent";
 
 import 'materialize-css'
 
@@ -128,6 +128,7 @@ export const ItemUnit = () => {
         </tr>
         </thead>
         </table>
+<LikesComent/>
         </div>
 );
 
