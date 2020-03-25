@@ -26,17 +26,16 @@ export const ItemUnit = () => {
             delete dat[0];
             settag(dat)
 
-            const tgs =""
-            for (var i = 1; i < tag.length; i++) {tgs=tgs+itm[i].nam
-                console.log(tgs)}
+
         } catch (e) {}
     }
 
     useEffect(() => {
-        if (itm.nam==''){console.log('lod')
-            registerAl()}
-        console.log(itm)
-        console.log(tag)
+        if (itm.nam==''){
+            registerAl()} else {  const tgs =""
+            for (var i = 1; i < tag.length; i++) {tgs=tgs+itm[i].nam
+                console.log(tgs)}}
+
        }
     )
 
