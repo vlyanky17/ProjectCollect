@@ -84,14 +84,15 @@ export const ItemUnit = () => {
     if (itm.Cbol3!=undefined) {   var PCbol3 = itm.Cbol3
         var Cbol3= <th>{PCbol3}</th>;
     }
-
+const tgs =""
+    for (var i = 1; i < tag.length; i++) { tgs=tgs+tag[i]}
     return( <div>
         <table class="resp-tab">
         <thead>
         <tr>
 
         <th>название</th>
-        <th>{tag}</th>
+        <th>{}</th>
     {intgr1}
     {intgr2}
     {intgr3}
