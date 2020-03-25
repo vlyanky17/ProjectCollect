@@ -361,7 +361,12 @@ router.post('/GetItm', async(req,res) =>{
 
 
         const items = await Item.find(  { _id: req.body.us } )
-        res.json(items)
+        const teg = await Tag.find(  { owner: items._id } )
+        console.log(items)
+        console.log(teg)
+        const Finl = items+teg
+        console.log(Finl)
+        res.json(Finl)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

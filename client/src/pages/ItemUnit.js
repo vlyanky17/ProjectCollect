@@ -22,7 +22,7 @@ export const ItemUnit = () => {
             const dat = await request('/GetItm', 'POST',{us})
 
             setitm(dat[0])
-            console.log(dat[0])
+            console.log(dat)
 
         } catch (e) {}
     }
