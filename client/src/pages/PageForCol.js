@@ -35,8 +35,8 @@ const us = data.ColId
     )
 
 
-    if (form.pict!='') {  var Pintgr1 = form.pict
-        var im=  <img src={'data:image/jpeg;base64,' + {Pintgr1}} />}
+    if (form.pict!='') {  
+        var im=  <img src={'data:image/jpeg;base64,' + {form.pict}} />}
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
