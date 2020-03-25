@@ -17,7 +17,7 @@ export const ItemTabl = () =>{
     const us = data.ColId
 
     useEffect(() => {
-        if (itms==null){  registerAll()}
+        if (itms==undefined){  registerAll()}
 console.log(itms)
         }
     )
