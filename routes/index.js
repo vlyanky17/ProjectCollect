@@ -365,7 +365,7 @@ router.post('/GetItm', async(req,res) =>{
 
         console.log(teg)
         const Finl = items+teg
-        console.log(Finl)
+  
         res.json(Finl)
     } catch(e){
         res.status(500).json({message: 'error Col'})
