@@ -106,54 +106,69 @@ export const ItemMap = ({ itms }) => {
         </thead>
     <tbody>
     { itms.map((itm, index) => {
+            var  intgr1 = null
+            var  intgr2= null
+            var  intgr3= null
+            var  Cstr1= null
+            var  Cstr2= null
+            var Cstr3= null
+            var  Ctxt1= null
+            var Ctxt2= null
+            var Ctxt3= null
+            var Cdate1= null
+            var Cdate2= null
+            var Cdate3= null
+            var  Cbol1= null
+            var  Cbol2= null
+            var Cbol3= null
 
             if (itm.intgr1!="") {   var Pintgr1 = itm.intgr1
-                var intgr1= <td>{Pintgr1}</td>;
+                 intgr1= <td>{Pintgr1}</td>;
       console.log(Pintgr1)      }
             if (itm.intgr2!="") {   var Pintgr2 = itm.intgr2
-                var intgr2= <td>{Pintgr2}</td>;
+                 intgr2= <td>{Pintgr2}</td>;
                 console.log(Pintgr2)        }
             if (itm.intgr3!="") {   var Pintgr3 = itm.intgr3
-                var intgr3= <td>{Pintgr3}</td>;
+                 intgr3= <td>{Pintgr3}</td>;
                 console.log(Pintgr3)       }
             if (itm.Cstr1!="") {   var PCstr1 = itm.Cstr1
-                var Cstr1= <td>{PCstr1}</td>;
+                 Cstr1= <td>{PCstr1}</td>;
                 console.log(PCstr1)       }
             if (itm.Cstr2!="") {   var PCstr2 = itm.Cstr2
-                var Cstr2= <td>{PCstr2}</td>;
+                 Cstr2= <td>{PCstr2}</td>;
                 console.log(PCstr2)     }
             if (itm.Cstr3!="") {   var PCstr3 = itm.Cstr3
-                var Cstr3= <td>{PCstr3}</td>;
+                 Cstr3= <td>{PCstr3}</td>;
                 console.log(PCstr3)     }
             if (itm.Ctxt1!="") {   var PCtxt1 = itm.Ctxt1
-                var Ctxt1= <td>{PCtxt1}</td>;
+                 Ctxt1= <td>{PCtxt1}</td>;
                 console.log(PCtxt1)    }
             if (itm.Ctxt2!="") {   var PCtxt2 = itm.Ctxt2
-                var Ctxt2= <td>{PCtxt2}</td>;
+                 Ctxt2= <td>{PCtxt2}</td>;
                 console.log(PCtxt2)    }
             if (itm.Ctxt3!="") {   var PCtxt3 = itm.Ctxt3
-                var Ctxt3= <td>{PCtxt3}</td>;
+                 Ctxt3= <td>{PCtxt3}</td>;
                 console.log(PCtxt3)    }
             if (itm.Cdate1!="") {   var PCdate1 = itm.Cdate1
-                var Cdate1= <td>{PCdate1}</td>;
+                 Cdate1= <td>{PCdate1}</td>;
                 console.log(PCdate1)    }
             if (itm.Cdate2!="") {   var PCdate2 = itm.Cdate2
-                var Cdate2= <td>{PCdate2}</td>;
+                 Cdate2= <td>{PCdate2}</td>;
                 console.log(PCdate2)      }
             if (itm.Cdate3!="") {   var PCdate3 = itm.Cdate3
-                var Cdate3= <td>{PCdate3}</td>;
+                 Cdate3= <td>{PCdate3}</td>;
                 console.log(PCdate3)    }
 
             if (itm.Cbol1!="") {   var PCbol1 = itm.Cbol1
-                var Cbol1= <td>{PCbol1}</td>;
+                 Cbol1= <td>{PCbol1}</td>;
                 console.log(PCbol1)     }
             if (itm.Cbol2!="") {   var PCbol2 = itm.Cbol2
-                var Cbol2= <td>{PCbol2}</td>;
+                 Cbol2= <td>{PCbol2}</td>;
                 console.log(PCbol2)     }
             if (itm.Cbol3!="") {   var PCbol3 = itm.Cbol3
-                var Cbol3= <td>{PCbol3}</td>;
+                 Cbol3= <td>{PCbol3}</td>;
                 console.log(PCbol3)     }
-            Cbol2= null;
+
 
             return (
                 <tr key={itm._id}>
