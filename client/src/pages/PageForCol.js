@@ -35,8 +35,6 @@ const us = data.ColId
     )
 
 
-    if (form.pict!='') {  
-        var im=  <img src={'data:image/jpeg;base64,' + {form.pict}} />}
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
@@ -58,7 +56,7 @@ const us = data.ColId
         <th>имя</th>
         <th>описание</th>
         <th>тема</th>
-        <th>картинка</th>
+       
 
         </tr>
         </thead>
@@ -66,7 +64,7 @@ const us = data.ColId
         <td>{form.nam}</td>
         <td>{form.disk}</td>
         <td>{form.tem}</td>
-        <td>{im}</td>
+        <td><img src={'data:image/jpeg;base64,' + form.pict} /></td>
         </tbody>
     </table>
 
