@@ -38,9 +38,63 @@ export const ItemUnit = () => {
        }
     )
 
+    if (itm.intgr1!=undefined) {   var Pintgr1 = itm.intgr1
+        var intgr1= <th>{Pintgr1}</th>;
+    }
+    if (itm.intgr2!=undefined) {   var Pintgr2 = itm.intgr2
+        var intgr2= <th>{Pintgr2}</th>;
+    }
+    if (itm.intgr3!=undefined) {   var Pintgr3 = itm.intgr3
+        var intgr3= <th>{Pintgr3}</th>;
+    }
+    if (itm.Cstr1!=undefined) {   var PCstr1 = itm.Cstr1
+        var Cstr1= <th>{PCstr1}</th>;
+    }
+    if (itm.Cstr2!=undefined) {   var PCstr2 = itm.Cstr2
+        var Cstr2= <th>{PCstr2}</th>;
+    }
+    if (itm.Cstr3!=undefined) {   var PCstr3 = itm.Cstr3
+        var Cstr3= <th>{PCstr3}</th>;
+    }
+    if (itm.Ctxt1!=undefined) {   var PCtxt1 = itm.Ctxt1
+        var Ctxt1= <th>{PCtxt1}</th>;
+    }
+    if (itm.Ctxt2!=undefined) {   var PCtxt2 = itm.Ctxt2
+        var Ctxt2= <th>{PCtxt2}</th>;
+    }
+    if (itm.Ctxt3!=undefined) {   var PCtxt3 = itm.Ctxt3
+        var Ctxt3= <th>{PCtxt3}</th>;
+    }
+    if (itm.Cdate1!=undefined) {   var PCdate1 = itm.Cdate1
+        var Cdate1= <th>{PCdate1}</th>;
+    }
+    if (itm.Cdate2!=undefined) {   var PCdate2 = itm.Cdate2
+        var Cdate2= <th>{PCdate2}</th>;
+    }
+    if (itm.Cdate3!=undefined) {   var PCdate3 = itm.Cdate3
+        var Cdate3= <th>{PCdate3}</th>;
+    }
+
+    if (itm.Cbol1!=undefined) {   var PCbol1 = itm.Cbol1
+        var Cbol1= <th>{PCbol1}</th>;
+    }
+    if (itm.Cbol2!=undefined) {   var PCbol2 = itm.Cbol2
+        var Cbol2= <th>{PCbol2}</th>;
+    }
+    if (itm.Cbol3!=undefined) {   var PCbol3 = itm.Cbol3
+        var Cbol3= <th>{PCbol3}</th>;
+    }
+
     return( <div>
-        {us}
-        111111111111
+        <table class="resp-tab">
+        <thead>
+        <tr>
+
+        <th>название</th>
+
+        </tr>
+        </thead>
+        </table>
         </div>
 );
 
