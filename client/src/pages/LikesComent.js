@@ -20,9 +20,9 @@ export const LikesComent = () => {
         <tbody>
 
 
-        <form class="form-2">
+        <th> <form class="form-2">
         <input type="submit" name="submit" value="отправить"/>
-        </form>
+        </form>  </th>
         </tbody>
 
 
