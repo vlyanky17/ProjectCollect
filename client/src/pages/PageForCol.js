@@ -56,7 +56,7 @@ const us = data.ColId
         <th>имя</th>
         <th>описание</th>
         <th>тема</th>
-       
+        <th>картинка</th>
 
         </tr>
         </thead>
