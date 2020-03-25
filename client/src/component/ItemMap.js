@@ -31,7 +31,7 @@ export const ItemMap = ({ itms }) => {
         return <p className="center">нет айтемов</p>
     }
 
-    const tp = <div>    <th>название</th></div>;
+    const tp =   <th>айтем</th>;
     return (
         <table class="resp-tab">
         <thead>
