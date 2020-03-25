@@ -149,6 +149,8 @@ export const CreatItem = () =>{
                                                                 {Cbol3}
                                                             <p className="clearfix">
                                                             <input type="submit" name="submit" value="добавить" onClick={addItm} />
+
+                                                                <input type="text" value="добавить" onChange={addItm} />
                                                                 </p>
         </form>
     </div>
