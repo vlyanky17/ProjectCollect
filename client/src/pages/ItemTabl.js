@@ -6,6 +6,7 @@ import {NavLink, useHistory} from 'react-router-dom'
 import ItemMap from "../component/ItemMap";
 
 
+
 export const ItemTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
@@ -33,8 +34,7 @@ console.log(itms)
 
 
     return(<div>
-        1111111111111
-        <button onClick={registerAll}> ryjgrf </button>
+        <ItemMap itms={itms} />
         </div>
 
     );
