@@ -1,6 +1,6 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-import "../pages/Aut.css";
+import './Aut.css';
 import {useHttp} from "../hooks/http.hook";
 
 
@@ -9,8 +9,24 @@ export const LikesComent = () => {
 
 
     return(
-        <div>11111111</div>
-    )
+        <table class="resp-tab">
+        <thead>
+        <tr>
+
+        <th>комментарии</th>
+        <th>лайки</th>
+        </tr>
+        </thead>
+        <tbody>
+        <form class="form-2">
+        <input type="submit" name="submit" value="отправить"/>
+        </form>
+        </tbody>
+
+
+
+        </table>
+)
 }
 
 export default LikesComent;
