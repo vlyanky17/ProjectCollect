@@ -17,9 +17,9 @@ export const ItemTabl = () =>{
         try {
             console.log(us)
             const data = await request('/ItemUp', 'POST',{us})
-console.log(data)
-            setForm(data)
 
+            setForm(data)
+            console.log(data)
         } catch (e) {}
     }
 
