@@ -23,16 +23,11 @@ console.log(data)
         } catch (e) {}
     }
 
-    useEffect(() => {
-          registerAll()
-                console.log("usEf")
 
-
-        }
-    )
 
     return(<div>
         1111111111111
+        <button onClick={registerAll}> ryjgrf </button>
         </div>
 
     );
