@@ -10,10 +10,7 @@ export const ItemMap = ({ itms }) => {
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
-    useEffect(() => {
-            console.log(lod)
-        }
-    )
+
     const registerAll = async () => {
         try {
 
@@ -23,6 +20,13 @@ export const ItemMap = ({ itms }) => {
 
         } catch (e) {}
     }
+    useEffect(() => {
+            if (lod==null) {
+                registerAll()
+            }
+            console.log(lod)
+        }
+    )
     if (!itms.length) {
         return <p className="center">нет айтемов</p>
     }
