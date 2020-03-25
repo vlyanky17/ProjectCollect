@@ -92,7 +92,7 @@ const tgs =""
         <tr>
 
         <th>название</th>
-        <th>{}</th>
+        <th>{tgs}</th>
     {intgr1}
     {intgr2}
     {intgr3}
