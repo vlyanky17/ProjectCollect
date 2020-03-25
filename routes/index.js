@@ -293,10 +293,10 @@ console.log(coleks)
 router.post('/ColForItm', async(req,res) =>{
 
     try{
-        console.log(req.body)
+
         const coleks = await Colec.find({ _id: req.body.us }  , { nam:1 , disk:1 ,tem:1 ,intgr1:1,intgr2:1,intgr3:1,Cstr1:1,Cstr2:1,Cstr3:1,Cdate1:1,Cdate2:1,Cdate3:1,Ctxt1:1,Ctxt2:1,Ctxt3:1,Cbol1:1,Cbol2:1,Cbol3:1})
         console.log(coleks)
-
+        res.json(coleks)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

@@ -16,8 +16,8 @@ export const ItemMap = ({ itms }) => {
             console.log(us)
             const dat = await request('/ColForItm', 'POST',{us})
 
-            setLod(dat)
-            console.log(dat)
+            setLod(dat[0])
+            console.log(dat[0])
 
         } catch (e) {}
     }
