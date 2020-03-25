@@ -22,10 +22,12 @@ export const LikesComent = () => {
         </tbody>
 
 
+
+        </table>
+
         <form class="form-2">
         <input type="submit" name="submit" value="отправить"/>
         </form>
-        </table>
         </div>
 )
 }
