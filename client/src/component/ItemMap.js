@@ -85,7 +85,7 @@ export const ItemMap = ({ itms }) => {
         <tr>
 
         <th>название</th>
-        <th>айтем</th>
+
     {intgr1}
     {intgr2}
     {intgr3}
@@ -106,12 +106,74 @@ export const ItemMap = ({ itms }) => {
         </thead>
     <tbody>
     { itms.map((itm, index) => {
-        console.log(itm._id)
+
+            if (itm.intgr1!='') {   var Pintgr1 = itm.intgr1
+                var intgr1= <td>{Pintgr1}</td>;
+            }
+            if (itm.intgr2!='') {   var Pintgr2 = itm.intgr2
+                var intgr2= <td>{Pintgr2}</td>;
+            }
+            if (itm.intgr3!='') {   var Pintgr3 = itm.intgr3
+                var intgr3= <td>{Pintgr3}</td>;
+            }
+            if (itm.Cstr1!='') {   var PCstr1 = itm.Cstr1
+                var Cstr1= <td>{PCstr1}</td>;
+            }
+            if (itm.Cstr2!='') {   var PCstr2 = itm.Cstr2
+                var Cstr2= <td>{PCstr2}</td>;
+            }
+            if (itm.Cstr3!='') {   var PCstr3 = itm.Cstr3
+                var Cstr3= <td>{PCstr3}</td>;
+            }
+            if (itm.Ctxt1!='') {   var PCtxt1 = itm.Ctxt1
+                var Ctxt1= <td>{PCtxt1}</td>;
+            }
+            if (itm.Ctxt2!='') {   var PCtxt2 = itm.Ctxt2
+                var Ctxt2= <td>{PCtxt2}</td>;
+            }
+            if (itm.Ctxt3!='') {   var PCtxt3 = itm.Ctxt3
+                var Ctxt3= <td>{PCtxt3}</td>;
+            }
+            if (itm.Cdate1!='') {   var PCdate1 = itm.Cdate1
+                var Cdate1= <td>{PCdate1}</td>;
+            }
+            if (itm.Cdate2!='') {   var PCdate2 = itm.Cdate2
+                var Cdate2= <td>{PCdate2}</td>;
+            }
+            if (itm.Cdate3!='') {   var PCdate3 = itm.Cdate3
+                var Cdate3= <td>{PCdate3}</td>;
+            }
+
+            if (itm.Cbol1!='') {   var PCbol1 = itm.Cbol1
+                var Cbol1= <td>{PCbol1}</td>;
+            }
+            if (itm.Cbol2!='') {   var PCbol2 = itm.Cbol2
+                var Cbol2= <td>{PCbol2}</td>;
+            }
+            if (itm.Cbol3!='') {   var PCbol3 = itm.Cbol3
+                var Cbol3= <td>{PCbol3}</td>;
+            }
+
+
             return (
                 <tr key={itm._id}>
 
                 <td>{itm.nazv}</td>
-
+            {intgr1}
+            {intgr2}
+            {intgr3}
+            {Cstr1}
+            {Cstr2}
+            {Cstr3}
+            {Ctxt1}
+            {Ctxt2}
+            {Ctxt3}
+            {Cdate1}
+            {Cdate2}
+            {Cdate3}
+            {Cbol1}
+            {Cbol2}
+            {Cbol3}
 
             </tr>
         )
