@@ -36,6 +36,7 @@ export const ItemUnit = () => {
             for (var i = 1; i < tag.length; i++) {
                 const UnitTag=tag[i]
                 console.log(UnitTag.nam)
+                tgs=tgs+UnitTag.nam
                 console.log(tgs)}}
 
        }
