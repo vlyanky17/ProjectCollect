@@ -24,7 +24,8 @@ export const ItemTabl = () =>{
 
     const registerAll = async () => {
         try {
-
+console.log(us)
+            console.log("222222222222222")
             const data = await request('/ItemUp', 'POST',{us})
             setitms(data)
 
