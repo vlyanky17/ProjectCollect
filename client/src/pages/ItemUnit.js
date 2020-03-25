@@ -85,15 +85,16 @@ export const ItemUnit = () => {
         var Cbol3= <th>{PCbol3}</th>;
     }
 const tgs =""
-    for (var i = 1; i < tag.length; i++) { tgs=tgs+tag[i].nam}
-    console.log(tgs)
+    for (var i = 1; i < tag.length; i++) { tgs=tgs+tag[i].nam
+        console.log(tgs)}
+
     return( <div>
         <table class="resp-tab">
         <thead>
         <tr>
 
         <th>название</th>
-        <th>{}</th>
+
     {intgr1}
     {intgr2}
     {intgr3}
