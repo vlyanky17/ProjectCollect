@@ -15,4 +15,3 @@ export const ItemTabl = () =>{
 }
 
 export default ItemTabl;
-}
