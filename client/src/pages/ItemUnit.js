@@ -33,7 +33,7 @@ export const ItemUnit = () => {
     useEffect(() => {
         if (itm.nam==''){
             registerAl()}
-           
+
 
        }
     )
@@ -97,7 +97,7 @@ console.log(tgs)
         <thead>
         <tr>
 
-        <th>название</th>
+        <th>{itm.nam}</th>
         <th>{tgs}</th>
     {intgr1}
     {intgr2}
