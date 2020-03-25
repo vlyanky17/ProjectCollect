@@ -332,10 +332,10 @@ router.post('/ToItm', async(req,res) =>{
 router.post('/ItemUp', async(req,res) =>{
 
     try{
- 
+
 
         const items = await Item.find(  { owner: req.body.us } )
-console.log(items)
+        res.json(items)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

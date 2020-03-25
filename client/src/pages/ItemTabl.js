@@ -8,17 +8,24 @@ import {NavLink, useHistory} from 'react-router-dom'
 export const ItemTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
-    const [form, setForm] = useState( {nazv:''})
+
+    const [itms, setitms] = useState([])
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
+
+    useEffect(() => {
+        if (itms==[]){  registerAll()}
+console.log(itms)
+        }
+    )
 
     const registerAll = async () => {
         try {
             console.log(us)
             const data = await request('/ItemUp', 'POST',{us})
 
-            setForm(data)
+            setitms(data)
             console.log(data)
         } catch (e) {}
     }
