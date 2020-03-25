@@ -13,11 +13,12 @@ export const ItemMap = ({ itms }) => {
 
     const registerAll = async () => {
         try {
-            console.log(us)
+
             const dat = await request('/ToCabCol', 'POST',{us})
+            console.log("1111111111111111")
             console.log(dat)
             setLod(dat)
-            console.log(dat)
+
 
         } catch (e) {}
     }
