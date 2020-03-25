@@ -106,11 +106,12 @@ export const ItemMap = ({ itms }) => {
         </thead>
     <tbody>
     { itms.map((itm, index) => {
+        console.log(itm._id)
             return (
                 <tr key={itm._id}>
 
                 <td>{itm.nazv}</td>
-           
+
 
             </tr>
         )

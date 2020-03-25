@@ -39,6 +39,7 @@ export const ColMap = ({ cols }) => {
     {
 
         sortBy(cols, c => c.nam).map((col, index) => {
+
             return (
 
                 <tr key={col.nam}>
