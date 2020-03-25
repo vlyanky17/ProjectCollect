@@ -15,20 +15,13 @@ export const ItemMap = ({ itms }) => {
         try {
 
             const dat = await request('/ToCabCol', 'POST',{us})
-            console.log("1111111111111111")
-            console.log(dat)
+
             setLod(dat)
 
 
         } catch (e) {}
     }
-    useEffect(() => {
-            if (lod==null) {
-                registerAll()
-            }
 
-        }
-    )
     if (!itms.length) {
         return <p className="center">нет айтемов</p>
     }

@@ -18,7 +18,8 @@ export const ItemTabl = () =>{
     useEffect(() => {
         if (itms==[]){console.log('itms')
             registerAll()}
-        console.log(itms)       }
+        console.log(itms)
+        console.log("1111111") }
     )
 
     const registerAll = async () => {
