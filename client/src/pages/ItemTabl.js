@@ -11,12 +11,12 @@ export const ItemTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
 
-    const [itms, setitms] = useState([])
+    const [itms, setitms] = useState({nazv:''})
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
     useEffect(() => {
-        if (itms==[]){console.log('itms')
+        if (itms.nazv==''){console.log('itms')
             registerAll()}
         console.log(itms)
         console.log("1111111") }
