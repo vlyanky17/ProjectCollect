@@ -10,7 +10,12 @@ import 'materialize-css'
 
 
 export const ItemUnit = () => {
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+    const us = data.ItId
+
     return( <div>
+        {us}
         111111111111
         </div>
 );
