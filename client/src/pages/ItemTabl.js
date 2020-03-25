@@ -22,10 +22,10 @@ export const ItemTabl = () =>{
 
     const registerAll = async () => {
         try {
-            console.log(us)
+
             const data = await request('/ItemUp', 'POST',{us})
             setitms(data)
-            console.log(data)
+
         } catch (e) {}
     }
 
