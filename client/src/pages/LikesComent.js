@@ -8,7 +8,7 @@ import {useHttp} from "../hooks/http.hook";
 export const LikesComent = () => {
 
 
-    return(
+    return(<div>
         <table class="resp-tab">
         <thead>
         <tr>
@@ -18,14 +18,15 @@ export const LikesComent = () => {
         </tr>
         </thead>
         <tbody>
-        <form class="form-2">
-        <input type="submit" name="submit" value="отправить"/>
-        </form>
+
         </tbody>
 
 
-
+        <form class="form-2">
+        <input type="submit" name="submit" value="отправить"/>
+        </form>
         </table>
+        </div>
 )
 }
 
