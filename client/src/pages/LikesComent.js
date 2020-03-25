@@ -19,15 +19,17 @@ export const LikesComent = () => {
         </thead>
         <tbody>
 
+
+        <form class="form-2">
+        <input type="submit" name="submit" value="отправить"/>
+        </form>
         </tbody>
 
 
 
         </table>
 
-        <form class="form-2">
-        <input type="submit" name="submit" value="отправить"/>
-        </form>
+
         </div>
 )
 }
