@@ -5,9 +5,6 @@ import "../pages/Aut.css";
 
 export const ItemMap = ({ itms }) => {
 
-    if (!itms.length) {
-        return <p className="center">нет коллекций</p>
-    }
 
 
 
