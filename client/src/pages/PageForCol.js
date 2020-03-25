@@ -35,6 +35,8 @@ const us = data.ColId
     )
 
 
+    if (form.pict!='') {  var Pintgr1 = form.pict
+        var im=  <img src={'data:image/jpeg;base64,' + {Pintgr1}} />}
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
@@ -64,7 +66,7 @@ const us = data.ColId
         <td>{form.nam}</td>
         <td>{form.disk}</td>
         <td>{form.tem}</td>
-        <td><img src={'data:image/jpeg;base64,' + form.pict} /></td>
+        <td>{im}</td>
         </tbody>
     </table>
 
