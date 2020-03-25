@@ -364,8 +364,10 @@ router.post('/GetItm', async(req,res) =>{
         const teg = await Tag.find(  { owner: items[0]._id } )
 
         console.log(teg)
-        const Finl = items+teg
-  
+        const Finl = items.concat(teg);
+
+        console.log(Finl)
+
         res.json(Finl)
     } catch(e){
         res.status(500).json({message: 'error Col'})
