@@ -290,6 +290,18 @@ console.log(coleks)
     }
 })
 
+router.post('/ColForItm', async(req,res) =>{
+
+    try{
+        console.log(req.body)
+        const coleks = await Colec.find({ _id: req.body.us })
+        console.log(coleks)
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
 
 router.post('/ColUp', async(req,res) =>{
 

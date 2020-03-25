@@ -13,8 +13,8 @@ export const ItemMap = ({ itms }) => {
 
     const registerAl = async () => {
         try {
-
-            const dat = await request('/ToCabCol', 'POST',{us})
+            console.log(us)
+            const dat = await request('/ColForItm', 'POST',{us})
 
             setLod(dat)
             console.log(dat)
