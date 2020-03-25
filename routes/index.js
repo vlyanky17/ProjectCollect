@@ -322,7 +322,7 @@ const tag = new Tag({nam:na  ,owner: item._id})
             console.log(tag)
             await tag.save()
         }
-
+        res.json("item added")
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
