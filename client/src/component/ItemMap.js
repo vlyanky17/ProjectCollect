@@ -4,13 +4,29 @@ import "../pages/Aut.css";
 
 
 export const ItemMap = ({ itms }) => {
-
+    const sortBy = require('lodash/sortBy');
+    if (!itms.length) {
+        return <p className="center">нет коллекций</p>
+    }
 
 
 
 
     return (
-     <div>111111 <div>
+        <table class="resp-tab">
+        <thead>
+        <tr>
+
+        <th>Название</th>
+        <th>теги</th>
+
+      
+
+        </tr>
+        </thead>
+
+
+    </table>
 
 )
 }
