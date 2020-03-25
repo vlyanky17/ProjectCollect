@@ -71,7 +71,7 @@ const us = data.ColId
         <div  >
 
         </div>
-        <ItemTabl/>
+
     </div>
 );
 }
