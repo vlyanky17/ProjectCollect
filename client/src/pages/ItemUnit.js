@@ -35,7 +35,7 @@ export const ItemUnit = () => {
             registerAl()} else {  let tgs =""
             for (var i = 1; i < tag.length; i++) {
                 const UnitTag=tag[i]
-                console.log(UnitTag)
+                console.log(UnitTag.nam)
                 console.log(tgs)}}
 
        }
