@@ -33,7 +33,7 @@ export const ItemUnit = () => {
     useEffect(() => {
         if (itm.nam==''){
             registerAl()} else {  let tgs =""
-            for (var i = 0; i < tag.length; i++) {  console.log(tag[i].nam)
+            for (var i = 0; i < tag.length; i++) {  console.log(tag[i])
                 console.log(tgs)}}
 
        }
