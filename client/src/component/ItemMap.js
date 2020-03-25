@@ -11,6 +11,17 @@ export const ItemMap = ({ itms }) => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
 
+    const changeHandler = event => {
+        console.log(event.target.name)
+        const storageName = 'userData'
+        const data = JSON.parse(localStorage.getItem(storageName))
+        localStorage.setItem(storageName, JSON.stringify({
+            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: data.ColId
+
+        }))
+
+    }
+
     const registerAl = async () => {
         try {
             console.log(us)
@@ -101,7 +112,7 @@ export const ItemMap = ({ itms }) => {
     {Cbol1}
     {Cbol2}
     {Cbol3}
-
+<th>перейти</th>
         </tr>
         </thead>
     <tbody>
