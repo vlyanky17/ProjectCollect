@@ -11,10 +11,18 @@ export const ItemMap = ({ itms }) => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
     useEffect(() => {
-            console.log("11111")
+            console.log(lod)
         }
     )
+    const registerAll = async () => {
+        try {
 
+            const dat = await request('/ToCabCol', 'POST',{us})
+            setLod(dat)
+
+
+        } catch (e) {}
+    }
     if (!itms.length) {
         return <p className="center">нет айтемов</p>
     }
