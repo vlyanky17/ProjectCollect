@@ -106,68 +106,54 @@ export const ItemMap = ({ itms }) => {
         </thead>
     <tbody>
     { itms.map((itm, index) => {
-            var  intgr1 = null
-            var  intgr2= null
-            var  intgr3= null
-            var  Cstr1= null
-            var  Cstr2= null
-            var Cstr3= null
-            var  Ctxt1= null
-            var Ctxt2= null
-            var Ctxt3= null
-            var Cdate1= null
-            var Cdate2= null
-            var Cdate3= null
-            var  Cbol1= null
-            var  Cbol2= null
-            var Cbol3= null
+
 
             if (itm.intgr1!="") {   var Pintgr1 = itm.intgr1
-                 intgr1= <td>{Pintgr1}</td>;
-      console.log(Pintgr1)      }
+                var intgr1= <td>{Pintgr1}</td>;
+      console.log(Pintgr1)      } else intgr1 =null
             if (itm.intgr2!="") {   var Pintgr2 = itm.intgr2
-                 intgr2= <td>{Pintgr2}</td>;
-                console.log(Pintgr2)        }
+                var intgr2= <td>{Pintgr2}</td>;
+                console.log(Pintgr2)        } else intgr2 =null
             if (itm.intgr3!="") {   var Pintgr3 = itm.intgr3
-                 intgr3= <td>{Pintgr3}</td>;
-                console.log(Pintgr3)       }
+                var intgr3= <td>{Pintgr3}</td>;
+                console.log(Pintgr3)       } else intgr3 =null
             if (itm.Cstr1!="") {   var PCstr1 = itm.Cstr1
-                 Cstr1= <td>{PCstr1}</td>;
-                console.log(PCstr1)       }
+                var Cstr1= <td>{PCstr1}</td>;
+                console.log(PCstr1)       } else Cstr1 =null
             if (itm.Cstr2!="") {   var PCstr2 = itm.Cstr2
-                 Cstr2= <td>{PCstr2}</td>;
-                console.log(PCstr2)     }
+                var Cstr2= <td>{PCstr2}</td>;
+                console.log(PCstr2)     } else Cstr2 =null
             if (itm.Cstr3!="") {   var PCstr3 = itm.Cstr3
-                 Cstr3= <td>{PCstr3}</td>;
-                console.log(PCstr3)     }
+                var Cstr3= <td>{PCstr3}</td>;
+                console.log(PCstr3)     } else Cstr3 =null
             if (itm.Ctxt1!="") {   var PCtxt1 = itm.Ctxt1
-                 Ctxt1= <td>{PCtxt1}</td>;
-                console.log(PCtxt1)    }
+                var Ctxt1= <td>{PCtxt1}</td>;
+                console.log(PCtxt1)    } else Ctxt1 =null
             if (itm.Ctxt2!="") {   var PCtxt2 = itm.Ctxt2
-                 Ctxt2= <td>{PCtxt2}</td>;
-                console.log(PCtxt2)    }
+                var Ctxt2= <td>{PCtxt2}</td>;
+                console.log(PCtxt2)    } else Ctxt2 =null
             if (itm.Ctxt3!="") {   var PCtxt3 = itm.Ctxt3
-                 Ctxt3= <td>{PCtxt3}</td>;
-                console.log(PCtxt3)    }
+                var Ctxt3= <td>{PCtxt3}</td>;
+                console.log(PCtxt3)    } else Ctxt3 =null
             if (itm.Cdate1!="") {   var PCdate1 = itm.Cdate1
-                 Cdate1= <td>{PCdate1}</td>;
-                console.log(PCdate1)    }
+                var Cdate1= <td>{PCdate1}</td>;
+                console.log(PCdate1)    } else Cdate1 =null
             if (itm.Cdate2!="") {   var PCdate2 = itm.Cdate2
-                 Cdate2= <td>{PCdate2}</td>;
-                console.log(PCdate2)      }
+                var Cdate2= <td>{PCdate2}</td>;
+                console.log(PCdate2)      } else Cdate2 =null
             if (itm.Cdate3!="") {   var PCdate3 = itm.Cdate3
-                 Cdate3= <td>{PCdate3}</td>;
-                console.log(PCdate3)    }
+                var Cdate3= <td>{PCdate3}</td>;
+                console.log(PCdate3)    } else Cdate3 =null
 
             if (itm.Cbol1!="") {   var PCbol1 = itm.Cbol1
-                 Cbol1= <td>{PCbol1}</td>;
-                console.log(PCbol1)     }
+                var Cbol1= <td>{PCbol1}</td>;
+                console.log(PCbol1)     } else Cbol1 =null
             if (itm.Cbol2!="") {   var PCbol2 = itm.Cbol2
-                 Cbol2= <td>{PCbol2}</td>;
-                console.log(PCbol2)     }
+                var Cbol2= <td>{PCbol2}</td>;
+                console.log(PCbol2)     } else Cbol2 =null
             if (itm.Cbol3!="") {   var PCbol3 = itm.Cbol3
-                 Cbol3= <td>{PCbol3}</td>;
-                console.log(PCbol3)     }
+                var Cbol3= <td>{PCbol3}</td>;
+                console.log(PCbol3)     } else Cbol3 =null
 
 
             return (
