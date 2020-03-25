@@ -104,25 +104,18 @@ export const ItemMap = ({ itms }) => {
 
         </tr>
         </thead>
-
     <tbody>
-    {
+    { itms.map((itm, index) => {
+            return (
+                <tr key={itm._id}>
 
-        sortBy(itms, c => c.nazv).map((itm, index) => {
-        return (
+                <td>{itm.nazv}</td>
+           
 
-            <tr key={itm.nazv}>
-
-
-            <td>{itm.nazv}</td>
-
-
-            <td><a  href="/PageForCol"> <button name={itm._id} > открыть</button></a> </td>
-        </tr>
-    )
-    }) }
-
-</tbody>
+            </tr>
+        )
+        }) }
+    </tbody>
 
 
 
