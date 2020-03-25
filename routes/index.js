@@ -379,9 +379,9 @@ router.post('/GetItm', async(req,res) =>{
 router.post('/InCom', async(req,res) =>{
 
     try{
-        console.log("11111111111111111111111111111111111")
+        console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
 console.log(req.body)
-
+        console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
