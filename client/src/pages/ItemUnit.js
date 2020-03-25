@@ -91,7 +91,22 @@ export const ItemUnit = () => {
         <tr>
 
         <th>название</th>
-
+        <th>{tag.nam}</th>
+    {intgr1}
+    {intgr2}
+    {intgr3}
+    {Cstr1}
+    {Cstr2}
+    {Cstr3}
+    {Ctxt1}
+    {Ctxt2}
+    {Ctxt3}
+    {Cdate1}
+    {Cdate2}
+    {Cdate3}
+    {Cbol1}
+    {Cbol2}
+    {Cbol3}
         </tr>
         </thead>
         </table>
