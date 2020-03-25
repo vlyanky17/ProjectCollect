@@ -313,12 +313,11 @@ router.post('/ToItm', async(req,res) =>{
         const item = new Item({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: id})
         console.log(item)
         await item.save()
-  const i=      item._id
-        console.log(i)
+        console.log(item._id)
         for (var i = 1; i < req.body.tags.length; i++) {
             console.log(i);
             const na = '#'+req.body.tags[i]
-            const tag = new Tag({nam:na  ,owner:i})
+            const tag = new Tag({nam:na })
             console.log(tag)
             await tag.save()
         }
