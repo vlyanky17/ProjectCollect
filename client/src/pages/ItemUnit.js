@@ -93,6 +93,17 @@ export const ItemUnit = () => {
     }
 
     return( <div>
+        <nav>
+        <div className="nav-wrapper" style={{ padding: '0 ' }}>
+
+<ul id="nav-mobile" className="right hide-on-med-and-down">
+
+
+        <li><a  href="/PageForCol" >назад</a></li>
+    <li><a href="/">Главная </a></li>
+    </ul>
+    </div>
+    </nav>
         <table class="resp-tab">
         <thead>
         <tr>
