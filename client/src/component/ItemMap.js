@@ -153,7 +153,7 @@ export const ItemMap = ({ itms }) => {
             if (itm.Cbol3!="") {   var PCbol3 = itm.Cbol3
                 var Cbol3= <td>{PCbol3}</td>;
                 console.log(PCbol3)     }
-
+            Cbol2= null;
 
             return (
                 <tr key={itm._id}>
