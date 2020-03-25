@@ -314,7 +314,7 @@ router.post('/ToItm', async(req,res) =>{
         console.log(item)
         await item.save()
 
-
+        console.log(item)
         for (var i = 1; i < req.body.tags.length; i++) {
             console.log(i);
             const na = '#'+req.body.tags[i]
