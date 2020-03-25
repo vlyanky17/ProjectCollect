@@ -35,9 +35,9 @@ export const ItemUnit = () => {
             registerAl()} else {  let tgs =""
             for (var i = 1; i < tag.length; i++) {
                 const UnitTag=tag[i]
-                console.log(UnitTag.nam)
+
                 tgs=tgs+UnitTag.nam
-                console.log(tgs)}}
+              }}
 
        }
     )
@@ -96,7 +96,7 @@ export const ItemUnit = () => {
         <tr>
 
         <th>название</th>
-
+        <th>{tgs}</th>
     {intgr1}
     {intgr2}
     {intgr3}
