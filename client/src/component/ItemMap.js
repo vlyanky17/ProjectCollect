@@ -31,14 +31,14 @@ export const ItemMap = ({ itms }) => {
         return <p className="center">нет айтемов</p>
     }
 
-
+const tp =<  <th>название</th>/>
     return (
         <table class="resp-tab">
         <thead>
         <tr>
 
         <th>название</th>
-        <th тэги></th>
+    {tp}
 
 
         </tr>
