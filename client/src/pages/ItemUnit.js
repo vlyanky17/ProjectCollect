@@ -29,10 +29,10 @@ export const ItemUnit = () => {
 
         } catch (e) {}
     }
-
+    let tgs =""
     useEffect(() => {
         if (itm.nam==''){
-            registerAl()} else {  let tgs =""
+            registerAl()} else {
             for (var i = 1; i < tag.length; i++) {
                 const UnitTag=tag[i]
 
