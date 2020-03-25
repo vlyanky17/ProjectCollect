@@ -10,10 +10,15 @@ export const ItemMap = ({ itms }) => {
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
+    useEffect(() => {
+            console.log("11111")
+        }
+    )
+
     if (!itms.length) {
         return <p className="center">нет айтемов</p>
     }
-    
+
 
     return (
         <table class="resp-tab">
