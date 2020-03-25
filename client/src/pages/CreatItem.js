@@ -151,7 +151,7 @@ alert(data)
                                                             <input type="submit" name="submit" value="добавить" onClick={addItm} />
                                                                 </p>
         </form>
-                                                                <input type="text" onChange={addItm} />
+
     </div>
 
 );
