@@ -7,13 +7,30 @@ import {useHttp} from "../hooks/http.hook";
 
 export const LikesComent = () => {
 
+    const {loading, error,request} = useHttp()
+    const [com, setcom] = useState(null)
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+    const us = data.logn
+
+    const changeHandler = event => {
+        setcom({com,[event.target.name]: event.target.value})}
+
+    const ToComent = async () => {
+        try {
+            setcom({com,'nam':us})
+console.log(com)
+            const data = await request('/InCom', 'POST', {com})
+
+        } catch (e) {}
+    }
 
     return(<div>
         <table class="resp-tab">
         <thead>
         <tr>
 
-        <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="comen "  />  <button>  отправить</button>  </form> </th>
+        <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />  <button>  отправить</button>  </form> </th>
         <th>лайки</th>
         </tr>
         </thead>
