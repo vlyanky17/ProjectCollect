@@ -13,16 +13,14 @@ export const LikesComent = () => {
         <thead>
         <tr>
 
-        <th>комментарии</th>
+        <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="comen "  />  <button>  отправить</button>  </form> </th>
         <th>лайки</th>
         </tr>
         </thead>
         <tbody>
 
 
-        <th> <form class="form-2">
-        <input type="submit" name="submit" value="отправить"/>
-        </form>  </th>
+
         </tbody>
 
 
