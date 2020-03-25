@@ -327,5 +327,15 @@ const tag = new Tag({nam:na  ,owner: item._id})
         res.status(500).json({message: 'error Col'})
     }
 })
+router.post('/ItemUp', async(req,res) =>{
 
+    try{
+        console.log(req.body)
+        const coleks = await Colec.find({ _id: req.body.us })
+        res.json(coleks)
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
 module.exports = router;
