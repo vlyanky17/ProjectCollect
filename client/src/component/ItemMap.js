@@ -16,7 +16,7 @@ export const ItemMap = ({ itms }) => {
 
             const dat = await request('/ToCabCol', 'POST',{us})
             setLod(dat)
-
+            console.log(dat)
 
         } catch (e) {}
     }
