@@ -3,7 +3,7 @@ import {NavLink, useHistory} from 'react-router-dom'
 import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
-
+import ItemTabl from "./ItemTabl";
 
 import 'materialize-css'
 
@@ -71,6 +71,7 @@ const us = data.ColId
         <div  >
 
         </div>
+        <ItemTabl/>
     </div>
 );
 }
