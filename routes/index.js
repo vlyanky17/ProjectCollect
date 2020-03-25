@@ -361,8 +361,8 @@ router.post('/GetItm', async(req,res) =>{
 
 
         const items = await Item.find(  { _id: req.body.us } )
-        const teg = await Tag.find(  { owner: items._id } )
-        console.log(items)
+        const teg = await Tag.find(  { owner: items[0]._id } )
+
         console.log(teg)
         const Finl = items+teg
         console.log(Finl)
