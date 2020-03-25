@@ -16,8 +16,9 @@ export const ItemTabl = () =>{
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
     useEffect(() => {
-            registerAll()
-        }
+        if (itms===[]){console.log('itms')
+            registerAll()}
+        console.log(itms)       }
     )
 
     const registerAll = async () => {
