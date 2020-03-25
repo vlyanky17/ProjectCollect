@@ -354,4 +354,17 @@ router.post('/ItemUp', async(req,res) =>{
 })
 
 
+
+router.post('/GetItm', async(req,res) =>{
+
+    try{
+
+
+        const items = await Item.find(  { _id: req.body.us } )
+        res.json(items)
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
 module.exports = router;
