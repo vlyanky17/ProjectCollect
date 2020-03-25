@@ -310,21 +310,15 @@ router.post('/ToItm', async(req,res) =>{
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
 
 
-        const item = new Item({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: id})
+        const item = new Item({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3})
         console.log(item)
         await item.save()
 
 
-        for (var i = 1; i < req.body.tags.length; i++) {
-            console.log(i);
-            const na = '#'+req.body.tags[i]
-const tag = new Tag({nam:na  ,owner: item._id})
-            console.log(tag)
-            await tag.save()
-        }
+   console.log('ovr')
 
     } catch(e){
-        res.status(500).json({message: 'error Col'})
+        res.status(500).json({message: 'error ToItem'})
     }
 })
 
