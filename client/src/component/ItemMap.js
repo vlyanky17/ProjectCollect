@@ -16,7 +16,7 @@ export const ItemMap = ({ itms }) => {
         const storageName = 'userData'
         const data = JSON.parse(localStorage.getItem(storageName))
         localStorage.setItem(storageName, JSON.stringify({
-            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: data.ColId
+            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: data.ColId,ItId: event.target.name
 
         }))
 
