@@ -8,13 +8,15 @@ import {useHttp} from "../hooks/http.hook";
 export const LikesComent = () => {
 
     const {loading, error,request} = useHttp()
-    const [com, setcom] = useState(null)
+    const [com, setcom] = useState({nam:'',comen:''})
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
 
     const changeHandler = event => {
-        setcom({com,[event.target.name]: event.target.value})}
+        setcom({...com,[event.target.name]: event.target.value})
+    console.log(com)
+    }
 
     const ToComent = async () => {
         try {
