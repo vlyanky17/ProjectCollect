@@ -29,15 +29,11 @@ export const ItemUnit = () => {
 
         } catch (e) {}
     }
-    let tgs =""
+
     useEffect(() => {
         if (itm.nam==''){
-            registerAl()} else {
-            for (var i = 1; i < tag.length; i++) {
-                const UnitTag=tag[i]
-
-                tgs=tgs+UnitTag.nam
-              }}
+            registerAl()}
+           
 
        }
     )
@@ -89,7 +85,13 @@ export const ItemUnit = () => {
         var Cbol3= <th>{PCbol3}</th>;
     }
 
+    let tgs =""
+    for (var i = 1; i < tag.length; i++) {
+        const UnitTag=tag[i]
 
+        tgs=tgs+UnitTag.nam
+    }
+console.log(tgs)
     return( <div>
         <table class="resp-tab">
         <thead>
