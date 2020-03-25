@@ -31,15 +31,17 @@ export const ItemMap = ({ itms }) => {
         return <p className="center">нет айтемов</p>
     }
 
-    const tp =   <th>айтем</th>;
-    return (
+    if (lod.intgr1!='') {   var Pintgr1 = lod.intgr1
+        var intgr1= <th>{Pintgr1}</th>;
+    }
+        return (
         <table class="resp-tab">
         <thead>
         <tr>
 
         <th>название</th>
-    {tp}
-
+        <th>айтем</th>
+    {intgr1}
 
         </tr>
         </thead>
