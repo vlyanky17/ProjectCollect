@@ -13,20 +13,6 @@ export const ItemMap = ({ itms }) => {
     if (!itms.length) {
         return <p className="center">нет айтемов</p>
     }
-    useEffect(() => {
-       if (lod ==null){
-
-       }
-        }
-    )
-    const registerAll = async () => {
-        try {
-            console.log(us)
-            const data = await request('/ToCabCol', 'POST',{us})
-            setitms(data)
-            console.log(data)
-        } catch (e) {}
-    }
 
 
     return (
