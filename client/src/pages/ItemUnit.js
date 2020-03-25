@@ -26,7 +26,9 @@ export const ItemUnit = () => {
             delete dat[0];
             settag(dat)
 
-
+            const tgs =""
+            for (var i = 1; i < tag.length; i++) {console.log(tag)
+                console.log(tgs)}
         } catch (e) {}
     }
 
@@ -84,9 +86,7 @@ export const ItemUnit = () => {
     if (itm.Cbol3!=undefined) {   var PCbol3 = itm.Cbol3
         var Cbol3= <th>{PCbol3}</th>;
     }
-const tgs =""
-    for (var i = 1; i < tag.length; i++) { tgs=tgs+tag[i].nam
-        console.log(tgs)}
+
 
     return( <div>
         <table class="resp-tab">
