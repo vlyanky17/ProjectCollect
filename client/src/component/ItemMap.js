@@ -13,10 +13,7 @@ export const ItemMap = ({ itms }) => {
     if (!itms.length) {
         return <p className="center">нет айтемов</p>
     }
-    useEffect(() => {
-           
-        }
-    )
+    
 
     return (
         <table class="resp-tab">
