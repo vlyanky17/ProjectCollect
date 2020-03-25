@@ -11,7 +11,21 @@ export const ItemMap = ({ itms }) => {
 
 
     return (
-       <div>1111111111 </div>
+        <table class="resp-tab">
+        <thead>
+        <tr>
+
+        <th>название</th>
+        <th>теги</th>
+
+
+        </tr>
+        </thead>
+
+
+
+
+    </table>
 )
 }
 
