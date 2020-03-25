@@ -380,7 +380,7 @@ router.post('/InCom', async(req,res) =>{
 
     try{
         console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
-console.log(req.body)
+console.log(req.body.com)
         console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
 
     } catch(e){
