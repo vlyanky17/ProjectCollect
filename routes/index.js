@@ -379,6 +379,7 @@ router.post('/GetItm', async(req,res) =>{
 router.post('/InCom', async(req,res) =>{
 
     try{
+        console.log("11111111111111111111111111111111111")
 console.log(req.body)
 
 

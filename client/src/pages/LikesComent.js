@@ -32,7 +32,8 @@ console.log(com)
         <thead>
         <tr>
 
-        <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />  <button>  отправить</button>  </form> </th>
+        <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
+    <button onClick={ToComent}>  отправить</button>  </form> </th>
         <th>лайки</th>
         </tr>
         </thead>
