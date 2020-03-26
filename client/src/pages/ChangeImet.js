@@ -12,7 +12,7 @@ export const ChangeItem = () =>{
 
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-    const us = data.ColId
+    const us = data.ItId
     const [form, setForm] = useState( {})
 
     const changeHandler = event => {
