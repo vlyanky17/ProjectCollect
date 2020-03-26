@@ -144,7 +144,7 @@ export const ChangeCol = () =>{
         file.preview
 
     ));
-if (th!=[]){console.log(th)
+if (!th){console.log(th)
     console.log(th.style)}
 
 
