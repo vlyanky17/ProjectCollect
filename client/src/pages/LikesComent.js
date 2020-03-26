@@ -10,7 +10,7 @@ export const LikesComent = () => {
 
     const {loading, error,request} = useHttp()
     const [com, setcom] = useState({nam:'',comen:''})
-    const [outcom, setoutcom] = useState(null)
+    const [outcom, setoutcom] = useState([])
     const [lodTr, setlodTr] = useState(false)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
@@ -66,7 +66,7 @@ console.log(d)
 
         </table>
 
-
+    < ColMap outcom={outcom}  />
         </div>
 )
 }
