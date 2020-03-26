@@ -16,6 +16,7 @@ export const LikesComent = () => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
 const  d =data.ItId
+    var NewImg = new Image ();
     const changeHandler = event => {
         setcom({[event.target.name]: event.target.value,'nam':us,id:d})
 
