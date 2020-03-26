@@ -396,9 +396,15 @@ router.post('/InLike', async(req,res) =>{
 
     try{
     console.log(req.body.lkin)
-const like = new Like({nam:req.body.lkin.nam,owner:req.body.lkin.id})
+        const Flike = await Like.findOne({nam:req.body.lkin.nam})
 
-        await like.save()
+        if (!Flike) {const like = new Like({nam:req.body.lkin.nam,owner:req.body.lkin.id})
+
+            await like.save()} else {
+            await user.remove()
+        }
+
+
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
