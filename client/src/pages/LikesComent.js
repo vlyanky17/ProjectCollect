@@ -2,6 +2,7 @@ import React, {useCallback, useContext, useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import './Aut.css';
 import {useHttp} from "../hooks/http.hook";
+import ColMap from "../component/ColMap";
 
 
 
@@ -65,7 +66,7 @@ console.log(d)
 
         </table>
 
-
+    < ColMap outcom={outcom}  />
         </div>
 )
 }
