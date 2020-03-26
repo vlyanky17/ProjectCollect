@@ -13,6 +13,7 @@ import ForCol from "./pages/ForCol";
 import PageForCol from "./pages/PageForCol";
 import CreatItem from "./pages/CreatItem";
 import ItemUnit from "./pages/ItemUnit";
+import ChangeCol from "./pages/ChangeCol";
 
 
 export const useRoutes = isAuthenticated => {
@@ -24,6 +25,10 @@ export const useRoutes = isAuthenticated => {
 
             <Route path="/Col" exact>
         <ForCol/>
+        </Route>
+
+        <Route path="/ChangeCol" exact>
+        <ChangeCol/>
         </Route>
 
         <Route path="/ItemUnit" exact>
@@ -66,6 +71,9 @@ export const useRoutes = isAuthenticated => {
         <ItemUnit/>
         </Route>
 
+        <Route path="/ChangeCol" exact>
+        <ChangeCol/>
+        </Route>
 
         <Route path="/PageForCol" exact>
         <PageForCol/>
@@ -105,6 +113,9 @@ export const useRoutes = isAuthenticated => {
     <ItemUnit/>
     </Route>
 
+    <Route path="/ChangeCol" exact>
+    <ChangeCol/>
+    </Route>
 
     <Route path="/CreatItem" exact>
     <CreatItem/>

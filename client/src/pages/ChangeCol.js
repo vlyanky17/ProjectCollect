@@ -13,7 +13,7 @@ import {AuthContext} from '../context/AuthContext'
 export const ChangeCol = () =>{
 
     return(
-        
+        <div>1111</div>
     )
 }
 export default ChangeCol;
