@@ -286,9 +286,10 @@ router.post('/Chencol',[check('nam','введите название').exists(),
 
     try{
 
-        console.log(req.body)
+        const {nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = req.body
+
         const colec = await Colec.findOne({_id:req.body.id})
-console.log(colec)
+        await colec.update({nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3})
     } catch(e){
         res.status(500).json({message: 'error on add'})
     }
