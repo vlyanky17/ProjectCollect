@@ -12,12 +12,12 @@ export const useAuth = isAuth => {
   const [userLog, setUserLog] = useState(null)
   const [ColId, setColId] = useState(null)
   const [ItId, setItId] = useState(null)
-  const login = useCallback((jwtToken, id,Adm,logn,Col,Itd,RID) => {
+  const login = useCallback((jwtToken, id,Adm,logn,RID,Col,Itd) => {
     setToken(jwtToken)
     setUserId(id)
     setUserAdm(Adm)
     setUserLog(logn)
-
+    setreservUserId(RID)
 
     localStorage.setItem(storageName, JSON.stringify({
       userId: id, token: jwtToken,Adm:Adm,logn:logn,ColId:Col,ItId:Itd,ResId:RID
