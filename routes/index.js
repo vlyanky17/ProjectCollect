@@ -413,13 +413,13 @@ router.post('/InLike', async(req,res) =>{
 })
 
 
-router.post('/OutCom', async(req,res) =>{
+router.post('/OutLike', async(req,res) =>{
 
     try{
 
-
-        const coments = await Coment.find(  { owner: req.body.d } )
-        res.json(coments)
+console.log(req.body)
+        const likes = await Like.find(  { owner:req.body} )
+        console.log(likes)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
