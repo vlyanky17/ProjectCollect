@@ -21,6 +21,15 @@ const  d =data.ItId
 
     console.log(com)
     }
+    const ToLike = async () => {
+        try {
+
+
+            const data = await request('/InLike', 'POST', {d})
+
+        } catch (e) {}
+    }
+
 
     const ToComent = async () => {
         try {
@@ -51,14 +60,14 @@ console.log(d)
 
 
     return(<div>
-        <img src={logo} alt="logo" />
+
         <table class="resp-tab">
         <thead>
         <tr>
 
         <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
     <button onClick={ToComent}>  отправить</button>  </form> </th>
-        <th><button  id="Ok"><img src={logo} alt="logo" /> </button></th>
+        <th><button  id="Ok"  onClick={ToLike}><img src={logo} alt="logo" /> </button></th>
         </tr>
         </thead>
     <tbody>
