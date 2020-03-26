@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import './Aut.css';
 import {useHttp} from "../hooks/http.hook";
 import ComTryMap from "./ComTryMap";
-
+import logo from './lk.png';
 
 export const LikesComent = () => {
 
@@ -49,7 +49,7 @@ console.log(d)
         }
     )
 
-    console.log(outcom)
+    console.log(logo)
     return(<div>
         <table class="resp-tab">
         <thead>
@@ -57,7 +57,7 @@ console.log(d)
 
         <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
     <button onClick={ToComent}>  отправить</button>  </form> </th>
-        <th><button  id="Ok"> <img src={'./lk.png'}alt="Canvas Logo" /></button></th>
+        <th><button  id="Ok"> </button></th>
         </tr>
         </thead>
     <tbody>
