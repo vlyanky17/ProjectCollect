@@ -60,7 +60,10 @@ console.log(d)
         </tr>
         </thead>
     <tbody>
-    { outcom.map((outco, index) => {
+    {  if (!outcom.length) {
+        return <p className="center">Нет комментариев</p>
+    } else {
+        outcom.map((outco, index) => {
             return (
 
                 <tr key={outco._id}>
@@ -68,7 +71,7 @@ console.log(d)
                 <td>{outco.nam}</td>
                 </tr>
         )
-        }) }
+        })} }
 
     </tbody>
 
