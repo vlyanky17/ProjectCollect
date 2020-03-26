@@ -266,11 +266,7 @@ router.get('/GetUser', async (req, res) => {
 
     try {
         console.log('GetUsr')
-        const users = await User.find({});
 
-        return res.json({
-            users
-        });
     } catch (error) {
         return res.status(500).json({
             message: 'Internal Server error'
