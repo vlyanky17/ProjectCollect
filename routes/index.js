@@ -382,7 +382,9 @@ router.post('/InCom', async(req,res) =>{
     try{
         console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
 console.log(req.body.com)
-        console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+        const d = new Date();
+     const comen = Coment(nam:req.body.com.nam , comen:req.body.com.comen ,dat:d.toDateString() ,owner:req.body.com.id)
+        console.log(comen)
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
