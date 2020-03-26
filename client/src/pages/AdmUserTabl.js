@@ -17,8 +17,8 @@ export const AdmUserTabl = () =>{
 
     const registerAll = async () => {
         try {
-console.log('WeGo')
-            const data = await request('/GetUser', 'POST')
+
+            const data = await request('/GetUser', 'POST',{})
 
             setusr(data)
 
