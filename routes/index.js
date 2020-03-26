@@ -397,7 +397,9 @@ router.post('/InLike', async(req,res) =>{
     try{
     console.log(req.body.lkin)
 const like = new Like({nam:req.body.lkin.nam,owner:req.body.lkin.id})
-console.log(like)
+
+        await like.save()
+
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
