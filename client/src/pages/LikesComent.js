@@ -65,9 +65,7 @@ console.log(d)
 
                 <tr key={outco._id}>
 
-                <td>{outco.nam}<br/>
-                {outco.comen}<br/>
-                {outco.dat}<br/></td>
+                <td>{outco.nam}</td>
                 </tr>
         )
         }) }
