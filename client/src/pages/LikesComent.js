@@ -59,7 +59,20 @@ console.log(d)
         <th>лайки</th>
         </tr>
         </thead>
+    <tbody>
+    { outcom.map((outco, index) => {
+            return (
 
+                <tr key={outcom._id}>
+
+                <td>{outcom.nam}<br/>
+                {outcom.comen}<br/>
+                {outcom.dat}<br/></td>
+                </tr>
+        )
+        }) }
+
+    </tbody>
 
 
         </table>
