@@ -141,7 +141,7 @@ export const ChangeCol = () =>{
 ));
     const th = files.map(file => (
 
-        file
+        file.preview
 
     ));
 if (th.length>0 ){
