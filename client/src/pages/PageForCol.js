@@ -44,7 +44,7 @@ const us = data.ColId
 
         <li><a  href="/Cab" >назад</a></li>
     <li><a href="/CreatItem">Добавить айтем </a></li>
-    <li><a href="/ChangeCol">Добавить айтем </a></li>
+    <li><a href="/ChangeCol">изменить коллекцию </a></li>
     <li><a href="/">Главная </a></li>
     </ul>
     </div>

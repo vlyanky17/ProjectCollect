@@ -282,6 +282,19 @@ router.post('/adcol',[check('nam','введите название').exists(),ch
     }
 })
 
+router.post('/Chencol',[check('nam','введите название').exists(),check('disk','введите описание').exists(),check('tem','введите тему').exists() ],auth, async(req,res) =>{
+
+    try{
+
+        console.log(req.body)
+
+
+    } catch(e){
+        res.status(500).json({message: 'error on add'})
+    }
+})
+
+
 
 router.post('/ToCabCol', async(req,res) =>{
 
