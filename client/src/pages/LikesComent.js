@@ -10,6 +10,7 @@ export const LikesComent = () => {
     const {loading, error,request} = useHttp()
     const [com, setcom] = useState({nam:'',comen:''})
     const [outcom, setoutcom] = useState([])
+    const [lkin, setlkin] = useState({nam:''})
     const [lodTr, setlodTr] = useState(false)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
@@ -25,7 +26,7 @@ const  d =data.ItId
         try {
 
 
-            const data = await request('/InLike', 'POST', {d})
+            const data = await request('/InLike', 'POST', {lkin})
 
         } catch (e) {}
     }
@@ -53,7 +54,9 @@ console.log(d)
     }
     useEffect(() => {
         if (lodTr==false){
-            GetAll()}
+            GetAll()} else {if (lkin.nam==''){
+                setlkin({nam:us,id: d})
+        }}
 
         }
     )
