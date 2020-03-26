@@ -12,9 +12,9 @@ export const LikesComent = () => {
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
-
+const  d =data.ItId
     const changeHandler = event => {
-        setcom({[event.target.name]: event.target.value,'nam':us})
+        setcom({[event.target.name]: event.target.value,'nam':us,id:d})
 
     console.log(com)
     }
