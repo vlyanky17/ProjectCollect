@@ -287,8 +287,8 @@ router.post('/Chencol',[check('nam','введите название').exists(),
     try{
 
         console.log(req.body)
-
-
+        const colec = await Colec.findOne({_id:req.body.id})
+console.log(colec)
     } catch(e){
         res.status(500).json({message: 'error on add'})
     }

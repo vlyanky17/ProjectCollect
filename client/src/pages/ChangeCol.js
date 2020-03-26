@@ -144,17 +144,7 @@ export const ChangeCol = () =>{
         file.preview
 
     ));
-if (th.length>0 ){
 
-
-    console.log(th.size)
-    console.log(th[0].size)
-  }
-    var NewImg = new Image ();
-
-    NewImg= th
-    NewImg.width *= 2; //увеличиваем размеры картинки в 20 раз
-    console.log(NewImg.width)
 
 
     image2base64(th) // you can also to use url
@@ -201,7 +191,7 @@ if (th.length>0 ){
 
     return (
         <div>
-        <img src={NewImg}  />
+
 
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
