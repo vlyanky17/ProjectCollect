@@ -397,8 +397,8 @@ router.post('/OutCom', async(req,res) =>{
     try{
 
         console.log(req.body)
-        const items = await Item.find(  { owner: req.body.d } )
-        console.log(items)
+        const coments = await Coment.find(  { owner: req.body.d } )
+        console.log(coments)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
