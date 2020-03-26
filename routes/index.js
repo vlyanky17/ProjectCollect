@@ -262,6 +262,24 @@ router.get('/users', async (req, res) => {
 });
 
 
+router.get('/GetUser', async (req, res) => {
+
+    try {
+        const users = await User.find({});
+
+        return res.json({
+            users
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+
+});
+
+
+
 router.post('/adcol',[check('nam','введите название').exists(),check('disk','введите описание').exists(),check('tem','введите тему').exists() ],auth, async(req,res) =>{
 
     try{
