@@ -144,11 +144,10 @@ export const ChangeCol = () =>{
         file.preview
 
     ));
-if (!th){
+if (th == [{}] ){
+    console.log("11111111")
+  }
     console.log(th)
-    th.style.height = '100px';
-    th.style.width = '200px';}
-
 
 
 
