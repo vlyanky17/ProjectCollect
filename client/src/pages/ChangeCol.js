@@ -145,6 +145,7 @@ export const ChangeCol = () =>{
 
     ));
 if (!th){
+    console.log(th)
     th.style.height = '100px';
     th.style.width = '200px';}
 
@@ -158,7 +159,7 @@ if (!th){
                 if ( response.charAt(0)!= form.pict.charAt(0)) {
                     if ( response.charAt(0)!='P'){
                         setForm({...form,["pict"]: response})
-                        console.log(response)
+
                     }
                 }
 
