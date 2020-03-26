@@ -98,7 +98,7 @@ export const ChangeItem = () =>{
                                                                 const addItm = async () => {
                                                                     try {
 
-                                                                        const data = await request('/ToItm', 'POST', {...form})
+                                                                        const data = await request('/ChangeItem', 'POST', {...form})
                                                                         alert(data)
                                                                     } catch (e) {}
                                                                 }
