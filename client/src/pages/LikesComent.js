@@ -67,7 +67,7 @@ console.log(d)
 
         <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
     <button onClick={ToComent}>  отправить</button>  </form> </th>
-        <th><button  id="Ok"  onClick={ToLike}><img src={logo} alt="logo" /> </button></th>
+        <th> <form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button> </form> </th>
         </tr>
         </thead>
     <tbody>
