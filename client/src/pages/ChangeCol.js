@@ -154,8 +154,9 @@ if (th.length>0 ){
 
     NewImg= th
     NewImg.width *= 2; //увеличиваем размеры картинки в 20 раз
-    var s = NewImg.cloneNode (1);
-    console.log(s.width)
+    console.log(NewImg.width)
+
+
     image2base64(th) // you can also to use url
         .then(
             (response) => {
@@ -201,7 +202,7 @@ if (th.length>0 ){
     return (
         <div>
         <img src={NewImg}  />
-    <img src={s}  />
+
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
 
