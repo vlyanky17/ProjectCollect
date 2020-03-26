@@ -4,7 +4,7 @@ import "../pages/Aut.css";
 import {useHttp} from "../hooks/http.hook";
 
 
-export const ComMap = ({ outcom }) => {
+export const ComMap = () => {
 
 
 
