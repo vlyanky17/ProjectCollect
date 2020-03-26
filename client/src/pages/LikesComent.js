@@ -15,6 +15,8 @@ export const LikesComent = () => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
 const  d =data.ItId
+    console.log(d)
+    console.log('|||||||||||||||||||||||||||||||||||||||||')
     const changeHandler = event => {
         setcom({[event.target.name]: event.target.value,'nam':us,id:d})
 
@@ -32,7 +34,7 @@ console.log(com)
 
     const GetAll = async () => {
         try {
-
+console.log(d)
             const datC = await request('/OutCom', 'POST',{d})
 
             setoutcom(datC)
