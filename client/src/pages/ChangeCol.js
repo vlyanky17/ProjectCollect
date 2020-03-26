@@ -145,7 +145,7 @@ export const ChangeCol = () =>{
 
     ));
 
-
+th.style.width='200px';
 
 
 
@@ -193,7 +193,7 @@ export const ChangeCol = () =>{
 
     return (
         <div>
-        <img src={th} style={img} />
+        <img src={th}  />
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
 
