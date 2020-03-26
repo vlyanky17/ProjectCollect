@@ -34,6 +34,7 @@ export const ChangeCol = () =>{
         transition: "border .24s ease-in-out"
     };
 
+
     const activeStyle = {
         borderColor: "#2196f3"
     };
@@ -140,7 +141,7 @@ export const ChangeCol = () =>{
 ));
     const th = files.map(file => (
 
-        file.preview.size={weight:40}
+        file.preview
 
     ));
 
