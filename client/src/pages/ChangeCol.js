@@ -144,10 +144,10 @@ export const ChangeCol = () =>{
         file.preview
 
     ));
-if (th == [{}] ){
-    console.log("11111111")
-  }
+if (th.length>0 ){
     console.log(th)
+  }
+
 
 
 
