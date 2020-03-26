@@ -9,6 +9,8 @@ export const LikesComent = () => {
 
     const {loading, error,request} = useHttp()
     const [com, setcom] = useState({nam:'',comen:''})
+    const [outcom, setoutcom] = useState(null)
+    const [lodTr, setlodTr] = useState(false)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
@@ -27,6 +29,20 @@ console.log(com)
 
         } catch (e) {}
     }
+
+    const GetAll = async () => {
+        try {
+
+            const datC = await request('/OutCom', 'POST',{d})
+
+            setoutcom(datC)
+           console.log(datC)
+
+            setlodTr(true)
+        } catch (e) {}
+    }
+
+
 
     return(<div>
         <table class="resp-tab">

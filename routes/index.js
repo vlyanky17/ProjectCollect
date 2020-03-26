@@ -385,10 +385,24 @@ console.log(req.body.com)
         const d = new Date();
 const coment = new Coment({nam:req.body.com.nam,comen:req.body.com.comen,dat:d.toDateString(),owner:req.body.com.id} )
         await coment.save()
-        
+
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
 })
+
+
+router.post('/OutCom', async(req,res) =>{
+
+    try{
+
+        console.log(req.body.com)
+
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
 
 module.exports = router;
