@@ -265,6 +265,7 @@ router.get('/users', async (req, res) => {
 router.get('/GetUser', async (req, res) => {
 
     try {
+        console.log('GetUsr')
         const users = await User.find({});
 
         return res.json({
