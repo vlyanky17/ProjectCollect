@@ -383,7 +383,7 @@ router.post('/InCom', async(req,res) =>{
         console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
 console.log(req.body.com)
         const d = new Date();
-const coment = new Coment({nam:"111"} )
+const coment = new Coment({nam:req.body.com.nam,comen:req.body.com.comen,dat:d.toDateString(),owner:req.body.com.id} )
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
