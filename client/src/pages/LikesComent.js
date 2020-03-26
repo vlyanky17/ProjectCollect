@@ -60,9 +60,7 @@ console.log(d)
         </tr>
         </thead>
     <tbody>
-    {  if (!outcom.length) {
-        return <p className="center">Нет комментариев</p>
-    } else {
+    {
         outcom.map((outco, index) => {
             return (
 
