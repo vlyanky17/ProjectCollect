@@ -278,7 +278,7 @@ router.post('/adcol',[check('nam','введите название').exists(),ch
         await colec.save()
         res.status(201).json({message:' добавлена'})
     } catch(e){
-        res.status(500).json({message: 'error add'})
+        res.status(500).json({message: 'error on add'})
     }
 })
 
