@@ -262,19 +262,6 @@ router.get('/users', async (req, res) => {
 });
 
 
-router.get('/GetUser', async (req, res) => {
-
-    try {
-        console.log('GetUsr')
-
-    } catch (error) {
-        return res.status(500).json({
-            message: 'Internal Server error'
-        });
-    }
-
-});
-
 
 
 router.post('/adcol',[check('nam','введите название').exists(),check('disk','введите описание').exists(),check('tem','введите тему').exists() ],auth, async(req,res) =>{
@@ -483,6 +470,17 @@ router.post('/OutCom', async(req,res) =>{
 
         const coments = await Coment.find(  { owner: req.body.d } )
         res.json(coments)
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
+
+router.post('/UsGet', async(req,res) =>{
+
+    try{
+
+console.log('1111111')
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

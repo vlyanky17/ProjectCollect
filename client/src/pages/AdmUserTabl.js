@@ -19,10 +19,10 @@ export const AdmUserTabl = () =>{
 
     const registerAll = async () => {
         try {
+console.log(us)
+            const dy = await request('/UsGet', 'POST',{us})
 
-            const data = await request('/GetUser', 'POST',{us})
 
-         
 
         } catch (e) {}
     }
