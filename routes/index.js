@@ -282,7 +282,7 @@ router.post('/adcol',[check('nam','введите название').exists(),ch
     }
 })
 
-router.post('/Chencol',[check('nam','введите название').exists(),check('disk','введите описание').exists(),check('tem','введите тему').exists() ],auth, async(req,res) =>{
+router.post('/Chencol',[check('nam','введите название').exists(),check('disk','введите описание').exists(),check('tem','введите тему').exists() ], async(req,res) =>{
 
     try{
 
