@@ -141,7 +141,7 @@ export const ChangeCol = () =>{
 ));
     const th = files.map(file => (
 
-        file.preview
+        <img src={file.preview} style={img} />
 
     ));
 
