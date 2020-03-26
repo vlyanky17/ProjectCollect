@@ -19,7 +19,7 @@ export const AdmUserTabl = () =>{
 
     const registerAll = async () => {
         try {
-console.log(us)
+
             const dy = await request('/UsGet', 'POST',{us})
             setusr(dy)
 
@@ -28,7 +28,7 @@ console.log(us)
     }
 
     useEffect(() => {if (usr.nam=''){    registerAll()}
-
+console.log(usr)
         }
     )
 
