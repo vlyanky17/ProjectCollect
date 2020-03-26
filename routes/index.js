@@ -366,8 +366,10 @@ router.post('/ChangeItem', async(req,res) =>{
 
     try{
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
-        const items = await Item.find(  { _id: id } )
-       console.log(items)
+        const item = await Item.find(  { _id: id } )
+       console.log(item)
+        await items.update({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3})
+
 
     } catch(e){
         res.status(500).json({message: 'error ToItem'})
