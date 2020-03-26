@@ -12,7 +12,8 @@ export const AdminPage = () =>{
 
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-    const us = data.logn
+    const us = data.userId
+    const tu = data.ResId
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0' }}>
@@ -25,7 +26,8 @@ export const AdminPage = () =>{
     </ul>
     </div>
     </nav>
-
+    {us}
+    {tu}
     </div>
 );
 }
