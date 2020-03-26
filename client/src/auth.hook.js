@@ -7,6 +7,7 @@ export const useAuth = isAuth => {
   const [token, setToken] = useState(null)
   const [ready, setReady] = useState(false)
   const [userId, setUserId] = useState(null)
+  const [reservuserId, setreservUserId] = useState(null)
   const [userAdm, setUserAdm] = useState(null)
   const [userLog, setUserLog] = useState(null)
   const [ColId, setColId] = useState(null)

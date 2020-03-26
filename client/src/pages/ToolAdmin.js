@@ -25,7 +25,7 @@ export const ToolAdmin = () =>{
 
     <li><a href="/Cab">Личный кабинет</a></li>
 
-    <li><a >Администрирование </a></li>
+    <li><a href="/AdminPage" >Администрирование </a></li>
     <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
     </ul>
     </div>

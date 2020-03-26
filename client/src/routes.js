@@ -15,7 +15,7 @@ import CreatItem from "./pages/CreatItem";
 import ItemUnit from "./pages/ItemUnit";
 import ChangeCol from "./pages/ChangeCol";
 import ChangeItem from "./pages/ChangeImet";
-
+import AdminPage from "./pages/AdminPage";
 
 export const useRoutes = isAuthenticated => {
 
@@ -26,6 +26,10 @@ export const useRoutes = isAuthenticated => {
 
             <Route path="/Col" exact>
         <ForCol/>
+        </Route>
+
+        <Route path="/AdminPage" exact>
+        <AdminPage/>
         </Route>
 
         <Route path="/ChangeItem" exact>
@@ -129,6 +133,11 @@ export const useRoutes = isAuthenticated => {
     <Route path="/ChangeItem" exact>
     <ChangeItem/>
     </Route>
+
+    <Route path="/AdminPage" exact>
+    <AdminPage/>
+    </Route>
+
 
     <Route path="/CreatItem" exact>
     <CreatItem/>
