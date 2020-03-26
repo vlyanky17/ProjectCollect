@@ -380,8 +380,7 @@ router.post('/GetItm', async(req,res) =>{
 router.post('/InCom', async(req,res) =>{
 
     try{
-        console.log("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
-console.log(req.body.com)
+
         const d = new Date();
 const coment = new Coment({nam:req.body.com.nam,comen:req.body.com.comen,dat:d.toDateString(),owner:req.body.com.id} )
         await coment.save()
