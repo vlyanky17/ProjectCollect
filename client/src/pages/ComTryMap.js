@@ -14,7 +14,7 @@ export const ComTryMap = ({ outcom }) => {
         <th>комментарии</th>
         </tr>
         </thead>
-      
+
         <tbody>
         { outcom.map((itm, index) => {
                     return (
@@ -26,6 +26,7 @@ export const ComTryMap = ({ outcom }) => {
         </tbody>
 
         </table>
+    </div>
 )
 }
 
