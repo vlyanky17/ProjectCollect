@@ -21,12 +21,16 @@ export const AdmUserTabl = () =>{
         try {
 console.log(us)
             const dy = await request('/UsGet', 'POST',{us})
+            setusr(dy)
 
-console.log(dy)
 
         } catch (e) {}
     }
 
+    useEffect(() => {if (usr.nam=''){    registerAll()}
+
+        }
+    )
 
 
     return( <div>
