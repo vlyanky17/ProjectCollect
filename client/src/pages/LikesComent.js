@@ -59,11 +59,6 @@ console.log(d)
         <th>лайки</th>
         </tr>
         </thead>
-        <tbody>
-
-
-
-        </tbody>
 
 
 
