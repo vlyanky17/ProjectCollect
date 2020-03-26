@@ -395,9 +395,9 @@ const coment = new Coment({nam:req.body.com.nam,comen:req.body.com.comen,dat:d.t
 router.post('/InLike', async(req,res) =>{
 
     try{
-    console.log(req.body)
-
-
+    console.log(req.body.lkin)
+const like = new Like({nam:req.body.lkin.nam,owner:req.body.lkin.id})
+console.log(like)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
