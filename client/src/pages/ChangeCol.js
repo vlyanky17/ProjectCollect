@@ -140,7 +140,7 @@ export const ChangeCol = () =>{
 ));
     const th = files.map(file => (
 
-        file.preview
+        file.preview.style=={{ width: 40, height: 40 }}
 
     ));
 
