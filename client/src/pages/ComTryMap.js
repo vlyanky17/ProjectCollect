@@ -19,7 +19,7 @@ export const ComTryMap = ({ outcom }) => {
         { outcom.map((itm, index) => {
                     return (
                         <tr key={itm._id}>
-                    <td>{itm.nam}: {itm.comen}|byn{itm.dat}</td>
+                    <td>{itm.nam}: {itm.comen}|by {itm.dat}</td>
                     </tr>
             )
             }) }
