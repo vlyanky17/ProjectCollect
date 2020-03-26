@@ -59,17 +59,7 @@ console.log(d)
         <th>лайки</th>
         </tr>
         </thead>
-    <tbody>
-    {
-        outcom.map((outco, index) => {
-            return (
-
-               <div>11111</div>
-        )
-        })} }
-
-    </tbody>
-
+   
 
         </table>
 
