@@ -5,7 +5,6 @@ import {useHttp} from "../hooks/http.hook";
 import ComTryMap from "./ComTryMap";
 
 
-
 export const LikesComent = () => {
 
     const {loading, error,request} = useHttp()
@@ -17,6 +16,7 @@ export const LikesComent = () => {
     const us = data.logn
 const  d =data.ItId
     var NewImg = new Image ();
+    NewImg.src = "../png/lk.png";
     const changeHandler = event => {
         setcom({[event.target.name]: event.target.value,'nam':us,id:d})
 
