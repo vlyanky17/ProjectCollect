@@ -63,11 +63,11 @@ console.log(d)
     { outcom.map((outco, index) => {
             return (
 
-                <tr key={outcom._id}>
+                <tr key={outco._id}>
 
-                <td>{outcom.nam}<br/>
-                {outcom.comen}<br/>
-                {outcom.dat}<br/></td>
+                <td>{outco.nam}<br/>
+                {outco.comen}<br/>
+                {outco.dat}<br/></td>
                 </tr>
         )
         }) }
