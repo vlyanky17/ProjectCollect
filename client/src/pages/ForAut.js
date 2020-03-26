@@ -22,7 +22,12 @@ export const ForAut = () =>{
         try {
             const data = await request('/login', 'POST', {...form})
             auth.login(data.token, data.userId,data.userAdm,data.userlogin)
+            const storageName = 'userData'
+            const dt = JSON.parse(localStorage.getItem(storageName))
+            localStorage.setItem(storageName, JSON.stringify({
+                ResId: data.userId
 
+            }))
         } catch (e) {}
     }
 
