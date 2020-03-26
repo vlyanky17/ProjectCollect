@@ -141,7 +141,7 @@ export const ChangeCol = () =>{
 ));
     const th = files.map(file => (
 
-        <img src={file.preview} style={img} />
+        file.preview
 
     ));
 
@@ -193,6 +193,7 @@ export const ChangeCol = () =>{
 
     return (
         <div>
+        <img src={th} style={img} />
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
 
