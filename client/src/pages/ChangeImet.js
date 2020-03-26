@@ -12,7 +12,8 @@ export const ChangeItem = () =>{
 
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-    const us = data.ItId
+    const us = data.ColId
+    const tid = data.ItId
     const [form, setForm] = useState( {})
 
     const changeHandler = event => {
@@ -34,7 +35,7 @@ export const ChangeItem = () =>{
             const data = await request('/ColUp', 'POST',{us})
 
             setcol(data[0])
-            setForm({...form,["id"]:data[0]._id})
+            setForm({...form,["id"]:tid})
         } catch (e) {}
     }
 
