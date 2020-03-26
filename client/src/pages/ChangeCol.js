@@ -141,15 +141,20 @@ export const ChangeCol = () =>{
 ));
     const th = files.map(file => (
 
-        file.preview
+        file
 
     ));
 if (th.length>0 ){
 
 
     console.log(th[0].weight)
-
+    console.log(th[0].size)
+    console.log(th[0].style)
   }
+
+    console.log(th[0].weight)
+    console.log(th[0].size)
+    console.log(th[0].style)
     console.log(th)
 
 
