@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec64d76c-b428-4d0f-b6cc-0feb4dadfea9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth.hook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/ForAut.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ForAut.js" afterDir="false" />
     </list>
@@ -57,7 +58,7 @@
       <workItem from="1585107693903" duration="52720000" />
       <workItem from="1585196373145" duration="19855000" />
       <workItem from="1585217771163" duration="5694000" />
-      <workItem from="1585225276922" duration="22077000" />
+      <workItem from="1585225276922" duration="22407000" />
     </task>
     <servers />
   </component>

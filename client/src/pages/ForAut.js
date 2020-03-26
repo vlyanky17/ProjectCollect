@@ -21,7 +21,7 @@ export const ForAut = () =>{
     const loginHandler = async () => {
         try {
             const data = await request('/login', 'POST', {...form})
-            auth.login(data.token, data.userId,data.userAdm,data.userlogin)
+            auth.login(data.token, data.userId,data.userAdm,data.userlogin,data.userId)
 
         } catch (e) {}
     }
