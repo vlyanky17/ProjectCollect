@@ -145,8 +145,9 @@ export const ChangeCol = () =>{
 
     ));
 if (th.length>0 ){
-    console.log(th[0].style)
-    th[0].style.height = '100px';
+    console.log(th[0])
+    th[0].height = 150;
+    th[0].width = 150;
   }
 
 
