@@ -66,7 +66,7 @@ console.log(d)
 
         </table>
 
-    < ColMap  />
+
         </div>
 )
 }
