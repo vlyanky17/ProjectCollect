@@ -400,7 +400,7 @@ router.post('/InLike', async(req,res) =>{
         console.log(Flike)
         if (!Flike) {const like = new Like({nam:req.body.lkin.nam,owner:req.body.lkin.id})
             console.log("here we go to add")
-            await like.save()} else {
+            await like.save()}   if (Flike) {
             await Flike.remove()
             console.log("here we go to del")
         }
