@@ -36,19 +36,19 @@ console.log(d)
             const datC = await request('/OutCom', 'POST',{d})
 
             setoutcom(datC)
-            console.log(datC)
+
 
             setlodTr(true)
         } catch (e) {}
     }
     useEffect(() => {
-        if (lodTr==false){console.log('lod')
+        if (lodTr==false){
             GetAll()}
 
         }
     )
 
-
+    console.log(outcom)
     return(<div>
         <table class="resp-tab">
         <thead>
@@ -59,7 +59,9 @@ console.log(d)
         <th>лайки</th>
         </tr>
         </thead>
-   
+    <tbody>
+
+    </tbody>
 
         </table>
 
