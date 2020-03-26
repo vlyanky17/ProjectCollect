@@ -153,8 +153,8 @@ if (th.length>0 ){
     var NewImg = new Image ();
 
     NewImg= th
-    NewImg.height = '100px';
-
+    NewImg.height = '10px';
+    console.log(NewImg.size)
     image2base64(th) // you can also to use url
         .then(
             (response) => {
