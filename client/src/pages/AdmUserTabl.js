@@ -22,7 +22,7 @@ export const AdmUserTabl = () =>{
 console.log(us)
             const dy = await request('/UsGet', 'POST',{us})
 
-
+console.log(dy)
 
         } catch (e) {}
     }

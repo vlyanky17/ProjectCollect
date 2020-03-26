@@ -479,8 +479,12 @@ router.post('/OutCom', async(req,res) =>{
 router.post('/UsGet', async(req,res) =>{
 
     try{
+        const users = await User.find({});
 
-console.log('1111111')
+        return res.json({
+            users
+        });
+
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
