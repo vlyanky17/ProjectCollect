@@ -47,7 +47,7 @@ console.log(d)
             const datC = await request('/OutCom', 'POST',{d})
 
             setoutcom(datC)
-
+            const datL = await request('/OutLike', 'POST',{d})
 
             setlodTr(true)
         } catch (e) {}
