@@ -13,12 +13,14 @@ export const AdmUserTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
     const [usr, setusr] = useState( {nam:'',disk:'',tem:''})
-
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+    const us = data.ColId
 
     const registerAll = async () => {
         try {
 
-            const data = await request('/GetUser', 'POST',{})
+            const data = await request('/GetUser', 'POST',{us})
 
             setusr(data)
 
