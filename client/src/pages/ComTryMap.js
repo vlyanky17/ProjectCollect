@@ -4,11 +4,21 @@ import React, {useCallback, useContext, useEffect, useState} from 'react'
 
 export const ComTryMap = ({ outcom }) => {
     if (!outcom.length) {
-        return <p className="center">нет кооментариев</p>
+        return <p className="center">нет коментариев</p>
     }
     return(<div>
-        1111111111111
-        </div>
+        <table class="resp-tab">
+        <tbody>
+        { outcom.map((itm, index) => {
+                    return (
+                        <tr key={itm._id}>
+                    <td>{itm.comen}</td>
+                    </tr>
+            )
+            }) }
+        </tbody>
+
+        </table>
 )
 }
 
