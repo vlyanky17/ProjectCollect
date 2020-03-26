@@ -5,11 +5,8 @@ import {useHttp} from "../hooks/http.hook";
 
 
 export const ComMap = ({ outcom }) => {
-    const {loading, error,request} = useHttp()
 
-    if (!outcom.length) {
-        return <p className="center">нет коментариев</p>
-    }
+
 
 
     return (<div>1111</div>)
