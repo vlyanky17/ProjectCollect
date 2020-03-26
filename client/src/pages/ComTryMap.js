@@ -8,6 +8,13 @@ export const ComTryMap = ({ outcom }) => {
     }
     return(<div>
         <table class="resp-tab">
+        <thead>
+        <tr>
+
+        <th>комментарии</th>
+        </tr>
+        </thead>
+      
         <tbody>
         { outcom.map((itm, index) => {
                     return (
