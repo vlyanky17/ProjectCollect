@@ -144,7 +144,7 @@ export const ChangeCol = () =>{
         file.preview
 
     ));
-if (th){th.style.width='200px';}
+if (th){console.log(th)}
 
 
 
