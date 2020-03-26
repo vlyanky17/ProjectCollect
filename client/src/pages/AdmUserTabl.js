@@ -22,22 +22,15 @@ export const AdmUserTabl = () =>{
 
             const data = await request('/GetUser', 'POST',{us})
 
-            setusr(data)
+         
 
         } catch (e) {}
     }
 
-    useEffect(() => {
-            if (usr.nam =='') {registerAll()
-                console.log("usEf")
-            }
-
-        }
-    )
 
 
     return( <div>
-       1111
+      <button onClick={registerAll}> 11111 </button>
 
     </div>
 );
