@@ -238,10 +238,6 @@
 .resp-tab tr:nth-child(even) {
     background: #F8F8F8;
 }
-.dropzone .dz-preview .dz-image {
-    width: 250px;
-    height: 250px;
-}
 @media (max-width: 767px) {
     .resp-tab {
         display: block;

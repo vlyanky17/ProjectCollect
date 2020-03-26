@@ -74,8 +74,8 @@ export const ChangeCol = () =>{
 
     const img = {
         display: "block",
-        width: "auto",
-        height: "100%"
+        width: 200,
+        height: 200
     };
     const auth = useContext(AuthContext)
     const [form, setForm] = useState( {id:us,nam:'', disk:'',tem:'',pict:'',intgr1:'',intgr2:'',intgr3:'',Cstr1:'',Cstr2:'',Cstr3:'',Cdate1:'',Cdate2:'',Cdate3:'',Ctxt1:'',Ctxt2:'',Ctxt3:'',Cbol1:'',Cbol2:'',Cbol3:''})
