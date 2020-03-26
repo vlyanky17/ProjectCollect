@@ -41,7 +41,12 @@ console.log(com)
             setlodTr(true)
         } catch (e) {}
     }
-
+    useEffect(() => {
+        if (lodTr==false){console.log('lod')
+            GetAll()}
+        console.log(outcom)
+        }
+    )
 
 
     return(<div>
