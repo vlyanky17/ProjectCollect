@@ -64,8 +64,8 @@ console.log(d)
         <table class="resp-tab">
         <thead>
         <tr>
-
-        <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
+        <form class="form-2">
+        <th>  комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
     <button onClick={ToComent}>  отправить</button>   </th>
         <th><button  id="Ok"  onClick={ToLike}><img src={logo} alt="logo" /> </button></th></form>
         </tr>
