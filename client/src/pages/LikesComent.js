@@ -15,8 +15,7 @@ export const LikesComent = () => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
 const  d =data.ItId
-    var NewImg = new Image ();
-    NewImg.src = "../png/lk.png";
+
     const changeHandler = event => {
         setcom({[event.target.name]: event.target.value,'nam':us,id:d})
 
@@ -58,7 +57,7 @@ console.log(d)
 
         <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
     <button onClick={ToComent}>  отправить</button>  </form> </th>
-        <th><button  id="Ok">{NewImg}</button></th>
+        <th><button  id="Ok"> <img src={'../png/lk.png'}alt="Canvas Logo" /></button></th>
         </tr>
         </thead>
     <tbody>
