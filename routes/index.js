@@ -4,6 +4,7 @@ const User = require('../models/user');
 const Colec = require('../models/colec');
 const Item = require('../models/Item');
 const Tag = require('../models/Tag');
+const Coment = require('../models/Coment');
 const {check, validationResult} = require('express-validator')
 const jwt = require('jsonwebtoken')
 const config = require('config')
