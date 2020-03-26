@@ -11,6 +11,7 @@ export const LikesComent = () => {
     const [com, setcom] = useState({nam:'',comen:''})
     const [outcom, setoutcom] = useState([])
     const [lkin, setlkin] = useState({nam:''})
+    const [LikeCount, setLikeCount] = useState(0)
     const [lodTr, setlodTr] = useState(false)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
@@ -48,7 +49,7 @@ console.log(d)
 
             setoutcom(datC)
             const datL = await request('/OutLike', 'POST',{d})
-
+            setLikeCount(datL)
             setlodTr(true)
         } catch (e) {}
     }
@@ -70,7 +71,7 @@ console.log(d)
 
         <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
     <button onClick={ToComent}>  отправить</button>  </form> </th>
-        <th> <form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button> </form> </th>
+        <th> <form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button> {LikeCount} </form> </th>
         </tr>
         </thead>
     <tbody>

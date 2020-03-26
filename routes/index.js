@@ -418,7 +418,8 @@ router.post('/OutLike', async(req,res) =>{
 
 
         const likes = await Like.find(  { owner: req.body.d } )
-     console.log(likes)
+     console.log(likes.length)
+        res.json(likes.length)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
