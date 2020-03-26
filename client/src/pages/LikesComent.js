@@ -10,6 +10,7 @@ export const LikesComent = () => {
     const {loading, error,request} = useHttp()
     const [com, setcom] = useState({nam:'',comen:''})
     const [outcom, setoutcom] = useState([])
+    const [lkin, setlkin] = useState({nam:''}
     const [lodTr, setlodTr] = useState(false)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
@@ -53,7 +54,9 @@ console.log(d)
     }
     useEffect(() => {
         if (lodTr==false){
-            GetAll()}
+            GetAll()} else {if (lkin==''){
+            setlkin({'nam':us,'id':d})
+        }}
 
         }
     )
@@ -64,10 +67,10 @@ console.log(d)
         <table class="resp-tab">
         <thead>
         <tr>
-        <form class="form-2">
-        <th>  комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
-    <button onClick={ToComent}>  отправить</button>   </th>
-        <th><button  id="Ok"  onClick={ToLike}><img src={logo} alt="logo" /> </button></th></form>
+
+        <th>  комментарии      <form class="form-2"> <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
+    <button onClick={ToComent}>  отправить</button> </form>  </th>
+        <th><button  id="Ok"  onClick={ToLike}><img src={logo} alt="logo" /> </button></th>
         </tr>
         </thead>
     <tbody>
