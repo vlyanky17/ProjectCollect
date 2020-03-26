@@ -66,7 +66,7 @@ console.log(d)
 
         </table>
 
-<ComTryMap />
+<ComTryMap  outcom={outcom} />
         </div>
 )
 }
