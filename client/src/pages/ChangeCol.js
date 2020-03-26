@@ -145,7 +145,7 @@ export const ChangeCol = () =>{
 
     ));
 if (th.length>0 ){
-    console.log(th)
+
     console.log(th.weight)
     console.log(th[0])
     console.log(th[0].weight)
