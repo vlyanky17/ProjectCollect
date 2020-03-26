@@ -54,10 +54,10 @@ console.log(d)
         } catch (e) {}
     }
     useEffect(() => {
-
-            GetAll() (lkin.nam=='')
+        if (lodTr==false){
+            GetAll()} else {if (lkin.nam==''){
                 setlkin({nam:us,id: d})
-
+        }}
 
         }
     )
@@ -71,7 +71,7 @@ console.log(d)
 
         <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
     <button onClick={ToComent}>  отправить</button>  </form> </th>
-        <th> <form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button> {LikeCount} </form> </th>
+        <th> <form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button>{LikeCount} </form> </th>
         </tr>
         </thead>
     <tbody>
