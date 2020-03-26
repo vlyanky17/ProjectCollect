@@ -12,15 +12,15 @@ export const useAuth = isAuth => {
   const [userLog, setUserLog] = useState(null)
   const [ColId, setColId] = useState(null)
   const [ItId, setItId] = useState(null)
-  const login = useCallback((jwtToken, id,Adm,logn,Col,Itd) => {
+  const login = useCallback((jwtToken, id,Adm,logn,Col,Itd,RID) => {
     setToken(jwtToken)
     setUserId(id)
     setUserAdm(Adm)
     setUserLog(logn)
-    if (Adm=='Adm'){  setreservUserId(id)}
+
 
     localStorage.setItem(storageName, JSON.stringify({
-      userId: id, token: jwtToken,Adm:Adm,logn:logn,ColId:Col,ItId:Itd,ResId:reservuserId
+      userId: id, token: jwtToken,Adm:Adm,logn:logn,ColId:Col,ItId:Itd,ResId:RID
     }))
   }, [])
 
@@ -32,6 +32,7 @@ export const useAuth = isAuth => {
     setUserLog(null)
     setColId(null)
     setItId(null)
+    setreservUserId(null)
     localStorage.removeItem(storageName)
   }, [])
 
@@ -40,7 +41,7 @@ export const useAuth = isAuth => {
 
     if (data && data.token) {
 
-      login(data.token, data.userId, data.Adm, data.logn,data.ColId,data.ItId)
+      login(data.token, data.userId, data.Adm, data.logn,data.ColId,data.ItId,data.ResId)
     }
     setReady(true)
   }, [login])
