@@ -384,7 +384,7 @@ router.post('/InCom', async(req,res) =>{
 console.log(req.body.com)
         const d = new Date();
 const coment = new Coment({nam:req.body.com.nam,comen:req.body.com.comen,dat:d.toDateString(),owner:req.body.com.id} )
-
+console.log(coment)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
