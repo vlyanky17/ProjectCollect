@@ -147,8 +147,8 @@ export const ChangeCol = () =>{
 if (th.length>0 ){
 
 
-    console.log(th[0].weight)
-
+    console.log(th.size)
+    console.log(th[0].size)
   }
 
 
@@ -232,7 +232,7 @@ if (th.length>0 ){
         <div className='container'>
         <div {...getRootProps({ style })}>
 <input {...getInputProps()} />
-    <p>Drag 'n' drop some files here</p>
+    <p>Drag 'n' drop (не более 15КБ)</p>
     <button type='button' onClick={open}>
         Open File Dialog
     </button>
