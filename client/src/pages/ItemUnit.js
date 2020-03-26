@@ -100,6 +100,7 @@ export const ItemUnit = () => {
 
 
         <li><a  href="/PageForCol" >назад</a></li>
+    <li><a  href="/ChangeItem" >изменить айтем</a></li>
     <li><a href="/">Главная </a></li>
     </ul>
     </div>
