@@ -15,7 +15,8 @@ export const ForReg = () =>{
         try {
 
             const data = await request('/register', 'POST', {...form})
-alert(data)
+            console.log(data)
+alert(data.message)
         } catch (e) {}
     }
     return(
