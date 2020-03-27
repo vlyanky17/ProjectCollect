@@ -1,6 +1,6 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react'
 
-export const UserMap = ({ usr }) => {
+export const UserMap = () => {
 
 
     return (

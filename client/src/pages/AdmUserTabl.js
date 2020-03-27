@@ -35,7 +35,7 @@ console.log(usr)
 
     return( <div>
 
-<UserMap usr-{usr} />
+<UserMap  />
     </div>
 );
 }
