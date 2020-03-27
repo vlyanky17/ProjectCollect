@@ -31,6 +31,16 @@ export const AdmUserTabl = () =>{
         } catch (e) {}
     }
 
+    const IsBan = async () => {
+        try {
+
+            const dy = await request('/IsBan', 'POST',{us})
+console.log(dy)
+
+        } catch (e) {}
+    }
+
+
     useEffect(() =>  { if (lod==false){registerAll()}
 
         }

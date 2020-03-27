@@ -136,6 +136,20 @@ router.post('/ban', async(req,res) =>{
 })
 
 
+router.post('/IsBan', async(req,res) =>{
+
+    try{
+
+        const user = await User.findOne({_id:req.body.us})
+        console.log(user)
+        return res.json({user.Ban});
+
+    } catch(e){
+        res.status(500).json({message: 'error ban'})
+    }
+})
+
+
 router.post('/antiban', async(req,res) =>{
 
     try{
