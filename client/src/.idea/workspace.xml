@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ec64d76c-b428-4d0f-b6cc-0feb4dadfea9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UserMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UserMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../routes/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
       <workItem from="1585217771163" duration="5694000" />
       <workItem from="1585225276922" duration="25926000" />
       <workItem from="1585253382220" duration="2416000" />
-      <workItem from="1585285409234" duration="4312000" />
+      <workItem from="1585285409234" duration="4650000" />
     </task>
     <servers />
   </component>
@@ -71,5 +71,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585041543061" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585290061555">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585290061555" />
   </component>
 </project>
