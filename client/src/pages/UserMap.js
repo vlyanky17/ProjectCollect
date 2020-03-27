@@ -9,9 +9,9 @@ export const UserMap = ({ usrs }) => {
     if (!usrs.length) {
         return <p className="center">нет коментариев</p>
     }
-
+    const {loading, error,request} = useHttp()
     const changeHandler = event => {
-        const {loading, error,request} = useHttp()
+
         console.log(event.target.name)
         const storageName = 'userData'
         const data = JSON.parse(localStorage.getItem(storageName))
@@ -22,18 +22,26 @@ export const UserMap = ({ usrs }) => {
 
     }
 
-    const BanMachine = event => {
-        console.log(event.target.name)
-
-
-
-
+    const BanMachine = async (event) => {
+        try {
+            console.log(event.target.name)
+            const ev =event.target.name
+            console.log(ev)
+            
+        } catch (e) {}
     }
 
-    const Deleter = event => {
-        console.log(event.target.name)
+    const Deleter = async (event) => {
+        try {
+            console.log(event.target.name)
+            const ev =event.target.name
+            console.log(ev)
 
+        } catch (e) {}
     }
+
+
+
     return (
         <div>
         <table class="resp-tab">
@@ -43,6 +51,9 @@ export const UserMap = ({ usrs }) => {
         <th>имя</th>
         <th>админ</th>
         <th>заблокирован</th>
+        <th></th>
+        <th></th>
+        <th></th>
         </tr>
         </thead>
 
@@ -54,7 +65,7 @@ export const UserMap = ({ usrs }) => {
                     <td>{usr.login}</td>
                     <td>{IAmd}</td>
                     <td>{usr.Ban}</td>
-                    <td><a  href="/Cab"> <button name={usr._id} id={usr.login}  onClick={changeHandler} > открыть</button></a> </td>
+                    <td><a  href="/Cab"> <button name={usr._id} id={usr.login}  onClick={changeHandler} > перейтив личный кабинет</button></a> </td>
                 <td><a  href="/Cab"> <button name={usr._id}  onClick={BanMachine} > заблокировать/разблокироввать </button></a> </td>
                 <td><a  href="/Cab"> <button name={usr._id}  onClick={Deleter} > Удалить</button></a> </td>
                 </tr>
