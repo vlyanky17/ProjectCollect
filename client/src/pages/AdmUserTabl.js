@@ -35,6 +35,7 @@ export const AdmUserTabl = () =>{
         try {
 
             const dt = await request('/IsBan', 'POST',{us})
+            console.log(dt)
 if (dt.Ban=='true'){
     auth.logout()
     history.push('/')}
