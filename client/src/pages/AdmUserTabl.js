@@ -34,8 +34,8 @@ export const AdmUserTabl = () =>{
     const IsBan = async () => {
         try {
 
-            const dy = await request('/IsBan', 'POST',{us})
-console.log(dy)
+            const dt = await request('/IsBan', 'POST',{us})
+
 
         } catch (e) {}
     }
