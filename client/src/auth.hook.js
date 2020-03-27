@@ -20,15 +20,9 @@ export const useAuth = isAuth => {
     setUserLog(logn)
     setreservUserId(RID)
     setreservLog(Rlog)
-    console.log('|||||||||||||||||||||||')
-console.log(userId)
-    console.log(userAdm)
-    console.log(userLog)
-    console.log(reservuserId)
-    console.log(reservLog)
-    console.log('|||||||||||||||||||||||')
+ 
     localStorage.setItem(storageName, JSON.stringify({
-      userId: id, token: jwtToken,Adm:Adm,logn:logn,ColId:Col,ItId:Itd,ResId:RID
+      userId: id, token: jwtToken,Adm:Adm,logn:logn,ColId:Col,ItId:Itd,ResId:RID,ResLog:Rlog
     }))
   }, [])
 
@@ -50,7 +44,7 @@ console.log(userId)
 
     if (data && data.token) {
 
-      login(data.token, data.userId, data.Adm, data.logn,data.ResId,data.ColId,data.ItId)
+      login(data.token, data.userId, data.Adm, data.logn,data.ResId,data.ResLog,data.ColId,data.ItId)
     }
     setReady(true)
   }, [login])

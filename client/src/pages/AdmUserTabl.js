@@ -15,7 +15,7 @@ export const AdmUserTabl = () =>{
     const [usrs, setusr] = useState( [])
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-    const us = data.ColId
+    const us = data.userId
     const ResI = data.ResId
     const log = data.logn
     const ResL = data.ResLog
@@ -38,6 +38,11 @@ console.log(usrs[0])
 
 
     return( <div>
+
+        {us}
+    {ResI}
+    {log}
+    {ResL}
 <UserMap usrs={usrs} />
     </div>
 );
