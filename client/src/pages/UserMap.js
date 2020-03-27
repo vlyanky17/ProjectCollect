@@ -5,17 +5,6 @@ export const UserMap = ({ usrs }) => {
         return <p className="center">нет коментариев</p>
     }
 
-    const changeHandler = event => {
-        console.log(event.target.name)
-        const storageName = 'userData'
-        const data = JSON.parse(localStorage.getItem(storageName))
-        localStorage.setItem(storageName, JSON.stringify({
-            userId:event.target.name, token: data.token,Adm: data.Adm,logn:data.logn
-
-        }))
-
-    }
-
     return (
         <div>
         <table class="resp-tab">
@@ -30,13 +19,12 @@ export const UserMap = ({ usrs }) => {
 
         <tbody>
         { usrs.map((usr, index) => {
-            if (usr.Admin=="Adm"){ var IAmd = 'true'} else {IAmd='false'}
+            if (usr.Admin=="Adm"){ var IAmd = 'true'} else {IAmd = 'false'}
                 return (
                     <tr key={usr._id}>
                     <td>{usr.login}</td>
+                    <td>{usr.Admin}</td>
                     <td>{IAmd}</td>
-                    <td>{usr.Ban}</td>
-                    <td><a  href="/ForCab"> <button name={usr._id} onClick={changeHandler} > открыть</button></a> </td>
                 </tr>
             )
             }) }
