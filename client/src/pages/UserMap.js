@@ -62,7 +62,7 @@ export const UserMap = ({ usrs }) => {
             if (usr.Admin=="Adm"){ var IAmd = 'true'} else {IAmd = 'false'}
                 return (
                     <tr key={usr._id}>
-                    <td> <form class="form-2">{usr.login}</form></td>
+                    <form class="form-2"> <td>{usr.login}</td></form>
                     <td>  <form class="form-2">{IAmd}</form></td>
                     <td>  <form class="form-2">{usr.Ban}</form></td>
                     <td><a  href="/Cab">    <form class="form-2"><button name={usr._id} id={usr.login}  onClick={changeHandler} > перейти в личный кабинет</button></form></a> </td>
