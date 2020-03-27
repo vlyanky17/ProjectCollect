@@ -27,7 +27,7 @@ export const AdmUserTabl = () =>{
         } catch (e) {}
     }
 
-    useEffect(() =>    registerAll()
+    useEffect(() =>  {  registerAll()
 console.log(usrs[0])
             console.log(usrs)
         }
