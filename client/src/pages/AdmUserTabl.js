@@ -20,7 +20,7 @@ export const AdmUserTabl = () =>{
     const ResI = data.ResId
     const log = data.logn
     const ResL = data.ResLog
-
+    const auth = useContext(AuthContext)
     const registerAll = async () => {
         try {
 
@@ -35,7 +35,7 @@ export const AdmUserTabl = () =>{
         try {
 
             const dt = await request('/IsBan', 'POST',{us})
-if (dt.Ban=='true'){   event.preventDefault()
+if (dt.Ban=='true'){
     auth.logout()
     history.push('/')}
 
