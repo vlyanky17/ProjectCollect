@@ -267,16 +267,17 @@ router.get('/users', async (req, res) => {
 router.post('/adcol',[check('nam','введите название').exists(),check('disk','введите описание').exists(),check('tem','введите тему').exists() ], async(req,res) =>{
 
     try{
+        console.log('1')
         const errors = validationResult(req.body)
         if (!errors.isEmpty()) { return res.status(400).json({
             errors:errors.array(),message:'некорректные данные'
         })}
-
+        console.log(2')
         const {nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3} = req.body
-        console.log(req.user.userId)
+       
 
         const colec = new Colec({nam,disk,tem,pict,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: req.body.id})
-
+        console.log('3')
         await colec.save()
         res.status(201).json({message:' добавлена'})
     } catch(e){
