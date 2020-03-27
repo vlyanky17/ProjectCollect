@@ -15,7 +15,10 @@ export const AdmUserTabl = () =>{
     const [usrs, setusr] = useState( [])
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-
+    const us = data.userId
+    const ResI = data.ResId
+    const log = data.logn
+    const ResL = data.ResLog
 
     const registerAll = async () => {
         try {
