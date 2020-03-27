@@ -54,10 +54,11 @@ console.log(d)
         } catch (e) {}
     }
     useEffect(() => {
-        if (lodTr==false){
-            GetAll()} else {if (lkin.nam==''){
+
+            GetAll()
+        if (lkin.nam==''){
                 setlkin({nam:us,id: d})
-        }}
+        }
 
         }
     )
