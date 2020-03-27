@@ -13,6 +13,7 @@ export const ForAut = () =>{
         <div class="column">
         <p>1111111111</p>
     <p>22222222222222222</p>
+        <p>333333333333</p>
     </div>
 )
 
