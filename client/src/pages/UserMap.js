@@ -10,7 +10,7 @@ export const UserMap = ({ usrs }) => {
         const storageName = 'userData'
         const data = JSON.parse(localStorage.getItem(storageName))
         localStorage.setItem(storageName, JSON.stringify({
-            userId:  event.target.name, token: data.token,Adm: data.Adm,logn:event.target.id,ResId: data.ResId,ResLog data.ResLog
+            userId:  event.target.name, token: data.token,Adm: data.Adm,logn:event.target.id,ResId: data.ResId,ResLog: data.ResLog
 
         }))
 
