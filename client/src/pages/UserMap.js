@@ -27,7 +27,7 @@ export const UserMap = ({ usrs }) => {
             console.log(event.target.name)
             const ev =event.target.name
             console.log(ev)
-            const dt = await request('/ban', 'POST', {...ev})
+            const dt = await request('/ban', 'POST', {ev})
         } catch (e) {}
     }
 
@@ -36,7 +36,7 @@ export const UserMap = ({ usrs }) => {
             console.log(event.target.name)
             const ev =event.target.name
             console.log(ev)
-            const dt = await request('/delet', 'POST', {...ev})
+            const dt = await request('/delet', 'POST', {ev})
         } catch (e) {}
     }
 
