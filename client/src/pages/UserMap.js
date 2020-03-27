@@ -24,6 +24,7 @@ export const UserMap = ({ usrs }) => {
                     <tr key={usr._id}>
                     <td>{usr.login}</td>
                     <td>{IAmd}</td>
+                    <td>{usr.Ban}</td>
                 </tr>
             )
             }) }
