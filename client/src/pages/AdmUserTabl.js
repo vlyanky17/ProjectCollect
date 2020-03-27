@@ -36,7 +36,7 @@ export const AdmUserTabl = () =>{
 
             const dt = await request('/IsBan', 'POST',{us})
             console.log(dt)
-if (dt.Ban=='true'){
+if (dt.user.Ban=='true'){
     auth.logout()
     history.push('/')}
 
@@ -45,7 +45,7 @@ if (dt.Ban=='true'){
 
 
     useEffect(() =>  { if (lod==false){registerAll()}
-        IsBan()
+    
         }
     )
 
