@@ -19,12 +19,13 @@ export const useAuth = isAuth => {
     setUserAdm(Adm)
     setUserLog(logn)
     setreservUserId(RID)
+    console.log('|||||||||||||||||||||||')
 console.log(id)
     console.log(Adm)
     console.log(logn)
     console.log(RID)
-
     console.log(Rlog)
+    console.log('|||||||||||||||||||||||')
     localStorage.setItem(storageName, JSON.stringify({
       userId: id, token: jwtToken,Adm:Adm,logn:logn,ColId:Col,ItId:Itd,ResId:RID
     }))
