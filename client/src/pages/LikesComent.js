@@ -56,9 +56,9 @@ console.log(d)
     useEffect(() => {
 
             GetAll()
-        if (lkin.nam==''){
+
                 setlkin({nam:us,id: d})
-        }
+
 
         }
     )
