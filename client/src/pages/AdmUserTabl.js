@@ -4,7 +4,7 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
-
+import UserMap from "./UserMap";
 
 
 
@@ -34,8 +34,8 @@ console.log(usr)
 
 
     return( <div>
-      <button onClick={registerAll}> 11111 </button>
 
+<UserMap usr-{usr} />
     </div>
 );
 }
