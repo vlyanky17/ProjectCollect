@@ -39,7 +39,7 @@ console.log(usrs[0])
 
     return( <div>
 
-        {us}
+        {us}</br>
     {ResI}
     {log}
     {ResL}

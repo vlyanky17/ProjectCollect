@@ -20,7 +20,7 @@ export const useAuth = isAuth => {
     setUserLog(logn)
     setreservUserId(RID)
     setreservLog(Rlog)
- 
+
     localStorage.setItem(storageName, JSON.stringify({
       userId: id, token: jwtToken,Adm:Adm,logn:logn,ColId:Col,ItId:Itd,ResId:RID,ResLog:Rlog
     }))
