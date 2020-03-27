@@ -15,6 +15,13 @@ export const ToolAdmin = () =>{
         auth.logout()
         history.push('/')
     }
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+    localStorage.setItem(storageName, JSON.stringify({
+        userId: data.ResId, token: data.token,Adm: data.Adm,logn:data.ResLog,ResId: data.ResId,ResLog: data.ResLog
+
+    }))
+    console.log(data)
     
     return(<div>
 
