@@ -42,7 +42,7 @@ export const AdmUserTabl = () =>{
 
 
     useEffect(() =>  { if (lod==false){registerAll()}
-
+        IsBan()
         }
     )
 
