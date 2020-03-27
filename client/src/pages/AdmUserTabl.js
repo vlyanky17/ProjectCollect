@@ -12,7 +12,7 @@ import UserMap from "./UserMap";
 export const AdmUserTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
-    const [usrs, setusr] = useState( {nam:'',disk:'',tem:''})
+    const [usrs, setusr] = useState( [])
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
@@ -27,8 +27,9 @@ export const AdmUserTabl = () =>{
         } catch (e) {}
     }
 
-    useEffect(() => {if (usrs.nam==''){    registerAll()}
+    useEffect(() => {if (usrs==[]){    registerAll()}
 console.log(usrs[0])
+            console.log(usrs)
         }
     )
 
