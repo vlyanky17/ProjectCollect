@@ -7,7 +7,28 @@ export const UserMap = ({ usrs }) => {
 
     return (
         <div>
-        111111111
+        <table class="resp-tab">
+        <thead>
+        <tr>
+
+        <th>имя</th>
+        <th>админ</th>
+        <th>заблокирован</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        { usrs.map((usr, index) => {
+                return (
+                    <tr key={usr._id}>
+                    <td>{usr.login}</td>
+                    <td>{usr.Admin}</td>
+                </tr>
+            )
+            }) }
+        </tbody>
+
+        </table>
         </div>
     )
 }
