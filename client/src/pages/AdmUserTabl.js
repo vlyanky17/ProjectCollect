@@ -39,10 +39,10 @@ console.log(usrs[0])
 
     return( <div>
 
-        {us}
-    {ResI}
-    {log}
-    {ResL}
+        {us} ||||||||||
+    {ResI} ||||||||||||||
+    {log} ||||||||||||
+    {ResL} ||||||||
 <UserMap usrs={usrs} />
     </div>
 );

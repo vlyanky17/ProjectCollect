@@ -36,7 +36,7 @@ export const UserMap = ({ usrs }) => {
                     <td>{usr.login}</td>
                     <td>{IAmd}</td>
                     <td>{usr.Ban}</td>
-                    <td><a  > <button name={usr._id}  onClick={changeHandler} > открыть</button></a> </td>
+                    <td><a  > <button name={usr._id} id={usr.login}  onClick={changeHandler} > открыть</button></a> </td>
                 </tr>
             )
             }) }
