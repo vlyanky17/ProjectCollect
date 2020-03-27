@@ -188,7 +188,7 @@ if ( response.charAt(0)!= form.pict.charAt(0)) {
             {file.path} - {file.size} bytes
         </li>
     ));
-
+console.log(form)
     return (
         <div>
             <nav>
