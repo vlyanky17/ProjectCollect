@@ -1,4 +1,9 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react'
+import {NavLink, useHistory} from 'react-router-dom'
+import {AuthContext} from '../context/AuthContext'
+import {useHttp} from "../hooks/http.hook";
+import './Aut.css';
+import 'materialize-css'
 
 export const UserMap = ({ usrs }) => {
     if (!usrs.length) {
@@ -6,6 +11,7 @@ export const UserMap = ({ usrs }) => {
     }
 
     const changeHandler = event => {
+        const {loading, error,request} = useHttp()
         console.log(event.target.name)
         const storageName = 'userData'
         const data = JSON.parse(localStorage.getItem(storageName))
@@ -16,6 +22,18 @@ export const UserMap = ({ usrs }) => {
 
     }
 
+    const BanMachine = event => {
+        console.log(event.target.name)
+
+
+
+
+    }
+
+    const Deleter = event => {
+        console.log(event.target.name)
+
+    }
     return (
         <div>
         <table class="resp-tab">
@@ -37,6 +55,8 @@ export const UserMap = ({ usrs }) => {
                     <td>{IAmd}</td>
                     <td>{usr.Ban}</td>
                     <td><a  href="/Cab"> <button name={usr._id} id={usr.login}  onClick={changeHandler} > открыть</button></a> </td>
+                <td><a  href="/Cab"> <button name={usr._id}  onClick={BanMachine} > заблокировать/разблокироввать </button></a> </td>
+                <td><a  href="/Cab"> <button name={usr._id}  onClick={Deleter} > Удалить</button></a> </td>
                 </tr>
             )
             }) }
