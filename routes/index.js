@@ -126,27 +126,7 @@ router.post('/ban', async(req,res) =>{
 
     try{
 
-        let i=0;
-
-        while (true){
-            try {
-                const {login, val} = req.body[i]
-                console.log(i)
-                if (val==true) {
-                    const user = await User.findOne({login})
-                    console.log(user)
-                    await user.update({stat:'banned'})
-                    console.log('ban')}
-                i++
-            }catch (e) {
-
-                break
-            }
-        }
-
-
-        res.status(201).json({message:' users banned'})
-
+        console.log(req.body)
 
     } catch(e){
         res.status(500).json({message: 'error ban'})
@@ -188,23 +168,7 @@ router.post('/delet', async(req,res) =>{
 
     try{
 
-        let i=0;
-
-        while (true){
-            try {
-                const {login, val} = req.body[i]
-                console.log(i)
-                if (val==true) {
-                    const user = await User.findOne({login})
-                    console.log(user)
-                    await user.remove()
-                    console.log('ban')}
-                i++
-            }catch (e) {
-                break
-            }
-        }
-        res.status(201).json({message:' users delete'})
+   console.log(req.body)
 
 
     } catch(e){
