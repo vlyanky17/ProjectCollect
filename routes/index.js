@@ -126,7 +126,8 @@ router.post('/ban', async(req,res) =>{
 
     try{
 
-        console.log(req.body)
+        const user = await User.findOne({_id:req.body.ev})
+        console.log(user)
 
     } catch(e){
         res.status(500).json({message: 'error ban'})
@@ -168,9 +169,9 @@ router.post('/delet', async(req,res) =>{
 
     try{
 
-   console.log(req.body)
 
-
+        const user = await User.findOne({_id:req.body.ev})
+        console.log(user)
     } catch(e){
         res.status(500).json({message: 'error all'})
     }
