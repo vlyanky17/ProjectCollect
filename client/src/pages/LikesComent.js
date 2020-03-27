@@ -10,14 +10,14 @@ export const LikesComent = () => {
     const {loading, error,request} = useHttp()
     const [com, setcom] = useState({nam:'',comen:''})
     const [outcom, setoutcom] = useState([])
-    const [lkin, setlkin] = useState({nam:''})
+
     const [LikeCount, setLikeCount] = useState(0)
     const [lodTr, setlodTr] = useState(false)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
 const  d =data.ItId
-
+    const [lkin, setlkin] = useState({nam:us,id: d})
     const changeHandler = event => {
         setcom({[event.target.name]: event.target.value,'nam':us,id:d})
 
@@ -54,10 +54,10 @@ console.log(d)
         } catch (e) {}
     }
     useEffect(() => {
-        if (lodTr==false){
-            GetAll()} else {if (lkin.nam==''){
-                setlkin({nam:us,id: d})
-        }}
+
+            GetAll()
+
+
 
         }
     )
