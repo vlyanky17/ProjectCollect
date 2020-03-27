@@ -10,9 +10,10 @@ export const ForAut = () =>{
 
 
     return(
-        <div>
-       1111111111111111111111
-        </div>
+        <div class="column">
+        <p>1111111111</p>
+    <p>22222222222222222</p>
+    </div>
 )
 
 }
