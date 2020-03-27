@@ -26,7 +26,7 @@ const  d =data.ItId
     const ToLike = async () => {
         try {
 
-
+console.log(lkin)
             const data = await request('/InLike', 'POST', {lkin})
 
         } catch (e) {}
@@ -51,7 +51,7 @@ console.log(d)
             const datL = await request('/OutLike', 'POST',{d})
             setLikeCount(datL)
             setlkin({nam:us,id: d})
-         
+
         } catch (e) {}
     }
     useEffect(() => {
