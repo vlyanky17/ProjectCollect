@@ -65,7 +65,7 @@ export const UserMap = ({ usrs }) => {
                     <td> <form class="form-2">{usr.login}</form></td>
                     <td>  <form class="form-2">{IAmd}</form></td>
                     <td>  <form class="form-2">{usr.Ban}</form></td>
-                    <td><a  href="/Cab">    <form class="form-2"><button name={usr._id} id={usr.login}  onClick={changeHandler} > перейти в личный кабинет</button></form></a> </td>
+                    <td><a  href="/Cab">    <form class="form-2"><button name={usr._id} id={usr.login}  onClick={changeHandler} >кабинет</button></form></a> </td>
                 <td><a   >     <form class="form-2"><button name={usr._id}  onClick={BanMachine} > заблокировать/разблокироввать </button>  </form></a> </td>
                 <td><a  >     <form class="form-2"><button name={usr._id}  onClick={Deleter} > Удалить</button>  </form> </a> </td>
                 </tr>

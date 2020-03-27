@@ -45,7 +45,7 @@ if (dt.user.Ban=='true'){
 
 
     useEffect(() =>  { if (lod==false){registerAll()}
-    
+
         }
     )
 
