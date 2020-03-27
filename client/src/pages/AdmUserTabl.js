@@ -13,6 +13,7 @@ export const AdmUserTabl = () =>{
     const {loading, error,request} = useHttp()
     const history = useHistory()
     const [usrs, setusr] = useState( [])
+    const [lod, setlod] = useState( false)
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.userId
@@ -25,14 +26,13 @@ export const AdmUserTabl = () =>{
 
             const dy = await request('/UsGet', 'POST',{us})
             setusr(dy.users)
-
+            setlod(true)
 
         } catch (e) {}
     }
 
-    useEffect(() =>  {  registerAll()
-console.log(usrs[0])
-            console.log(usrs)
+    useEffect(() =>  { if (lod==false){registerAll()}
+
         }
     )
 
