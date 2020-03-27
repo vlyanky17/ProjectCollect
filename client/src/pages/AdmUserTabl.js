@@ -28,7 +28,7 @@ export const AdmUserTabl = () =>{
     }
 
     useEffect(() => {if (usrs.nam==''){    registerAll()}
-console.log(usrs)
+console.log(usrs[0])
         }
     )
 
