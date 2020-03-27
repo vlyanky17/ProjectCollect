@@ -15,14 +15,16 @@ export const ToolAdmin = () =>{
         auth.logout()
         history.push('/')
     }
-    const storageName = 'userData'
-    const data = JSON.parse(localStorage.getItem(storageName))
-    localStorage.setItem(storageName, JSON.stringify({
-        userId: data.ResId, token: data.token,Adm: data.Adm,logn:data.ResLog,ResId: data.ResId,ResLog: data.ResLog
+    const ReLog = event => {  const storageName = 'userData'
+        const data = JSON.parse(localStorage.getItem(storageName))
+        localStorage.setItem(storageName, JSON.stringify({
+            userId: data.ResId, token: data.token,Adm: data.Adm,logn:data.ResLog,ResId: data.ResId,ResLog: data.ResLog
 
-    }))
-    console.log(data)
-    
+        }))
+        console.log(data)}
+
+
+
     return(<div>
 
         <nav>
@@ -32,7 +34,7 @@ export const ToolAdmin = () =>{
 
     <li><a href="/Cab">Личный кабинет</a></li>
 
-    <li><a href="/AdminPage" >Администрирование </a></li>
+    <li><a href="/AdminPage"   onClick={ReLog}>Администрирование </a></li>
     <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
     </ul>
     </div>
