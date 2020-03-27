@@ -26,7 +26,7 @@ const  d =data.ItId
     const ToLike = async () => {
         try {
 
-console.log(lkin)
+
             const data = await request('/InLike', 'POST', {lkin})
 
         } catch (e) {}
@@ -50,16 +50,14 @@ console.log(d)
             setoutcom(datC)
             const datL = await request('/OutLike', 'POST',{d})
             setLikeCount(datL)
-            setlkin({nam:us,id: d})
-
+            setlodTr(true)
         } catch (e) {}
     }
     useEffect(() => {
-
-            GetAll()
-
-
-
+        if (lodTr==false){
+            GetAll()} else {if (lkin.nam==''){
+                setlkin({nam:us,id: d})
+        }}
 
         }
     )
