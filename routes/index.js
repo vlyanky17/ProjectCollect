@@ -70,7 +70,7 @@ router.post('/login',[check('login','введите логин').exists(),check(
         if (!user) { return res.status(400).json({message:' user not found'})}
 
         if (user.password!=password) { return res.status(400).json({ message:'неверный пароль'})}
-
+        if (user.Ban=='true') { return res.status(400).json({ message:'пользователь заблокирован'})}
         const d = new Date();
         await user.update({datLog:d.toDateString()})
         console.log(user)
