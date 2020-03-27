@@ -21,7 +21,7 @@ export const AdmUserTabl = () =>{
         try {
 
             const dy = await request('/UsGet', 'POST',{us})
-            setusr(dy)
+            setusr(dy.users)
 
 
         } catch (e) {}
