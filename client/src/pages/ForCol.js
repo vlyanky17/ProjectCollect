@@ -12,7 +12,7 @@ import {AuthContext} from '../context/AuthContext'
 export const ForCol = () =>{
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-    const us = data.ColId
+    const us = data.userId
 
     const image2base64 = require('image-to-base64');
 
