@@ -416,7 +416,7 @@ router.post('/InLike', async(req,res) =>{
 
     try{
     console.log(req.body.lkin)
-        const Flike = await Like.findOne({nam:req.body.lkin.nam})
+        const Flike = await Like.findOne({nam:req.body.lkin.nam,owner:req.body.lkin.id})
         console.log(Flike)
         if (!Flike) {const like = new Like({nam:req.body.lkin.nam,owner:req.body.lkin.id})
             console.log("here we go to add")
