@@ -50,14 +50,15 @@ console.log(d)
             setoutcom(datC)
             const datL = await request('/OutLike', 'POST',{d})
             setLikeCount(datL)
-            setlodTr(true)
+            setlkin({nam:us,id: d})
+         
         } catch (e) {}
     }
     useEffect(() => {
 
             GetAll()
 
-                setlkin({nam:us,id: d})
+
 
 
         }
