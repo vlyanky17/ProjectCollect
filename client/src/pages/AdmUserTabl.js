@@ -35,7 +35,9 @@ export const AdmUserTabl = () =>{
         try {
 
             const dt = await request('/IsBan', 'POST',{us})
-
+if (dt.Ban=='true'){   event.preventDefault()
+    auth.logout()
+    history.push('/')}
 
         } catch (e) {}
     }
