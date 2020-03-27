@@ -128,6 +128,7 @@ router.post('/ban', async(req,res) =>{
 
         const user = await User.findOne({_id:req.body.ev})
         console.log(user)
+        if (user.Ban=='false'){    await user.update({Ban:'true'})} else { await user.update({Ban:'false'})}
 
     } catch(e){
         res.status(500).json({message: 'error ban'})
