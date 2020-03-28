@@ -16,9 +16,7 @@ export const TagMap = ({ tags }) =>{
     return (  <div>
         { tags.map((usr, index) => {
                 return (
-                    <tr key={usr._id}>
-                  
-                </tr>
+                  111111111111111
             )
             }) }
         </div>)
