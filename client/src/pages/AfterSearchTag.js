@@ -8,8 +8,10 @@ import 'materialize-css'
 
 
 export const AfterSearchTag = () =>{
-
-    return(1111111111)
+    const storageName = 'userData'
+    const data = JSON.parse(localStorage.getItem(storageName))
+  const us =  data.TagN
+    return({us})
 
 }
 export default AfterSearchTag;
