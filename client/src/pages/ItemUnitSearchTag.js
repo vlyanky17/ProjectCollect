@@ -18,7 +18,7 @@ export const ItemUnitSearchTag = () => {
     const registerAl = async () => {
         try {
 
-            const dat = await request('/GetItm', 'POST',{us})
+            const dat = await request('/GetItmSearchtag', 'POST',{us})
 
             setitm(dat[0])
             delete dat[0];
