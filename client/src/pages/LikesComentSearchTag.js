@@ -35,14 +35,7 @@ export const LikesComentSearchTag = () => {
     }
 
 
-    const ToComent = async () => {
-        try {
 
-          alert(com.comen)
-            const data = await request('/InCom', 'POST', {com})
-
-        } catch (e) {}
-    }
 
     const GetAll = async () => {
         try {
