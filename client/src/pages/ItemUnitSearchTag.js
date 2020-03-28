@@ -15,6 +15,7 @@ export const ItemUnitSearchTag = () => {
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ItId
+    const UserAut= data.userId
 
     const registerAl = async () => {
         try {
@@ -90,12 +91,9 @@ export const ItemUnitSearchTag = () => {
 
         tgs=tgs+UnitTag.nam
     }
-    console.log("usr")
-console.log(usr)
-    console.log("tag")
-    console.log(tag)
-    console.log("itm")
-    console.log(itm)
+if (UserAut==usr._id){
+    var ty=  <li><a  href="/ChangeItem" >изменить айтем</a></li>
+}
 
     return( <div>
         <nav>
@@ -103,9 +101,9 @@ console.log(usr)
 
 <ul id="nav-mobile" className="right hide-on-med-and-down">
 
-
+        {ty}
         <li><a  href="/PageForCol" >назад</a></li>
-    <li><a  href="/ChangeItem" >изменить айтем</a></li>
+
     <li><a href="/">Главная </a></li>
     </ul>
     </div>
