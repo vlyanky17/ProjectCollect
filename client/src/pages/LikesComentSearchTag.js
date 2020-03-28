@@ -49,7 +49,7 @@ export const LikesComentSearchTag = () => {
     )
 
 if (UserAut != undefined) {var cm = <ToComentSearchTag />}
-    if (UserAut != undefined) {var llk = <ToComentSearchTag />}
+    if (UserAut != undefined) {var llk = <ToLikeSearchTag />}
     return(<div>
 
         <table class="resp-tab">
