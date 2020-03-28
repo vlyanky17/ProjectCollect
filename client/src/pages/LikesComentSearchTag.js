@@ -26,7 +26,7 @@ export const LikesComentSearchTag = () => {
     const ToLike = async () => {
         try {
 
-
+            alert(lkin)
             const data = await request('/InLike', 'POST', {lkin})
 
         } catch (e) {}
@@ -36,7 +36,7 @@ export const LikesComentSearchTag = () => {
     const ToComent = async () => {
         try {
 
-            console.log(com)
+          alert(com)
             const data = await request('/InCom', 'POST', {com})
 
         } catch (e) {}

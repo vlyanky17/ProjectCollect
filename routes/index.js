@@ -431,6 +431,7 @@ router.post('/InCom', async(req,res) =>{
 
     try{
 console.log(req.body)
+        console.log('InComInComInComInComInComInComInComInComInComInComInCom')
         const d = new Date();
 const coment = new Coment({nam:req.body.com.nam,comen:req.body.com.comen,dat:d.toDateString(),owner:req.body.com.id} )
         await coment.save()
@@ -444,7 +445,7 @@ const coment = new Coment({nam:req.body.com.nam,comen:req.body.com.comen,dat:d.t
 router.post('/InLike', async(req,res) =>{
 
     try{
-        console.log(req.body)
+        console.log('InLikeInLikeInLikeInLikeInLikeInLikeInLikeInLikeInLike')
     console.log(req.body.lkin)
         const Flike = await Like.findOne({nam:req.body.lkin.nam,owner:req.body.lkin.id})
         console.log(Flike)
@@ -468,7 +469,7 @@ router.post('/OutLike', async(req,res) =>{
 
 
         const likes = await Like.find(  { owner: req.body.d } )
-     console.log(likes.length)
+
         res.json(likes.length)
     } catch(e){
         res.status(500).json({message: 'error Col'})
