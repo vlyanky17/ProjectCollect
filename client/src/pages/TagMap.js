@@ -19,7 +19,7 @@ export const TagMap = ({ tags }) =>{
             userId: data.ResId, token: data.token,Adm: data.Adm,logn:data.ResLog,ResId: data.ResId,ResLog: data.ResLog,TagN:event.target.name
 
         }))
-
+console.log(data)
 
 
     }
@@ -27,7 +27,7 @@ export const TagMap = ({ tags }) =>{
     return (  <div>
         { tags.map((tag, index) => {
                 return (<div>
-                    <a  href="/AfterSearchTag" onClick={changeHandler}  name={tag}> {tag}</a>
+                    <a   onClick={changeHandler}  name={tag}> {tag}</a>
                     </div>
             )
             }) }

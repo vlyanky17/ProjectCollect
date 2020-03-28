@@ -11,7 +11,7 @@ export const AfterSearchTag = () =>{
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
   const us =  data.TagN
-    return({us})
+    return(<div>{us} 11111111111111111</div>)
 
 }
 export default AfterSearchTag;
