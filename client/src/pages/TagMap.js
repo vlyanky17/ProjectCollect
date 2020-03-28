@@ -15,7 +15,6 @@ export const TagMap = ({ tags }) =>{
 
     return (  <div>
         { tags.map((usr, index) => {
-                if (usr.Admin=="Adm"){ var IAmd = 'true'} else {IAmd = 'false'}
                 return (
                     <tr key={usr._id}>
                     <td> {usr.login}</td>
