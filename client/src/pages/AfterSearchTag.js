@@ -35,8 +35,16 @@ export const AfterSearchTag = () =>{
 
         }
     )
-console.log(itms)
-    return(<div>   <ItemMapTagSearch itms={itms} /> </div>)
+
+    return(<div>  <nav>
+        <div className="nav-wrapper" style={{ padding: '0' }}>
+
+<ul id="nav-mobile" className="right hide-on-med-and-down">
+    <li><a href="/">Главная </a></li>
+    </ul>
+    </div>
+    </nav>
+    <ItemMapTagSearch itms={itms} /> </div>)
 
 }
 export default AfterSearchTag;
