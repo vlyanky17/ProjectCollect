@@ -92,10 +92,13 @@ export const ItemUnitSearchTag = () => {
 
         tgs=tgs+UnitTag.nam
     }
+    console.log("usr")
 console.log(usr)
+    console.log("tag")
     console.log(tag)
+    console.log("itm")
     console.log(itm)
-    
+
     return( <div>
         <nav>
         <div className="nav-wrapper" style={{ padding: '0 ' }}>
