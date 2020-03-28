@@ -12,7 +12,14 @@ export const TagMap = ({ tags }) =>{
         return <p className="center">нет тегов</p>
     }
     const changeHandler = event => {
-       alert(event.target.name)
+        console.log(event.target.name)
+        const storageName = 'userData'
+        const data = JSON.parse(localStorage.getItem(storageName))
+        localStorage.setItem(storageName, JSON.stringify({
+            userId: data.ResId, token: data.token,Adm: data.Adm,logn:data.ResLog,ResId: data.ResId,ResLog: data.ResLog,TagN:event.target.name
+
+        }))
+
 
 
     }
