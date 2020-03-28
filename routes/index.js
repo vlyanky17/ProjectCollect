@@ -481,10 +481,12 @@ router.post('/IloadTags', async(req,res) =>{
         console.log('IloadTags')
         const array1 = [];
         const tags = await Tag.find({});
+        console.log(tags)
         for (var i = 0; i < tags.length; i++) {
             console.log(array1)
-if (!array1.includes(tags[i].nazv)){
-    array1.push(tags[i].nazv)
+            console.log(tags[i])
+if (!array1.includes(tags[i].nam)){
+    array1.push(tags[i].nam)
 }
         }
 console.log(array1)
