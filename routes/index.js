@@ -481,10 +481,12 @@ router.post('/IsearchOnTag', async(req,res) =>{
         for (var i = 0; i < tags.length; i++) {
             console.log('weGo')
             const itms = await Item.find({_id:tags[i].owner});
-            console.log(itms)
-            array1 = array1.concat(itms);
+            console.log('222222')
+        const    array3 = array1.concat(itms);
+            array1 = array3
             console.log('1111111111111111111111111111')
         }
+        console.log(array1)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
