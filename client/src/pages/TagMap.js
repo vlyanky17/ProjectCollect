@@ -16,7 +16,7 @@ console.log(tags)
     return (  <div>
         { tags.map((tag, index) => {
                 return (
-                  {111111111111111}
+                  111111111111111
             )
             }) }
         </div>)
