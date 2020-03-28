@@ -4,12 +4,13 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
+import ItemMapTagSearch from "./ItemMapTagSearch";
 
 
 
 export const AfterSearchTag = () =>{
     const {loading, error,request} = useHttp()
-    const [tags, settag] = useState( {})
+    const [itms, setitms] = useState( {})
     const [OnLoad, setOnLoad] = useState( false)
 
 
@@ -21,7 +22,7 @@ export const AfterSearchTag = () =>{
     const addCol = async () => {
         try {
             const data = await request('/IsearchOnTag', 'POST', {us})
-            settag(data.array1)
+            setitms(data.array1)
             setOnLoad(true)
         } catch (e) {}
 
@@ -34,8 +35,8 @@ export const AfterSearchTag = () =>{
 
         }
     )
-console.log(tags)
-    return(<div>{us} </div>)
+console.log(itms)
+    return(<div>   <ItemMapTagSearch itms={itms} /> </div>)
 
 }
 export default AfterSearchTag;
