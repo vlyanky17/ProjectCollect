@@ -13,10 +13,10 @@ export const ForAut = () =>{
         <div >
 
         <div id="column-1">
-        <label htmlFor=""><i className="icon-user"></i>Облако тегов</label>
+
         <p className="clearfix">
 
-    <hr className="hr-shelf"/>
+        Облако тегов:
         </p>
         <TagsCloud /></div>
         <div id="column-2">2222222222</div>

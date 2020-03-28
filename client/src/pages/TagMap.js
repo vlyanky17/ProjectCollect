@@ -11,12 +11,16 @@ export const TagMap = ({ tags }) =>{
     if (!tags.length) {
         return <p className="center">нет тегов</p>
     }
+    const changeHandler = event => {
+        console.log(event.target.name)
 
-console.log(tags)
+
+    }
+
     return (  <div>
         { tags.map((tag, index) => {
                 return (<div>
-                    {tag}
+                    <a onClick={changeHandler}  name={tag}> {tag}</a>
                     </div>
             )
             }) }
