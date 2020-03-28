@@ -8,11 +8,19 @@ import 'materialize-css'
 
 
 export const AfterSearchTag = () =>{
+    const {loading, error,request} = useHttp()
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
   const us =  data.TagN
-    console.log(data)
-    return(<div>{us} 11111111111111111</div>)
+
+    const addCol = async () => {
+        try {
+            const data = await request('/IsearchOnTag', 'POST', {us})
+        } catch (e) {}
+
+    }
+
+    return(<div>{us} </div>)
 
 }
 export default AfterSearchTag;

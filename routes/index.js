@@ -473,6 +473,17 @@ router.post('/UsGet', async(req,res) =>{
     }
 })
 
+router.post('/IsearchOnTag', async(req,res) =>{
+
+    try{
+       console.log(req.body)
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
+
 
 router.post('/IloadTags', async(req,res) =>{
 
