@@ -6,7 +6,7 @@ import ComTryMap from "./ComTryMap";
 import logo from './lk.png';
 
 
-export const ToLikeSearchTag = () => {
+export const ToLikeSearchTag = ({LikeCount}) => {
     const {loading, error,request} = useHttp()
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
@@ -24,7 +24,7 @@ export const ToLikeSearchTag = () => {
         } catch (e) {}
     }
 
-    return (11111111)
+    return (<form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button>{LikeCount} </form> )
 }
 
 export default ToLikeSearchTag;
