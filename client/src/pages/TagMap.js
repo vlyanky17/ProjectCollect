@@ -13,7 +13,13 @@ export const TagMap = ({ tags }) =>{
     }
 
 
-    return (1111111111111)
+    return (  { tags.map((usr, index) => {
+    
+            return (<div>
+                {usr}
+                </div>
+        )
+        }) })
 }
 
 export default TagMap;
