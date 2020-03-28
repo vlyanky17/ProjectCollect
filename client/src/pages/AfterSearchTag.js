@@ -17,11 +17,10 @@ export const AfterSearchTag = () =>{
 
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-  const us =  data.TagN
-    console.log(us)
+
     const addCol = async () => {
         try {
-            const data = await request('/IsearchOnTag', 'POST', {us})
+            const data = await request('/IsearchOnTag', 'POST')
             setitms(data.array1)
             setOnLoad(true)
         } catch (e) {}
@@ -29,7 +28,7 @@ export const AfterSearchTag = () =>{
     }
 
 
-    return(<div> 11111111111111111111111</div>)
+    return(<div> 1111111111111111</div>)
 
 }
 export default AfterSearchTag;
