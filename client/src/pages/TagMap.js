@@ -14,19 +14,7 @@ export const TagMap = ({ tags }) =>{
 
 
     return (  <div>
-        { tags.map((usr, index) => {
-
-            return (
-                <tr key={usr._id}>
-                <td> {usr.login}</td>
-                <td>  {IAmd}</td>
-                <td> {usr.Ban}</td>
-                <td><a  href="/Cab">    <form class="form-2"><button name={usr._id} id={usr.login}  onClick={changeHandler} >кабинет</button></form></a> </td>
-            <td><a   >     <form class="form-2"><button name={usr._id}  onClick={BanMachine} > заблокировать/разблокироввать </button>  </form></a> </td>
-            <td><a  >     <form class="form-2"><button name={usr._id}  onClick={Deleter} > Удалить</button>  </form> </a> </td>
-            </tr>
-        )
-        }) }
+       111111111111111
         </div>)
 }
 
