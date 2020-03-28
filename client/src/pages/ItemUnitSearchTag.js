@@ -11,6 +11,7 @@ export const ItemUnitSearchTag = () => {
     const {loading, error,request} = useHttp()
     const [itm, setitm] = useState({nam:''})
     const [tag, settag] = useState({nam:''})
+    const [AUs, setAUs] = useState({nam:''})
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ItId
@@ -18,10 +19,12 @@ export const ItemUnitSearchTag = () => {
     const registerAl = async () => {
         try {
 
-            const dat = await request('/GetItm', 'POST',{us})
+            const dat = await request('/GetItmSearch', 'POST',{us})
 
             setitm(dat[0])
+            setAUs(dat[1])
             delete dat[0];
+            delete dat[1];
             settag(dat)
 
 
@@ -32,7 +35,9 @@ export const ItemUnitSearchTag = () => {
             if (itm.nam==''){
                 registerAl()}
 
-
+console.log(itm)
+            console.log(AUs)
+            console.log(tag)
         }
     )
 
@@ -133,4 +138,4 @@ export const ItemUnitSearchTag = () => {
 
 }
 
-export default ItemUnitSearchTag;
+export default ItemUnitSearchTag``;
