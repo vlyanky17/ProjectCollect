@@ -35,7 +35,12 @@ export const TagsCloud = () =>{
 
         {tag}
         <div>
-    {  if (tag==true) {} }
+    { tag.map((usr, index) => {
+           
+            return (
+         111111111111111111111111
+        )
+        }) }
         </div>
         </div>
 )
