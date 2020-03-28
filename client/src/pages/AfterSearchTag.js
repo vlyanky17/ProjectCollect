@@ -17,19 +17,35 @@ export const AfterSearchTag = () =>{
 
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
+  const us =  data.TagN
 
-    console.log(data)
     const addCol = async () => {
         try {
-            const data = await request('/IsearchOnTag', 'POST')
+            const data = await request('/IsearchOnTag', 'POST', {us})
             setitms(data.array1)
             setOnLoad(true)
         } catch (e) {}
 
     }
 
+    useEffect(() => {
+            if (OnLoad ==false) {addCol()
+                console.log("usEf")
+            }
 
-    return(<div> 1111111111111111</div>)
+        }
+    )
+
+    return(<div>  <nav>
+        <div className="nav-wrapper" style={{ padding: '0' }}>
+
+<ul id="nav-mobile" className="right hide-on-med-and-down">
+
+    <li><a href="/">Главная </a></li>
+    </ul>
+    </div>
+    </nav>
+    <ItemMapTagSearch itms={itms} /> </div>)
 
 }
 export default AfterSearchTag;
