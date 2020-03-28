@@ -34,7 +34,9 @@ export const TagsCloud = () =>{
     return( <div>
 
         {tag}
-    {  if (tag !=null){console.log('1111111111111') } }
+        <div>
+    {  if (tag==true) {} }
+        </div>
         </div>
 )
 }
