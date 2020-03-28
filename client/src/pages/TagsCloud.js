@@ -34,9 +34,7 @@ export const TagsCloud = () =>{
 
     {tag}
     { tag.map((usr, index) => {
-        return (
-         1111111111111111111
-    )
+       
     }) }
         </div>
 )
