@@ -16,7 +16,7 @@ export const ItemUnitSearchTag = () => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ItId
     const UserAut= data.userId
-
+    const UserAdmt= data.Adm
     const registerAl = async () => {
         try {
 
@@ -94,6 +94,10 @@ export const ItemUnitSearchTag = () => {
 if (UserAut==usr._id){
     var ty=  <li><a  href="/ChangeItem" >изменить айтем</a></li>
 }
+    if (UserAdmt=='Adm'){
+        var ty=  <li><a  href="/ChangeItem" >изменить айтем</a></li>
+    }
+
 
     return( <div>
         <nav>
