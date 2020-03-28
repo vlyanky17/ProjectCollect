@@ -49,6 +49,13 @@ export const useAuth = isAuth => {
     if (data && data.token) {
 
       login(data.token, data.userId, data.Adm, data.logn,data.ResId,data.ResLog,data.ColId,data.ItId,data.TagN)
+      console.log(data.userId)
+      console.log(data.Adm)
+      console.log(data.logn)
+      console.log(data.ResId)
+      console.log(data.ResLog)
+      console.log(data.ColId)
+      console.log(data.ItId)
     }
     setReady(true)
   }, [login])
