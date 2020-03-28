@@ -46,7 +46,7 @@ export const LikesComentSearchTag = () => {
 
     const GetAll = async () => {
         try {
-            console.log(d)
+
             const datC = await request('/OutCom', 'POST',{d})
 
             setoutcom(datC)
@@ -63,7 +63,7 @@ export const LikesComentSearchTag = () => {
         }
     )
 
-if (UserAut != undefined) {var cm = <ToComentSearchTag />}
+ var cm = <ToComentSearchTag />
     return(<div>
 
         <table class="resp-tab">
