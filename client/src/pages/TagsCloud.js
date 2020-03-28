@@ -35,12 +35,13 @@ export const TagsCloud = () =>{
 
         {tag}
         <div>
-    { tag.map((usr, index) => {
-           
+    {if (tag !=null){
+        tag.map((usr, index) => {
+
             return (
          111111111111111111111111
         )
-        }) }
+        }) }{}
         </div>
         </div>
 )
