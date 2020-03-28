@@ -476,7 +476,9 @@ router.post('/UsGet', async(req,res) =>{
 router.post('/IsearchOnTag', async(req,res) =>{
 
     try{
-       console.log(req.body)
+  
+        const tags = await Tag.find({nam:req.body.us});
+        console.log(tags)
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
