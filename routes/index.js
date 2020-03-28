@@ -498,7 +498,7 @@ router.post('/IloadTags', async(req,res) =>{
         console.log('IloadTags')
         const array1 = [];
         const tags = await Tag.find({});
-        console.log(tags)
+        console.log(tags.length)
         for (var i = 0; i < tags.length; i++) {
             console.log(array1)
             console.log(tags[i])
