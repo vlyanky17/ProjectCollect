@@ -11,7 +11,6 @@ export const ItemUnitSearchTag = () => {
     const {loading, error,request} = useHttp()
     const [itm, setitm] = useState({nam:''})
     const [tag, settag] = useState({nam:''})
-    const [AUs, setAUs] = useState({nam:''})
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ItId
@@ -19,7 +18,7 @@ export const ItemUnitSearchTag = () => {
     const registerAl = async () => {
         try {
 
-            const dat = await request('/GetItmSearch', 'POST',{us})
+            const dat = await request('/GetItm', 'POST',{us})
 
             setitm(dat[0])
             delete dat[0];
@@ -134,4 +133,4 @@ export const ItemUnitSearchTag = () => {
 
 }
 
-export default ItemUnitSearchTag``;
+export default ItemUnitSearchTag;

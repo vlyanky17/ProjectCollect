@@ -397,27 +397,6 @@ router.post('/GetItm', async(req,res) =>{
 })
 
 
-router.post('/GetItmSearch', async(req,res) =>{
-
-    try{
-
-
-        const items = await Item.find(  { _id: req.body.us } )
-        const col = await Colec.find({_id:items[0].owner})
-        const usr = await User.find({_id:col[0].owner})
-        const teg = await Tag.find(  { owner: items[0]._id } )
-
-const preFinl =  items.concat(usr);
-        const Finl = preFinl.concat(teg);
-
-
-
-        res.json(Finl)
-    } catch(e){
-        res.status(500).json({message: 'error Col'})
-    }
-})
-
 
 
 router.post('/InCom', async(req,res) =>{
