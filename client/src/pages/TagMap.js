@@ -12,7 +12,7 @@ export const TagMap = ({ tags }) =>{
         return <p className="center">нет тегов</p>
     }
     const changeHandler = event => {
-        console.log(event.target.name)
+       alert(event.target.name)
 
 
     }
