@@ -63,7 +63,7 @@ export const LikesComentSearchTag = () => {
         }
     )
 
- var cm = <ToComentSearchTag />
+if (UserAut != undefined) {var cm = <ToComentSearchTag />}
     return(<div>
 
         <table class="resp-tab">
