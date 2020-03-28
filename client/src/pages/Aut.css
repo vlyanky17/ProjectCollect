@@ -289,14 +289,22 @@
         text-align: center;
     }
 }
-.column {
-    -webkit-columns: 200px 3;
-    -moz-columns: 200px 3;
-    columns: 200px 3;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    -webkit-column-rule: 1px solid #ccc;
-    -moz-column-rule: 1px solid #ccc;
-    column-rule: 1px solid #ccc;
+#column-1 {
+    width: 33%;
+
+    float: left;
+    min-height: 100%;
+}
+
+#column-2 {
+
+    width: 34%;
+    min-height: 100%;
+    float: left;
+}
+#column-3 {
+    width: 33%;
+    min-height: 100%;
+    float: left;
+
 }

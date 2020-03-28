@@ -10,10 +10,12 @@ export const ForAut = () =>{
 
 
     return(
-        <div class="column">
-        <p><div>  <form class="form-2"> <TagsCloud />     </form> </div></p>
-    <p>22222222222222222</p>
-        <p>333333333333</p>
+        <div >
+
+        <div id="column-1"><TagsCloud /></div>
+        <div id="column-2">2222222222</div>
+        <div id="column-3">333333333</div>
+
     </div>
 )
 
