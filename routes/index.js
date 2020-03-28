@@ -474,4 +474,17 @@ router.post('/UsGet', async(req,res) =>{
 })
 
 
+router.post('/IloadTags', async(req,res) =>{
+
+    try{
+
+        console.log('IloadTags')
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
+
+
 module.exports = router;
