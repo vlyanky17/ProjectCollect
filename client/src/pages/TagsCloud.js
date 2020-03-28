@@ -30,13 +30,13 @@ export const TagsCloud = () =>{
 
         }
     )
+    if (tag !=null){
+        var t ='11111111'
+    }
     return( <div>
 
-
-    { if (tag !=null)
-    {
-        return (<div>111111 </div>)
-    }        }
+        {tag}
+    {t}
         </div>
 )
 }
