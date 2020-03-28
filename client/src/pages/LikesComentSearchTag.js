@@ -5,7 +5,7 @@ import {useHttp} from "../hooks/http.hook";
 import ComTryMap from "./ComTryMap";
 import logo from './lk.png';
 import ToComentSearchTag from "./ToComentSearchTag";
-import ToLikeSearchTag from "./ToLikeSearchTag";
+
 
 export const LikesComentSearchTag = () => {
 
