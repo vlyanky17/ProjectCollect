@@ -4,7 +4,7 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
-
+import LikesComentSearchTag from "./LikesComentSearchTag";
 
 
 export const ItemUnitSearchTag = () => {
@@ -106,7 +106,7 @@ if (UserAut==usr._id){
 <ul id="nav-mobile" className="right hide-on-med-and-down">
 
 {ty}
-      
+
 
     <li><a href="/">Главная </a></li>
     </ul>
@@ -136,7 +136,7 @@ if (UserAut==usr._id){
 </tr>
     </thead>
     </table>
-
+<LikesComentSearchTag />
     </div>
 );
 
