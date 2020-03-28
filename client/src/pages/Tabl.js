@@ -11,7 +11,7 @@ export const ForAut = () =>{
 
     return(
         <div class="column">
-        <p><TagsCloud /></p>
+        <p><div><TagsCloud /> 111111111111111<div></p>
     <p>22222222222222222</p>
         <p>333333333333</p>
     </div>
