@@ -352,7 +352,7 @@ router.post('/ChangeItem', async(req,res) =>{
     try{
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
         const item = await Item.findOne(  { _id: id } )
-       console.log(item)
+ 
         await item.update({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3})
 
 
@@ -409,9 +409,9 @@ router.post('/GetItmSearchtag', async(req,res) =>{
 
         const col = await Colec.find(  { _id:items[0].owner } )
         const usr = await User.find(  { _id:col[0].owner } )
-        console.log(col)
+
         const teg = await Tag.find(  { owner: items[0]._id } )
-        console.log(usr)
+
         const PreFinl = items.concat(usr);
 
         const Finl = PreFinl.concat(teg);
@@ -534,10 +534,9 @@ router.post('/IloadTags', async(req,res) =>{
         console.log('IloadTags')
         const array1 = [];
         const tags = await Tag.find({});
-        console.log(tags)
+
         for (var i = 0; i < tags.length; i++) {
-            console.log(array1)
-            console.log(tags[i])
+
 if (!array1.includes(tags[i].nam)){
     array1.push(tags[i].nam)
 }
