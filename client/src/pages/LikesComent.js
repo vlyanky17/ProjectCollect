@@ -55,8 +55,8 @@ console.log(d)
         } catch (e) {}
     }
     useEffect(() => {
+if (lodTr==false){   GetAll()}
 
-            GetAll()
 
         }
     )
