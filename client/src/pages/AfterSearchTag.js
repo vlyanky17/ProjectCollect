@@ -17,8 +17,8 @@ export const AfterSearchTag = () =>{
 
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
-  const us =  data.TagN
-    console.log(us)
+
+    console.log(data)
     const addCol = async () => {
         try {
             const data = await request('/IsearchOnTag', 'POST')
