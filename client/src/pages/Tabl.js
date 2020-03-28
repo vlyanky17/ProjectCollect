@@ -4,6 +4,7 @@ import './Aut.css';
 import {useHttp} from "../hooks/http.hook";
 import {AuthContext} from '../context/AuthContext'
 import TagsCloud from "./TagsCloud";
+import BiggestCol from "./BigggestCol";
 
 export const ForAut = () =>{
     const {loading, error,request} = useHttp()
@@ -19,7 +20,7 @@ export const ForAut = () =>{
         Облако тегов:
         </p>
         <TagsCloud /></div>
-        <div id="column-2">2222222222</div>
+        <div id="column-2"><BiggestCol/></div>
         <div id="column-3">333333333</div>
 
     </div>

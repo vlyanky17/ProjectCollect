@@ -43,7 +43,7 @@ export const LikesComentSearchTag = () => {
     }
     useEffect(() => {
 
-        GetAll()
+         if (lodTr==false)  {GetAll()}
 
         }
     )
