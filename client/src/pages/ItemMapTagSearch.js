@@ -16,7 +16,7 @@ export const ItemMapTagSearch = ({ itms }) => {
         const storageName = 'userData'
         const data = JSON.parse(localStorage.getItem(storageName))
         localStorage.setItem(storageName, JSON.stringify({
-            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: data.ColId,ItId: event.target.name
+            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: data.ColId,ItId: event.target.name,ResId: data.ResId,ResLog:data.ResLog
 
         }))
 
