@@ -478,13 +478,14 @@ router.post('/IsearchOnTag', async(req,res) =>{
     try{
         const array1 = [];
         const tags = await Tag.find({nam:req.body.us} , { owner:1,_id:0 });
+        console.log('weHere')
         for (var i = 0; i < tags.length; i++) {
             console.log('weGo')
             const itms = await Item.find({_id:tags[i].owner});
             console.log('222222')
-        const    array3 = array1.concat(itms);
-            array1 = array3
+      array1.push(itms[0])
             console.log('1111111111111111111111111111')
+            console.log(array1)
         }
         console.log(array1)
     } catch(e){
