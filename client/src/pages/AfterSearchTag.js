@@ -28,13 +28,7 @@ export const AfterSearchTag = () =>{
 
     }
 
-    useEffect(() => {
-            if (OnLoad ==false) {addCol()
-                console.log("usEf")
-            }
-
-        }
-    )
+    
 
     return(<div>  <nav>
         <div className="nav-wrapper" style={{ padding: '0' }}>
