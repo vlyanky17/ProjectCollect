@@ -35,9 +35,7 @@ export const TagsCloud = () =>{
     {tag}
     { tag.map((usr, index) => {
         return (
-            <tr key={usr._id}>
-
-        </tr>
+           <div>{usr} </div>
     )
     }) }
         </div>
