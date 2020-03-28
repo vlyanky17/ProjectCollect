@@ -7,7 +7,23 @@ import ComTryMap from "./ComTryMap";
 
 
 export const BiggestCol = () => {
+    const {loading, error,request} = useHttp()
+    const [lodTr, setlodTr] = useState(false)
 
+    const FB = async () => {
+        try {
+
+
+            const data = await request('/FindBiggest', 'POST')
+            setlodTr(true)
+        } catch (e) {}
+    }
+    useEffect(() => {
+
+      if (lodTr==true)  {FB()}
+
+        }
+    )
     return(<div>
         1111111111111
         </div>
