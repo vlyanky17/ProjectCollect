@@ -15,8 +15,9 @@ export const TagMap = ({ tags }) =>{
 console.log(tags)
     return (  <div>
         { tags.map((tag, index) => {
-                return (
-                  111111111111111
+                return (<div>
+                    {tag}
+                    </div>
             )
             }) }
         </div>)
