@@ -7,7 +7,10 @@ import 'materialize-css'
 
 
 export const TagMap = ({ tags }) =>{
-
+    
+    if (!tags.length) {
+        return <p className="center">нет коментариев</p>
+    }
 
 
     return (1111111111111)
