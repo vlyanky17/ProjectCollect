@@ -23,8 +23,6 @@ export const ItemUnitSearchTag = () => {
 
             setitm(dat[0])
             setusr(dat[1])
-            delete dat[0];
-            delete dat[1];
             settag(dat)
 
 
