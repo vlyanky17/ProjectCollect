@@ -12,11 +12,11 @@ export const TagMap = ({ tags }) =>{
         return <p className="center">нет тегов</p>
     }
 
-
+console.log(tags)
     return (  <div>
-        { tags.map((usr, index) => {
+        { tags.map((tag, index) => {
                 return (
-                  {usr}
+                  {111111111111111}
             )
             }) }
         </div>)
