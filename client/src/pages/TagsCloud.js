@@ -32,9 +32,9 @@ export const TagsCloud = () =>{
     )
     return( <div>
 
-    {tag}
+
     { tag.map((usr, index) => {
-       
+
     }) }
         </div>
 )
