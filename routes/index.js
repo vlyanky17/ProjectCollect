@@ -408,10 +408,10 @@ router.post('/GetItmSearchtag', async(req,res) =>{
         const items = await Item.find(  { _id: req.body.us } )
 
         const col = await Colec.find(  { _id:items[0].owner } )
-        const usr = await Colec.find(  { _id:col[0].owner } )
+        const usr = await User.find(  { _id:col[0].owner } )
         console.log(col)
         const teg = await Tag.find(  { owner: items[0]._id } )
-
+        console.log(usr)
         const PreFinl = items.concat(usr);
 
         const Finl = PreFinl.concat(teg);

@@ -85,7 +85,7 @@ export const ItemUnitSearchTag = () => {
     }
 
     let tgs =""
-    for (var i = 1; i < tag.length; i++) {
+    for (var i = 2; i < tag.length; i++) {
         const UnitTag=tag[i]
 
         tgs=tgs+UnitTag.nam
