@@ -4,7 +4,7 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
-
+import ItemMapTagSearch from "./ItemMapTagSearch";
 
 
 
@@ -15,36 +15,18 @@ export const AfterSearchTag = () =>{
 
 
 
-    const storageName = 'userData'
-    const data = JSON.parse(localStorage.getItem(storageName))
-  const us =  data.TagN
-    console.log(us)
+
     const addCol = async () => {
         try {
-            const data = await request('/IsearchOnTag', 'POST', {us})
+            const data = await request('/IsearchOnTag', 'POST')
             setitms(data.array1)
             setOnLoad(true)
         } catch (e) {}
 
     }
 
-    useEffect(() => {
-            if (OnLoad ==false) {addCol()
-                console.log("usEf")
-            }
 
-        }
-    )
-
-    return(<div>  <nav>
-        <div className="nav-wrapper" style={{ padding: '0' }}>
-
-<ul id="nav-mobile" className="right hide-on-med-and-down">
-    <li><a href="/">Главная </a></li>
-    </ul>
-    </div>
-    </nav>
- </div>)
+    return(<div> 1</div>)
 
 }
 export default AfterSearchTag;
