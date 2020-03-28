@@ -4,7 +4,7 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
-import ItemMapTagSearch from "./ItemMapTagSearch";
+
 
 
 
@@ -28,7 +28,13 @@ export const AfterSearchTag = () =>{
 
     }
 
-    
+    useEffect(() => {
+            if (OnLoad ==false) {addCol()
+                console.log("usEf")
+            }
+
+        }
+    )
 
     return(<div>  <nav>
         <div className="nav-wrapper" style={{ padding: '0' }}>
@@ -38,7 +44,7 @@ export const AfterSearchTag = () =>{
     </ul>
     </div>
     </nav>
-    <ItemMapTagSearch itms={itms} /> </div>)
+ </div>)
 
 }
 export default AfterSearchTag;

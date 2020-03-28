@@ -101,7 +101,7 @@ if (UserAut==usr._id){
 
 <ul id="nav-mobile" className="right hide-on-med-and-down">
 
-        {ty}
+{ty}
         <li><a  href="/PageForCol" >назад</a></li>
 
     <li><a href="/">Главная </a></li>
