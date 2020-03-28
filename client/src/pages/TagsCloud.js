@@ -34,7 +34,7 @@ export const TagsCloud = () =>{
     return( <div>
 
         {tag}
-<TagMap tag={tag} />
+<TagMap/>
         </div>
 )
 }

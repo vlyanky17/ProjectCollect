@@ -6,11 +6,9 @@ import './Aut.css';
 import 'materialize-css'
 
 
-export const TagMap = ({tag}) =>{
+export const TagMap = () =>{
 
-    if (!tag.length) {
-        return <p className="center">нет тегов</p>
-    }
+
 
     return (1111111111111)
 }
