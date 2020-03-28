@@ -22,9 +22,7 @@ export const ItemUnitSearchTag = () => {
             const dat = await request('/GetItmSearch', 'POST',{us})
 
             setitm(dat[0])
-            setAUs(dat[1])
             delete dat[0];
-            delete dat[1];
             settag(dat)
 
 
@@ -35,9 +33,7 @@ export const ItemUnitSearchTag = () => {
             if (itm.nam==''){
                 registerAl()}
 
-console.log(itm)
-            console.log(AUs)
-            console.log(tag)
+
         }
     )
 
