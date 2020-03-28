@@ -33,9 +33,10 @@ export const TagsCloud = () =>{
     return( <div>
 
 
-    { tag.map((usr, index) => {
-
-    }) }
+    { if (tag !=null)
+    {
+        return (<div>111111 </div>)
+    }        }
         </div>
 )
 }
