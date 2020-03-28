@@ -13,7 +13,7 @@ export const ForAut = () =>{
         <div >
 
         <div id="column-1">
-        облако тегов
+        <label htmlFor=""><i className="icon-user"></i>Облако тегов</label>
         <p className="clearfix">
 
     <hr className="hr-shelf"/>
