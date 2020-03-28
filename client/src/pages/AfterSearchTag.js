@@ -9,6 +9,11 @@ import 'materialize-css'
 
 export const AfterSearchTag = () =>{
     const {loading, error,request} = useHttp()
+    const [tags, settag] = useState( {})
+    const [OnLoad, setOnLoad] = useState( false)
+
+
+
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
   const us =  data.TagN
@@ -16,9 +21,18 @@ export const AfterSearchTag = () =>{
     const addCol = async () => {
         try {
             const data = await request('/IsearchOnTag', 'POST', {us})
+            setOnLoad(true)
         } catch (e) {}
 
     }
+
+    useEffect(() => {
+            if (OnLoad ==false) {addCol()
+                console.log("usEf")
+            }
+
+        }
+    )
 
     return(<div>{us} </div>)
 
