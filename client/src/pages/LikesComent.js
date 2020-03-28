@@ -44,7 +44,7 @@ console.log(com)
 
     const GetAll = async () => {
         try {
-console.log(d)
+
             const datC = await request('/OutCom', 'POST',{d})
 
             setoutcom(datC)
@@ -55,7 +55,7 @@ console.log(d)
         } catch (e) {}
     }
     useEffect(() => {
-if (lodTr==false){   GetAll()}
+if (lodTr==false){  console.log(lodTr) GetAll()}
 
 
         }
