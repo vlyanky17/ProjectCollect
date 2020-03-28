@@ -10,7 +10,7 @@ import TagMap from "./TagMap";
 export const TagsCloud = () =>{
 
         const {loading, error,request} = useHttp()
-    const [tag, settag] = useState( null)
+    const [tags, settag] = useState( null)
 
     const [OnLoad, setOnLoad] = useState( false)
     const registerAll = async () => {
@@ -33,8 +33,8 @@ export const TagsCloud = () =>{
 
     return( <div>
 
-        {tag}
-<TagMap/>
+
+<TagMap tags={tags} />
         </div>
 )
 }

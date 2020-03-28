@@ -6,7 +6,7 @@ import './Aut.css';
 import 'materialize-css'
 
 
-export const TagMap = () =>{
+export const TagMap = ({ tags }) =>{
 
 
 
