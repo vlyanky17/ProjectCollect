@@ -4,7 +4,7 @@ import {AuthContext} from '../context/AuthContext'
 import {useHttp} from "../hooks/http.hook";
 import './Aut.css';
 import 'materialize-css'
-
+import TagMap from "./TagMap";
 
 
 export const TagsCloud = () =>{
@@ -34,15 +34,7 @@ export const TagsCloud = () =>{
     return( <div>
 
         {tag}
-        <div>
-    {if (tag !=null){
-        tag.map((usr, index) => {
-
-            return (
-         111111111111111111111111
-        )
-        }) }{}
-        </div>
+<TagMap tag={tag} />
         </div>
 )
 }
