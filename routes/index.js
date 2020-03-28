@@ -478,7 +478,7 @@ router.post('/IsearchOnTag', async(req,res) =>{
     try{
         const array1 = [];
         const tags = await Tag.find({nam:req.body.us} , { owner:1,_id:0 });
- 
+
         for (var i = 0; i < tags.length; i++) {
 
             const itms = await Item.find({_id:tags[i].owner});
@@ -486,7 +486,9 @@ router.post('/IsearchOnTag', async(req,res) =>{
       array1.push(itms[0])
 
         }
-        console.log(array1)
+        return res.json({
+            array1
+        });
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

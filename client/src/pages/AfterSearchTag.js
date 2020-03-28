@@ -21,6 +21,7 @@ export const AfterSearchTag = () =>{
     const addCol = async () => {
         try {
             const data = await request('/IsearchOnTag', 'POST', {us})
+            settag(data.array1)
             setOnLoad(true)
         } catch (e) {}
 
@@ -33,7 +34,7 @@ export const AfterSearchTag = () =>{
 
         }
     )
-
+console.log(tags)
     return(<div>{us} </div>)
 
 }
