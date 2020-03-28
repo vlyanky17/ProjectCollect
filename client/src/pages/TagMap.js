@@ -17,10 +17,7 @@ export const TagMap = ({ tags }) =>{
         { tags.map((usr, index) => {
                 return (
                     <tr key={usr._id}>
-                    <td> {usr.login}</td>
-
-                    <td> {usr.Ban}</td>
-
+                  
                 </tr>
             )
             }) }
