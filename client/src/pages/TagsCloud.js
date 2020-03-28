@@ -33,7 +33,13 @@ export const TagsCloud = () =>{
     return( <div>
 
     {tag}
-    {    for (var i = 0; i < tag.length; i++) { }}
+    { tag.map((usr, index) => {
+        return (
+            <tr key={usr._id}>
+
+        </tr>
+    )
+    }) }
         </div>
 )
 }
