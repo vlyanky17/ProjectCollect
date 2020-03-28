@@ -476,8 +476,8 @@ router.post('/UsGet', async(req,res) =>{
 router.post('/IsearchOnTag', async(req,res) =>{
 
     try{
-  
-        const tags = await Tag.find({nam:req.body.us});
+
+        const tags = await Tag.find({nam:req.body.us} , { owner:1 });
         console.log(tags)
 
     } catch(e){
