@@ -9,7 +9,7 @@ import 'materialize-css'
 export const TagMap = ({ tags }) =>{
 
     if (!tags.length) {
-      console.log('111111111111111111111111111')
+        return <p className="center">нет тегов</p>
     }
 
 
