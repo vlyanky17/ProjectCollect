@@ -33,9 +33,7 @@ export const TagsCloud = () =>{
     return( <div>
 
     {tag}
-    {
-    for (var i = 0; i < tag.length; i++) {   return (<div>111111 </div>)}
-    }
+    {tag}
         </div>
 )
 }
