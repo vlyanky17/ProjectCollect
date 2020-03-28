@@ -490,6 +490,9 @@ if (!array1.includes(tags[i].nam)){
 }
         }
 console.log(array1)
+        return res.json({
+            array1
+        });
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

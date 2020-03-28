@@ -11,13 +11,14 @@ export const TagsCloud = () =>{
 
         const {loading, error,request} = useHttp()
     const [tag, settag] = useState( null)
+
     const [OnLoad, setOnLoad] = useState( false)
     const registerAll = async () => {
         try {
 
             const data = await request('/IloadTags', 'POST')
             setOnLoad(true)
-
+            settag(data.array1)
 
         } catch (e) {}
     }
@@ -31,6 +32,7 @@ export const TagsCloud = () =>{
     )
     return( <div>
 11111111111111
+    {tag}
         </div>
 )
 }
