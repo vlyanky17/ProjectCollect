@@ -12,7 +12,7 @@ export const ToLikeSearchTag = () => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
     const  d =data.ItId
-    const [lkin, setlkin] = useState({nam:''})
+    const [lkin, setlkin] = useState({nam:us,id: d})
 
 
     const ToLike = async () => {
