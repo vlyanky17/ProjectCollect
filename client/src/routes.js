@@ -17,7 +17,7 @@ import ChangeCol from "./pages/ChangeCol";
 import ChangeItem from "./pages/ChangeImet";
 import AdminPage from "./pages/AdminPage";
 import AfterSearchTag from "./pages/AfterSearchTag";
-
+import ItemUnitSearchTag from "./pages/ItemUnitSearchTag";
 export const useRoutes = isAuthenticated => {
 
 
@@ -27,6 +27,11 @@ export const useRoutes = isAuthenticated => {
 
             <Route path="/Col" exact>
         <ForCol/>
+        </Route>
+
+
+        <Route path="/ItemUnitSearchTag" exact>
+        <ItemUnitSearchTag/>
         </Route>
 
         <Route path="/AfterSearchTag" exact>
@@ -79,6 +84,10 @@ export const useRoutes = isAuthenticated => {
 
         <Route path="/CreatItem" exact>
         <CreatItem/>
+        </Route>
+
+        <Route path="/ItemUnitSearchTag" exact>
+        <ItemUnitSearchTag/>
         </Route>
 
         <Route path="/AfterSearchTag" exact>
@@ -141,6 +150,10 @@ export const useRoutes = isAuthenticated => {
 
     <Route path="/AfterSearchTag" exact>
     <AfterSearchTag/>
+    </Route>
+
+    <Route path="/ItemUnitSearchTag" exact>
+    <ItemUnitSearchTag/>
     </Route>
 
     <Route path="/ChangeItem" exact>
