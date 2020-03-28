@@ -38,7 +38,9 @@ export const useAuth = isAuth => {
     setTagN(null)
     setreservUserId(null)
     setreservLog(null)
-    localStorage.removeItem(storageName)
+    localStorage.setItem(storageName, JSON.stringify({
+      userId: null, token: null,Adm:null,logn:null,ColId:null,ItId:null,ResId:null,ResLog:null,TagN:null
+    }))
   }, [])
 
   useEffect(() => {
