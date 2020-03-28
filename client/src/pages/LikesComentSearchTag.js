@@ -25,14 +25,6 @@ export const LikesComentSearchTag = () => {
 
         console.log(com)
     }
-    const ToLike = async () => {
-        try {
-
-            alert(lkin)
-            const data = await request('/InLike', 'POST', {lkin})
-
-        } catch (e) {}
-    }
 
 
 
@@ -46,7 +38,7 @@ export const LikesComentSearchTag = () => {
             const datL = await request('/OutLike', 'POST',{d})
             setLikeCount(datL)
             setlodTr(true)
-            setlkin({nam:us,id: d})
+
         } catch (e) {}
     }
     useEffect(() => {
@@ -57,6 +49,7 @@ export const LikesComentSearchTag = () => {
     )
 
 if (UserAut != undefined) {var cm = <ToComentSearchTag />}
+    if (UserAut != undefined) {var llk = <ToComentSearchTag />}
     return(<div>
 
         <table class="resp-tab">
@@ -64,7 +57,7 @@ if (UserAut != undefined) {var cm = <ToComentSearchTag />}
         <tr>
 
         <th> {cm} </th>
-    <th> <form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button>{LikeCount} </form> </th>
+    <th> {llk}</th>
     </tr>
     </thead>
     <tbody>
