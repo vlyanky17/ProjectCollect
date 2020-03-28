@@ -4,6 +4,8 @@ import './Aut.css';
 import {useHttp} from "../hooks/http.hook";
 import ComTryMap from "./ComTryMap";
 import logo from './lk.png';
+import ToComentSearchTag from "./ToComentSearchTag";
+
 
 export const LikesComentSearchTag = () => {
 
@@ -17,7 +19,7 @@ export const LikesComentSearchTag = () => {
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.logn
     const  d =data.ItId
-
+    const UserAut= data.userId
     const changeHandler = event => {
         setcom({[event.target.name]: event.target.value,'nam':us,id:d})
 
@@ -61,15 +63,14 @@ export const LikesComentSearchTag = () => {
         }
     )
 
-
+if (UserAut != undefined) {var cm = <ToComentSearchTag />}
     return(<div>
 
         <table class="resp-tab">
         <thead>
         <tr>
 
-        <th> <form class="form-2"> комментарии   <input type="text" id="comen" name="comen" placeholder="комментарий " onChange={changeHandler} />
-    <button onClick={ToComent}>  отправить</button>  </form> </th>
+        <th> {cm} </th>
     <th> <form class="form-2"> <button  onClick={ToLike}><img src={logo} alt="logo" /> </button>{LikeCount} </form> </th>
     </tr>
     </thead>

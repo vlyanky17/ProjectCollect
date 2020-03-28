@@ -352,7 +352,7 @@ router.post('/ChangeItem', async(req,res) =>{
     try{
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
         const item = await Item.findOne(  { _id: id } )
- 
+
         await item.update({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3})
 
 
@@ -448,7 +448,7 @@ router.post('/InLike', async(req,res) =>{
         console.log('InLikeInLikeInLikeInLikeInLikeInLikeInLikeInLikeInLike')
     console.log(req.body.lkin)
         const Flike = await Like.findOne({nam:req.body.lkin.nam,owner:req.body.lkin.id})
-        console.log(Flike)
+
         if (!Flike) {const like = new Like({nam:req.body.lkin.nam,owner:req.body.lkin.id})
             console.log("here we go to add")
             await like.save()}   if (Flike) {
