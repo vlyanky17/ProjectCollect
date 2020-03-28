@@ -482,9 +482,12 @@ router.post('/IloadTags', async(req,res) =>{
         const array1 = [];
         const tags = await Tag.find({});
         for (var i = 0; i < tags.length; i++) {
-
+            console.log(array1)
+if (!array1.includes(tags[i].nazv)){
+    array1.push(tags[i].nazv)
+}
         }
-
+console.log(array1)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
