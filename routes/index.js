@@ -594,7 +594,10 @@ console.log('IfindLast')
             id=items[i]._id
         }
         }
-console.log(id)
+        const itm =  await Item.find({_id:id})
+        return res.json({
+            itm
+        });
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

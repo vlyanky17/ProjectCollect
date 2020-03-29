@@ -17,12 +17,22 @@ export const LastItem = () =>{
 
             const data = await request('/IfindLast', 'POST')
             setOnLoad(true)
-
+            setThisItm(data.itm[0])
+            console.log(data.itm[0].nam)
 
         } catch (e) {}
     }
 
+    const changeHandler = event => {
+        console.log(event.target.name)
+        const storageName = 'userData'
+        const data = JSON.parse(localStorage.getItem(storageName))
+        localStorage.setItem(storageName, JSON.stringify({
+            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ItId: event.target.name,ResId: data.ResId,ResLog:data.ResLog
 
+        }))
+
+    }
 
     useEffect(() => {
             if (OnLoad ==false) {registerAll()
@@ -32,7 +42,27 @@ export const LastItem = () =>{
         }
     )
 
-    return (1111111111111)
+    return (<div>
+
+        <table class="resp-tab">
+        <thead>
+        <tr>
+        <th> {ThisCol.nam}</th>
+        <th> {ThisCol.tem} </th>
+
+
+        </tr>
+        </thead>
+        </table>
+        <table class="resp-tab">
+        <tbody>
+        <tr >
+        <td><a  href="/ColTablSearch"name={ThisItm._id} onClick={changeHandler}> открыть</a> </td>
+    </tr>
+    </tbody>
+
+    </table>
+    </div>1)
 
 }
 
