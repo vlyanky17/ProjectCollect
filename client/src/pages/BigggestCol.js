@@ -31,7 +31,8 @@ export const BiggestCol = () => {
         <table class="resp-tab">
         <thead>
         <tr>
-
+        <th>{data.col[0].nam}</th>
+        <th>{data.col[0].disk}</th>
 
 
         </tr>
