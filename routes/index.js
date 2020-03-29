@@ -561,7 +561,7 @@ router.post('/FindBiggest', async(req,res) =>{
         var coun
 
         for (var i = 0; i < cols.length; i++) {
-            console.log(i)
+            console.log(cols[i]._id)
         }
 
     } catch(e){
