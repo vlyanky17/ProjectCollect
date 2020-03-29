@@ -9,7 +9,7 @@ import ComTryMap from "./ComTryMap";
 export const BiggestCol = () => {
     const {loading, error,request} = useHttp()
     const [lodTr, setlodTr] = useState(false)
-    const [col, setcol] = useState({})
+    const [ThisCol, setcol] = useState({})
 
     const FB = async () => {
         try {
@@ -17,8 +17,8 @@ export const BiggestCol = () => {
 
             const data = await request('/FindBiggest', 'POST')
             setlodTr(true)
-            setcol(data[0])
-            console.log(data)
+            setcol(data.col)
+            console.log(data.col)
         } catch (e) {}
     }
     useEffect(() => {
