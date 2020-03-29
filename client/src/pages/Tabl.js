@@ -5,6 +5,7 @@ import {useHttp} from "../hooks/http.hook";
 import {AuthContext} from '../context/AuthContext'
 import TagsCloud from "./TagsCloud";
 import BiggestCol from "./BigggestCol";
+import LastItem from "./LastItem";
 
 export const ForAut = () =>{
     const {loading, error,request} = useHttp()
@@ -28,7 +29,12 @@ export const ForAut = () =>{
         </p>
         <BiggestCol/> </form>
         </div>
-        <div id="column-3">333333333</div>
+        <div id="column-3"> <form class="form-2">
+        <p className="clearfix">
+
+       последний добавленный айтем:
+        </p>
+    <LastItem/> </form></div>
 
     </div>
 )
