@@ -556,7 +556,15 @@ router.post('/FindBiggest', async(req,res) =>{
     try{
 
         console.log('FindBiggest')
-        
+        const usrs = await Colec.find({})
+        var id
+        var coun
+        for (var i = 0; i < usrs.length; i++) {
+            const col = await Item.find({owner:usrs[i]._id})
+            if (col.length>coun){coun=col.length
+                id=usrs[i]._id}
+        }
+        console.log(id)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

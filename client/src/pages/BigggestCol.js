@@ -20,7 +20,7 @@ export const BiggestCol = () => {
     }
     useEffect(() => {
 
-      if (lodTr==true)  {FB()}
+      if (lodTr==false)  {FB()}
 
         }
     )
