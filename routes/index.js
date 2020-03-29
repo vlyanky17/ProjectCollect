@@ -541,7 +541,7 @@ if (!array1.includes(tags[i].nam)){
     array1.push(tags[i].nam)
 }
         }
-console.log(array1)
+
         return res.json({
             array1
         });
@@ -558,13 +558,15 @@ router.post('/FindBiggest', async(req,res) =>{
         console.log('FindBiggest')
         const cols = await Colec.find({})
         var id
-        var coun
+        var coun = 0;
 
         for (var i = 0; i < cols.length; i++) {
             const item = await Item.find({owner:cols[i]._id})
-            console.log(item.length)
-        }
 
+            if (coun<item.length) {coun=item.length
+            id =cols[i]._id }
+        }
+console.log(coun)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
