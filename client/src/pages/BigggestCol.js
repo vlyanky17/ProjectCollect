@@ -52,7 +52,7 @@ export const BiggestCol = () => {
     <table class="resp-tab">
         <tbody>
         <tr >
-        <td><a  href="/AdminPage"> <button name={ThisCol._id} onClick={changeHandler} > открыть</button></a> </td>
+        <td><a  href="/AdminPage"> открыть</a> </td>
         </tr>
         </tbody>
 
