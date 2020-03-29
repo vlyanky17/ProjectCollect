@@ -327,8 +327,8 @@ router.post('/ToItm', async(req,res) =>{
 
         const {nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3,id} = req.body
 
-
-        const item = new Item({nazv,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: id})
+        const thisD = new Date();
+        const item = new Item({nazv,dat: thisD,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: id})
 
             //   await item.save()
    // const d =   item._id
@@ -339,8 +339,8 @@ router.post('/ToItm', async(req,res) =>{
 
      //       await tag.save()
    //     }
-        const thisD = new Date();
-        console.log(thisD)
+
+        console.log(item)
         res.json("добавлен")
 
     } catch(e){
