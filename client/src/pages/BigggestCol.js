@@ -23,7 +23,7 @@ export const BiggestCol = () => {
     useEffect(() => {
 
       if (lodTr==false)  {FB()}
-console.log(col)
+console.log(col.nam)
         }
     )
     return(<div>
@@ -31,8 +31,7 @@ console.log(col)
         <thead>
         <tr>
 
-        <th>{col.nam}</th>
-        <th>{col.tem}</th>
+       
 
         </tr>
         </thead>
