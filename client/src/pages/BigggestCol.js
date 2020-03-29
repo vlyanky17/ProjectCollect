@@ -42,8 +42,8 @@ export const BiggestCol = () => {
         <table class="resp-tab">
         <thead>
         <tr>
-        <th> <form class="form-2">{ThisCol.nam} </form></th>
-        <th> <form class="form-2">{ThisCol.tem} </form></th>
+        <th> >{ThisCol.nam}</th>
+        <th> {ThisCol.tem} </th>
 
 
         </tr>
@@ -52,7 +52,7 @@ export const BiggestCol = () => {
     <table class="resp-tab">
         <tbody>
         <tr >
-        <td><a  > <button name={ThisCol._id} onClick={changeHandler} > открыть</button></a> </td>
+        <td><a  href="/ColTablSearch"> <button name={ThisCol._id} onClick={changeHandler} > открыть</button></a> </td>
         </tr>
         </tbody>
 

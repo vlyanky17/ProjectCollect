@@ -18,6 +18,10 @@ import ChangeItem from "./pages/ChangeImet";
 import AdminPage from "./pages/AdminPage";
 import AfterSearchTag from "./pages/AfterSearchTag";
 import ItemUnitSearchTag from "./pages/ItemUnitSearchTag";
+import ColTablSearch from "./pages/ColTabl Search";
+
+
+
 export const useRoutes = isAuthenticated => {
 
 
@@ -27,6 +31,10 @@ export const useRoutes = isAuthenticated => {
 
             <Route path="/Col" exact>
         <ForCol/>
+        </Route>
+
+        <Route path="/ColTablSearch" exact>
+        <ColTablSearch/>
         </Route>
 
 
@@ -102,6 +110,10 @@ export const useRoutes = isAuthenticated => {
         <ItemUnit/>
         </Route>
 
+        <Route path="/ColTablSearch" exact>
+        <ColTablSearch/>
+        </Route>
+
         <Route path="/ChangeCol" exact>
         <ChangeCol/>
         </Route>
@@ -138,6 +150,10 @@ export const useRoutes = isAuthenticated => {
     </Route>
     <Route path="/Reg" exact>
     <ForReg/>
+    </Route>
+
+    <Route path="/ColTablSearch" exact>
+    <ColTablSearch/>
     </Route>
 
     <Route path="/ItemUnit" exact>
