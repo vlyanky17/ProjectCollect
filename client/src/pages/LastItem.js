@@ -47,6 +47,7 @@ export const LastItem = () =>{
         <table class="resp-tab">
         <thead>
         <tr>
+        <th> {ThisItm.nazv}</th>
         </tr>
         </thead>
         </table>
