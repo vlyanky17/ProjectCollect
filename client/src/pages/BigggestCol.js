@@ -39,6 +39,7 @@ export const BiggestCol = () => {
         }
     )
     return(<div>
+
         <table class="resp-tab">
         <thead>
         <tr>
