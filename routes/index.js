@@ -583,9 +583,14 @@ router.post('/IfindLast', async(req,res) =>{
 
     try{
 console.log('IfindLast')
+        var id
+        var coun;
         const items = await Item.find({})
+        var coun =items[0].dat ;
         for (var i = 0; i < items.length; i++) {
-            console.log(items[i])
+        if (items[i].dat>coun) {
+            console.log(items[i].dat)
+        }
         }
 
     } catch(e){
