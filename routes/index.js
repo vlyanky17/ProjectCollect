@@ -584,7 +584,7 @@ router.post('/IfindLast', async(req,res) =>{
     try{
 console.log('IfindLast')
         const items = await Item.find({})
-        for (var i = 0; i < cols.length; i++) {
+        for (var i = 0; i < items.length; i++) {
             console.log(items[i])
         }
 
