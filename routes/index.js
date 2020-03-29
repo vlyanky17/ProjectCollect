@@ -330,15 +330,15 @@ router.post('/ToItm', async(req,res) =>{
         const thisD = new Date();
         const item = new Item({nazv,dat: thisD,intgr1,intgr2,intgr3,Cstr1,Cstr2,Cstr3,Cdate1,Cdate2,Cdate3,Ctxt1,Ctxt2,Ctxt3,Cbol1,Cbol2,Cbol3, owner: id})
 
-            //   await item.save()
-   // const d =   item._id
-   //     for (var i = 1; i < req.body.tags.length; i++) {
+             await item.save()
+   const d =   item._id
+     for (var i = 1; i < req.body.tags.length; i++) {
 
-   //         const na = '#'+req.body.tags[i]
-    //        const tag = new Tag({nam:na, owner: d })
+           const na = '#'+req.body.tags[i]
+        const tag = new Tag({nam:na, owner: d })
 
-     //       await tag.save()
-   //     }
+         await tag.save()
+     }
 
         console.log(item)
         res.json("добавлен")
