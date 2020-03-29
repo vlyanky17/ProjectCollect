@@ -50,7 +50,9 @@ export const BiggestCol = () => {
         </thead>
 
         <tbody>
-
+        <tr >
+        <td><a  > <button name={col._id} onClick={changeHandler} > открыть</button></a> </td>
+        </tr>
         </tbody>
 
         </table>
