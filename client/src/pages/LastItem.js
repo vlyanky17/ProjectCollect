@@ -44,25 +44,8 @@ export const LastItem = () =>{
 
     return (<div>
 
-        <table class="resp-tab">
-        <thead>
-        <tr>
-        <th> {ThisItm.nazv}</th>
-   
-
-
-        </tr>
-        </thead>
-        </table>
-        <table class="resp-tab">
-        <tbody>
-        <tr >
-        <td><a  href="/ItemUnitSearchTag"name={ThisItm._id} onClick={changeHandler}> открыть</a> </td>
-    </tr>
-    </tbody>
-
-    </table>
-    </div>1)
+   111111111111111111111
+    </div>)
 
 }
 
