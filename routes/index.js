@@ -566,7 +566,8 @@ router.post('/FindBiggest', async(req,res) =>{
             if (coun<item.length) {coun=item.length
             id =cols[i]._id }
         }
-console.log( id)
+const col =  await Colec.findOne({_id:id})
+        console.log(col)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
