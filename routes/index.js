@@ -559,8 +559,10 @@ router.post('/FindBiggest', async(req,res) =>{
         const cols = await Colec.find({})
         var id
         var coun
-        console.log(cols.length)
-       
+
+        for (var i = 0; i < cols.length; i++) {
+            console.log(i)
+        }
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
