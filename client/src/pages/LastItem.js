@@ -54,7 +54,7 @@ export const LastItem = () =>{
         <table class="resp-tab">
         <tbody>
         <tr >
-        <td><a  href="/ColTablSearch"name={ThisItm._id} onClick={changeHandler}> открыть</a> </td>
+        <td><a  href="/ItemUnitSearchTag"name={ThisItm._id} onClick={changeHandler}> открыть</a> </td>
     </tr>
     </tbody>
 
