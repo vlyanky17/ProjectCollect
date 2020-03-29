@@ -14,12 +14,13 @@ export const ForAut = () =>{
         <div >
 
         <div id="column-1">
-
+        <form class="form-2">
         <p className="clearfix">
 
         Облако тегов:
         </p>
-        <TagsCloud /></div>
+        <TagsCloud />   </form>
+    </div>
         <div id="column-2"><BiggestCol/></div>
         <div id="column-3">333333333</div>
 
