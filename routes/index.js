@@ -531,7 +531,7 @@ router.post('/IloadTags', async(req,res) =>{
 
     try{
 
-        console.log('IloadTags')
+
         const array1 = [];
         const tags = await Tag.find({});
 
@@ -560,13 +560,7 @@ router.post('/FindBiggest', async(req,res) =>{
         var id
         var coun
         console.log(cols.length)
-        for (var i = 0; i < cols.length; i++) {
-            const itms = await Item.find({owner:usrs[i]._id})
-      
-            if (itms.length>itms){coun=itms.length
-                id=usrs[i]._id}
-
-        }
+       
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
