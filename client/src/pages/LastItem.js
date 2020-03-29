@@ -44,18 +44,9 @@ export const LastItem = () =>{
 
     return (<div>
 
-        <table class="resp-tab">
-        <thead>
-        <tr>
-        <th></th>
+        111111111111111
 
-
-
-        </tr>
-        </thead>
-
-    </div>
-)
+    </div>)
 
 }
 
