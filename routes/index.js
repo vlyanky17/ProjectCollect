@@ -557,7 +557,7 @@ router.post('/FindBiggest', async(req,res) =>{
 
     try{
 
-        console.log('FindBiggest')
+
         const cols = await Colec.find({})
         var id
         var coun = 0;
@@ -583,6 +583,10 @@ router.post('/IfindLast', async(req,res) =>{
 
     try{
 console.log('IfindLast')
+        const items = await Item.find({})
+        for (var i = 0; i < cols.length; i++) {
+            console.log(items[i])
+        }
 
     } catch(e){
         res.status(500).json({message: 'error Col'})
