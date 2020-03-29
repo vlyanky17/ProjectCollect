@@ -18,12 +18,13 @@ export const BiggestCol = () => {
             const data = await request('/FindBiggest', 'POST')
             setlodTr(true)
             setcol(data[0])
+            console.log(data)
         } catch (e) {}
     }
     useEffect(() => {
 
       if (lodTr==false)  {FB()}
-console.log(col)
+
         }
     )
     return(<div>
