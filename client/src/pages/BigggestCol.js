@@ -17,8 +17,8 @@ export const BiggestCol = () => {
 
             const data = await request('/FindBiggest', 'POST')
             setlodTr(true)
-            setcol(data.col)
-            console.log(data.col)
+            setcol(data.col[0])
+            console.log(data.col[0])
         } catch (e) {}
     }
     useEffect(() => {
