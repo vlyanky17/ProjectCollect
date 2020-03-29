@@ -18,7 +18,7 @@ export const LastItem = () =>{
             const data = await request('/IfindLast', 'POST')
             setOnLoad(true)
             setThisItm(data.itm[0])
-            console.log(data.itm[0].nam)
+
 
         } catch (e) {}
     }
@@ -47,14 +47,15 @@ export const LastItem = () =>{
         <table class="resp-tab">
         <thead>
         <tr>
-        <th> {ThisItm.nazv}</th>
+        <th></th>
 
 
 
         </tr>
         </thead>
-      
-    </div>)
+
+    </div>
+)
 
 }
 
