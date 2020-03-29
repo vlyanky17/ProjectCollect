@@ -589,10 +589,12 @@ console.log('IfindLast')
         var coun =items[0].dat ;
         for (var i = 0; i < items.length; i++) {
         if (items[i].dat>coun) {
-            console.log(items[i].dat)
+            console.log(items[i].dat )
+            coun=items[i].dat
+            id=items[i]._id
         }
         }
-
+console.log(id)
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }
