@@ -21,7 +21,12 @@ export const ForAut = () =>{
         </p>
         <TagsCloud />   </form>
     </div>
-        <div id="column-2">     <form class="form-2"><BiggestCol/> </form>
+        <div id="column-2">     <form class="form-2">
+        <p className="clearfix">
+
+        самая большая коллекция:
+        </p>
+        <BiggestCol/> </form>
         </div>
         <div id="column-3">333333333</div>
 

@@ -14,7 +14,7 @@ export const ColMap = ({ cols }) => {
         const storageName = 'userData'
         const data = JSON.parse(localStorage.getItem(storageName))
         localStorage.setItem(storageName, JSON.stringify({
-            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: event.target.name
+            userId: data.userId, token: data.token,Adm: data.Adm,logn:data.logn,ColId: event.target.name,ResId: data.ResId,ResLog:data.ResLog
 
         }))
 
