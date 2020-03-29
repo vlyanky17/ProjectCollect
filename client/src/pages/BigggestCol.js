@@ -42,13 +42,14 @@ export const BiggestCol = () => {
         <table class="resp-tab">
         <thead>
         <tr>
-        <th>{ThisCol.nam}</th>
-        <th>{ThisCol.tem}</th>
+        <th> <form class="form-2">{ThisCol.nam} </form></th>
+        <th> <form class="form-2">{ThisCol.tem} </form></th>
 
 
         </tr>
         </thead>
-
+    </table>
+    <table class="resp-tab">
         <tbody>
         <tr >
         <td><a  > <button name={ThisCol._id} onClick={changeHandler} > открыть</button></a> </td>
