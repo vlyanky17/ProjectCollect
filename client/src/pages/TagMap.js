@@ -25,12 +25,7 @@ console.log(data)
     }
 
     return (  <div>
-        { tags.map((tag, index) => {
-                return (<div>
-                    <a  href="/AfterSearchTag" onClick={changeHandler}  name={tag}> {tag}</a>
-                    </div>
-            )
-            }) }
+       11111111111111111111
         </div>)
 }
 
