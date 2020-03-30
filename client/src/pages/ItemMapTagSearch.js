@@ -40,11 +40,7 @@ export const ItemMapTagSearch = ({ itms }) => {
         return <p className="center">нет айтемов</p>
     }
 
-  
-    if (UserAdmt=='Adm'){
-        var ty=    <td><a  > <form class="form-2"> <button name={itm._id} onClick={Deleter}  > Удалить</button>    </form></a> </td>
-    }
-
+ 
 
 
 
@@ -129,7 +125,6 @@ export const ItemMapTagSearch = ({ itms }) => {
             {Cbol2}
             {Cbol3}
         <td><a  href="/ItemUnitSearchTag"> <button name={itm._id} onClick={changeHandler}  > открыть</button></a> </td>
-            {ty}
             </tr>
         )
         }) }
