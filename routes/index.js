@@ -608,7 +608,8 @@ router.post('/WegoDel', async(req,res) =>{
 
     try{
         console.log('WegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDel')
-
+        const item = await Item.findOne({_id:req.body.ev})
+        item.delete()
     } catch(e){
         res.status(500).json({message: 'error Col'})
     }

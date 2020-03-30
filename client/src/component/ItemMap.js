@@ -198,7 +198,7 @@ export const ItemMap = ({ itms }) => {
             {Cbol2}
             {Cbol3}
         <td><a  href="/ItemUnit"> <button name={itm._id} onClick={changeHandler}  > открыть</button></a> </td>
-            <td><a  href="/ItemUnit"> <button name={itm._id} onClick={Deleter}  > Удалить</button></a> </td>
+            <td><a  > <button name={itm._id} onClick={Deleter}  > Удалить</button></a> </td>
             </tr>
         )
         }) }
