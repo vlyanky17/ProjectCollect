@@ -42,7 +42,7 @@ console.log(itms)
         </thead>
         <tbody>
         { itms.map((itm, index) => {
-if (itm != null){
+if (itm != null){console.log('11111')}
 
                 if (itm.intgr1!=undefined) {   var Pintgr1 = itm.intgr1
                     var intgr1= <td>{Pintgr1}</td>;
@@ -114,7 +114,7 @@ if (itm != null){
             <td><a  href="/ItemUnitSearchTag"> <button name={itm._id} onClick={changeHandler}  > открыть</button></a> </td>
                 </tr>
             )
-            }) }}
+            }) }
         </tbody>
 
 
