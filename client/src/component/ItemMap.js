@@ -22,6 +22,16 @@ export const ItemMap = ({ itms }) => {
 
     }
 
+    const Deleter = async (event) => {
+        try {
+            console.log(event.target.name)
+            const ev =event.target.name
+            console.log(ev)
+            const dt = await request('/WegoDel', 'POST', {ev})
+        } catch (e) {}
+    }
+
+
     const registerAl = async () => {
         try {
             console.log(us)
@@ -113,6 +123,7 @@ export const ItemMap = ({ itms }) => {
     {Cbol2}
     {Cbol3}
 <th>перейти</th>
+    <th>удалить</th>
         </tr>
         </thead>
     <tbody>
@@ -187,6 +198,7 @@ export const ItemMap = ({ itms }) => {
             {Cbol2}
             {Cbol3}
         <td><a  href="/ItemUnit"> <button name={itm._id} onClick={changeHandler}  > открыть</button></a> </td>
+            <td><a  href="/ItemUnit"> <button name={itm._id} onClick={Deleter}  > Удалить</button></a> </td>
             </tr>
         )
         }) }
