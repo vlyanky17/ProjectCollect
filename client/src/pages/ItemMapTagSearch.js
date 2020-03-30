@@ -10,18 +10,6 @@ export const ItemMapTagSearch = ({ itms }) => {
     const storageName = 'userData'
     const data = JSON.parse(localStorage.getItem(storageName))
     const us = data.ColId
-    const UserAut= data.userId
-    const UserAdmt= data.Adm
-
-
-    const Deleter = async (event) => {
-        try {
-            console.log(event.target.name)
-            const ev =event.target.name
-            console.log(ev)
-            const dt = await request('/WegoDel', 'POST', {ev})
-        } catch (e) {}
-    }
 
     const changeHandler = event => {
         console.log(event.target.name)
@@ -40,10 +28,6 @@ export const ItemMapTagSearch = ({ itms }) => {
         return <p className="center">нет айтемов</p>
     }
 
-
-    if (UserAdmt=='Adm'){
-        var ty=  <li><a  href="/ChangeItem" >изменить айтем</a></li>
-    }
 
 
 
