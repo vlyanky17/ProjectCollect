@@ -607,7 +607,7 @@ console.log('IfindLast')
 router.post('/WegoDel', async(req,res) =>{
 
     try{
-        console.log('IfindLast')
+        console.log('WegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDelWegoDel')
 
     } catch(e){
         res.status(500).json({message: 'error Col'})

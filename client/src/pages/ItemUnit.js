@@ -32,10 +32,10 @@ export const ItemUnit = () => {
 
     const WeGoDel = async () => {
         try {
-
+alert('WegoDel')
             const dat = await request('/WegoDel', 'POST',{us})
 
-        
+
 
 
         } catch (e) {}
