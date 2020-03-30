@@ -93,26 +93,7 @@ export const ItemMapTagSearch = ({ itms }) => {
 
 
             return (
-                <tr key={itm._id}>
-
-                <td>{itm.nazv}</td>
-            {intgr1}
-            {intgr2}
-            {intgr3}
-            {Cstr1}
-            {Cstr2}
-            {Cstr3}
-            {Ctxt1}
-            {Ctxt2}
-            {Ctxt3}
-            {Cdate1}
-            {Cdate2}
-            {Cdate3}
-            {Cbol1}
-            {Cbol2}
-            {Cbol3}
-        <td><a  href="/ItemUnitSearchTag"> <button name={itm._id} onClick={changeHandler}  > открыть</button></a> </td>
-            </tr>
+              11111111111111111111111111111
         )
         }) }
     </tbody>
