@@ -604,4 +604,15 @@ console.log('IfindLast')
 })
 
 
+router.post('/WegoDel', async(req,res) =>{
+
+    try{
+        console.log('IfindLast')
+
+    } catch(e){
+        res.status(500).json({message: 'error Col'})
+    }
+})
+
+
 module.exports = router;

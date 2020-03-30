@@ -30,6 +30,17 @@ export const ItemUnit = () => {
         } catch (e) {}
     }
 
+    const WeGoDel = async () => {
+        try {
+
+            const dat = await request('/WegoDel', 'POST',{us})
+
+        
+
+
+        } catch (e) {}
+    }
+
     useEffect(() => {
         if (itm.nam==''){
             registerAl()}
@@ -100,6 +111,7 @@ export const ItemUnit = () => {
 
 
         <li><a  href="/PageForCol" >назад</a></li>
+    <li><a  href="/PageForCol" onClick={WeGoDel} >удалить</a></li>
     <li><a  href="/ChangeItem" >изменить айтем</a></li>
     <li><a href="/">Главная </a></li>
     </ul>
