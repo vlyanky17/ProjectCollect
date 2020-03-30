@@ -30,9 +30,23 @@ export const ItemMapTagSearch = ({ itms }) => {
 
 
 
-
+console.log(itms)
     return (
-       111111111111111111111
+        <table class="resp-tab">
+        <thead>
+        <tr>
+
+        <th>название</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+
+
+        </table>
 )
 }
 
