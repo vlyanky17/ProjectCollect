@@ -40,7 +40,10 @@ export const ItemMapTagSearch = ({ itms }) => {
         return <p className="center">нет айтемов</p>
     }
 
- 
+
+    if (UserAdmt=='Adm'){
+        var ty=  <li><a  href="/ChangeItem" >изменить айтем</a></li>
+    }
 
 
 
