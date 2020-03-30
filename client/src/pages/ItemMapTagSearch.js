@@ -40,9 +40,7 @@ export const ItemMapTagSearch = ({ itms }) => {
         return <p className="center">нет айтемов</p>
     }
 
-    if (UserAut==usr._id){
-        var ty=   <td><a  > <form class="form-2"> <button name={itm._id} onClick={Deleter}  > Удалить</button>    </form></a> </td>
-    }
+  
     if (UserAdmt=='Adm'){
         var ty=    <td><a  > <form class="form-2"> <button name={itm._id} onClick={Deleter}  > Удалить</button>    </form></a> </td>
     }
