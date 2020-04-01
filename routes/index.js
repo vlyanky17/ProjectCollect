@@ -136,6 +136,21 @@ router.post('/ban', async(req,res) =>{
 })
 
 
+router.post('/GoAdm', async(req,res) =>{
+
+    try{
+
+        const user = await User.findOne({_id:req.body.ev})
+        console.log(user)
+        if (user.Admin=='Adm'){    await user.update({Ban:'Aut'})} else { await user.update({Ban:'Adm'})}
+
+    } catch(e){
+        res.status(500).json({message: 'error ban'})
+    }
+})
+
+
+
 router.post('/IsBan', async(req,res) =>{
 
     try{

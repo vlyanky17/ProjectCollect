@@ -31,6 +31,15 @@ export const UserMap = ({ usrs }) => {
         } catch (e) {}
     }
 
+    const AdminMachine = async (event) => {
+        try {
+            console.log(event.target.name)
+            const ev =event.target.name
+            console.log(ev)
+            const dt = await request('/GoAdm', 'POST', {ev})
+        } catch (e) {}
+    }
+
     const Deleter = async (event) => {
         try {
             console.log(event.target.name)
@@ -67,6 +76,7 @@ export const UserMap = ({ usrs }) => {
                     <td> {usr.Ban}</td>
                     <td><a  href="/Cab">    <form class="form-2"><button name={usr._id} id={usr.login}  onClick={changeHandler} >кабинет</button></form></a> </td>
                 <td><a   >     <form class="form-2"><button name={usr._id}  onClick={BanMachine} > заблокировать/разблокироввать </button>  </form></a> </td>
+                <td><a   >     <form class="form-2"><button name={usr._id}  onClick={AdminMachine} >дать админку/снять админку </button>  </form></a> </td>
                 <td><a  >     <form class="form-2"><button name={usr._id}  onClick={Deleter} > Удалить</button>  </form> </a> </td>
                 </tr>
             )
