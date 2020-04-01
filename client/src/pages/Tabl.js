@@ -27,14 +27,16 @@ export const ForAut = () =>{
 
         самая большая коллекция:
         </p>
-        <BiggestCol/> </form>
+     //   <BiggestCol/>
+    </form>
         </div>
         <div id="column-3"> <form class="form-2">
         <p className="clearfix">
 
        последний добавленный айтем:
         </p>
-    <LastItem/> </form></div>
+ ///   <LastItem/>
+    </form></div>
 
     </div>
 )
