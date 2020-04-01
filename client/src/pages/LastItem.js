@@ -14,10 +14,10 @@ export const LastItem = () =>{
     const [OnLoad, setOnLoad] = useState( false)
     const registerAll = async () => {
         try {
-
+alert('weGoReg')
             const data = await request('/IfindLast', 'POST')
             setOnLoad(true)
-            alert(data)
+            alert('data'+data)
             setThisItm(data.itm[0])
             alert('111111')
 
@@ -42,7 +42,7 @@ export const LastItem = () =>{
 
         }
     )
-alert(ThisItm)
+
     return (<div>
 
         <table class="resp-tab">
