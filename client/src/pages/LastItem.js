@@ -44,7 +44,9 @@ export const LastItem = () =>{
 
         }
     )
-if (ThisItm=={}) {return (нет айтемов)}
+    if (ThisItm=={}) {
+        return <p className="center">нет айтемов</p>
+    }
     return (<div>
 
         <table class="resp-tab">
