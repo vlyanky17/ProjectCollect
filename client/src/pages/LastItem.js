@@ -47,7 +47,7 @@ export const LastItem = () =>{
     if (ThisItm=='nothing') {
         return <p className="center">нет айтемов</p>
     }
-    alert(ThisItm)
+
     return (<div>
 
         <table class="resp-tab">
