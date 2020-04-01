@@ -602,6 +602,7 @@ console.log('IfindLast')
         var coun;
         const items = await Item.find({})
         console.log(items)
+        if (items!=[]){
         var coun =items[0].dat ;
         for (var i = 0; i < items.length; i++) {
         if (items[i].dat>coun) {
@@ -613,7 +614,7 @@ console.log('IfindLast')
         const itm =  await Item.find({_id:id})
         return res.json({
             itm
-        });
+        });}
     } catch(e){
         res.status(500).json({message: 'error Findlast'})
     }
