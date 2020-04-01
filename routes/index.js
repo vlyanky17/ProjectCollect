@@ -615,10 +615,7 @@ console.log('IfindLast')
         return res.json({
             itm
         });}
-        else {
-            return res.json({'nothing'})
-        }
-
+     
     } catch(e){
         res.status(500).json({message: 'error Findlast'})
     }
