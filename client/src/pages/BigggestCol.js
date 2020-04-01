@@ -29,7 +29,7 @@ export const BiggestCol = () => {
             const data = await request('/FindBiggest', 'POST')
             setlodTr(true)
             console.log(data.col.length)
-            alert(data.col)
+
             if (data.col.length>0){ setcol(data.col[0])
                 console.log(data.col[0].nam)}
 
