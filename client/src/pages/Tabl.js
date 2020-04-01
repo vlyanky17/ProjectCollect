@@ -4,7 +4,7 @@ import './Aut.css';
 import {useHttp} from "../hooks/http.hook";
 import {AuthContext} from '../context/AuthContext'
 import TagsCloud from "./TagsCloud";
-
+import BiggestCol from "./BigggestCol";
 import LastItem from "./LastItem";
 
 export const ForAut = () =>{
@@ -27,7 +27,7 @@ export const ForAut = () =>{
 
         самая большая коллекция:
         </p>
-
+   <BiggestCol/>
     </form>
         </div>
         <div id="column-3"> <form class="form-2">

@@ -28,6 +28,7 @@ export const BiggestCol = () => {
 
             const data = await request('/FindBiggest', 'POST')
             setlodTr(true)
+            alert(data.col)
             setcol(data.col[0])
             console.log(data.col[0].nam)
         } catch (e) {}
