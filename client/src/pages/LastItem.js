@@ -18,7 +18,7 @@ export const LastItem = () =>{
             const data = await request('/IfindLast', 'POST')
             setOnLoad(true)
 
-            if (data.itm!='nothing'){ alert('thisWrong')
+            if (data.itm!='nothing'){ 
                 setThisItm(data.itm[0])}
 
 
@@ -44,7 +44,7 @@ export const LastItem = () =>{
 
         }
     )
-alert(ThisItm)
+
     return (<div>
 
         <table class="resp-tab">
