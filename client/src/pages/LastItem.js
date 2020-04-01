@@ -17,9 +17,7 @@ export const LastItem = () =>{
 
             const data = await request('/IfindLast', 'POST')
             setOnLoad(true)
-            alert(data)
-            if (data!='nothing'){      setThisItm(data.itm[0])}
-
+            setThisItm(data.itm[0])
 
 
         } catch (e) {}
