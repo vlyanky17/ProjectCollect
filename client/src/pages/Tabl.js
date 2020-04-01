@@ -5,7 +5,7 @@ import {useHttp} from "../hooks/http.hook";
 import {AuthContext} from '../context/AuthContext'
 import TagsCloud from "./TagsCloud";
 import BiggestCol from "./BigggestCol";
-
+import LastItem from "./LastItem";
 
 export const ForAut = () =>{
     const {loading, error,request} = useHttp()
@@ -35,7 +35,7 @@ export const ForAut = () =>{
 
        последний добавленный айтем:
         </p>
-
+   <LastItem/>
     </form></div>
 
     </div>
