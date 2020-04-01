@@ -601,6 +601,7 @@ console.log('IfindLast')
         var id
         var coun;
         const items = await Item.find({})
+        console.log(items)
         var coun =items[0].dat ;
         for (var i = 0; i < items.length; i++) {
         if (items[i].dat>coun) {
