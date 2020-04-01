@@ -35,8 +35,9 @@ export const UserMap = ({ usrs }) => {
         try {
             console.log(event.target.name)
             const ev =event.target.name
-            console.log(ev)
+
             const dt = await request('/GoAdm', 'POST', {ev})
+  
         } catch (e) {}
     }
 
@@ -60,6 +61,7 @@ export const UserMap = ({ usrs }) => {
         <th>имя</th>
         <th>админ</th>
         <th>заблокирован</th>
+        <th></th>
         <th></th>
         <th></th>
         <th></th>
