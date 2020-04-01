@@ -17,8 +17,9 @@ export const LastItem = () =>{
 
             const data = await request('/IfindLast', 'POST')
             setOnLoad(true)
+            alert(data)
             setThisItm(data.itm[0])
-
+            alert('111111')
 
         } catch (e) {}
     }
