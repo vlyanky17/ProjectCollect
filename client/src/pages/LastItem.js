@@ -41,7 +41,7 @@ export const LastItem = () =>{
 
         }
     )
-
+alert(ThisItm)
     return (<div>
 
         <table class="resp-tab">
