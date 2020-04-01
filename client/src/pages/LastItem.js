@@ -15,11 +15,10 @@ export const LastItem = () =>{
     const registerAll = async () => {
         try {
 
-            const data = await request('/IfindLast', 'POST')
+
             setOnLoad(true)
 
-            if (data.itm!='nothing'){ alert('thisWrong')
-                setThisItm(data.itm[0])}
+         
 
 
 
