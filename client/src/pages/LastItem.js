@@ -17,8 +17,9 @@ export const LastItem = () =>{
 alert('weGoReg')
             const data = await request('/IfindLast', 'POST')
             setOnLoad(true)
-            alert('data'+data)
-            setThisItm(data.itm[0])
+            alert('data'+data.itm)
+            if (data.itm!='nothing'){    setThisItm(data.itm[0])}
+
             alert('111111')
 
         } catch (e) {}
