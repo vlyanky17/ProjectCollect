@@ -19,7 +19,7 @@ export const LastItem = () =>{
             setOnLoad(true)
 
             if (data.itm!='nothing'){
-                setThisItm(data.itm[0])}
+                setThisItm(data.itm[0])} else {setThisItm(data.itm)}
 
 
 
@@ -44,9 +44,10 @@ export const LastItem = () =>{
 
         }
     )
-    if (ThisItm=={}) {
+    if (ThisItm=='nothing') {
         return <p className="center">нет айтемов</p>
     }
+    alert(ThisItm)
     return (<div>
 
         <table class="resp-tab">
