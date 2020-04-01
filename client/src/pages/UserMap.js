@@ -37,7 +37,7 @@ export const UserMap = ({ usrs }) => {
             const ev =event.target.name
 
             const dt = await request('/GoAdm', 'POST', {ev})
-  
+
         } catch (e) {}
     }
 

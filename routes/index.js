@@ -588,7 +588,7 @@ const col =  await Colec.find({_id:id})
             col
         });
     } catch(e){
-        res.status(500).json({message: 'error Col'})
+        res.status(500).json({message: 'error FindBigest'})
     }
 })
 
@@ -614,7 +614,7 @@ console.log('IfindLast')
             itm
         });
     } catch(e){
-        res.status(500).json({message: 'error Col'})
+        res.status(500).json({message: 'error Findlast'})
     }
 })
 
