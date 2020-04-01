@@ -35,7 +35,7 @@ export const ForAut = () =>{
 
        последний добавленный айтем:
         </p>
-
+   <LastItem/>
     </form></div>
 
     </div>
